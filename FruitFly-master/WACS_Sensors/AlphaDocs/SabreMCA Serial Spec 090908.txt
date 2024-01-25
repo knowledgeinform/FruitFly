@@ -1,0 +1,55 @@
+
+The 9-pin male Sub-D serial RS-232 connector (J4) is used for communications 
+with a PC.  The pinouts are as follows:
+
+PIN	DESCRIPTION
+1	unused
+2	RxD (data from PC to SabreMCA)
+3	TxD (data to PC from SabreMCA)
+4	DTR (jumpered to RTS on SabreMCA board)
+5	Ground
+6	no connection
+7	RTS (jumpered to DTR on SabreMCA board)
+8	CTS (handshake to PC from SabreMCA)
+9	no connection
+
+To function properly, the SabreMCA board requires a cable with RxD, TxD, Gnd,
+RTS and CTS.  Usually, a serial RS-232 "extension cable" with a male-male 
+gender changer will provide the necessary connections with off-the-shelf parts.
+
+To communicate with the SabreMCA, single character commands are issued by the
+PC.  The CTS handshake signal must be asserted before sending a command.  With
+the CTS signal cleared, the SabreMCA will broadcast a character every time it 
+receives a count.  The value of the count corrsponds to the channel of the count
+(e.g. 1 through 254).  A value of zero indicates an underrange.  A value of 255
+indicates an overrange.
+
+HEX	DESCRIPTION
+20	Version and Parameter Request--MCA will return a 22-byte string with 
+	version information, followed by the one-byte settings for Scale, 
+	Offset, Gain, Threshold and a parameter checksum.
+
+21	Get ADC value.  Gets the ADC reading for Flow or Battery Level.
+
+22	Enter calibration mode
+
+23	Exit calibration mode
+
+40	Set ADC channel. 0=Flow channel,  1=Battery level
+
+60	Put serial number.  (factory use only)
+
+80-82	Set Scale Command--MCA will set the 'binning' of the actual 1024-channel
+	count to the command value minus the 0x80 offset (0-2).  A value of zero
+	does no binning.  A value of 1 bins 1024 channels into 512.  A value of
+	2 bins all 1024 channels into 256 channels.
+
+A0-BF	Set Threshold Command--MCA will set the threshold to the command value 
+	minus the 0xA0 offset (0-31).
+
+C0-DF	Set Gain Command--MCA will set its Gain to the command value minus the
+	0xC0 offset (0-31).
+
+E0-FF	Set Offset Command--MCA will offset the binned channel by the command
+	value minus the 0xE0 offset.  Has no effect when Scale is 2.
+ 

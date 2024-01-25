@@ -1,0 +1,166 @@
+\hypertarget{classgl_quaternion}{
+\section{glQuaternion Class Reference}
+\label{classgl_quaternion}\index{glQuaternion@{glQuaternion}}
+}
+
+
+An object to represent a quaternion for OpenGL math.  
+
+
+
+
+{\ttfamily \#include $<$glQuaternion.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgl_quaternion_ac389d49c55ef3b5fa303e04958c9400c}{glQuaternion} ()
+\begin{DoxyCompactList}\small\item\em Constructor, sets all values to default. \end{DoxyCompactList}\item 
+\hypertarget{classgl_quaternion_ac7f0565cb2061ac6dd4bd8bc9c07e8ae}{
+virtual \hyperlink{classgl_quaternion_ac7f0565cb2061ac6dd4bd8bc9c07e8ae}{$\sim$glQuaternion} ()}
+\label{classgl_quaternion_ac7f0565cb2061ac6dd4bd8bc9c07e8ae}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classgl_quaternion}{glQuaternion} \hyperlink{classgl_quaternion_ac46764a018996045424f121b762c8565}{operator$\ast$} (\hyperlink{classgl_quaternion}{glQuaternion} q)
+\begin{DoxyCompactList}\small\item\em Overloaded multiplication operator to combine two \hyperlink{classgl_quaternion}{glQuaternion} objects. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_quaternion_a2fdd5743dcaf58d1fc71ca0c35f9cda0}{CreateMatrix} (GLfloat $\ast$pMatrix)
+\begin{DoxyCompactList}\small\item\em Using the data of this \hyperlink{classgl_quaternion}{glQuaternion} object, populate a rotation/translation matrix. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_quaternion_a52f7221972e53ac90d245d9bf0542c74}{CreateFromAxisAngle} (GLfloat x, GLfloat y, GLfloat z, GLfloat degrees)
+\begin{DoxyCompactList}\small\item\em Populate this quaternion using specified data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgl_quaternion_a922203e3da7551bce6cb52bd88680a2b}{
+GLfloat \hyperlink{classgl_quaternion_a922203e3da7551bce6cb52bd88680a2b}{m\_\-w}}
+\label{classgl_quaternion_a922203e3da7551bce6cb52bd88680a2b}
+
+\begin{DoxyCompactList}\small\item\em Quaternion W. \end{DoxyCompactList}\item 
+\hypertarget{classgl_quaternion_aee4aea16f758432eaa97f3b6d9ac911c}{
+GLfloat \hyperlink{classgl_quaternion_aee4aea16f758432eaa97f3b6d9ac911c}{m\_\-z}}
+\label{classgl_quaternion_aee4aea16f758432eaa97f3b6d9ac911c}
+
+\begin{DoxyCompactList}\small\item\em Quaternion Z. \end{DoxyCompactList}\item 
+\hypertarget{classgl_quaternion_a27c7ace16ec44354957c7532a381f68f}{
+GLfloat \hyperlink{classgl_quaternion_a27c7ace16ec44354957c7532a381f68f}{m\_\-y}}
+\label{classgl_quaternion_a27c7ace16ec44354957c7532a381f68f}
+
+\begin{DoxyCompactList}\small\item\em Quaternion Y. \end{DoxyCompactList}\item 
+\hypertarget{classgl_quaternion_aad569bf001fdf8f78e7b66724cbaac8f}{
+GLfloat \hyperlink{classgl_quaternion_aad569bf001fdf8f78e7b66724cbaac8f}{m\_\-x}}
+\label{classgl_quaternion_aad569bf001fdf8f78e7b66724cbaac8f}
+
+\begin{DoxyCompactList}\small\item\em Quaternion X. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object to represent a quaternion for OpenGL math. 
+
+\begin{DoxyAuthor}{Author}
+Kevin Murphy, John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgl_quaternion_ac389d49c55ef3b5fa303e04958c9400c}{
+\index{glQuaternion@{glQuaternion}!glQuaternion@{glQuaternion}}
+\index{glQuaternion@{glQuaternion}!glQuaternion@{glQuaternion}}
+\subsubsection[{glQuaternion}]{\setlength{\rightskip}{0pt plus 5cm}glQuaternion::glQuaternion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_quaternion_ac389d49c55ef3b5fa303e04958c9400c}
+
+
+Constructor, sets all values to default. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgl_quaternion_a52f7221972e53ac90d245d9bf0542c74}{
+\index{glQuaternion@{glQuaternion}!CreateFromAxisAngle@{CreateFromAxisAngle}}
+\index{CreateFromAxisAngle@{CreateFromAxisAngle}!glQuaternion@{glQuaternion}}
+\subsubsection[{CreateFromAxisAngle}]{\setlength{\rightskip}{0pt plus 5cm}void glQuaternion::CreateFromAxisAngle (
+\begin{DoxyParamCaption}
+\item[{GLfloat}]{x, }
+\item[{GLfloat}]{y, }
+\item[{GLfloat}]{z, }
+\item[{GLfloat}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_quaternion_a52f7221972e53ac90d245d9bf0542c74}
+
+
+Populate this quaternion using specified data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Rotation axis X vector \\
+\hline
+{\em y} & Rotation axis X vector \\
+\hline
+{\em z} & Rotation axis X vector \\
+\hline
+{\em degrees} & Angle of rotation about axis, degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_quaternion_a2fdd5743dcaf58d1fc71ca0c35f9cda0}{
+\index{glQuaternion@{glQuaternion}!CreateMatrix@{CreateMatrix}}
+\index{CreateMatrix@{CreateMatrix}!glQuaternion@{glQuaternion}}
+\subsubsection[{CreateMatrix}]{\setlength{\rightskip}{0pt plus 5cm}void glQuaternion::CreateMatrix (
+\begin{DoxyParamCaption}
+\item[{GLfloat $\ast$}]{pMatrix}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_quaternion_a2fdd5743dcaf58d1fc71ca0c35f9cda0}
+
+
+Using the data of this \hyperlink{classgl_quaternion}{glQuaternion} object, populate a rotation/translation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pMatrix} & After execution, will be a rotation-\/translation matrix formed from this quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_quaternion_ac46764a018996045424f121b762c8565}{
+\index{glQuaternion@{glQuaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!glQuaternion@{glQuaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf glQuaternion} glQuaternion::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf glQuaternion}}]{q}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_quaternion_ac46764a018996045424f121b762c8565}
+
+
+Overloaded multiplication operator to combine two \hyperlink{classgl_quaternion}{glQuaternion} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Quaternion to post-\/multiply to this one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classgl_quaternion}{glQuaternion} Product of this object and q 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/glQuaternion.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/glQuaternion.cpp\end{DoxyCompactItemize}

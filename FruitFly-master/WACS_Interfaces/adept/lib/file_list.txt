@@ -1,0 +1,18 @@
+
+Microsoft compatible libraries
+
+	Static libraries
+
+		Adept104_PCI.lib		- release version
+		Adept104_PCI_D.lib		- debug version
+
+	Dynamic link/load libraries (DLLs)
+
+		Adept104DLL_PCI.dll		- release version
+		Adept104DLL_PCI_D.dll		- debug version
+
+		Adept104DLL_PCI.lib		- library for building Adept104DLL_PCI.dll
+		Adept104DLL_PCI_D.lib		- library for building Adept104DLL_PCI_D.dll
+
+
+List last updated: 5 May 2006

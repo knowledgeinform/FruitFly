@@ -1,0 +1,240 @@
+\hypertarget{class_agent_position_belief}{
+\section{AgentPositionBelief Class Reference}
+\label{class_agent_position_belief}\index{AgentPositionBelief@{AgentPositionBelief}}
+}
+
+
+Historical list of \hyperlink{class_agent_position}{AgentPosition} objects.  
+
+
+
+
+{\ttfamily \#include $<$AgentPositionBelief.h$>$}
+
+Inheritance diagram for AgentPositionBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_agent_position_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_position_belief_a8dd3de3cf2f95f730fe294cdb11e07b1}{
+\hyperlink{class_agent_position_belief_a8dd3de3cf2f95f730fe294cdb11e07b1}{AgentPositionBelief} ()}
+\label{class_agent_position_belief_a8dd3de3cf2f95f730fe294cdb11e07b1}
+
+\begin{DoxyCompactList}\small\item\em Create empty \hyperlink{class_agent_position}{AgentPosition} list and set current position to NULL. \end{DoxyCompactList}\item 
+\hyperlink{class_agent_position_belief_a4912fe0dfd751a25c1fed98f16241ef2}{AgentPositionBelief} (\hyperlink{class_agent_position}{AgentPosition} $\ast$firstPosition)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{class_agent_position}{AgentPosition} list and add firstPosition to it. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_belief_aad7647aca1143286b45043bba8b259e0}{
+\hyperlink{class_agent_position_belief_aad7647aca1143286b45043bba8b259e0}{$\sim$AgentPositionBelief} ()}
+\label{class_agent_position_belief_aad7647aca1143286b45043bba8b259e0}
+
+\begin{DoxyCompactList}\small\item\em Destructor, delete list. \end{DoxyCompactList}\item 
+bool \hyperlink{class_agent_position_belief_a03efa19776066401b75405b0f7aae6f2}{addAgentPosition} (\hyperlink{class_agent_position}{AgentPosition} $\ast$newPosition)
+\begin{DoxyCompactList}\small\item\em Add newPosition to \hyperlink{class_agent_position}{AgentPosition} history list and store it as the current position. \end{DoxyCompactList}\item 
+bool \hyperlink{class_agent_position_belief_aec0083de3aa4827e33429c5e03b35111}{clearAgentPositions} ()
+\begin{DoxyCompactList}\small\item\em Clear \hyperlink{class_agent_position}{AgentPosition} history. \end{DoxyCompactList}\item 
+const list$<$ \hyperlink{class_agent_position}{AgentPosition} $\ast$ $>$ $\ast$const \hyperlink{class_agent_position_belief_a0aaa0fc21e69548d477cc4d0cc0f1c3a}{getAgentPositions} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to \hyperlink{class_agent_position}{AgentPosition} history. \end{DoxyCompactList}\item 
+list$<$ \hyperlink{class_agent_position}{AgentPosition} $\ast$ $>$ $\ast$ \hyperlink{class_agent_position_belief_abb8f9d2a4497fe526a59ddf800103763}{getModifiableAgentPositions} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to \hyperlink{class_agent_position}{AgentPosition} history. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_agent_position_belief_a7022bf540e04f7f830af8c331a051c64}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)=0
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. This class is virtual and must be extended to define how the display the agent in OpenGL. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_belief_a881a657a0261fbbb2086365a522e7b8d}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_position_belief_ace58855dd73ac8893881d98fc64c5632}{
+list$<$ \hyperlink{class_agent_position}{AgentPosition} $\ast$ $>$ $\ast$ \hyperlink{class_agent_position_belief_ace58855dd73ac8893881d98fc64c5632}{m\_\-AgentPositionHistory}}
+\label{class_agent_position_belief_ace58855dd73ac8893881d98fc64c5632}
+
+\begin{DoxyCompactList}\small\item\em List of \hyperlink{class_agent_position}{AgentPosition} history. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_belief_af01caa5517ec12e7177bb76c85b93714}{
+\hyperlink{class_agent_position}{AgentPosition} $\ast$ \hyperlink{class_agent_position_belief_af01caa5517ec12e7177bb76c85b93714}{m\_\-CurrentPosition}}
+\label{class_agent_position_belief_af01caa5517ec12e7177bb76c85b93714}
+
+\begin{DoxyCompactList}\small\item\em Current \hyperlink{class_agent_position}{AgentPosition}, pointer to last item in \hyperlink{class_agent_position}{AgentPosition} history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_position_belief_adbff6c8d58d81c6eddbe52535330132e}{
+static const int \hyperlink{class_agent_position_belief_adbff6c8d58d81c6eddbe52535330132e}{MAX\_\-AGENT\_\-POSITIONS} = 1000}
+\label{class_agent_position_belief_adbff6c8d58d81c6eddbe52535330132e}
+
+\begin{DoxyCompactList}\small\item\em Maximum historical positions in \hyperlink{class_agent_position}{AgentPosition} list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Historical list of \hyperlink{class_agent_position}{AgentPosition} objects. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_agent_position_belief_a4912fe0dfd751a25c1fed98f16241ef2}{
+\index{AgentPositionBelief@{AgentPositionBelief}!AgentPositionBelief@{AgentPositionBelief}}
+\index{AgentPositionBelief@{AgentPositionBelief}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{AgentPositionBelief}]{\setlength{\rightskip}{0pt plus 5cm}AgentPositionBelief::AgentPositionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{firstPosition}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_position_belief_a4912fe0dfd751a25c1fed98f16241ef2}
+
+
+Create \hyperlink{class_agent_position}{AgentPosition} list and add firstPosition to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em firstPosition} & First position for position history \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_agent_position_belief_a03efa19776066401b75405b0f7aae6f2}{
+\index{AgentPositionBelief@{AgentPositionBelief}!addAgentPosition@{addAgentPosition}}
+\index{addAgentPosition@{addAgentPosition}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{addAgentPosition}]{\setlength{\rightskip}{0pt plus 5cm}bool AgentPositionBelief::addAgentPosition (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{newPosition}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_position_belief_a03efa19776066401b75405b0f7aae6f2}
+
+
+Add newPosition to \hyperlink{class_agent_position}{AgentPosition} history list and store it as the current position. 
+
+Adding newPosition is dependent on checking timestamp of newPosition against the last received position. If message is not new, delete the message. If the message is new, add newPosition to history. 
+\begin{DoxyParams}{Parameters}
+{\em newPosition} & \hyperlink{class_agent_position}{AgentPosition} to add to the history \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the newPosition was new data and was added to the list. False if newPosition was not new and not added. 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_belief_aec0083de3aa4827e33429c5e03b35111}{
+\index{AgentPositionBelief@{AgentPositionBelief}!clearAgentPositions@{clearAgentPositions}}
+\index{clearAgentPositions@{clearAgentPositions}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{clearAgentPositions}]{\setlength{\rightskip}{0pt plus 5cm}bool AgentPositionBelief::clearAgentPositions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_position_belief_aec0083de3aa4827e33429c5e03b35111}
+
+
+Clear \hyperlink{class_agent_position}{AgentPosition} history. 
+
+\begin{DoxyReturn}{Returns}
+True if history was cleared, false if there was no history to clear 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_belief_a7022bf540e04f7f830af8c331a051c64}{
+\index{AgentPositionBelief@{AgentPositionBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}virtual void AgentPositionBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_agent_position_belief_a7022bf540e04f7f830af8c331a051c64}
+
+
+Paint the contents of this belief in an OpenGL scene. This class is virtual and must be extended to define how the display the agent in OpenGL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+
+
+Implemented in \hyperlink{class_g_c_s_agent_position_belief_a148cf93f40d6a0517c4cd02f714b443a}{GCSAgentPositionBelief}, and \hyperlink{class_shadow_agent_position_belief_a93612c99d78d18a09a50816ddd86e715}{ShadowAgentPositionBelief}.
+
+\hypertarget{class_agent_position_belief_a0aaa0fc21e69548d477cc4d0cc0f1c3a}{
+\index{AgentPositionBelief@{AgentPositionBelief}!getAgentPositions@{getAgentPositions}}
+\index{getAgentPositions@{getAgentPositions}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{getAgentPositions}]{\setlength{\rightskip}{0pt plus 5cm}const list$<${\bf AgentPosition}$\ast$$>$$\ast$ const AgentPositionBelief::getAgentPositions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_belief_a0aaa0fc21e69548d477cc4d0cc0f1c3a}
+
+
+Returns pointer to \hyperlink{class_agent_position}{AgentPosition} history. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to internal \hyperlink{class_agent_position}{AgentPosition} history. Can not be modified 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_belief_abb8f9d2a4497fe526a59ddf800103763}{
+\index{AgentPositionBelief@{AgentPositionBelief}!getModifiableAgentPositions@{getModifiableAgentPositions}}
+\index{getModifiableAgentPositions@{getModifiableAgentPositions}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{getModifiableAgentPositions}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf AgentPosition}$\ast$$>$$\ast$ AgentPositionBelief::getModifiableAgentPositions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_belief_abb8f9d2a4497fe526a59ddf800103763}
+
+
+Returns pointer to \hyperlink{class_agent_position}{AgentPosition} history. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to internal \hyperlink{class_agent_position}{AgentPosition} history. WARNING -\/ Can be modified and screw up this object 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_belief_a881a657a0261fbbb2086365a522e7b8d}{
+\index{AgentPositionBelief@{AgentPositionBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!AgentPositionBelief@{AgentPositionBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPositionBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_agent_position_belief_a881a657a0261fbbb2086365a522e7b8d}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentPositionBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentPositionBelief.cpp\end{DoxyCompactItemize}

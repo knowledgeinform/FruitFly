@@ -1,0 +1,11 @@
+global.behavior.verbosity = <empty>
+global.behavior.circular.desiredDistance = <empty>
+global.searchDecay = <empty>
+global.latencyCompensation = <empty>
+global.uav.waypointDist = <empty>
+global.nitroAgent.hasVideo = <empty>
+global.geminiAgent.hasVideo = <empty>
+global.iceAgent.hasVideo = <empty>
+global.malibuAgent.hasVideo = <empty>
+global.thunderAgent.hasVideo = <empty>
+global.atlasAgent.hasVideo = <empty>

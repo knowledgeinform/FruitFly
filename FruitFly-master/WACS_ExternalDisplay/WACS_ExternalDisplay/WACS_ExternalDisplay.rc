@@ -1,0 +1,296 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MENUBAR MENU
+BEGIN
+    POPUP "View"
+    BEGIN
+        MENUITEM "Display WACS UAV",            ID_OPTIONS_DISPLAYSHADOW
+        MENUITEM "Use Pic Tel For UAV",         ID_OPTIONS_USEPICTEL
+        MENUITEM "Display WACS GCS",            ID_OPTIONS_DISPLAYPGCS
+        MENUITEM "Display Orbit",               ID_OPTIONS_DISPLAYORBIT
+        MENUITEM "Display Particle Detections", ID_OPTIONS_DISPLAYPARTICLEDETECTIONS
+        MENUITEM "Display Chemical Detections", ID_OPTIONS_DISPLAYCHEMICALDETECTIONS
+        MENUITEM "Display Propogated Detections", ID_OPTIONS_DISPLAYPROPOGATEDDETECTIONS
+        MENUITEM "Display Predicted Cloud",     ID_OPTIONS_DISPLAYPREDICTEDCLOUD
+        MENUITEM "Display Explosion Indicator", ID_OPTIONS_DISPLAYEXPLOSIONINDICATOR
+        MENUITEM "Display Explosion Time",      ID_OPTIONS_DISPLAYIREXPLOSIONALGORITHMENABLED
+        MENUITEM "Display Loiter Approach Path", ID_OPTIONS_DISPLAYLOITERAPPROACHPATH
+        MENUITEM "Display MET Data",            ID_OPTIONS_DISPLAYMETDATA
+        MENUITEM "Display Sensor Overlays",     ID_OPTIONS_DISPLAYSENSOROVERLAYS
+        MENUITEM SEPARATOR
+        MENUITEM "Show Raw Tables",             ID_OPTIONS_SHOWRAWTABLES
+        MENUITEM SEPARATOR
+        MENUITEM "Reset Camera",                ID_VIEW_RESETVIEW
+    END
+    POPUP "Units"
+    BEGIN
+        MENUITEM "Altitude in Feet",            ID_UNITS_ALTITUDEINFEET
+    END
+    POPUP "Swarm Spy"
+    BEGIN
+        MENUITEM "Restart Logging",             ID_SWARMSPY_RESTARTLOGGING
+        MENUITEM "Restart Replay",              ID_SWARMSPY_RESTARTREPLAY
+        MENUITEM "Pause Replay",                ID_SWARMSPY_PAUSEREPLAY
+        MENUITEM "Pause Detection Propogation", ID_OPTIONS_PAUSEDETECTIONPROPOGATION
+        MENUITEM SEPARATOR
+        MENUITEM "Pause All",                   ID_SWARMSPY_PAUSEALL
+        MENUITEM "Unpause All",                 ID_SWARMSPY_UNPAUSEALL
+    END
+    POPUP "Log"
+    BEGIN
+        MENUITEM "Log",                         ID_LOG_LOG
+    END
+    POPUP "Video Capture"
+    BEGIN
+        MENUITEM "Enabled",                     ID_VIDEOCAPTURE_ENABLED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_ACCELERATORS ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 607, 375
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_OVERLAPPEDWINDOW | WS_EX_STATICEDGE
+CAPTION "WACS External Display"
+MENU IDC_MENUBAR
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Mouse Position:",IDC_MOUSELABEL,244,358,51,8
+    LTEXT           " ",IDC_MOUSEOUTPUT,308,357,292,11,SS_SUNKEN | WS_BORDER
+    CONTROL         "Custom2",IDC_MAP_VIEW,"Viewer3D",WS_TABSTOP,7,7,593,347
+END
+
+IDD_CONFIRMDIALOG DIALOGEX 0, 0, 262, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "No",ID_NO,154,25,50,14
+    PUSHBUTTON      "Yes",ID_YES,205,25,50,14
+    CTEXT           "Static",IDC_CONFIRMTEXT,7,14,248,8
+END
+
+IDD_LOGBOX DIALOGEX 0, 0, 617, 385
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Log"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LOGLIST,7,7,603,371,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_RAWTABLES DIALOGEX 0, 0, 292, 345
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "WACS Raw Message Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,235,324,50,14
+    LTEXT           "Message:  ",IDC_STATIC,67,9,36,8
+    COMBOBOX        IDC_BELIEFCOMBO,104,7,118,97,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "",IDC_FIELDLABEL1,7,38,67,8
+    RTEXT           "",IDC_FIELDLABEL2,7,52,67,8
+    LTEXT           "",IDC_FIELDVALUE2,78,50,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL3,7,65,67,8
+    LTEXT           "",IDC_FIELDVALUE3,78,63,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL4,7,79,67,8
+    LTEXT           "",IDC_FIELDVALUE4,78,76,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL5,7,92,67,8
+    LTEXT           "",IDC_FIELDVALUE5,78,90,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL6,7,105,67,8
+    LTEXT           "",IDC_FIELDVALUE6,78,103,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL7,7,118,67,8
+    LTEXT           "",IDC_FIELDVALUE7,78,115,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL8,7,130,67,8
+    LTEXT           "",IDC_FIELDVALUE8,78,128,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL9,7,144,67,8
+    LTEXT           "",IDC_FIELDVALUE9,78,141,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL10,7,156,67,8
+    LTEXT           "",IDC_FIELDVALUE10,78,154,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL11,7,169,67,8
+    LTEXT           "",IDC_FIELDVALUE11,78,166,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL12,7,182,67,8
+    LTEXT           "",IDC_FIELDVALUE12,78,179,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL13,7,195,67,8
+    LTEXT           "",IDC_FIELDVALUE13,78,192,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL14,7,208,67,8
+    LTEXT           "",IDC_FIELDVALUE14,78,205,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL15,7,220,67,8
+    LTEXT           "",IDC_FIELDVALUE15,78,218,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL16,7,233,67,8
+    LTEXT           "",IDC_FIELDVALUE16,78,230,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL17,7,246,67,8
+    LTEXT           "",IDC_FIELDVALUE17,78,243,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL18,7,258,67,8
+    LTEXT           "",IDC_FIELDVALUE18,78,256,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL19,7,271,67,8
+    LTEXT           "",IDC_FIELDVALUE19,78,268,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL20,7,283,67,8
+    LTEXT           "",IDC_FIELDVALUE20,78,281,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL21,8,296,67,8
+    LTEXT           "",IDC_FIELDVALUE21,78,294,207,11,SS_SUNKEN | WS_BORDER
+    RTEXT           "",IDC_FIELDLABEL22,8,310,67,8
+    LTEXT           "",IDC_FIELDVALUE22,78,307,207,11,SS_SUNKEN | WS_BORDER
+    LTEXT           "",IDC_FIELDVALUE1,78,37,207,11,SS_SUNKEN | WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 600
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 368
+    END
+
+    IDD_CONFIRMDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_LOGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 610
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 378
+    END
+
+    IDD_RAWTABLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON                    "icons.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "CRATR Interface Display"
+    IDC_CRATRGUI            "CratrGui"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MOSAICFILTER        "Supported Mosaic Types|*.png;*.tiff;*.tif;*.bmp|"
+    IDS_SHPFILTER           "Support Shape Files|*.shp|"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

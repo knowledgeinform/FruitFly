@@ -1,0 +1,694 @@
+This is a machine generated file.
+Modifications by hand must be made carefully at one's own risk.
+Deleting an entry will result in factory default for that entry.
+----------------------------------------------------------------
+
+[COMM]
+port=17
+coldload baud=2400
+pilot baud=57600
+bios baud=115200
+Max Negotiated Baud=460800
+stop bits=2
+use TCP=0
+TCP Port=0
+TCP Name=
+Net Address=
+Serial Response Timeout=400
+Ethernet Response Timeout=8000
+Serial Retry Count=5
+Ethernet Retry Count=0
+Serial Poll Interval=3000
+Ethernet Poll Interval=30000
+Verify DSR=1
+Use USB to Serial Converter=1
+Disable Baud Negotiation=0
+USB to Serial Delay=2000
+Pilot Bios Physical Address=0x4000
+Flash erase timeout=10000
+RS Console newline=\r\n
+RS Console greeting msg=220 Z-World RabbitSys Console
+RS Console username prompt=Username:
+RS Console password msg=331 Password required
+RS Console password prompt=Password:
+RS Console logged in msg=230 User logged in.
+RS Console bad uname msg=530 Bad Username/Password
+RS Console prompt=CON:
+RS Console targetmd command=targetmd
+RS Console targetmd msg=200 targetmd
+RS Console User Name=
+RS Console Password=
+Use RabbitLink=0
+RabbitLink Port=0
+RabbitLink Address=
+RabbitLink Name=
+Use RabbitSys=1
+RabbitSys Port=32023
+RabbitSys Address=
+[Compiler Options]
+Max Errors Shown=100
+Max Warnings Shown=10
+All Serious None=A
+RTC Indices=1
+RTC Pointers=1
+Optimize For Size=0
+Prototypes=1
+Demotion=1
+Pointers=1
+BIOS Memory Mode=2
+Restrict Watch Expressions=0
+Separate Instruction and Data=1
+Generate List Files=0
+Inline Internal IO Functions=1
+Default Compile Mode=0
+RabbitSys Protected IO=0
+RabbitSys Manual Detect=0
+RabbitSys Mode=0
+RabbitSys system binary=C:\Program Files\DCRABBIT_9.62\Applications\RabbitSys\FastRAM\system.bin
+RabbitSys RFU path=C:\Program Files\DCRABBIT_9.62\utilities\clrfu.exe
+[Debug Options]
+Enable Breakpoints=1
+Enable Instruction Level Single Step=1
+Enable Watch Expressions=1
+Max Breakpoints=32
+Max Watch Expressions=8
+Watch Memory for Structs=32
+Enable Tracing=1
+Trace Buf Size=8
+Enable Trace Buf Wrap=0
+Trace Statements=1
+Enable Trace RST=1
+Enable Trace Functions=1
+Enable Trace Auto Save=0
+Trace Auto Save File=
+Trace Info Func=1
+Trace Info Action=1
+Trace Info Time=1
+Trace Info File=1
+Trace Info Line/Col=1
+Trace Info Repeat=0
+Trace Info Reg=1
+Enable Stack Tracing=1
+Stack Tracing Memory=4096
+Enable debug kernel=1
+[Include RST 28]
+Include RST=1
+[Include BIOS]
+Include BIOS=1
+[Poll Target]
+Poll target while running=1
+[Targetless Compile]
+Board ID=0x170a
+CPU ID=3000
+CPU Revision=1
+Crystal Speed MHz=22.1184
+RAM Size KBytes=512
+Flash Size KBytes=512
+Description=44MHz, BL2600, 512 FSRAM, 16 Mb Nand Flash, xD Connector
+[Output File]
+Auto open STDIO=1
+Append=0
+Log STDIO=0
+Output File Name=DC.OUT
+[Dynamic C Files]
+Use Lib File=1
+Use BIOS File=0
+Use Default Source File=0
+LIB File=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib.dir
+BIOS File=
+Cold Loader File=bios\coldload.bin
+Pilot BIOS File=bios\pilot.bin
+Default Source File=
+Start Dir=C:\Documents and Settings\humphjc1\My Documents\wacs\BL2600\lib\
+[DEFINES]
+Defines=
+[Compression Utility]
+Zimport External Utility=ZCOMPRESS.EXE
+[MRU Files]
+FileCount=3
+[Open Files]
+Number Open=21
+[OpenFile  1]
+OpenFile  1 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\main.c
+OpenFile  1 X=74
+OpenFile  1 Y=45
+OpenFile  1 W=1275
+OpenFile  1 H=681
+OpenFile  1 Top Row=263
+OpenFile  1 Top Col=0
+OpenFile  1 WindowState=0
+OpenFile  1 Cursor Row=263
+OpenFile  1 Cursor Col=3
+[MRU 1]
+MRU 1 Path=C:\Program Files\DCRABBIT_9.62\bios\Rabbitbios.c
+MRU 1 X=0
+MRU 1 Y=0
+MRU 1 W=1271
+MRU 1 H=561
+MRU 1 Top Row=0
+MRU 1 WindowState=0
+MRU 1 Cursor Row=8
+MRU 1 Cursor Col=82
+[MRU 2]
+MRU 2 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\anaconda_messages.C
+MRU 2 X=11
+MRU 2 Y=5
+MRU 2 W=1203
+MRU 2 H=714
+MRU 2 Top Row=551
+MRU 2 WindowState=0
+MRU 2 Cursor Row=327
+MRU 2 Cursor Col=30
+[MRU 3]
+MRU 3 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bridgeport_messages.c
+MRU 3 X=0
+MRU 3 Y=0
+MRU 3 W=1323
+MRU 3 H=700
+MRU 3 Top Row=38
+MRU 3 WindowState=0
+MRU 3 Cursor Row=58
+MRU 3 Cursor Col=38
+[MRU 4]
+MRU 4 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\c100_messages.C
+MRU 4 X=41
+MRU 4 Y=95
+MRU 4 W=1323
+MRU 4 H=799
+MRU 4 Top Row=18
+MRU 4 WindowState=0
+MRU 4 Cursor Row=56
+MRU 4 Cursor Col=25
+[OpenFile  2]
+OpenFile  2 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\c100_messages.C
+OpenFile  2 X=102
+OpenFile  2 Y=95
+OpenFile  2 W=1262
+OpenFile  2 H=740
+OpenFile  2 Top Row=0
+OpenFile  2 Top Col=0
+OpenFile  2 WindowState=0
+OpenFile  2 Cursor Row=7
+OpenFile  2 Cursor Col=52
+[MRU 5]
+MRU 5 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bridgeport_messages.c
+MRU 5 X=0
+MRU 5 Y=0
+MRU 5 W=1323
+MRU 5 H=700
+MRU 5 Top Row=38
+MRU 5 WindowState=0
+MRU 5 Cursor Row=58
+MRU 5 Cursor Col=38
+[OpenFile  3]
+OpenFile  3 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\board_type.c
+OpenFile  3 X=110
+OpenFile  3 Y=145
+OpenFile  3 W=1203
+OpenFile  3 H=491
+OpenFile  3 Top Row=0
+OpenFile  3 Top Col=0
+OpenFile  3 WindowState=0
+OpenFile  3 Cursor Row=12
+OpenFile  3 Cursor Col=28
+[OpenFile  4]
+OpenFile  4 Path=C:\Documents and Settings\humphjc1\My Documents\wacs\BL2600\lib\bladewerx_messages.C
+OpenFile  4 X=176
+OpenFile  4 Y=232
+OpenFile  4 W=1277
+OpenFile  4 H=620
+OpenFile  4 Top Row=0
+OpenFile  4 Top Col=0
+OpenFile  4 WindowState=0
+OpenFile  4 Cursor Row=7
+OpenFile  4 Cursor Col=16
+[OpenFile  5]
+OpenFile  5 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\message_handling.c
+OpenFile  5 X=23
+OpenFile  5 Y=59
+OpenFile  5 W=1305
+OpenFile  5 H=592
+OpenFile  5 Top Row=690
+OpenFile  5 Top Col=0
+OpenFile  5 WindowState=0
+OpenFile  5 Cursor Row=908
+OpenFile  5 Cursor Col=32
+[OpenFile  6]
+OpenFile  6 Path=C:\Documents and Settings\humphjc1\My Documents\wacs\BL2600\lib\cof_read_serial.C
+OpenFile  6 X=22
+OpenFile  6 Y=29
+OpenFile  6 W=1271
+OpenFile  6 H=561
+OpenFile  6 Top Row=143
+OpenFile  6 Top Col=0
+OpenFile  6 WindowState=0
+OpenFile  6 Cursor Row=143
+OpenFile  6 Cursor Col=43
+[MRU 6]
+MRU 6 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\rtc_commands.C
+MRU 6 X=58
+MRU 6 Y=60
+MRU 6 W=1323
+MRU 6 H=700
+MRU 6 Top Row=0
+MRU 6 WindowState=0
+MRU 6 Cursor Row=18
+MRU 6 Cursor Col=24
+[OpenFile  7]
+OpenFile  7 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\heater_messages.C
+OpenFile  7 X=132
+OpenFile  7 Y=174
+OpenFile  7 W=1277
+OpenFile  7 H=670
+OpenFile  7 Top Row=0
+OpenFile  7 Top Col=0
+OpenFile  7 WindowState=0
+OpenFile  7 Cursor Row=29
+OpenFile  7 Cursor Col=9
+[OpenFile  8]
+OpenFile  8 Path=C:\PROGRAM FILES\DCRABBIT_9.62\LIB\TCPIP\TCP_CONFIG.LIB
+OpenFile  8 X=0
+OpenFile  8 Y=0
+OpenFile  8 W=1271
+OpenFile  8 H=561
+OpenFile  8 Top Row=128
+OpenFile  8 Top Col=0
+OpenFile  8 WindowState=0
+OpenFile  8 Cursor Row=138
+OpenFile  8 Cursor Col=29
+[MRU 7]
+MRU 7 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bridgeport_messages.c
+MRU 7 X=0
+MRU 7 Y=0
+MRU 7 W=1323
+MRU 7 H=700
+MRU 7 Top Row=38
+MRU 7 WindowState=0
+MRU 7 Cursor Row=58
+MRU 7 Cursor Col=38
+[MRU 8]
+MRU 8 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\message_handling.c
+MRU 8 X=23
+MRU 8 Y=59
+MRU 8 W=1305
+MRU 8 H=592
+MRU 8 Top Row=616
+MRU 8 WindowState=0
+MRU 8 Cursor Row=642
+MRU 8 Cursor Col=33
+[OpenFile  9]
+OpenFile  9 Path=C:\Documents and Settings\humphjc1\My Documents\wacs\BL2600\lib\bladewerx_pump_messages.C
+OpenFile  9 X=198
+OpenFile  9 Y=261
+OpenFile  9 W=1277
+OpenFile  9 H=620
+OpenFile  9 Top Row=3
+OpenFile  9 Top Col=0
+OpenFile  9 WindowState=0
+OpenFile  9 Cursor Row=36
+OpenFile  9 Cursor Col=12
+[MRU 9]
+MRU 9 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bridgeport_messages.c
+MRU 9 X=0
+MRU 9 Y=0
+MRU 9 W=1323
+MRU 9 H=700
+MRU 9 Top Row=38
+MRU 9 WindowState=0
+MRU 9 Cursor Row=58
+MRU 9 Cursor Col=38
+[MRU10]
+MRU10 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\message_handling.c
+MRU10 X=23
+MRU10 Y=59
+MRU10 W=1305
+MRU10 H=592
+MRU10 Top Row=616
+MRU10 WindowState=0
+MRU10 Cursor Row=642
+MRU10 Cursor Col=33
+[MRU11]
+MRU11 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\ibac_messages.C
+MRU11 X=41
+MRU11 Y=38
+MRU11 W=1311
+MRU11 H=663
+MRU11 Top Row=688
+MRU11 WindowState=0
+MRU11 Cursor Row=700
+MRU11 Cursor Col=14
+[MRU12]
+MRU12 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\udp_server.c
+MRU12 X=41
+MRU12 Y=73
+MRU12 W=1323
+MRU12 H=579
+MRU12 Top Row=54
+MRU12 WindowState=0
+MRU12 Cursor Row=54
+MRU12 Cursor Col=47
+[OpenFile 10]
+OpenFile 10 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\dio_pins.C
+OpenFile 10 X=66
+OpenFile 10 Y=87
+OpenFile 10 W=1242
+OpenFile 10 H=545
+OpenFile 10 Top Row=0
+OpenFile 10 Top Col=0
+OpenFile 10 WindowState=0
+OpenFile 10 Cursor Row=5
+OpenFile 10 Cursor Col=32
+[OpenFile 11]
+OpenFile 11 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\ibac_messages.C
+OpenFile 11 X=110
+OpenFile 11 Y=145
+OpenFile 11 W=1242
+OpenFile 11 H=545
+OpenFile 11 Top Row=0
+OpenFile 11 Top Col=0
+OpenFile 11 WindowState=0
+OpenFile 11 Cursor Row=0
+OpenFile 11 Cursor Col=0
+[MRU13]
+MRU13 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\cof_read_serial.C
+MRU13 X=32
+MRU13 Y=56
+MRU13 W=1323
+MRU13 H=562
+MRU13 Top Row=72
+MRU13 WindowState=0
+MRU13 Cursor Row=81
+MRU13 Cursor Col=33
+[OpenFile 12]
+OpenFile 12 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\rtc_commands.C
+OpenFile 12 X=58
+OpenFile 12 Y=60
+OpenFile 12 W=1323
+OpenFile 12 H=700
+OpenFile 12 Top Row=3
+OpenFile 12 Top Col=0
+OpenFile 12 WindowState=0
+OpenFile 12 Cursor Row=19
+OpenFile 12 Cursor Col=22
+[MRU14]
+MRU14 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\fan_messages.C
+MRU14 X=50
+MRU14 Y=26
+MRU14 W=1288
+MRU14 H=451
+MRU14 Top Row=0
+MRU14 WindowState=0
+MRU14 Cursor Row=10
+MRU14 Cursor Col=26
+[MRU15]
+MRU15 Path=C:\Program Files\DCRABBIT_9.62\LIB\STDIO.LIB
+MRU15 X=110
+MRU15 Y=145
+MRU15 W=1098
+MRU15 H=466
+MRU15 Top Row=170
+MRU15 WindowState=0
+MRU15 Cursor Row=194
+MRU15 Cursor Col=3
+[MRU16]
+MRU16 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bladewerx_messages.C
+MRU16 X=42
+MRU16 Y=32
+MRU16 W=1288
+MRU16 H=689
+MRU16 Top Row=29
+MRU16 WindowState=0
+MRU16 Cursor Row=37
+MRU16 Cursor Col=48
+[MRU17]
+MRU17 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\servo_messages.C
+MRU17 X=156
+MRU17 Y=204
+MRU17 W=1323
+MRU17 H=700
+MRU17 Top Row=113
+MRU17 WindowState=0
+MRU17 Cursor Row=117
+MRU17 Cursor Col=32
+[MRU18]
+MRU18 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\customFuncs.C
+MRU18 X=0
+MRU18 Y=0
+MRU18 W=1288
+MRU18 H=689
+MRU18 Top Row=79
+MRU18 WindowState=0
+MRU18 Cursor Row=110
+MRU18 Cursor Col=76
+[MRU19]
+MRU19 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\dio_pins.C
+MRU19 X=66
+MRU19 Y=87
+MRU19 W=1288
+MRU19 H=689
+MRU19 Top Row=0
+MRU19 WindowState=0
+MRU19 Cursor Row=11
+MRU19 Cursor Col=35
+[OpenFile 13]
+OpenFile 13 Path=C:\Program Files\DCRABBIT_9.62\Samples\BL2600\BOARD_ID.C
+OpenFile 13 X=110
+OpenFile 13 Y=145
+OpenFile 13 W=1271
+OpenFile 13 H=561
+OpenFile 13 Top Row=6
+OpenFile 13 Top Col=0
+OpenFile 13 WindowState=0
+OpenFile 13 Cursor Row=6
+OpenFile 13 Cursor Col=26
+[OpenFile 14]
+OpenFile 14 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\temp_humidity_logic.C
+OpenFile 14 X=148
+OpenFile 14 Y=149
+OpenFile 14 W=1288
+OpenFile 14 H=689
+OpenFile 14 Top Row=6
+OpenFile 14 Top Col=0
+OpenFile 14 WindowState=0
+OpenFile 14 Cursor Row=46
+OpenFile 14 Cursor Col=50
+[OpenFile 15]
+OpenFile 15 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\flash_handler.C
+OpenFile 15 X=154
+OpenFile 15 Y=203
+OpenFile 15 W=1277
+OpenFile 15 H=670
+OpenFile 15 Top Row=10
+OpenFile 15 Top Col=0
+OpenFile 15 WindowState=0
+OpenFile 15 Cursor Row=43
+OpenFile 15 Cursor Col=51
+[OpenFile 16]
+OpenFile 16 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\servo_messages.C
+OpenFile 16 X=132
+OpenFile 16 Y=99
+OpenFile 16 W=1277
+OpenFile 16 H=743
+OpenFile 16 Top Row=87
+OpenFile 16 Top Col=0
+OpenFile 16 WindowState=0
+OpenFile 16 Cursor Row=127
+OpenFile 16 Cursor Col=48
+[OpenFile 17]
+OpenFile 17 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\fan_messages.C
+OpenFile 17 X=110
+OpenFile 17 Y=145
+OpenFile 17 W=1277
+OpenFile 17 H=670
+OpenFile 17 Top Row=27
+OpenFile 17 Top Col=0
+OpenFile 17 WindowState=0
+OpenFile 17 Cursor Row=63
+OpenFile 17 Cursor Col=34
+[OpenFile 18]
+OpenFile 18 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\temp_humidity.C
+OpenFile 18 X=110
+OpenFile 18 Y=145
+OpenFile 18 W=1277
+OpenFile 18 H=670
+OpenFile 18 Top Row=8
+OpenFile 18 Top Col=0
+OpenFile 18 WindowState=0
+OpenFile 18 Cursor Row=0
+OpenFile 18 Cursor Col=0
+[OpenFile 19]
+OpenFile 19 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\log_line.c
+OpenFile 19 X=75
+OpenFile 19 Y=86
+OpenFile 19 W=1171
+OpenFile 19 H=610
+OpenFile 19 Top Row=177
+OpenFile 19 Top Col=0
+OpenFile 19 WindowState=0
+OpenFile 19 Cursor Row=185
+OpenFile 19 Cursor Col=33
+[OpenFile 20]
+OpenFile 20 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\servo_messages.C
+OpenFile 20 X=88
+OpenFile 20 Y=116
+OpenFile 20 W=1242
+OpenFile 20 H=545
+OpenFile 20 Top Row=0
+OpenFile 20 Top Col=0
+OpenFile 20 WindowState=0
+OpenFile 20 Cursor Row=127
+OpenFile 20 Cursor Col=48
+[OpenFile 21]
+OpenFile 21 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\fan_messages.C
+OpenFile 21 X=44
+OpenFile 21 Y=58
+OpenFile 21 W=1242
+OpenFile 21 H=545
+OpenFile 21 Top Row=0
+OpenFile 21 Top Col=0
+OpenFile 21 WindowState=0
+OpenFile 21 Cursor Row=63
+OpenFile 21 Cursor Col=34
+[OpenFile 22]
+OpenFile 22 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\temp_humidity.C
+OpenFile 22 X=79
+OpenFile 22 Y=135
+OpenFile 22 W=1288
+OpenFile 22 H=449
+OpenFile 22 Top Row=249
+OpenFile 22 Top Col=0
+OpenFile 22 WindowState=0
+OpenFile 22 Cursor Row=249
+OpenFile 22 Cursor Col=40
+[OpenFile 23]
+OpenFile 23 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\heater_messages.C
+OpenFile 23 X=154
+OpenFile 23 Y=203
+OpenFile 23 W=1288
+OpenFile 23 H=689
+OpenFile 23 Top Row=18
+OpenFile 23 Top Col=0
+OpenFile 23 WindowState=0
+OpenFile 23 Cursor Row=32
+OpenFile 23 Cursor Col=24
+[OpenFile 24]
+OpenFile 24 Path=C:\Program Files\DCRABBIT_9.62\Samples\BL2600\IO\High_current_io.c
+OpenFile 24 X=61
+OpenFile 24 Y=69
+OpenFile 24 W=1288
+OpenFile 24 H=689
+OpenFile 24 Top Row=96
+OpenFile 24 Top Col=0
+OpenFile 24 WindowState=0
+OpenFile 24 Cursor Row=131
+OpenFile 24 Cursor Col=0
+[MRU20]
+MRU20 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\bladewerx_pump_messages.C
+MRU20 X=52
+MRU20 Y=92
+MRU20 W=1288
+MRU20 H=460
+MRU20 Top Row=78
+MRU20 WindowState=0
+MRU20 Cursor Row=97
+MRU20 Cursor Col=9
+[MRU21]
+MRU21 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\temp_humidity.C
+MRU21 X=79
+MRU21 Y=135
+MRU21 W=1288
+MRU21 H=449
+MRU21 Top Row=249
+MRU21 WindowState=0
+MRU21 Cursor Row=249
+MRU21 Cursor Col=40
+[MRU22]
+MRU22 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\BL2600\lib\heater_messages.C
+MRU22 X=154
+MRU22 Y=203
+MRU22 W=1288
+MRU22 H=689
+MRU22 Top Row=18
+MRU22 WindowState=0
+MRU22 Cursor Row=32
+MRU22 Cursor Col=24
+[MRU23]
+MRU23 Path=C:\Program Files\DCRABBIT_9.62\LIB\RS232.LIB
+MRU23 X=132
+MRU23 Y=174
+MRU23 W=1252
+MRU23 H=683
+MRU23 Top Row=7811
+MRU23 WindowState=0
+MRU23 Cursor Row=7832
+MRU23 Cursor Col=66
+[MRU24]
+MRU24 Path=C:\Program Files\DCRABBIT_9.62\LIB\FILESYSTEM\PART.LIB
+MRU24 X=88
+MRU24 Y=116
+MRU24 W=1203
+MRU24 H=491
+MRU24 Top Row=0
+MRU24 WindowState=0
+MRU24 Cursor Row=0
+MRU24 Cursor Col=0
+[MRU25]
+MRU25 Path=C:\Program Files\DCRABBIT_9.62\LIB\STRING.LIB
+MRU25 X=82
+MRU25 Y=199
+MRU25 W=1323
+MRU25 H=700
+MRU25 Top Row=0
+MRU25 WindowState=0
+MRU25 Cursor Row=0
+MRU25 Cursor Col=0
+[MRU26]
+MRU26 Path=C:\Program Files\DCRABBIT_9.62\Samples\BL2600\IO\High_current_io.c
+MRU26 X=61
+MRU26 Y=69
+MRU26 W=1288
+MRU26 H=689
+MRU26 Top Row=96
+MRU26 WindowState=0
+MRU26 Cursor Row=131
+MRU26 Cursor Col=0
+[MRU27]
+MRU27 Path=C:\Program Files\DCRABBIT_9.62\Samples\FileSystem\FAT\FAT_HOT_SWAP.C
+MRU27 X=22
+MRU27 Y=29
+MRU27 W=1288
+MRU27 H=689
+MRU27 Top Row=153
+MRU27 WindowState=0
+MRU27 Cursor Row=159
+MRU27 Cursor Col=64
+[MRU28]
+MRU28 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\IBAC\lib\log_line.C
+MRU28 X=22
+MRU28 Y=29
+MRU28 W=1311
+MRU28 H=694
+MRU28 Top Row=36
+MRU28 WindowState=0
+MRU28 Cursor Row=58
+MRU28 Cursor Col=47
+[MRU29]
+MRU29 Path=C:\Program Files\DCRABBIT_9.62\Lib\FileSystem\fat.lib
+MRU29 X=66
+MRU29 Y=87
+MRU29 W=1288
+MRU29 H=689
+MRU29 Top Row=4856
+MRU29 WindowState=0
+MRU29 Cursor Row=4896
+MRU29 Cursor Col=17
+[MRU30]
+MRU30 Path=C:\Program Files\DCRABBIT_9.62\Lib\FileSystem\fatwtc.LIB
+MRU30 X=0
+MRU30 Y=0
+MRU30 W=1311
+MRU30 H=694
+MRU30 Top Row=1905
+MRU30 WindowState=0
+MRU30 Cursor Row=1909
+MRU30 Cursor Col=2

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="all" name="WACS"> 
+
+   <property name="swarm_home"              value="${basedir}"/>
+   <property name="swarm_lib"               value="${basedir}/lib"/>
+
+   <path id="class.path">
+      <pathelement path="${swarm_home}/classes"/>
+      <pathelement path="${swarm_home}/build/classes"/>
+      <pathelement path="${swarm_home}/config"/>
+      <pathelement path="${swarm_home}/images"/>
+      <pathelement path="${swarm_home}/classes/extern/Dragon"/>
+      <pathelement path="${swarm_home}/images"/>
+      <pathelement path="${swarm_lib}/jlibx.jar" />
+      <pathelement path="${swarm_lib}/jlib.jar" />
+      <pathelement path="${swarm_lib}/bing-maps-java-sdk.jar" />
+      <pathelement path="${swarm_lib}/webservices-api.jar" />
+      <pathelement path="${swarm_lib}/cbdews-comms.jar" />
+      <pathelement path="${swarm_lib}/Serialio.jar" />
+      <pathelement path="${swarm_lib}/junit-4.1.jar" />
+      <pathelement path="${swarm_lib}/RXTXcomm.jar" />
+      <pathelement path="${swarm_lib}/jspComm.jar" />
+      <pathelement path="${swarm_lib}/swarm.jar" />
+      <pathelement path="${swarm_lib}/jcommon-1.0.18.jar" />
+      <pathelement path="${swarm_lib}/jfreechart-1.0.14.jar" />
+      <pathelement path="${swarm_lib}/extern/colt.jar" />
+      <pathelement path="${swarm_lib}/extern/jgl3.1.0.jar" />
+      <pathelement path="${swarm_lib}/extern/repast.jar" />
+      <pathelement path="${swarm_lib}/extern/trove.jar" />
+      <pathelement path="${swarm_lib}/extern/xerces.jar" />
+      <pathelement path="${swarm_lib}/AETNAServiceInterface.jar" />
+      <pathelement path="${swarm_lib}/javadocking.jar" />
+      <pathelement path="${swarm_lib}/jcalendar-1.4.jar" />
+
+   </path>
+   <path id="bootclass.path">
+      <pathelement path="${swarm_lib}/jacorb_dev"/>
+      <pathelement path="${swarm_lib}/swing.jar"/>
+      <pathelement path="${env.JAVA_HOME}/jre/lib/rt.jar"/>
+   </path>
+
+  <target name="prepare">
+    <mkdir dir="${swarm_home}/classes"/>
+  </target>
+
+  <target name="all" description="compiles all of the code" depends="prepare">
+     <mkdir dir="${swarm_home}/classes/"/>
+    <javac 
+      classpathref="class.path"
+      destdir="${swarm_home}/classes"
+      nowarn="on"
+      debug="on"
+      optimize="off">
+      <src path="${swarm_home}/src"/>
+      <include name="edu/**"/>
+    </javac>
+  </target>
+
+   
+  <target name="all.tests" description="compiles all of the test code" depends="all">
+    <javac 
+      classpathref="class.path"
+      destdir="${swarm_home}/test-classes"
+      nowarn="on"
+      debug="on"
+      optimize="off">
+      <src path="${swarm_home}/test-src"/>
+      <include name="edu/**"/>
+    </javac>
+  </target>
+
+
+    <target name = "wacsdisplay" description="start the swarm display.">
+     <java classname="edu.jhuapl.nstd.swarm.WACSDisplayAgent"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+				<jvmarg value="-XX:+ForceTimeHighResolution"/>
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="display"/>
+           <sysproperty key="com.google.code.bing.webservices.client.standalone" value="true"/>
+     </java>
+    </target>
+	
+	<target name = "diffmerge" description="Start the Swarm Configuration File Diff/Merge Tool.">
+     <java classname="edu.jhuapl.nstd.swarm.util.diffmerge.ConfigDiffMergeView"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+     </java>
+    </target>
+
+
+    <target name = "testPiccolo" description="run the TestPiccolo main">
+     <java classname="edu.jhuapl.nstd.piccolo.TestPiccolo"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+     </java>
+    </target>
+
+    <target name = "wacsagent" description="start the WACS agent">
+     <java classname="edu.jhuapl.nstd.swarm.WACSAgent"
+	   fork="yes"
+           maxmemory="512m"
+           classpathref="class.path" >
+				<jvmarg value="-XX:+ForceTimeHighResolution"/>
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+    </target> 
+
+    <target name = "wacsmontecarlo" description="start the monte carlo simulation.">
+     <java classname="edu.jhuapl.nstd.swarm.WACSMonteCarloAgent"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="wacsMonteCarloAgent"/>
+     </java>
+    </target> 
+	
+    <target name = "wacsexternalcontrol" description="start the  WACS exernal control network interface">
+     <java classname="edu.jhuapl.nstd.swarm.WACSExternalControlInterface"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+    </target>	
+	
+    <target name = "wacsexternalcontroltest" description="test the  WACS exernal control network interface">
+     <java classname="edu.jhuapl.nstd.swarm.WACSExternalControlTest"
+	   fork="yes"
+           maxmemory="128m"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+     </java>
+    </target>		
+	
+    <target name = "shadowsimulator" description="start the shadow simulation.">
+     <java classname="edu.jhuapl.nstd.swarm.autopilot.ShadowGCSSimulator"
+	   fork="yes"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="shadowsimulator"/>
+     </java>
+    </target> 	
+
+    <target name = "shadowsimulatoronboard" description="start the shadow simulation.">
+     <java classname="edu.jhuapl.nstd.swarm.autopilot.ShadowWAVSMSimulator"
+	   fork="yes"
+           maxmemory="256m"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="shadowsimulatoronboard"/>
+     </java>
+    </target> 	
+
+    <target name = "wgvsmsimulator" description="start the shadow wgvsm simulation.">
+     <java classname="edu.jhuapl.nstd.swarm.autopilot.ShadowWGVSMSimulator"
+	   fork="yes"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="shadowwgvsmsimulator"/>
+     </java>
+    </target> 	
+
+    <target name = "piccolosimulator" description="start the piccolo simulation.">
+     <java classname="edu.jhuapl.nstd.swarm.autopilot.PiccoloSimulator"
+	   fork="yes"
+           classpathref="class.path" >
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+           <sysproperty key="agent.name" value="piccolosimulator"/>
+     </java>
+    </target> 	
+
+	<target name = "gimbalslew" description="Gimbal">
+     <java classname="edu.jhuapl.nstd.tase.TestTASEPointingAngles" 
+	   fork="true"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+   </target>   
+
+	<target name = "bridgeportTest" description="Interface to bridgeport sensor">
+     <java classname="edu.jhuapl.nstd.cbrnPods.Bridgeport.BridgeportOutputDisplay" 
+	   fork="true"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+   </target>   
+
+	<target name = "kmlGenerator" description="KML Generator, change settings in KMLGenerator.java and wacsagentConfig.txt">
+     <java classname="edu.jhuapl.nstd.swarm.kml.KMLGenerator" 
+	   fork="true"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+   </target>   
+
+	<target name = "interfaceTest" description="Test pods interface to sensors">
+     <java classname="edu.jhuapl.nstd.cbrnPods.cbrnPodsInterfaceTest" 
+	   fork="true"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="wacsagent"/>
+     </java>
+   </target>   
+
+
+    <target name = "podtimesync" description="start the WACS agent after waiting for time sync">
+     <java classname="edu.jhuapl.nstd.swarm.wacs.PodTimeSync"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="timesyncdialog"/>
+				<jvmarg value="-XX:+ForceTimeHighResolution"/>
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+     </java>
+    </target> 
+
+    <target name = "gcstimesync" description="start the WACS display after waiting for time sync">
+     <java classname="edu.jhuapl.nstd.swarm.wacs.GCSTimeSync"
+	   fork="yes"
+           maxmemory="1024m"
+           classpathref="class.path" >
+           <sysproperty key="agent.name" value="timesyncdialog"/>
+				<jvmarg value="-XX:+ForceTimeHighResolution"/>
+			  <!--<jvmarg value="-Xrunhprof:cpu=times,monitor=y,thread=y,file=log.txt,depth=4"/>-->
+     </java>
+    </target> 
+
+
+     
+  <target name="createjar" description="Create a jar file to use with other platforms">
+    <echo message="Creating swarm.jar....." />
+    <tstamp/>
+    <javac srcdir="${swarm_home}/src"
+      destdir="${swarm_home}/classes"
+      classpathref="class.path"
+      >
+    </javac>
+   
+    <jar destfile="${swarm_home}/lib/swarm-chicken.jar">
+      <fileset dir="${swarm_home}/classes" includes="**/*.class" />
+    </jar>
+    <delete dir="${swarm_home}/classes/edu"/>
+  </target>
+  
+	<target name="compile" description="Compile">
+	    <echo message="Compiling ....." />
+	    <tstamp/>
+	    <javac srcdir="${swarm_home}/src"
+	      destdir="${swarm_home}/classes"
+	      classpathref="class.path"
+	      >
+	    </javac>
+	</target>
+	 
+    <target name="javadoc">
+    <mkdir dir="${swarm_home}/docs/api"/>
+    <javadoc 
+      packagenames="edu.jhuapl.nstd.swarm.*,extern.*,edu.jhuapl.jlib.*" 
+      sourcepath="${swarm_home}/src;" 
+      destdir="${swarm_home}/docs/api" 
+      author="true" 
+      version="true" 
+      use="true" 
+      splitindex="true" 
+      noindex="false" 
+      windowtitle="swarm" 
+      link="http://java.sun.com/j2se/1.4.2/docs/api/" 
+      private="true"
+      additionalparam="-linksource"
+      doctitle="swarm">
+    </javadoc>
+ </target>
+ 
+  <target name="clean" description="cleans up the directory">
+    <delete dir="${swarm_home}/classes/edu"/>
+    <delete dir="${swarm_home}/classes/extern"/>
+  </target>
+
+</project>
+
+<!-- vim:set ts=2 noai sw=2 expandtab : -->
+

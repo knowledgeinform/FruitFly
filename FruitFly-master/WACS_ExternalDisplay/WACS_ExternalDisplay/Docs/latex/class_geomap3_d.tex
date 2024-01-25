@@ -1,0 +1,570 @@
+\hypertarget{class_geomap3_d}{
+\section{Geomap3D Class Reference}
+\label{class_geomap3_d}\index{Geomap3D@{Geomap3D}}
+}
+
+
+An object to store information about a map so it can be rendered in an OpenGL scene from file.  
+
+
+
+
+{\ttfamily \#include $<$Geomap3D.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_geomap3_d_abf177f3756d3c6f2e90cae43aa90da6d}{Geomap3D} ()
+\begin{DoxyCompactList}\small\item\em Constructor, sets all default values. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a3e19ec0ce16894796a678354942a92cc}{
+\hyperlink{class_geomap3_d_a3e19ec0ce16894796a678354942a92cc}{$\sim$Geomap3D} ()}
+\label{class_geomap3_d_a3e19ec0ce16894796a678354942a92cc}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_geomap3_d_a442d0efaa5a67ad6f6a4784bf60d73a0}{freeImageData} ()
+\begin{DoxyCompactList}\small\item\em Frees memory allocated for image data. Can be called once textures are generated because raw image data is no longer needed. \end{DoxyCompactList}\item 
+bool \hyperlink{class_geomap3_d_a80b950493b60caec36800391c3379da8}{importImage} (const char $\ast$imagefilename, bool $\ast$abortFlag, \hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$dtedData, \hyperlink{class_agent_position}{AgentPosition} $\ast$centerPoint)
+\begin{DoxyCompactList}\small\item\em Loads a map from file and stores necessary data for display. \end{DoxyCompactList}\item 
+void \hyperlink{class_geomap3_d_a69362ad464cf11185924680da764b2d6}{draw} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPoint, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Contains OpenGL commands to render the map into a GL scene in 3D. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_geomap3_d_a31508017c9648a8d45744a4624264cbe}{genTerrainList} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPoint, \hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$dtedData, double estLatToMConv, double estLonToMConv, int \&terrainListSizeOut)
+\begin{DoxyCompactList}\small\item\em Generate call list for displaying map in 3D scene. \end{DoxyCompactList}\item 
+double \hyperlink{class_geomap3_d_adeb26ae3312817dc24a62517abc7eeea}{getWidthMeters} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the width in meters of the loaded image. \end{DoxyCompactList}\item 
+double \hyperlink{class_geomap3_d_ad4ef60d7dd75d3f8f15027919c5cf9e8}{getHeightMeters} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the height in meters of the loaded image. \end{DoxyCompactList}\item 
+double \hyperlink{class_geomap3_d_ae9b9dde88a55b74f4d2c83288891a7ed}{getMinLon} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the Longitude of the left edge of the loaded image. \end{DoxyCompactList}\item 
+double \hyperlink{class_geomap3_d_a068217570a65e7000e36199752988b07}{getMaxLat} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the Latitude of the top edge of the loaded image. \end{DoxyCompactList}\item 
+int \hyperlink{class_geomap3_d_a6790c50adc6f6a1be16971a21adf44d8}{getPercentComplete} ()
+\begin{DoxyCompactList}\small\item\em Return the percent completed of image generation. \end{DoxyCompactList}\item 
+void \hyperlink{class_geomap3_d_a320f51df683d8cdf8fa0b40e311be26b}{setPercComplete} (int newPerc)
+\begin{DoxyCompactList}\small\item\em Set the percent completed of image generation and update the state window. \end{DoxyCompactList}\item 
+unsigned char $\ast$$\ast$ \hyperlink{class_geomap3_d_a1ca74b09b3cf4ae444c00ddfd67e7df1}{getImageData} (int \&\hyperlink{class_geomap3_d_a6eb34415f8711c175c3e2de62fce649f}{imageDepth}, int \&\hyperlink{class_geomap3_d_a727dff35321b9f86360873dea21825d3}{imageX}, int \&\hyperlink{class_geomap3_d_afa780dc6562152adfc5226951aca934d}{imageY})
+\begin{DoxyCompactList}\small\item\em Accessor for the image data. \end{DoxyCompactList}\item 
+int \hyperlink{class_geomap3_d_a9c7ad55aa600986c59ad8d9fc85ce4ab}{getPixelWidth} ()
+\begin{DoxyCompactList}\small\item\em Accessor for width in pixels of loaded image. \end{DoxyCompactList}\item 
+int \hyperlink{class_geomap3_d_ae2fe93c7d664fb0416870e94d5f14c68}{getPixelHeight} ()
+\begin{DoxyCompactList}\small\item\em Accessor for height in pixels of loaded image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_geomap3_d_ae50f7463da500b5d345fd54f4a8afff0}{
+char \hyperlink{class_geomap3_d_ae50f7463da500b5d345fd54f4a8afff0}{drive} \mbox{[}10\mbox{]}}
+\label{class_geomap3_d_ae50f7463da500b5d345fd54f4a8afff0}
+
+\begin{DoxyCompactList}\small\item\em 'Drive' compoenent of filename for loaded map \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_abb959f8d27639abfb99c17a2a8d07d45}{
+char \hyperlink{class_geomap3_d_abb959f8d27639abfb99c17a2a8d07d45}{dir} \mbox{[}100\mbox{]}}
+\label{class_geomap3_d_abb959f8d27639abfb99c17a2a8d07d45}
+
+\begin{DoxyCompactList}\small\item\em 'Directory' compoenent of filename for loaded map \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a51e3d41bd09fbb3116f084d5789a4249}{
+char \hyperlink{class_geomap3_d_a51e3d41bd09fbb3116f084d5789a4249}{fname} \mbox{[}10000\mbox{]}}
+\label{class_geomap3_d_a51e3d41bd09fbb3116f084d5789a4249}
+
+\begin{DoxyCompactList}\small\item\em 'Filename' compoenent of filename for loaded map \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a049d569e836760fd87f1ac5bd1465ad6}{
+char \hyperlink{class_geomap3_d_a049d569e836760fd87f1ac5bd1465ad6}{ext} \mbox{[}10\mbox{]}}
+\label{class_geomap3_d_a049d569e836760fd87f1ac5bd1465ad6}
+
+\begin{DoxyCompactList}\small\item\em 'Extension' compoenent of filename for loaded map \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a8e785ac77abeff79a67041c81438b65a}{
+char \hyperlink{class_geomap3_d_a8e785ac77abeff79a67041c81438b65a}{filename} \mbox{[}10000\mbox{]}}
+\label{class_geomap3_d_a8e785ac77abeff79a67041c81438b65a}
+
+\begin{DoxyCompactList}\small\item\em Full filename of loaded map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_geomap3_d_a40a24e412d6c67aed45b2372e200ae64}{
+\hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$ \hyperlink{class_geomap3_d_a40a24e412d6c67aed45b2372e200ae64}{m\_\-DtedData}}
+\label{class_geomap3_d_a40a24e412d6c67aed45b2372e200ae64}
+
+\begin{DoxyCompactList}\small\item\em DTED data used to generate 3D texturing. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a1870cd15a9a0fb293aba66f247ec46c8}{
+int $\ast$ \hyperlink{class_geomap3_d_a1870cd15a9a0fb293aba66f247ec46c8}{terrainList}}
+\label{class_geomap3_d_a1870cd15a9a0fb293aba66f247ec46c8}
+
+\begin{DoxyCompactList}\small\item\em GL call lists that generates 3D maps. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a3cb512f5d05db284ad6a1fae6f558ec2}{
+int \hyperlink{class_geomap3_d_a3cb512f5d05db284ad6a1fae6f558ec2}{terrainListSize}}
+\label{class_geomap3_d_a3cb512f5d05db284ad6a1fae6f558ec2}
+
+\begin{DoxyCompactList}\small\item\em Size of terrainList. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_ad8e5594579a9081091b84f9f21187f56}{
+GLenum \hyperlink{class_geomap3_d_ad8e5594579a9081091b84f9f21187f56}{mytextype}}
+\label{class_geomap3_d_ad8e5594579a9081091b84f9f21187f56}
+
+\begin{DoxyCompactList}\small\item\em Texture type enumeration. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a4f468efd7573e75d7440885d94d02346}{
+double \hyperlink{class_geomap3_d_a4f468efd7573e75d7440885d94d02346}{img\_\-orig\_\-width}}
+\label{class_geomap3_d_a4f468efd7573e75d7440885d94d02346}
+
+\begin{DoxyCompactList}\small\item\em Original image pixel width. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_aeacbb547df7e4aa7e92a42f8de4734da}{
+double \hyperlink{class_geomap3_d_aeacbb547df7e4aa7e92a42f8de4734da}{img\_\-orig\_\-height}}
+\label{class_geomap3_d_aeacbb547df7e4aa7e92a42f8de4734da}
+
+\begin{DoxyCompactList}\small\item\em Original image pixel height. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_aa619dfa660478df744ee6758287b639c}{
+double \hyperlink{class_geomap3_d_aa619dfa660478df744ee6758287b639c}{widthMeters}}
+\label{class_geomap3_d_aa619dfa660478df744ee6758287b639c}
+
+\begin{DoxyCompactList}\small\item\em Meter width of whole image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_af8759a9593146cd8550d654f3a1fe1e1}{
+double \hyperlink{class_geomap3_d_af8759a9593146cd8550d654f3a1fe1e1}{heightMeters}}
+\label{class_geomap3_d_af8759a9593146cd8550d654f3a1fe1e1}
+
+\begin{DoxyCompactList}\small\item\em Meter heigh of whole image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a1b43e2841f214afdb29fd39589b3da9a}{
+double \hyperlink{class_geomap3_d_a1b43e2841f214afdb29fd39589b3da9a}{resWMeters}}
+\label{class_geomap3_d_a1b43e2841f214afdb29fd39589b3da9a}
+
+\begin{DoxyCompactList}\small\item\em Meters/pixel resolution of image width. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a183f6500c71d309d365883fe68a278b1}{
+double \hyperlink{class_geomap3_d_a183f6500c71d309d365883fe68a278b1}{resHMeters}}
+\label{class_geomap3_d_a183f6500c71d309d365883fe68a278b1}
+
+\begin{DoxyCompactList}\small\item\em Meters/pixel resolution of image height. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a0a7a08affb1044647626df0afe0f2f6d}{
+double \hyperlink{class_geomap3_d_a0a7a08affb1044647626df0afe0f2f6d}{resXMeters}}
+\label{class_geomap3_d_a0a7a08affb1044647626df0afe0f2f6d}
+
+\begin{DoxyCompactList}\small\item\em Meters/pixel resolution of image width. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_af1bf107adae1c2abea9784eec8e2acf6}{
+double \hyperlink{class_geomap3_d_af1bf107adae1c2abea9784eec8e2acf6}{resYMeters}}
+\label{class_geomap3_d_af1bf107adae1c2abea9784eec8e2acf6}
+
+\begin{DoxyCompactList}\small\item\em Meters/pixel resolution of image height. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a854d8be7d39fe6950fb299031a7cd7c9}{
+double \hyperlink{class_geomap3_d_a854d8be7d39fe6950fb299031a7cd7c9}{rotXRadians}}
+\label{class_geomap3_d_a854d8be7d39fe6950fb299031a7cd7c9}
+
+\begin{DoxyCompactList}\small\item\em Rotation about x axis of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_ac15780d65a0e92dec0191d564273986a}{
+double \hyperlink{class_geomap3_d_ac15780d65a0e92dec0191d564273986a}{rotYRadians}}
+\label{class_geomap3_d_ac15780d65a0e92dec0191d564273986a}
+
+\begin{DoxyCompactList}\small\item\em Rotation about y axis of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a733ab983a0de120b6e082f634c199de5}{
+double \hyperlink{class_geomap3_d_a733ab983a0de120b6e082f634c199de5}{m\_\-MinLon}}
+\label{class_geomap3_d_a733ab983a0de120b6e082f634c199de5}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees of left edge of whole image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a7750ad8250d5b0ddf2aa9fcba99ac198}{
+double \hyperlink{class_geomap3_d_a7750ad8250d5b0ddf2aa9fcba99ac198}{m\_\-MaxLat}}
+\label{class_geomap3_d_a7750ad8250d5b0ddf2aa9fcba99ac198}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees of upper edge of whole image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a0d5cabf88eb777c32fb952d0da088aa5}{
+double \hyperlink{class_geomap3_d_a0d5cabf88eb777c32fb952d0da088aa5}{ulX}}
+\label{class_geomap3_d_a0d5cabf88eb777c32fb952d0da088aa5}
+
+\begin{DoxyCompactList}\small\item\em UpperLeft X(longitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a47859f043c3c3d76434402ce098401fc}{
+double \hyperlink{class_geomap3_d_a47859f043c3c3d76434402ce098401fc}{ulY}}
+\label{class_geomap3_d_a47859f043c3c3d76434402ce098401fc}
+
+\begin{DoxyCompactList}\small\item\em UpperLeft X(latitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a6429876f0d9be0dea0bcbe89720c4b64}{
+double \hyperlink{class_geomap3_d_a6429876f0d9be0dea0bcbe89720c4b64}{urX}}
+\label{class_geomap3_d_a6429876f0d9be0dea0bcbe89720c4b64}
+
+\begin{DoxyCompactList}\small\item\em UpperRight X(longitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a265ca0ef3d96aefc12d07bd1e7bebb77}{
+double \hyperlink{class_geomap3_d_a265ca0ef3d96aefc12d07bd1e7bebb77}{urY}}
+\label{class_geomap3_d_a265ca0ef3d96aefc12d07bd1e7bebb77}
+
+\begin{DoxyCompactList}\small\item\em UpperRight X(latitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a31bd48717256e41f9aaabdaabecbedb9}{
+double \hyperlink{class_geomap3_d_a31bd48717256e41f9aaabdaabecbedb9}{llX}}
+\label{class_geomap3_d_a31bd48717256e41f9aaabdaabecbedb9}
+
+\begin{DoxyCompactList}\small\item\em LowerLeft X(longitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_aff7114569371da8b89802fcb689e2427}{
+double \hyperlink{class_geomap3_d_aff7114569371da8b89802fcb689e2427}{llY}}
+\label{class_geomap3_d_aff7114569371da8b89802fcb689e2427}
+
+\begin{DoxyCompactList}\small\item\em LowerLeft X(latitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_ab367354c091837b2085cfbfe6f0d786f}{
+double \hyperlink{class_geomap3_d_ab367354c091837b2085cfbfe6f0d786f}{lrX}}
+\label{class_geomap3_d_ab367354c091837b2085cfbfe6f0d786f}
+
+\begin{DoxyCompactList}\small\item\em LowerRight X(longitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a88f90b24be76aba9f9e0c27b1319a4f9}{
+double \hyperlink{class_geomap3_d_a88f90b24be76aba9f9e0c27b1319a4f9}{lrY}}
+\label{class_geomap3_d_a88f90b24be76aba9f9e0c27b1319a4f9}
+
+\begin{DoxyCompactList}\small\item\em LowerRight X(latitude) coordinate of image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_aa1706b254fce6036442eb3931801acfc}{
+bool \hyperlink{class_geomap3_d_aa1706b254fce6036442eb3931801acfc}{registered}}
+\label{class_geomap3_d_aa1706b254fce6036442eb3931801acfc}
+
+\begin{DoxyCompactList}\small\item\em If true, this map has been successfully registered. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a90e78548f45bc5ba4b8226c60ce7a509}{
+int \hyperlink{class_geomap3_d_a90e78548f45bc5ba4b8226c60ce7a509}{desiredImageBytes}}
+\label{class_geomap3_d_a90e78548f45bc5ba4b8226c60ce7a509}
+
+\begin{DoxyCompactList}\small\item\em Number of image bytes we are expecting from the image. If 3, we are getting RGB images. Otherwise, will assume greyscale. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a1496b2017803422a07b8d42cf6e2b7a8}{
+int \hyperlink{class_geomap3_d_a1496b2017803422a07b8d42cf6e2b7a8}{percComplete}}
+\label{class_geomap3_d_a1496b2017803422a07b8d42cf6e2b7a8}
+
+\begin{DoxyCompactList}\small\item\em If the image is still loading, percent complete generating textures. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a2d7bc75d898265f92a7297c9d9df3a0a}{
+\hyperlink{structtexture_tile}{textureTile} $\ast$$\ast$ \hyperlink{class_geomap3_d_a2d7bc75d898265f92a7297c9d9df3a0a}{myTextures}}
+\label{class_geomap3_d_a2d7bc75d898265f92a7297c9d9df3a0a}
+
+\begin{DoxyCompactList}\small\item\em 2D Array of textures for the loaded mosaic image. If the image is larger than hardware limits, it will be broken down in this object into smaller textures \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a6d080def58991b1a88da8177c065e603}{
+int \hyperlink{class_geomap3_d_a6d080def58991b1a88da8177c065e603}{numXTex}}
+\label{class_geomap3_d_a6d080def58991b1a88da8177c065e603}
+
+\begin{DoxyCompactList}\small\item\em X Dimension of myTextures. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_add0ee5be74c4264bce7004ee910423dd}{
+int \hyperlink{class_geomap3_d_add0ee5be74c4264bce7004ee910423dd}{numYTex}}
+\label{class_geomap3_d_add0ee5be74c4264bce7004ee910423dd}
+
+\begin{DoxyCompactList}\small\item\em Y Dimension of myTextures. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a86b8e301e481c8dabc1feece38f89b0c}{
+bool \hyperlink{class_geomap3_d_a86b8e301e481c8dabc1feece38f89b0c}{smoothShading}}
+\label{class_geomap3_d_a86b8e301e481c8dabc1feece38f89b0c}
+
+\begin{DoxyCompactList}\small\item\em If true, we will smooth shade images. If false, images will be pixelated. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a530e7c3e47a9aa994619d0b90a69bc63}{
+int \hyperlink{class_geomap3_d_a530e7c3e47a9aa994619d0b90a69bc63}{m\_\-MaxTextureSizeW}}
+\label{class_geomap3_d_a530e7c3e47a9aa994619d0b90a69bc63}
+
+\begin{DoxyCompactList}\small\item\em Maximum texture width size desired. Must be 2$^\wedge$n. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_ae2b1965874c89cc4b543b39742f4b5d5}{
+int \hyperlink{class_geomap3_d_ae2b1965874c89cc4b543b39742f4b5d5}{m\_\-MaxTextureSizeH}}
+\label{class_geomap3_d_ae2b1965874c89cc4b543b39742f4b5d5}
+
+\begin{DoxyCompactList}\small\item\em Maximum texture height size desired. Must be 2$^\wedge$n. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_af2812be26b02da4603e32159f199d3de}{
+unsigned char $\ast$$\ast$ \hyperlink{class_geomap3_d_af2812be26b02da4603e32159f199d3de}{imageData}}
+\label{class_geomap3_d_af2812be26b02da4603e32159f199d3de}
+
+\begin{DoxyCompactList}\small\item\em Image data loaded from file. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a6eb34415f8711c175c3e2de62fce649f}{
+int \hyperlink{class_geomap3_d_a6eb34415f8711c175c3e2de62fce649f}{imageDepth}}
+\label{class_geomap3_d_a6eb34415f8711c175c3e2de62fce649f}
+
+\begin{DoxyCompactList}\small\item\em Number of image bytes -\/ 3:RGB, 1:Luminance. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_a727dff35321b9f86360873dea21825d3}{
+int \hyperlink{class_geomap3_d_a727dff35321b9f86360873dea21825d3}{imageX}}
+\label{class_geomap3_d_a727dff35321b9f86360873dea21825d3}
+
+\begin{DoxyCompactList}\small\item\em X pixels in image. \end{DoxyCompactList}\item 
+\hypertarget{class_geomap3_d_afa780dc6562152adfc5226951aca934d}{
+int \hyperlink{class_geomap3_d_afa780dc6562152adfc5226951aca934d}{imageY}}
+\label{class_geomap3_d_afa780dc6562152adfc5226951aca934d}
+
+\begin{DoxyCompactList}\small\item\em Y pixels in image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object to store information about a map so it can be rendered in an OpenGL scene from file. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_geomap3_d_abf177f3756d3c6f2e90cae43aa90da6d}{
+\index{Geomap3D@{Geomap3D}!Geomap3D@{Geomap3D}}
+\index{Geomap3D@{Geomap3D}!Geomap3D@{Geomap3D}}
+\subsubsection[{Geomap3D}]{\setlength{\rightskip}{0pt plus 5cm}Geomap3D::Geomap3D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_abf177f3756d3c6f2e90cae43aa90da6d}
+
+
+Constructor, sets all default values. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_geomap3_d_a69362ad464cf11185924680da764b2d6}{
+\index{Geomap3D@{Geomap3D}!draw@{draw}}
+\index{draw@{draw}!Geomap3D@{Geomap3D}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Geomap3D::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPoint, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a69362ad464cf11185924680da764b2d6}
+
+
+Contains OpenGL commands to render the map into a GL scene in 3D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPoint} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a442d0efaa5a67ad6f6a4784bf60d73a0}{
+\index{Geomap3D@{Geomap3D}!freeImageData@{freeImageData}}
+\index{freeImageData@{freeImageData}!Geomap3D@{Geomap3D}}
+\subsubsection[{freeImageData}]{\setlength{\rightskip}{0pt plus 5cm}void Geomap3D::freeImageData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a442d0efaa5a67ad6f6a4784bf60d73a0}
+
+
+Frees memory allocated for image data. Can be called once textures are generated because raw image data is no longer needed. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a31508017c9648a8d45744a4624264cbe}{
+\index{Geomap3D@{Geomap3D}!genTerrainList@{genTerrainList}}
+\index{genTerrainList@{genTerrainList}!Geomap3D@{Geomap3D}}
+\subsubsection[{genTerrainList}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Geomap3D::genTerrainList (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPoint, }
+\item[{{\bf DTEDObject} $\ast$}]{dtedData, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv, }
+\item[{int \&}]{terrainListSizeOut}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a31508017c9648a8d45744a4624264cbe}
+
+
+Generate call list for displaying map in 3D scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPoint} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em dtedData} & DTED data to use when generating 3D texture overlays of map \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+{\em terrainListSizeOut} & Size of terrainList that was generated after call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of display lists for all textures generated 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_ad4ef60d7dd75d3f8f15027919c5cf9e8}{
+\index{Geomap3D@{Geomap3D}!getHeightMeters@{getHeightMeters}}
+\index{getHeightMeters@{getHeightMeters}!Geomap3D@{Geomap3D}}
+\subsubsection[{getHeightMeters}]{\setlength{\rightskip}{0pt plus 5cm}double Geomap3D::getHeightMeters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_ad4ef60d7dd75d3f8f15027919c5cf9e8}
+
+
+Accessor for the height in meters of the loaded image. 
+
+\begin{DoxyReturn}{Returns}
+height in meters of the loaded image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a1ca74b09b3cf4ae444c00ddfd67e7df1}{
+\index{Geomap3D@{Geomap3D}!getImageData@{getImageData}}
+\index{getImageData@{getImageData}!Geomap3D@{Geomap3D}}
+\subsubsection[{getImageData}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$$\ast$ Geomap3D::getImageData (
+\begin{DoxyParamCaption}
+\item[{int \&}]{imageDepth, }
+\item[{int \&}]{imageX, }
+\item[{int \&}]{imageY}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a1ca74b09b3cf4ae444c00ddfd67e7df1}
+
+
+Accessor for the image data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imageDepth} & After return, will have the number of bytes per pixel \\
+\hline
+{\em imageX} & After return, will have the x-\/dimension of the image \\
+\hline
+{\em imageY} & After return, will have the y-\/dimension of the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Image data 2D array 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a068217570a65e7000e36199752988b07}{
+\index{Geomap3D@{Geomap3D}!getMaxLat@{getMaxLat}}
+\index{getMaxLat@{getMaxLat}!Geomap3D@{Geomap3D}}
+\subsubsection[{getMaxLat}]{\setlength{\rightskip}{0pt plus 5cm}double Geomap3D::getMaxLat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_a068217570a65e7000e36199752988b07}
+
+
+Accessor for the Latitude of the top edge of the loaded image. 
+
+\begin{DoxyReturn}{Returns}
+Maximum latitude decimal degrees of image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_ae9b9dde88a55b74f4d2c83288891a7ed}{
+\index{Geomap3D@{Geomap3D}!getMinLon@{getMinLon}}
+\index{getMinLon@{getMinLon}!Geomap3D@{Geomap3D}}
+\subsubsection[{getMinLon}]{\setlength{\rightskip}{0pt plus 5cm}double Geomap3D::getMinLon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_ae9b9dde88a55b74f4d2c83288891a7ed}
+
+
+Accessor for the Longitude of the left edge of the loaded image. 
+
+\begin{DoxyReturn}{Returns}
+Minimum longitude decimal degrees of image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a6790c50adc6f6a1be16971a21adf44d8}{
+\index{Geomap3D@{Geomap3D}!getPercentComplete@{getPercentComplete}}
+\index{getPercentComplete@{getPercentComplete}!Geomap3D@{Geomap3D}}
+\subsubsection[{getPercentComplete}]{\setlength{\rightskip}{0pt plus 5cm}int Geomap3D::getPercentComplete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_a6790c50adc6f6a1be16971a21adf44d8}
+
+
+Return the percent completed of image generation. 
+
+\begin{DoxyReturn}{Returns}
+Percent completed of image generation 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_ae2fe93c7d664fb0416870e94d5f14c68}{
+\index{Geomap3D@{Geomap3D}!getPixelHeight@{getPixelHeight}}
+\index{getPixelHeight@{getPixelHeight}!Geomap3D@{Geomap3D}}
+\subsubsection[{getPixelHeight}]{\setlength{\rightskip}{0pt plus 5cm}int Geomap3D::getPixelHeight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_ae2fe93c7d664fb0416870e94d5f14c68}
+
+
+Accessor for height in pixels of loaded image. 
+
+\begin{DoxyReturn}{Returns}
+pixel height of image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a9c7ad55aa600986c59ad8d9fc85ce4ab}{
+\index{Geomap3D@{Geomap3D}!getPixelWidth@{getPixelWidth}}
+\index{getPixelWidth@{getPixelWidth}!Geomap3D@{Geomap3D}}
+\subsubsection[{getPixelWidth}]{\setlength{\rightskip}{0pt plus 5cm}int Geomap3D::getPixelWidth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_a9c7ad55aa600986c59ad8d9fc85ce4ab}
+
+
+Accessor for width in pixels of loaded image. 
+
+\begin{DoxyReturn}{Returns}
+pixel width of image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_adeb26ae3312817dc24a62517abc7eeea}{
+\index{Geomap3D@{Geomap3D}!getWidthMeters@{getWidthMeters}}
+\index{getWidthMeters@{getWidthMeters}!Geomap3D@{Geomap3D}}
+\subsubsection[{getWidthMeters}]{\setlength{\rightskip}{0pt plus 5cm}double Geomap3D::getWidthMeters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_geomap3_d_adeb26ae3312817dc24a62517abc7eeea}
+
+
+Accessor for the width in meters of the loaded image. 
+
+\begin{DoxyReturn}{Returns}
+width in meters of the loaded image 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a80b950493b60caec36800391c3379da8}{
+\index{Geomap3D@{Geomap3D}!importImage@{importImage}}
+\index{importImage@{importImage}!Geomap3D@{Geomap3D}}
+\subsubsection[{importImage}]{\setlength{\rightskip}{0pt plus 5cm}bool Geomap3D::importImage (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{imagefilename, }
+\item[{bool $\ast$}]{abortFlag, }
+\item[{{\bf DTEDObject} $\ast$}]{dtedData, }
+\item[{{\bf AgentPosition} $\ast$}]{centerPoint}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a80b950493b60caec36800391c3379da8}
+
+
+Loads a map from file and stores necessary data for display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imagefilename} & Filename of image \\
+\hline
+{\em abortFlag} & Boolean flag to abort generation in process. Would be changed externally \\
+\hline
+{\em dtedData} & DTED data to use when generating 3D texture overlays of map \\
+\hline
+{\em centerPoint} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of load 
+\end{DoxyReturn}
+\hypertarget{class_geomap3_d_a320f51df683d8cdf8fa0b40e311be26b}{
+\index{Geomap3D@{Geomap3D}!setPercComplete@{setPercComplete}}
+\index{setPercComplete@{setPercComplete}!Geomap3D@{Geomap3D}}
+\subsubsection[{setPercComplete}]{\setlength{\rightskip}{0pt plus 5cm}void Geomap3D::setPercComplete (
+\begin{DoxyParamCaption}
+\item[{int}]{newPerc}
+\end{DoxyParamCaption}
+)}}
+\label{class_geomap3_d_a320f51df683d8cdf8fa0b40e311be26b}
+
+
+Set the percent completed of image generation and update the state window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newPerc} & completed of image generation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Geomap3D.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Geomap3D.cpp\end{DoxyCompactItemize}

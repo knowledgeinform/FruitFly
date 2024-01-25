@@ -1,0 +1,57 @@
+{
+  "name": "fruitfly-gcs-gui",
+  "version": "0.0.1",
+  "description": "The Graphical User Interface the Fruitfly Ground Control Station.",
+  "main": "index.js",
+  "build": {
+    "appId": "com.electron.${name}",
+    "copyright": "Copyright (c) 2019 Johns Hopkins University Applied Physics Lab, All Rights Reserved",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "assets/icons/icon.png"
+    },
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": "zip"
+    },
+    "files": [
+      "**/*",
+      "dist/**/*",
+      "backend/*",
+      "package.json",
+      "assets/icons/icon.png",
+      "assets/icons/icon.ico"
+    ],
+    "extraResources": [
+      "server-cert.pem",
+      "server-key.pem",
+      "loc.dat",
+      "id.dat",
+      "tiles/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --mac",
+    "push": "./push.sh"
+  },
+  "author": "Jonathan P. Jones",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^6.0.10",
+    "electron-builder": "^22.1.0",
+    "electron-packager": "^14.1.0"
+  },
+  "dependencies": {
+    "collections": "^5.1.9",
+    "complex.js": "^2.0.11",
+    "npm": "^6.12.1",
+    "plotly.js-dist": "^1.49.5"
+  }
+}

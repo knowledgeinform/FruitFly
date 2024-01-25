@@ -1,0 +1,332 @@
+\hypertarget{class_agent_position}{
+\section{AgentPosition Class Reference}
+\label{class_agent_position}\index{AgentPosition@{AgentPosition}}
+}
+
+
+3D Position and heading object  
+
+
+
+
+{\ttfamily \#include $<$AgentPosition.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_position_aacfae8d984a7b741db32578b32f2d9c3}{
+\hyperlink{class_agent_position_aacfae8d984a7b741db32578b32f2d9c3}{AgentPosition} ()}
+\label{class_agent_position_aacfae8d984a7b741db32578b32f2d9c3}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, does nothing. \end{DoxyCompactList}\item 
+\hyperlink{class_agent_position_a12f6eddef3a762e004144330df957ea8}{AgentPosition} (long msgTimestampMs, double latDecDeg, double lonDecDeg, double altMslM, double headingDecDeg)
+\begin{DoxyCompactList}\small\item\em Constructor, sets variables as specified. \end{DoxyCompactList}\item 
+\hyperlink{class_agent_position_a77d44af3e39f6e1db2f5cc4f7bd810a6}{AgentPosition} (\hyperlink{class_agent_position}{AgentPosition} $\ast$position)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+long long \hyperlink{class_agent_position_a25d0e39d8f89352435db6ecf62374e42}{getMsgTimestampMs} ()
+\begin{DoxyCompactList}\small\item\em Accessor for timestamp milliseconds. \end{DoxyCompactList}\item 
+double \hyperlink{class_agent_position_a742ef33e3cbc77086f3f9f69bfb5b97e}{getLatDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for latitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_agent_position_acd42df2a0ae2377614ca99f1365b355e}{getLonDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for longitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_agent_position_ae36081c9c143a067d7a48ae087d8802a}{getAltMslM} ()
+\begin{DoxyCompactList}\small\item\em Accessor for altitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_agent_position_afce1996922af5675900bde64ef0324f2}{getHeadingDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for heading. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_a8e650f66dca57e7a512b30014fd5da0c}{setMsgTimestampMs} (long long newMsgTimestampMs)
+\begin{DoxyCompactList}\small\item\em Modifier for timestamp milliseconds. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_adec8b5202d0e18d8921d90176d8bb5d2}{setLatDecDeg} (double newLatDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for latitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_a011104fb914dcadfc77232c5c135c519}{setLonDecDeg} (double newLonDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for longitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_a2ef7b229ad422c92580fbad3887180ae}{setAltMslM} (double newAltMslM)
+\begin{DoxyCompactList}\small\item\em Modifier for altitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_position_ad1bcbd0bdb192593d38e6e8301f60110}{setHeadingDecDeg} (double newHeadingDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for heading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_position_ae305c666d8745538a820862feb6b5e93}{
+long long \hyperlink{class_agent_position_ae305c666d8745538a820862feb6b5e93}{m\_\-MsgTimestampMs}}
+\label{class_agent_position_ae305c666d8745538a820862feb6b5e93}
+
+\begin{DoxyCompactList}\small\item\em Timestamp milliseconds. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_aa4ba73aad6458981f285cecba3c3f95b}{
+double \hyperlink{class_agent_position_aa4ba73aad6458981f285cecba3c3f95b}{m\_\-LatDecDeg}}
+\label{class_agent_position_aa4ba73aad6458981f285cecba3c3f95b}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_a6394e165c8f3bcb066f1626392efd3bb}{
+double \hyperlink{class_agent_position_a6394e165c8f3bcb066f1626392efd3bb}{m\_\-LonDecDeg}}
+\label{class_agent_position_a6394e165c8f3bcb066f1626392efd3bb}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_a7b3f412810efbe56208f9395ff312496}{
+double \hyperlink{class_agent_position_a7b3f412810efbe56208f9395ff312496}{m\_\-AltMslM}}
+\label{class_agent_position_a7b3f412810efbe56208f9395ff312496}
+
+\begin{DoxyCompactList}\small\item\em Altitude MSL meters. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_position_a7c0095f72abd28193238332434462294}{
+double \hyperlink{class_agent_position_a7c0095f72abd28193238332434462294}{m\_\-HeadingDecDeg}}
+\label{class_agent_position_a7c0095f72abd28193238332434462294}
+
+\begin{DoxyCompactList}\small\item\em Heading decimal degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+3D Position and heading object 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_agent_position_a12f6eddef3a762e004144330df957ea8}{
+\index{AgentPosition@{AgentPosition}!AgentPosition@{AgentPosition}}
+\index{AgentPosition@{AgentPosition}!AgentPosition@{AgentPosition}}
+\subsubsection[{AgentPosition}]{\setlength{\rightskip}{0pt plus 5cm}AgentPosition::AgentPosition (
+\begin{DoxyParamCaption}
+\item[{long}]{msgTimestampMs, }
+\item[{double}]{latDecDeg, }
+\item[{double}]{lonDecDeg, }
+\item[{double}]{altMslM, }
+\item[{double}]{headingDecDeg}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_position_a12f6eddef3a762e004144330df957ea8}
+
+
+Constructor, sets variables as specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msgTimestampMs} & New timestamp milliseconds value \\
+\hline
+{\em latDecDeg} & New latitude decimal degrees value \\
+\hline
+{\em lonDecDeg} & New longitude decimal degrees value \\
+\hline
+{\em altMslM} & New altitude meters MSL value \\
+\hline
+{\em headingDecDeg} & New heading decimal degrees value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_agent_position_a77d44af3e39f6e1db2f5cc4f7bd810a6}{
+\index{AgentPosition@{AgentPosition}!AgentPosition@{AgentPosition}}
+\index{AgentPosition@{AgentPosition}!AgentPosition@{AgentPosition}}
+\subsubsection[{AgentPosition}]{\setlength{\rightskip}{0pt plus 5cm}AgentPosition::AgentPosition (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{position}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_position_a77d44af3e39f6e1db2f5cc4f7bd810a6}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position to copy settings from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_agent_position_ae36081c9c143a067d7a48ae087d8802a}{
+\index{AgentPosition@{AgentPosition}!getAltMslM@{getAltMslM}}
+\index{getAltMslM@{getAltMslM}!AgentPosition@{AgentPosition}}
+\subsubsection[{getAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}double AgentPosition::getAltMslM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_ae36081c9c143a067d7a48ae087d8802a}
+
+
+Accessor for altitude. 
+
+\begin{DoxyReturn}{Returns}
+Altitude MSL meters 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_afce1996922af5675900bde64ef0324f2}{
+\index{AgentPosition@{AgentPosition}!getHeadingDecDeg@{getHeadingDecDeg}}
+\index{getHeadingDecDeg@{getHeadingDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{getHeadingDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double AgentPosition::getHeadingDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_afce1996922af5675900bde64ef0324f2}
+
+
+Accessor for heading. 
+
+\begin{DoxyReturn}{Returns}
+Heading decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_a742ef33e3cbc77086f3f9f69bfb5b97e}{
+\index{AgentPosition@{AgentPosition}!getLatDecDeg@{getLatDecDeg}}
+\index{getLatDecDeg@{getLatDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{getLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double AgentPosition::getLatDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_a742ef33e3cbc77086f3f9f69bfb5b97e}
+
+
+Accessor for latitude. 
+
+\begin{DoxyReturn}{Returns}
+Latitude decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_acd42df2a0ae2377614ca99f1365b355e}{
+\index{AgentPosition@{AgentPosition}!getLonDecDeg@{getLonDecDeg}}
+\index{getLonDecDeg@{getLonDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{getLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double AgentPosition::getLonDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_acd42df2a0ae2377614ca99f1365b355e}
+
+
+Accessor for longitude. 
+
+\begin{DoxyReturn}{Returns}
+Longitude decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_a25d0e39d8f89352435db6ecf62374e42}{
+\index{AgentPosition@{AgentPosition}!getMsgTimestampMs@{getMsgTimestampMs}}
+\index{getMsgTimestampMs@{getMsgTimestampMs}!AgentPosition@{AgentPosition}}
+\subsubsection[{getMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}long long AgentPosition::getMsgTimestampMs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_a25d0e39d8f89352435db6ecf62374e42}
+
+
+Accessor for timestamp milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+Timestamp milliseconds 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_a2ef7b229ad422c92580fbad3887180ae}{
+\index{AgentPosition@{AgentPosition}!setAltMslM@{setAltMslM}}
+\index{setAltMslM@{setAltMslM}!AgentPosition@{AgentPosition}}
+\subsubsection[{setAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPosition::setAltMslM (
+\begin{DoxyParamCaption}
+\item[{double}]{newAltMslM}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_a2ef7b229ad422c92580fbad3887180ae}
+
+
+Modifier for altitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newAltMslM} & New altitude MSL meters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_ad1bcbd0bdb192593d38e6e8301f60110}{
+\index{AgentPosition@{AgentPosition}!setHeadingDecDeg@{setHeadingDecDeg}}
+\index{setHeadingDecDeg@{setHeadingDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{setHeadingDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPosition::setHeadingDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{newHeadingDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_ad1bcbd0bdb192593d38e6e8301f60110}
+
+
+Modifier for heading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHeadingDecDeg} & New heading decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_adec8b5202d0e18d8921d90176d8bb5d2}{
+\index{AgentPosition@{AgentPosition}!setLatDecDeg@{setLatDecDeg}}
+\index{setLatDecDeg@{setLatDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{setLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPosition::setLatDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{newLatDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_adec8b5202d0e18d8921d90176d8bb5d2}
+
+
+Modifier for latitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLatDecDeg} & New latitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_a011104fb914dcadfc77232c5c135c519}{
+\index{AgentPosition@{AgentPosition}!setLonDecDeg@{setLonDecDeg}}
+\index{setLonDecDeg@{setLonDecDeg}!AgentPosition@{AgentPosition}}
+\subsubsection[{setLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPosition::setLonDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{newLonDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_a011104fb914dcadfc77232c5c135c519}
+
+
+Modifier for longitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLonDecDeg} & New longitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_position_a8e650f66dca57e7a512b30014fd5da0c}{
+\index{AgentPosition@{AgentPosition}!setMsgTimestampMs@{setMsgTimestampMs}}
+\index{setMsgTimestampMs@{setMsgTimestampMs}!AgentPosition@{AgentPosition}}
+\subsubsection[{setMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}void AgentPosition::setMsgTimestampMs (
+\begin{DoxyParamCaption}
+\item[{long long}]{newMsgTimestampMs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_position_a8e650f66dca57e7a512b30014fd5da0c}
+
+
+Modifier for timestamp milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newMsgTimestampMs} & New timestamp milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentPosition.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentPosition.cpp\end{DoxyCompactItemize}

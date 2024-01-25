@@ -1,0 +1,438 @@
+\hypertarget{class_config}{
+\section{Config Class Reference}
+\label{class_config}\index{Config@{Config}}
+}
+
+
+\hyperlink{class_config}{Config} class to store config settings from file and provide access to program. Can also overwrite config file and save new settings.  
+
+
+
+
+{\ttfamily \#include $<$Config.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_config_a543dce59b66475c5108088ee4ce1cdfc}{
+\hyperlink{class_config_a543dce59b66475c5108088ee4ce1cdfc}{$\sim$Config} ()}
+\label{class_config_a543dce59b66475c5108088ee4ce1cdfc}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a37d68b6ee7d75d4c8dce3bf2d1b846c7}{getValue} (string name, string \&value, string defaultValue)
+\begin{DoxyCompactList}\small\item\em Accessor for a config setting, provided as string. \end{DoxyCompactList}\item 
+int \hyperlink{class_config_a98c0ca609e4742569cd85e65d37bd083}{getValueAsInt} (string name, int defaultValue)
+\begin{DoxyCompactList}\small\item\em Accessor for a config setting, provided as integer. \end{DoxyCompactList}\item 
+double \hyperlink{class_config_a0d3270ea3610c65646f966ae4d4e0385}{getValueAsDouble} (string name, double defaultValue)
+\begin{DoxyCompactList}\small\item\em Accessor for a config setting, provided as double. \end{DoxyCompactList}\item 
+float \hyperlink{class_config_afd043b566281c38cd5ff27e722ff413f}{getValueAsFloat} (string name, float defaultValue)
+\begin{DoxyCompactList}\small\item\em Accessor for a config setting, provided as float. \end{DoxyCompactList}\item 
+bool \hyperlink{class_config_ac9303665c6adf9ca848b4fc9828132f6}{getValueAsBool} (string name, bool defaultValue)
+\begin{DoxyCompactList}\small\item\em Accessor for a config setting, provided as boolean. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_ac002a7b310032004b98822d5ce3e5ea5}{setValue} (string name, string value)
+\begin{DoxyCompactList}\small\item\em Modifier for a config setting, set as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a97bd97713242319ce7adf698b1ef0af1}{setValueAsInt} (string name, int value)
+\begin{DoxyCompactList}\small\item\em Modifier for a config setting, set as integer. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_ae8fb7ed4ec7a7b88038cd061469b0c8b}{setValueAsDouble} (string name, double value)
+\begin{DoxyCompactList}\small\item\em Modifier for a config setting, set as double. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_aaa1700e1cc4740270f54a117a4538050}{setValueAsBool} (string name, bool value)
+\begin{DoxyCompactList}\small\item\em Modifier for a config setting, set as boolean. \end{DoxyCompactList}\item 
+\hypertarget{class_config_a58e255bcac080cf9ad2f7a95af7f40db}{
+void \hyperlink{class_config_a58e255bcac080cf9ad2f7a95af7f40db}{writeOutToFile} ()}
+\label{class_config_a58e255bcac080cf9ad2f7a95af7f40db}
+
+\begin{DoxyCompactList}\small\item\em Write config settings back to the file they were read from to save updates for next time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_config}{Config} $\ast$ \hyperlink{class_config_a43d2f3e2a15a143a7ab3159a00657385}{getInstance} (string filename)
+\begin{DoxyCompactList}\small\item\em Static method to retrieve the singleton instance of this class. \end{DoxyCompactList}\item 
+static \hyperlink{class_config}{Config} $\ast$ \hyperlink{class_config_af7d6f89fc34627f15523df0b62acd7e5}{getInstance} ()
+\begin{DoxyCompactList}\small\item\em Static method to retrieve the singleton instance of this class. Will lock if the config object hasn't been created yet, by using the getInstance call specifying the filename to open. \end{DoxyCompactList}\item 
+\hypertarget{class_config_ad7a2b071db637e26aade2f863ce8f648}{
+static void \hyperlink{class_config_ad7a2b071db637e26aade2f863ce8f648}{releaseInstance} ()}
+\label{class_config_ad7a2b071db637e26aade2f863ce8f648}
+
+\begin{DoxyCompactList}\small\item\em Static method to release the singleton object from memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config_a400b10f33c097937034125f52137719b}{Config} (string filename)
+\begin{DoxyCompactList}\small\item\em Constructor, opens config file and reads settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_afbba804f1801b08f9da0738c036ced2d}{getValue} (string name, string \&value)
+\begin{DoxyCompactList}\small\item\em Private accessor for a config setting, provided as string. Will throw exception if token not found. \end{DoxyCompactList}\item 
+bool \hyperlink{class_config_af9b25268be98a69ee7880685a3a3ec5c}{readInConfigValues} (string filename)
+\begin{DoxyCompactList}\small\item\em Read config settings from file. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_ab770b1b9ef902ee717d189f015aea9e1}{printOutConfigValues} (string filename)
+\begin{DoxyCompactList}\small\item\em Write config settings to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_config_af1ed2d021c072989764936c3f9504acc}{
+string \hyperlink{class_config_af1ed2d021c072989764936c3f9504acc}{\_\-configFilename}}
+\label{class_config_af1ed2d021c072989764936c3f9504acc}
+
+\begin{DoxyCompactList}\small\item\em Filename for the config settings. \end{DoxyCompactList}\item 
+\hypertarget{class_config_ac5188c8628ffcddfca6a4e059c1dfdce}{
+vector$<$ string $>$ \hyperlink{class_config_ac5188c8628ffcddfca6a4e059c1dfdce}{\_\-variableNames}}
+\label{class_config_ac5188c8628ffcddfca6a4e059c1dfdce}
+
+\begin{DoxyCompactList}\small\item\em Configuration setting names. \end{DoxyCompactList}\item 
+\hypertarget{class_config_a2486ffad0cc6b7bf9b39a4845aec3f62}{
+vector$<$ string $>$ \hyperlink{class_config_a2486ffad0cc6b7bf9b39a4845aec3f62}{\_\-variableValues}}
+\label{class_config_a2486ffad0cc6b7bf9b39a4845aec3f62}
+
+\begin{DoxyCompactList}\small\item\em Configuration setting values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_config_a4744d7e5d36a855e1ec8bf51e8193fef}{
+static \hyperlink{class_config}{Config} $\ast$ \hyperlink{class_config_a4744d7e5d36a855e1ec8bf51e8193fef}{m\_\-Config} = NULL}
+\label{class_config_a4744d7e5d36a855e1ec8bf51e8193fef}
+
+\begin{DoxyCompactList}\small\item\em Singleton instance of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_config}{Config} class to store config settings from file and provide access to program. Can also overwrite config file and save new settings. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_config_a400b10f33c097937034125f52137719b}{
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}Config::Config (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_config_a400b10f33c097937034125f52137719b}
+
+
+Constructor, opens config file and reads settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename of string to open -\/ absolute path \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_config_a43d2f3e2a15a143a7ab3159a00657385}{
+\index{Config@{Config}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Config@{Config}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Config} $\ast$ Config::getInstance (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_config_a43d2f3e2a15a143a7ab3159a00657385}
+
+
+Static method to retrieve the singleton instance of this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & If the singleton object doesn't exist yet, the filename to open at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance 
+\end{DoxyReturn}
+\hypertarget{class_config_af7d6f89fc34627f15523df0b62acd7e5}{
+\index{Config@{Config}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Config@{Config}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Config} $\ast$ Config::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_config_af7d6f89fc34627f15523df0b62acd7e5}
+
+
+Static method to retrieve the singleton instance of this class. Will lock if the config object hasn't been created yet, by using the getInstance call specifying the filename to open. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance 
+\end{DoxyReturn}
+\hypertarget{class_config_a37d68b6ee7d75d4c8dce3bf2d1b846c7}{
+\index{Config@{Config}!getValue@{getValue}}
+\index{getValue@{getValue}!Config@{Config}}
+\subsubsection[{getValue}]{\setlength{\rightskip}{0pt plus 5cm}void Config::getValue (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{string \&}]{value, }
+\item[{string}]{defaultValue}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_a37d68b6ee7d75d4c8dce3bf2d1b846c7}
+
+
+Accessor for a config setting, provided as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & After return, the desired setting value \\
+\hline
+{\em defaultValue} & Value to use if config value isn't found \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_afbba804f1801b08f9da0738c036ced2d}{
+\index{Config@{Config}!getValue@{getValue}}
+\index{getValue@{getValue}!Config@{Config}}
+\subsubsection[{getValue}]{\setlength{\rightskip}{0pt plus 5cm}void Config::getValue (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_config_afbba804f1801b08f9da0738c036ced2d}
+
+
+Private accessor for a config setting, provided as string. Will throw exception if token not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & After return, the desired setting value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_ac9303665c6adf9ca848b4fc9828132f6}{
+\index{Config@{Config}!getValueAsBool@{getValueAsBool}}
+\index{getValueAsBool@{getValueAsBool}!Config@{Config}}
+\subsubsection[{getValueAsBool}]{\setlength{\rightskip}{0pt plus 5cm}bool Config::getValueAsBool (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{bool}]{defaultValue}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_ac9303665c6adf9ca848b4fc9828132f6}
+
+
+Accessor for a config setting, provided as boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em defaultValue} & Value to use if config value isn't found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The desired setting value, cast to an boolean 
+\end{DoxyReturn}
+\hypertarget{class_config_a0d3270ea3610c65646f966ae4d4e0385}{
+\index{Config@{Config}!getValueAsDouble@{getValueAsDouble}}
+\index{getValueAsDouble@{getValueAsDouble}!Config@{Config}}
+\subsubsection[{getValueAsDouble}]{\setlength{\rightskip}{0pt plus 5cm}double Config::getValueAsDouble (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{double}]{defaultValue}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_a0d3270ea3610c65646f966ae4d4e0385}
+
+
+Accessor for a config setting, provided as double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em defaultValue} & Value to use if config value isn't found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The desired setting value, cast to an double 
+\end{DoxyReturn}
+\hypertarget{class_config_afd043b566281c38cd5ff27e722ff413f}{
+\index{Config@{Config}!getValueAsFloat@{getValueAsFloat}}
+\index{getValueAsFloat@{getValueAsFloat}!Config@{Config}}
+\subsubsection[{getValueAsFloat}]{\setlength{\rightskip}{0pt plus 5cm}float Config::getValueAsFloat (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{float}]{defaultValue}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_afd043b566281c38cd5ff27e722ff413f}
+
+
+Accessor for a config setting, provided as float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em defaultValue} & Value to use if config value isn't found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The desired setting value, cast to an float 
+\end{DoxyReturn}
+\hypertarget{class_config_a98c0ca609e4742569cd85e65d37bd083}{
+\index{Config@{Config}!getValueAsInt@{getValueAsInt}}
+\index{getValueAsInt@{getValueAsInt}!Config@{Config}}
+\subsubsection[{getValueAsInt}]{\setlength{\rightskip}{0pt plus 5cm}int Config::getValueAsInt (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{int}]{defaultValue}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_a98c0ca609e4742569cd85e65d37bd083}
+
+
+Accessor for a config setting, provided as integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em defaultValue} & Value to use if config value isn't found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The desired setting value, cast to an integer 
+\end{DoxyReturn}
+\hypertarget{class_config_ab770b1b9ef902ee717d189f015aea9e1}{
+\index{Config@{Config}!printOutConfigValues@{printOutConfigValues}}
+\index{printOutConfigValues@{printOutConfigValues}!Config@{Config}}
+\subsubsection[{printOutConfigValues}]{\setlength{\rightskip}{0pt plus 5cm}void Config::printOutConfigValues (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_config_ab770b1b9ef902ee717d189f015aea9e1}
+
+
+Write config settings to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File to write to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_af9b25268be98a69ee7880685a3a3ec5c}{
+\index{Config@{Config}!readInConfigValues@{readInConfigValues}}
+\index{readInConfigValues@{readInConfigValues}!Config@{Config}}
+\subsubsection[{readInConfigValues}]{\setlength{\rightskip}{0pt plus 5cm}bool Config::readInConfigValues (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_config_af9b25268be98a69ee7880685a3a3ec5c}
+
+
+Read config settings from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean status of read 
+\end{DoxyReturn}
+\hypertarget{class_config_ac002a7b310032004b98822d5ce3e5ea5}{
+\index{Config@{Config}!setValue@{setValue}}
+\index{setValue@{setValue}!Config@{Config}}
+\subsubsection[{setValue}]{\setlength{\rightskip}{0pt plus 5cm}void Config::setValue (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{string}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_ac002a7b310032004b98822d5ce3e5ea5}
+
+
+Modifier for a config setting, set as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & The value to set for the desired setting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_aaa1700e1cc4740270f54a117a4538050}{
+\index{Config@{Config}!setValueAsBool@{setValueAsBool}}
+\index{setValueAsBool@{setValueAsBool}!Config@{Config}}
+\subsubsection[{setValueAsBool}]{\setlength{\rightskip}{0pt plus 5cm}void Config::setValueAsBool (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_aaa1700e1cc4740270f54a117a4538050}
+
+
+Modifier for a config setting, set as boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & The value to set for the desired setting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_ae8fb7ed4ec7a7b88038cd061469b0c8b}{
+\index{Config@{Config}!setValueAsDouble@{setValueAsDouble}}
+\index{setValueAsDouble@{setValueAsDouble}!Config@{Config}}
+\subsubsection[{setValueAsDouble}]{\setlength{\rightskip}{0pt plus 5cm}void Config::setValueAsDouble (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_ae8fb7ed4ec7a7b88038cd061469b0c8b}
+
+
+Modifier for a config setting, set as double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & The value to set for the desired setting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_config_a97bd97713242319ce7adf698b1ef0af1}{
+\index{Config@{Config}!setValueAsInt@{setValueAsInt}}
+\index{setValueAsInt@{setValueAsInt}!Config@{Config}}
+\subsubsection[{setValueAsInt}]{\setlength{\rightskip}{0pt plus 5cm}void Config::setValueAsInt (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{class_config_a97bd97713242319ce7adf698b1ef0af1}
+
+
+Modifier for a config setting, set as integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of config setting \\
+\hline
+{\em value} & The value to set for the desired setting \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Config.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Config.cpp\end{DoxyCompactItemize}

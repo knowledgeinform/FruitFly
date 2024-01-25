@@ -1,0 +1,63 @@
+{
+  "tiles":
+  [
+    {
+      "PathName": "0.png",
+      "width": 1664,
+      "height": 801,
+      "TLcorner": {
+        "lat": 39.166969,
+        "lng": -76.910337
+      },
+      "BRcorner": {
+        "lat": 39.160079,
+        "lng": -76.892523
+      }
+    },
+    {
+      "PathName": "1.jpg",
+      "width": 1337,
+      "height": 899,
+      "TLcorner": {
+        "lat": 39.475609,
+        "lng": -76.192185
+      },
+      "BRcorner": {
+        "lat": 39.452289,
+        "lng": -76.147221
+      }
+    },
+    {
+      "PathName": "2.png",
+      "width": 1758,
+      "height": 845,
+      "TLcorner": {
+        "lat": 39.480555,
+        "lng": -76.208175
+      },
+      "BRcorner": {
+        "lat": 39.453383,
+        "lng": -76.134511
+      }
+    },
+    {
+      "PathName": "3.png",
+      "width": 1760,
+      "height": 839,
+      "TLcorner": {
+        "lat": 39.279336,
+        "lng": -76.126987
+      },
+      "BRcorner": {
+        "lat": 39.267969,
+        "lng": -76.096222
+      }
+    }
+  ],
+  "error":
+  {
+    "PathName": "error.png",
+    "width": 2212,
+    "height": 328
+  }
+}

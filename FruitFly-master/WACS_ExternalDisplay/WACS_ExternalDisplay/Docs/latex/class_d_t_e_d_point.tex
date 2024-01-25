@@ -1,0 +1,135 @@
+\hypertarget{class_d_t_e_d_point}{
+\section{DTEDPoint Class Reference}
+\label{class_d_t_e_d_point}\index{DTEDPoint@{DTEDPoint}}
+}
+
+
+A \hyperlink{class_d_t_e_d_point}{DTEDPoint} object holds geolocation information about a specific point, including lat/lon and altitude.  
+
+
+
+
+{\ttfamily \#include $<$DTEDPoint.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_t_e_d_point_aa9c7dedffb89464ee39dd5f10121e5e8}{DTEDPoint} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, no location set. \end{DoxyCompactList}\item 
+\hyperlink{class_d_t_e_d_point_abf7809035af5944f52f00d6fb1424b28}{DTEDPoint} (double newLat, double newLon, double newZ)
+\begin{DoxyCompactList}\small\item\em Constructor with lat/lon/optional z inputs for this point. Calls calcXY and sets UTM locations for this point. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_t_e_d_point_a63d5c739997c463bfbe3b2106fcc582d}{setLatLonZ} (double newLat, double newLon, double newZ)
+\begin{DoxyCompactList}\small\item\em Establishes values position from lat/lon/optional z inputs for this point. Sets visibility to false. Calls calcXY and sets UTM locations for this point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_t_e_d_point_a237ae93e1d0a6c7e9b598f1ffd192ec1}{
+double \hyperlink{class_d_t_e_d_point_a237ae93e1d0a6c7e9b598f1ffd192ec1}{lat}}
+\label{class_d_t_e_d_point_a237ae93e1d0a6c7e9b598f1ffd192ec1}
+
+\begin{DoxyCompactList}\small\item\em Decimal latitude of this point, degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_point_a35cdbc1f455740bb7320255f85e44cf9}{
+double \hyperlink{class_d_t_e_d_point_a35cdbc1f455740bb7320255f85e44cf9}{lon}}
+\label{class_d_t_e_d_point_a35cdbc1f455740bb7320255f85e44cf9}
+
+\begin{DoxyCompactList}\small\item\em Decimal longitude of this point, degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_point_ae1e4f43de7a7a01597012d707968ac45}{
+double \hyperlink{class_d_t_e_d_point_ae1e4f43de7a7a01597012d707968ac45}{z}}
+\label{class_d_t_e_d_point_ae1e4f43de7a7a01597012d707968ac45}
+
+\begin{DoxyCompactList}\small\item\em Height above sea level of this point, meters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_d_t_e_d_point}{DTEDPoint} object holds geolocation information about a specific point, including lat/lon and altitude. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+Copyright (c) 2008 Johns Hopkins University 
+
+Applied Physics Laboratory. All Rights Reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_t_e_d_point_aa9c7dedffb89464ee39dd5f10121e5e8}{
+\index{DTEDPoint@{DTEDPoint}!DTEDPoint@{DTEDPoint}}
+\index{DTEDPoint@{DTEDPoint}!DTEDPoint@{DTEDPoint}}
+\subsubsection[{DTEDPoint}]{\setlength{\rightskip}{0pt plus 5cm}DTEDPoint::DTEDPoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_point_aa9c7dedffb89464ee39dd5f10121e5e8}
+
+
+Default constructor, no location set. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_point_abf7809035af5944f52f00d6fb1424b28}{
+\index{DTEDPoint@{DTEDPoint}!DTEDPoint@{DTEDPoint}}
+\index{DTEDPoint@{DTEDPoint}!DTEDPoint@{DTEDPoint}}
+\subsubsection[{DTEDPoint}]{\setlength{\rightskip}{0pt plus 5cm}DTEDPoint::DTEDPoint (
+\begin{DoxyParamCaption}
+\item[{double}]{newLat, }
+\item[{double}]{newLon, }
+\item[{double}]{newZ}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_point_abf7809035af5944f52f00d6fb1424b28}
+
+
+Constructor with lat/lon/optional z inputs for this point. Calls calcXY and sets UTM locations for this point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLat} & -\/ The latitude value to set this point at, specified between -\/90 and 90 degrees \\
+\hline
+{\em newLon} & -\/ The longitude value to set this point at, specified bewteen -\/180 and 180 degrees \\
+\hline
+{\em newZ} & -\/ The ASL height to set this point at, specified in meters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_t_e_d_point_a63d5c739997c463bfbe3b2106fcc582d}{
+\index{DTEDPoint@{DTEDPoint}!setLatLonZ@{setLatLonZ}}
+\index{setLatLonZ@{setLatLonZ}!DTEDPoint@{DTEDPoint}}
+\subsubsection[{setLatLonZ}]{\setlength{\rightskip}{0pt plus 5cm}void DTEDPoint::setLatLonZ (
+\begin{DoxyParamCaption}
+\item[{double}]{newLat, }
+\item[{double}]{newLon, }
+\item[{double}]{newZ}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_point_a63d5c739997c463bfbe3b2106fcc582d}
+
+
+Establishes values position from lat/lon/optional z inputs for this point. Sets visibility to false. Calls calcXY and sets UTM locations for this point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLat} & -\/ The latitude value to set this point at, specified between -\/90 and 90 degrees \\
+\hline
+{\em newLon} & -\/ The longitude value to set this point at, specified bewteen -\/180 and 180 degrees \\
+\hline
+{\em newZ} & -\/ The ASL height to set this point at, specified in meters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDPoint.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDPoint.cpp\end{DoxyCompactItemize}

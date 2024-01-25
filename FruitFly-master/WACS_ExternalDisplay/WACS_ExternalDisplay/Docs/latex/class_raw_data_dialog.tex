@@ -1,0 +1,299 @@
+\hypertarget{class_raw_data_dialog}{
+\section{RawDataDialog Class Reference}
+\label{class_raw_data_dialog}\index{RawDataDialog@{RawDataDialog}}
+}
+
+
+Dialog showing raw data from data objects in static labels.  
+
+
+
+
+{\ttfamily \#include $<$RawDataDialog.h$>$}
+
+Inheritance diagram for RawDataDialog:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_raw_data_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_raw_data_dialog_aa2c8040198fc5b94e6221295ce4b0652}{RawDataDialog} (HINSTANCE newHinst, HWND newhParent, \hyperlink{class_belief_collection}{BeliefCollection} $\ast$beliefCollection)
+\begin{DoxyCompactList}\small\item\em Constructor, essentially does nothing. \end{DoxyCompactList}\item 
+\hypertarget{class_raw_data_dialog_a2d30841a65fb054dc32aef2ca3b16ce6}{
+\hyperlink{class_raw_data_dialog_a2d30841a65fb054dc32aef2ca3b16ce6}{$\sim$RawDataDialog} ()}
+\label{class_raw_data_dialog_a2d30841a65fb054dc32aef2ca3b16ce6}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}{show} ()
+\begin{DoxyCompactList}\small\item\em Function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. \end{DoxyCompactList}\item 
+LRESULT \hyperlink{class_raw_data_dialog_a7a2e12f99118f2ba69bee51c07e04631}{processMessage} (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Non-\/static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. \end{DoxyCompactList}\item 
+bool \hyperlink{class_raw_data_dialog_ab118e3a9b3e53a9ddf48f0876e1a7be3}{containsWindow} (HWND hwnd)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified window is in this dialog. Used to determine how to handle messages. \end{DoxyCompactList}\item 
+\hyperlink{struct_data_rows}{DataRows} $\ast$ \hyperlink{class_raw_data_dialog_ac9bc6efc5251ffad3179f0a912eb9042}{getDataRows} ()
+\begin{DoxyCompactList}\small\item\em Accessor for \hyperlink{struct_data_rows}{DataRows} object that stores all required information to update labels with raw data from data objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static LRESULT CALLBACK \hyperlink{class_raw_data_dialog_a3f6714a823c63a968366ddefc521daab}{processMsg} (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_raw_data_dialog_a3dbd1f79d05c217dfcd55a795a8b8423}{initDataRows} ()
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{struct_data_rows}{DataRows} object for this window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_raw_data_dialog_a82f90333dea07918db272ec85e947f28}{
+int \hyperlink{class_raw_data_dialog_a82f90333dea07918db272ec85e947f28}{offsetXFromCenter}}
+\label{class_raw_data_dialog_a82f90333dea07918db272ec85e947f28}
+
+\begin{DoxyCompactList}\small\item\em Amount from the center of the parent window to offset this window so it looks centered. \end{DoxyCompactList}\item 
+\hypertarget{class_raw_data_dialog_a42980546af89335a7511499e522b9453}{
+\hyperlink{struct_data_rows}{DataRows} $\ast$ \hyperlink{class_raw_data_dialog_a42980546af89335a7511499e522b9453}{m\_\-DataRows}}
+\label{class_raw_data_dialog_a42980546af89335a7511499e522b9453}
+
+\begin{DoxyCompactList}\small\item\em Boxes to show raw data. \end{DoxyCompactList}\item 
+\hypertarget{class_raw_data_dialog_a9f51dabc099b54fd525a3512d2c63ed6}{
+\hyperlink{class_belief_collection}{BeliefCollection} $\ast$ \hyperlink{class_raw_data_dialog_a9f51dabc099b54fd525a3512d2c63ed6}{m\_\-BeliefCollection}}
+\label{class_raw_data_dialog_a9f51dabc099b54fd525a3512d2c63ed6}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_belief_collection}{BeliefCollection} use to update boxes with raw data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_raw_data_dialog_a5c6e246e8b5fa5cbb99fa4ea50b59604}{
+static const int \hyperlink{class_raw_data_dialog_a5c6e246e8b5fa5cbb99fa4ea50b59604}{m\_\-BeliefNamesSize} = 8}
+\label{class_raw_data_dialog_a5c6e246e8b5fa5cbb99fa4ea50b59604}
+
+\begin{DoxyCompactList}\small\item\em Number of belief names in the drop-\/down combo box for belief selection. \end{DoxyCompactList}\item 
+static char \hyperlink{class_raw_data_dialog_aadc315770f6c61cc4d00058f876dcd6c}{m\_\-BeliefNames} \mbox{[}\hyperlink{class_raw_data_dialog_a5c6e246e8b5fa5cbb99fa4ea50b59604}{m\_\-BeliefNamesSize}\mbox{]}\mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Names of beliefs that can be chosen for display of raw data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dialog showing raw data from data objects in static labels. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_raw_data_dialog_aa2c8040198fc5b94e6221295ce4b0652}{
+\index{RawDataDialog@{RawDataDialog}!RawDataDialog@{RawDataDialog}}
+\index{RawDataDialog@{RawDataDialog}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{RawDataDialog}]{\setlength{\rightskip}{0pt plus 5cm}RawDataDialog::RawDataDialog (
+\begin{DoxyParamCaption}
+\item[{HINSTANCE}]{newHinst, }
+\item[{HWND}]{newhParent, }
+\item[{{\bf BeliefCollection} $\ast$}]{beliefCollection}
+\end{DoxyParamCaption}
+)}}
+\label{class_raw_data_dialog_aa2c8040198fc5b94e6221295ce4b0652}
+
+
+Constructor, essentially does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHinst} & Instance of application \\
+\hline
+{\em newhParent} & Parent window \\
+\hline
+{\em beliefCollection} & \hyperlink{class_belief_collection}{BeliefCollection} that will be used to update the \hyperlink{class_raw_data_dialog}{RawDataDialog} values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_raw_data_dialog_ab118e3a9b3e53a9ddf48f0876e1a7be3}{
+\index{RawDataDialog@{RawDataDialog}!containsWindow@{containsWindow}}
+\index{containsWindow@{containsWindow}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{containsWindow}]{\setlength{\rightskip}{0pt plus 5cm}bool RawDataDialog::containsWindow (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hwnd}
+\end{DoxyParamCaption}
+)}}
+\label{class_raw_data_dialog_ab118e3a9b3e53a9ddf48f0876e1a7be3}
+
+
+Returns whether the specified window is in this dialog. Used to determine how to handle messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hwnd} & Window to check for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ True if this dialog contiains the window, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_raw_data_dialog_ac9bc6efc5251ffad3179f0a912eb9042}{
+\index{RawDataDialog@{RawDataDialog}!getDataRows@{getDataRows}}
+\index{getDataRows@{getDataRows}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{getDataRows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DataRows}$\ast$ RawDataDialog::getDataRows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_raw_data_dialog_ac9bc6efc5251ffad3179f0a912eb9042}
+
+
+Accessor for \hyperlink{struct_data_rows}{DataRows} object that stores all required information to update labels with raw data from data objects. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_data_rows}{DataRows} object for this \hyperlink{class_raw_data_dialog}{RawDataDialog} window 
+\end{DoxyReturn}
+\hypertarget{class_raw_data_dialog_a3dbd1f79d05c217dfcd55a795a8b8423}{
+\index{RawDataDialog@{RawDataDialog}!initDataRows@{initDataRows}}
+\index{initDataRows@{initDataRows}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{initDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void RawDataDialog::initDataRows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_raw_data_dialog_a3dbd1f79d05c217dfcd55a795a8b8423}
+
+
+Create \hyperlink{struct_data_rows}{DataRows} object for this window. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_raw_data_dialog_a7a2e12f99118f2ba69bee51c07e04631}{
+\index{RawDataDialog@{RawDataDialog}!processMessage@{processMessage}}
+\index{processMessage@{processMessage}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{processMessage}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT RawDataDialog::processMessage (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hDlg, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_raw_data_dialog_a7a2e12f99118f2ba69bee51c07e04631}
+
+
+Non-\/static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDlg} & HWND parameter for the object to receive the message \\
+\hline
+{\em message} & command to be processed \\
+\hline
+{\em wParam} & WPARAM for message \\
+\hline
+{\em lParam} & LPARAM for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LRESULT -\/ status of message processing 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_dialog_base_aac84de8c20f2b47ee3de73749922e880}{DialogBase}.
+
+\hypertarget{class_raw_data_dialog_a3f6714a823c63a968366ddefc521daab}{
+\index{RawDataDialog@{RawDataDialog}!processMsg@{processMsg}}
+\index{processMsg@{processMsg}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{processMsg}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK RawDataDialog::processMsg (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hDlg, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_raw_data_dialog_a3f6714a823c63a968366ddefc521daab}
+
+
+Static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDlg} & HWND parameter for the object to receive the message \\
+\hline
+{\em message} & command to be processed \\
+\hline
+{\em wParam} & WPARAM for message \\
+\hline
+{\em lParam} & LPARAM for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LRESULT -\/ status of message processing 
+\end{DoxyReturn}
+\hypertarget{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}{
+\index{RawDataDialog@{RawDataDialog}!show@{show}}
+\index{show@{show}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}bool RawDataDialog::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}
+
+
+Function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of operation to show dialog box 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{DialogBase}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_raw_data_dialog_aadc315770f6c61cc4d00058f876dcd6c}{
+\index{RawDataDialog@{RawDataDialog}!m\_\-BeliefNames@{m\_\-BeliefNames}}
+\index{m\_\-BeliefNames@{m\_\-BeliefNames}!RawDataDialog@{RawDataDialog}}
+\subsubsection[{m\_\-BeliefNames}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf RawDataDialog::m\_\-BeliefNames}\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_raw_data_dialog_aadc315770f6c61cc4d00058f876dcd6c}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+                                                                                                        (
+      "AgentPositionBelief\0"),
+                                                                                                        (
+      "CircularOrbitBelief\0"),
+                                                                                                        (
+      "ParticleDetectionBelief\0"),
+                                                                                                        (
+      "AnacondaDetectionBelief\0"),
+                                                                                                        (
+      "GCSPositionBelief\0"),
+                                                                                                        (
+      "PiccoloTelemetryBelief\0"),
+                                                                                                        (
+      "AgentModeBelief\0"),
+                                                                                                        (
+      "CloudDetectionBelief\0"),
+                                                                                                        }
+      
+\end{DoxyCode}
+
+
+Names of beliefs that can be chosen for display of raw data. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/RawDataDialog.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/RawDataDialog.cpp\end{DoxyCompactItemize}

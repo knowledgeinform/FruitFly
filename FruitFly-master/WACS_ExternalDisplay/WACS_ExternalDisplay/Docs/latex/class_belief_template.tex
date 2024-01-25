@@ -1,0 +1,122 @@
+\hypertarget{class_belief_template}{
+\section{BeliefTemplate Class Reference}
+\label{class_belief_template}\index{BeliefTemplate@{BeliefTemplate}}
+}
+
+
+Base class for all WACS Swarm belief objects. Stores last updated timestamp and abstracts functions for display to OpenGL scene and \hyperlink{class_raw_data_dialog}{RawDataDialog} window.  
+
+
+
+
+{\ttfamily \#include $<$BeliefTemplate.h$>$}
+
+Inheritance diagram for BeliefTemplate:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.379310cm]{class_belief_template}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_belief_template_af876948ec587cf5d056d06e57d02b414}{
+\hyperlink{class_belief_template_af876948ec587cf5d056d06e57d02b414}{BeliefTemplate} ()}
+\label{class_belief_template_af876948ec587cf5d056d06e57d02b414}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, sets last updated time. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_template_aabcd8cc04ac8a5e7dab0060481461fc8}{
+virtual \hyperlink{class_belief_template_aabcd8cc04ac8a5e7dab0060481461fc8}{$\sim$BeliefTemplate} ()}
+\label{class_belief_template_aabcd8cc04ac8a5e7dab0060481461fc8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)=0
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. \hyperlink{class_belief_template}{BeliefTemplate} Class must be extended and this function must be implemented by child class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)=0
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \hyperlink{class_belief_template}{BeliefTemplate} Class must be extended and this function must be implemented by child class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_belief_template_ab59f2b9cfe51aecb1fe9389301f2729e}{
+long long \hyperlink{class_belief_template_ab59f2b9cfe51aecb1fe9389301f2729e}{m\_\-LastUpdatedSec}}
+\label{class_belief_template_ab59f2b9cfe51aecb1fe9389301f2729e}
+
+\begin{DoxyCompactList}\small\item\em Timestamp seconds when this belief was last updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all WACS Swarm belief objects. Stores last updated timestamp and abstracts functions for display to OpenGL scene and \hyperlink{class_raw_data_dialog}{RawDataDialog} window. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{
+\index{BeliefTemplate@{BeliefTemplate}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!BeliefTemplate@{BeliefTemplate}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}virtual void BeliefTemplate::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}
+
+
+Paint the contents of this belief in an OpenGL scene. \hyperlink{class_belief_template}{BeliefTemplate} Class must be extended and this function must be implemented by child class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_agent_mode_belief_affc67b173b75fcb310b2c344ee64b6ee}{AgentModeBelief}, \hyperlink{class_agent_position_belief_a7022bf540e04f7f830af8c331a051c64}{AgentPositionBelief}, \hyperlink{class_anaconda_detection_belief_ad708581488abdb968a9412d955ca9b8f}{AnacondaDetectionBelief}, \hyperlink{class_circular_orbit_belief_a24aa41df680f5ed50114672aa02d1680}{CircularOrbitBelief}, \hyperlink{class_cloud_detection_belief_ae726016b9e1146d02fb242a04989a944}{CloudDetectionBelief}, \hyperlink{class_g_c_s_agent_position_belief_a148cf93f40d6a0517c4cd02f714b443a}{GCSAgentPositionBelief}, \hyperlink{class_particle_detection_belief_a72b09756119c7c94db4fcb6db5534104}{ParticleDetectionBelief}, \hyperlink{class_piccolo_telemetry_belief_af5fbaed4222906597b078eb5e97b35a4}{PiccoloTelemetryBelief}, and \hyperlink{class_shadow_agent_position_belief_a93612c99d78d18a09a50816ddd86e715}{ShadowAgentPositionBelief}.
+
+\hypertarget{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{
+\index{BeliefTemplate@{BeliefTemplate}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!BeliefTemplate@{BeliefTemplate}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}virtual void BeliefTemplate::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \hyperlink{class_belief_template}{BeliefTemplate} Class must be extended and this function must be implemented by child class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_agent_mode_belief_a96d89f34b7d27bb5e90b4c5e78cc0c38}{AgentModeBelief}, \hyperlink{class_agent_position_belief_a881a657a0261fbbb2086365a522e7b8d}{AgentPositionBelief}, \hyperlink{class_anaconda_detection_belief_a5e9699b6543d9cc1cd4fbfbecb6ea8f9}{AnacondaDetectionBelief}, \hyperlink{class_circular_orbit_belief_a06a40bc8e475f6f443edcfb56713860d}{CircularOrbitBelief}, \hyperlink{class_cloud_detection_belief_aca53d51cdf1df9ff57bc0565967c78d4}{CloudDetectionBelief}, \hyperlink{class_particle_detection_belief_a16879c7ebd0a461297bc6064e0562b7a}{ParticleDetectionBelief}, and \hyperlink{class_piccolo_telemetry_belief_a64a65f46bda72414e6d1760e4117d519}{PiccoloTelemetryBelief}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/BeliefTemplate.h\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+cbWatch0=tokenBuffer
+cbWatch1=1+1
+cbWatch2=c
+cbWatch3=true
+cbWatch4=tokenIndex
+cbWatch5=tokenBuffer[tokenIndex]
+cbWatch6=tokenSize

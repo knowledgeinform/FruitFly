@@ -1,0 +1,554 @@
+\hypertarget{class_belief_collection}{
+\section{BeliefCollection Class Reference}
+\label{class_belief_collection}\index{BeliefCollection@{BeliefCollection}}
+}
+
+
+Collection of WACS Swarm belief objects. This stores all current beliefs and provides access to them.  
+
+
+
+
+{\ttfamily \#include $<$BeliefCollection.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_belief_collection_af5681322d742e00dd490b6490c992da7}{
+\hyperlink{class_belief_collection_af5681322d742e00dd490b6490c992da7}{BeliefCollection} ()}
+\label{class_belief_collection_af5681322d742e00dd490b6490c992da7}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. Create list of beliefs and initialize lock object. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a38339ed9c83711159fc29b943362c3d3}{
+\hyperlink{class_belief_collection_a38339ed9c83711159fc29b943362c3d3}{$\sim$BeliefCollection} ()}
+\label{class_belief_collection_a38339ed9c83711159fc29b943362c3d3}
+
+\begin{DoxyCompactList}\small\item\em Destructor. Deletes all beliefs and static display objects. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_ae4bab3f004643dcc070ff406aef46440}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv, bool drawAgentPositionBelief, bool drawGCSAgentPositionBelief, bool drawCircularOrbitBelief, bool drawBiopodDetectionBelief, bool anacondaDetectionBelief, bool uavDisplayFromPicTel)
+\begin{DoxyCompactList}\small\item\em Draw beliefs in OpenGL scene according to boolean flags. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a13bccfcb55503a3b8b666010646cf164}{updateAgentPositionBelief} (\hyperlink{class_agent_position_belief}{AgentPositionBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current UAV \hyperlink{class_agent_position_belief}{AgentPositionBelief} object by merging newBelief positions with current history. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_aa940d5ed600beb03870764ed21ad1769}{updateGCSPositionBelief} (\hyperlink{class_agent_position_belief}{AgentPositionBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current GCS \hyperlink{class_agent_position_belief}{AgentPositionBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a610eedcd4f6bf5d2a1a81067525fb82f}{updateCircularOrbitBelief} (\hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a4bd13ec5fd72f788daece4596e1330eb}{updatePiccoloTelemetryBelief} (\hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_aaa73023c8be3ca9863e5b72869dacd19}{updateParticleDetectionBelief} (\hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} $\ast$newDetection)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a5a3643b52ba4df67515bcac030c78319}{updateAnacondaDetectionBelief} (\hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a73c5a4b3869372dffbf57fc3f570f57c}{updateAgentModeBelief} (\hyperlink{class_agent_mode_belief}{AgentModeBelief} $\ast$newBelief)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_agent_mode_belief}{AgentModeBelief} object by replacing it with newBelief. \end{DoxyCompactList}\item 
+bool \hyperlink{class_belief_collection_a6a063241841e74bc9e2caaff3a18b763}{updateCloudDetectionBelief} (\hyperlink{class_cloud_detection}{CloudDetection} $\ast$newDetection)
+\begin{DoxyCompactList}\small\item\em Update current \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} object by adding newDetection to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a22d8a05b224e5a11430d81f332c9e4c4}{setDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{struct_data_rows}{DataRows} object for the belief collection. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a702d3d6d5ecf17712b45b57d6fe14a60}{displayAgentPositionBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display UAV \hyperlink{class_agent_position_belief}{AgentPositionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a14b41ac0a8636586e573659915a24f14}{displayGCSPositionBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display GCS \hyperlink{class_agent_position_belief}{AgentPositionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a8d8325ef7a988883be00040cab1f34ff}{displayCircularOrbitBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a370765050c596aa8c7eab1930b93f904}{displayPiccoloTelemetryBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a9a4e94a10f524006fe1157e5681145d0}{displayParticleDetectionBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a2373bd445c1f9067bb96d1d97f166b88}{displayAnacondaDetectionBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_ad80583536515650193239aa6ab97d5b5}{displayAgentModeBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_agent_mode_belief}{AgentModeBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_ab6df8f670bc26729bb66665ed78e68af}{displayCloudDetectionBeliefRawData} ()
+\begin{DoxyCompactList}\small\item\em Display \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a5792edcd8a6a2ed43336c0f940645dcf}{clearDisplayRawData} ()
+\begin{DoxyCompactList}\small\item\em Clear all rows in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+void \hyperlink{class_belief_collection_a5ff35db55afff638f0cf605d3e6927ca}{updateRawDataDialog} ()
+\begin{DoxyCompactList}\small\item\em Display the selected belief's data \mbox{[}m\_\-RawDataDisplayOpt\mbox{]} in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_belief_collection_a221dbe1b2408a8b32145e058de0bed4d}{
+\hyperlink{class_belief_template}{BeliefTemplate} $\ast$$\ast$ \hyperlink{class_belief_collection_a221dbe1b2408a8b32145e058de0bed4d}{m\_\-CurrentBeliefs}}
+\label{class_belief_collection_a221dbe1b2408a8b32145e058de0bed4d}
+
+\begin{DoxyCompactList}\small\item\em List of current beliefs of each type. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a41ac5b2e1130fa3ca5f78c2b4bdda8ba}{
+CRITICAL\_\-SECTION \hyperlink{class_belief_collection_a41ac5b2e1130fa3ca5f78c2b4bdda8ba}{m\_\-CurrentBeliefsLock}}
+\label{class_belief_collection_a41ac5b2e1130fa3ca5f78c2b4bdda8ba}
+
+\begin{DoxyCompactList}\small\item\em Lock object for current beliefs array. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a4553ea7587fb23189b7f3c2d2e4d7fc4}{
+int \hyperlink{class_belief_collection_a4553ea7587fb23189b7f3c2d2e4d7fc4}{m\_\-RawDataDisplayOpt}}
+\label{class_belief_collection_a4553ea7587fb23189b7f3c2d2e4d7fc4}
+
+\begin{DoxyCompactList}\small\item\em Index of the belief to be displayed in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a5ba1bd050a1090c81963286c1c981e46}{
+\hyperlink{struct_data_rows}{DataRows} $\ast$ \hyperlink{class_belief_collection_a5ba1bd050a1090c81963286c1c981e46}{m\_\-DataRows}}
+\label{class_belief_collection_a5ba1bd050a1090c81963286c1c981e46}
+
+\begin{DoxyCompactList}\small\item\em Stores label boxes of \hyperlink{class_raw_data_dialog}{RawDataDialog} to display raw data of beliefs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_belief_collection_af08914f4c31838824538e5203f0fa8a3}{
+static const int \hyperlink{class_belief_collection_af08914f4c31838824538e5203f0fa8a3}{m\_\-BeliefListSize} = 10}
+\label{class_belief_collection_af08914f4c31838824538e5203f0fa8a3}
+
+\begin{DoxyCompactList}\small\item\em Size of belief collection. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a3cf2366409520271dfd8725c2ee38a91}{
+static const int \hyperlink{class_belief_collection_a3cf2366409520271dfd8725c2ee38a91}{m\_\-AgentPositionBeliefIdx} = 0}
+\label{class_belief_collection_a3cf2366409520271dfd8725c2ee38a91}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for UAV \hyperlink{class_agent_position_belief}{AgentPositionBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a3266e8a530f82abfa4784c9177c12a4f}{
+static const int \hyperlink{class_belief_collection_a3266e8a530f82abfa4784c9177c12a4f}{m\_\-CircularOrbitBeliefIdx} = 1}
+\label{class_belief_collection_a3266e8a530f82abfa4784c9177c12a4f}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a62e8e9949a14b86d4a93f53b72c7f315}{
+static const int \hyperlink{class_belief_collection_a62e8e9949a14b86d4a93f53b72c7f315}{m\_\-ParticleDetectionBeliefIdx} = 2}
+\label{class_belief_collection_a62e8e9949a14b86d4a93f53b72c7f315}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a9e295722357db92ebb76e2a911282b20}{
+static const int \hyperlink{class_belief_collection_a9e295722357db92ebb76e2a911282b20}{m\_\-AnacondaDetectionBeliefIdx} = 3}
+\label{class_belief_collection_a9e295722357db92ebb76e2a911282b20}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_addba5d38789f317f3d2ef8633ef814df}{
+static const int \hyperlink{class_belief_collection_addba5d38789f317f3d2ef8633ef814df}{m\_\-GCSPositionBeliefIdx} = 4}
+\label{class_belief_collection_addba5d38789f317f3d2ef8633ef814df}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for GCS \hyperlink{class_agent_position_belief}{AgentPositionBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_ac7592f4d9ffd26a5371c76ff942be59b}{
+static const int \hyperlink{class_belief_collection_ac7592f4d9ffd26a5371c76ff942be59b}{m\_\-PiccoloTelemetryBeliefIdx} = 5}
+\label{class_belief_collection_ac7592f4d9ffd26a5371c76ff942be59b}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a403a39b541bd09fc8acc354cbf9af11c}{
+static const int \hyperlink{class_belief_collection_a403a39b541bd09fc8acc354cbf9af11c}{m\_\-AgentModeBeliefIdx} = 6}
+\label{class_belief_collection_a403a39b541bd09fc8acc354cbf9af11c}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_agent_mode_belief}{AgentModeBelief}. \end{DoxyCompactList}\item 
+\hypertarget{class_belief_collection_a6f43134dc869a3f14e2dcc61d62193a6}{
+static const int \hyperlink{class_belief_collection_a6f43134dc869a3f14e2dcc61d62193a6}{m\_\-CloudDetectionBeliefIdx} = 7}
+\label{class_belief_collection_a6f43134dc869a3f14e2dcc61d62193a6}
+
+\begin{DoxyCompactList}\small\item\em Index in belief collection for \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collection of WACS Swarm belief objects. This stores all current beliefs and provides access to them. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_belief_collection_a5792edcd8a6a2ed43336c0f940645dcf}{
+\index{BeliefCollection@{BeliefCollection}!clearDisplayRawData@{clearDisplayRawData}}
+\index{clearDisplayRawData@{clearDisplayRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{clearDisplayRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::clearDisplayRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a5792edcd8a6a2ed43336c0f940645dcf}
+
+
+Clear all rows in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_ad80583536515650193239aa6ab97d5b5}{
+\index{BeliefCollection@{BeliefCollection}!displayAgentModeBeliefRawData@{displayAgentModeBeliefRawData}}
+\index{displayAgentModeBeliefRawData@{displayAgentModeBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayAgentModeBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayAgentModeBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_ad80583536515650193239aa6ab97d5b5}
+
+
+Display \hyperlink{class_agent_mode_belief}{AgentModeBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a702d3d6d5ecf17712b45b57d6fe14a60}{
+\index{BeliefCollection@{BeliefCollection}!displayAgentPositionBeliefRawData@{displayAgentPositionBeliefRawData}}
+\index{displayAgentPositionBeliefRawData@{displayAgentPositionBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayAgentPositionBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayAgentPositionBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a702d3d6d5ecf17712b45b57d6fe14a60}
+
+
+Display UAV \hyperlink{class_agent_position_belief}{AgentPositionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a2373bd445c1f9067bb96d1d97f166b88}{
+\index{BeliefCollection@{BeliefCollection}!displayAnacondaDetectionBeliefRawData@{displayAnacondaDetectionBeliefRawData}}
+\index{displayAnacondaDetectionBeliefRawData@{displayAnacondaDetectionBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayAnacondaDetectionBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayAnacondaDetectionBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a2373bd445c1f9067bb96d1d97f166b88}
+
+
+Display \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a8d8325ef7a988883be00040cab1f34ff}{
+\index{BeliefCollection@{BeliefCollection}!displayCircularOrbitBeliefRawData@{displayCircularOrbitBeliefRawData}}
+\index{displayCircularOrbitBeliefRawData@{displayCircularOrbitBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayCircularOrbitBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayCircularOrbitBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a8d8325ef7a988883be00040cab1f34ff}
+
+
+Display \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_ab6df8f670bc26729bb66665ed78e68af}{
+\index{BeliefCollection@{BeliefCollection}!displayCloudDetectionBeliefRawData@{displayCloudDetectionBeliefRawData}}
+\index{displayCloudDetectionBeliefRawData@{displayCloudDetectionBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayCloudDetectionBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayCloudDetectionBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_ab6df8f670bc26729bb66665ed78e68af}
+
+
+Display \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a14b41ac0a8636586e573659915a24f14}{
+\index{BeliefCollection@{BeliefCollection}!displayGCSPositionBeliefRawData@{displayGCSPositionBeliefRawData}}
+\index{displayGCSPositionBeliefRawData@{displayGCSPositionBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayGCSPositionBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayGCSPositionBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a14b41ac0a8636586e573659915a24f14}
+
+
+Display GCS \hyperlink{class_agent_position_belief}{AgentPositionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a9a4e94a10f524006fe1157e5681145d0}{
+\index{BeliefCollection@{BeliefCollection}!displayParticleDetectionBeliefRawData@{displayParticleDetectionBeliefRawData}}
+\index{displayParticleDetectionBeliefRawData@{displayParticleDetectionBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayParticleDetectionBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayParticleDetectionBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a9a4e94a10f524006fe1157e5681145d0}
+
+
+Display \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a370765050c596aa8c7eab1930b93f904}{
+\index{BeliefCollection@{BeliefCollection}!displayPiccoloTelemetryBeliefRawData@{displayPiccoloTelemetryBeliefRawData}}
+\index{displayPiccoloTelemetryBeliefRawData@{displayPiccoloTelemetryBeliefRawData}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{displayPiccoloTelemetryBeliefRawData}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::displayPiccoloTelemetryBeliefRawData (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a370765050c596aa8c7eab1930b93f904}
+
+
+Display \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} data in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_ae4bab3f004643dcc070ff406aef46440}{
+\index{BeliefCollection@{BeliefCollection}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv, }
+\item[{bool}]{drawAgentPositionBelief, }
+\item[{bool}]{drawGCSAgentPositionBelief, }
+\item[{bool}]{drawCircularOrbitBelief, }
+\item[{bool}]{drawBiopodDetectionBelief, }
+\item[{bool}]{anacondaDetectionBelief, }
+\item[{bool}]{uavDisplayFromPicTel}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_ae4bab3f004643dcc070ff406aef46440}
+
+
+Draw beliefs in OpenGL scene according to boolean flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+{\em drawAgentPositionBelief} & If true, display UAV agent in OpenGL \\
+\hline
+{\em drawGCSAgentPositionBelief} & If true, display GCS agent in OpenGL \\
+\hline
+{\em drawCircularOrbitBelief} & If true, display circular orbit in OpenGL \\
+\hline
+{\em drawBiopodDetectionBelief} & If true, display biopod detections in OpenGL (from \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}, not \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief}) \\
+\hline
+{\em anacondaDetectionBelief} & If true, display Anaconda detections in OpenGL (from \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}, not \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief}) \\
+\hline
+{\em uavDisplayFromPicTel} & If true (and if drawAgentPositionBelief is true), UAV display should be done using \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} data instead of \hyperlink{class_agent_position_belief}{AgentPositionBelief} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a22d8a05b224e5a11430d81f332c9e4c4}{
+\index{BeliefCollection@{BeliefCollection}!setDataRows@{setDataRows}}
+\index{setDataRows@{setDataRows}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{setDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::setDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a22d8a05b224e5a11430d81f332c9e4c4}
+
+
+Set \hyperlink{struct_data_rows}{DataRows} object for the belief collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & \hyperlink{struct_data_rows}{DataRows} object to populate with raw data from beliefs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a73c5a4b3869372dffbf57fc3f570f57c}{
+\index{BeliefCollection@{BeliefCollection}!updateAgentModeBelief@{updateAgentModeBelief}}
+\index{updateAgentModeBelief@{updateAgentModeBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateAgentModeBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateAgentModeBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentModeBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a73c5a4b3869372dffbf57fc3f570f57c}
+
+
+Update current \hyperlink{class_agent_mode_belief}{AgentModeBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New agent mode data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a13bccfcb55503a3b8b666010646cf164}{
+\index{BeliefCollection@{BeliefCollection}!updateAgentPositionBelief@{updateAgentPositionBelief}}
+\index{updateAgentPositionBelief@{updateAgentPositionBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateAgentPositionBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateAgentPositionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPositionBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a13bccfcb55503a3b8b666010646cf164}
+
+
+Update current UAV \hyperlink{class_agent_position_belief}{AgentPositionBelief} object by merging newBelief positions with current history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New agent position history to merge with current history \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a5a3643b52ba4df67515bcac030c78319}{
+\index{BeliefCollection@{BeliefCollection}!updateAnacondaDetectionBelief@{updateAnacondaDetectionBelief}}
+\index{updateAnacondaDetectionBelief@{updateAnacondaDetectionBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateAnacondaDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateAnacondaDetectionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AnacondaDetectionBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a5a3643b52ba4df67515bcac030c78319}
+
+
+Update current \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New anaconda detection data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a610eedcd4f6bf5d2a1a81067525fb82f}{
+\index{BeliefCollection@{BeliefCollection}!updateCircularOrbitBelief@{updateCircularOrbitBelief}}
+\index{updateCircularOrbitBelief@{updateCircularOrbitBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateCircularOrbitBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateCircularOrbitBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf CircularOrbitBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a610eedcd4f6bf5d2a1a81067525fb82f}
+
+
+Update current \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New circular orbit data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a6a063241841e74bc9e2caaff3a18b763}{
+\index{BeliefCollection@{BeliefCollection}!updateCloudDetectionBelief@{updateCloudDetectionBelief}}
+\index{updateCloudDetectionBelief@{updateCloudDetectionBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateCloudDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateCloudDetectionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf CloudDetection} $\ast$}]{newDetection}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a6a063241841e74bc9e2caaff3a18b763}
+
+
+Update current \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} object by adding newDetection to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newDetection} & new \hyperlink{class_cloud_detection}{CloudDetection} object to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newDetection was added succesfully 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_aa940d5ed600beb03870764ed21ad1769}{
+\index{BeliefCollection@{BeliefCollection}!updateGCSPositionBelief@{updateGCSPositionBelief}}
+\index{updateGCSPositionBelief@{updateGCSPositionBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateGCSPositionBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateGCSPositionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPositionBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_aa940d5ed600beb03870764ed21ad1769}
+
+
+Update current GCS \hyperlink{class_agent_position_belief}{AgentPositionBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New GCS position data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_aaa73023c8be3ca9863e5b72869dacd19}{
+\index{BeliefCollection@{BeliefCollection}!updateParticleDetectionBelief@{updateParticleDetectionBelief}}
+\index{updateParticleDetectionBelief@{updateParticleDetectionBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateParticleDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updateParticleDetectionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf ParticleDetectionBelief} $\ast$}]{newDetection}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_aaa73023c8be3ca9863e5b72869dacd19}
+
+
+Update current \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newDetection} & New particle detection data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a4bd13ec5fd72f788daece4596e1330eb}{
+\index{BeliefCollection@{BeliefCollection}!updatePiccoloTelemetryBelief@{updatePiccoloTelemetryBelief}}
+\index{updatePiccoloTelemetryBelief@{updatePiccoloTelemetryBelief}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updatePiccoloTelemetryBelief}]{\setlength{\rightskip}{0pt plus 5cm}bool BeliefCollection::updatePiccoloTelemetryBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf PiccoloTelemetryBelief} $\ast$}]{newBelief}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a4bd13ec5fd72f788daece4596e1330eb}
+
+
+Update current \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} object by replacing it with newBelief. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newBelief} & New piccolo telemetry data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if newBelief was added succesfully. 
+\end{DoxyReturn}
+\hypertarget{class_belief_collection_a5ff35db55afff638f0cf605d3e6927ca}{
+\index{BeliefCollection@{BeliefCollection}!updateRawDataDialog@{updateRawDataDialog}}
+\index{updateRawDataDialog@{updateRawDataDialog}!BeliefCollection@{BeliefCollection}}
+\subsubsection[{updateRawDataDialog}]{\setlength{\rightskip}{0pt plus 5cm}void BeliefCollection::updateRawDataDialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_belief_collection_a5ff35db55afff638f0cf605d3e6927ca}
+
+
+Display the selected belief's data \mbox{[}m\_\-RawDataDisplayOpt\mbox{]} in the \hyperlink{class_raw_data_dialog}{RawDataDialog} represented by m\_\-DataRows object. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/BeliefCollection.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/BeliefCollection.cpp\end{DoxyCompactItemize}

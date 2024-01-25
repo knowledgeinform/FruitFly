@@ -1,0 +1,379 @@
+\hypertarget{class_particle_detection_belief}{
+\section{ParticleDetectionBelief Class Reference}
+\label{class_particle_detection_belief}\index{ParticleDetectionBelief@{ParticleDetectionBelief}}
+}
+
+
+Class representing a WACS Swarm belief -\/ detections from particle sensor.  
+
+
+
+
+{\ttfamily \#include $<$ParticleDetectionBelief.h$>$}
+
+Inheritance diagram for ParticleDetectionBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_particle_detection_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_detection_belief_a801d6337798aac5728eb16c76b06df9d}{
+\hyperlink{class_particle_detection_belief_a801d6337798aac5728eb16c76b06df9d}{ParticleDetectionBelief} ()}
+\label{class_particle_detection_belief_a801d6337798aac5728eb16c76b06df9d}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. Clears detection message and parsed values. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_a37a6e7bf59cf0476ea0e4b2d0f74425e}{
+\hyperlink{class_particle_detection_belief_a37a6e7bf59cf0476ea0e4b2d0f74425e}{ParticleDetectionBelief} (char $\ast$detectionMessage)}
+\label{class_particle_detection_belief_a37a6e7bf59cf0476ea0e4b2d0f74425e}
+
+\begin{DoxyCompactList}\small\item\em Constructor, sets detection message and parses values from it. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_a4e08f4049e57297c6509ed65faec8c2e}{
+\hyperlink{class_particle_detection_belief_a4e08f4049e57297c6509ed65faec8c2e}{$\sim$ParticleDetectionBelief} ()}
+\label{class_particle_detection_belief_a4e08f4049e57297c6509ed65faec8c2e}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_a55c8bf69923ac0c45b606efba40c6d9c}{getDetectionMessage} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Accessor for detection message. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_abbfb68557c50bf5d81380de02419d9ef}{setDetectionMessage} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Modifier for detection message. \end{DoxyCompactList}\item 
+int \hyperlink{class_particle_detection_belief_ac72de10bee646aeacad6dcacab4f13f1}{getLargeCounts} ()
+\begin{DoxyCompactList}\small\item\em Accessor for parsed large counts value. \end{DoxyCompactList}\item 
+int \hyperlink{class_particle_detection_belief_a9aa9b38cfd12ededaf6927722a6202d3}{getSmallCounts} ()
+\begin{DoxyCompactList}\small\item\em Accessor for parsed small counts value. \end{DoxyCompactList}\item 
+int \hyperlink{class_particle_detection_belief_a462db9afd1c1c26fa75e39e00452c50d}{getBioLargeCounts} ()
+\begin{DoxyCompactList}\small\item\em Accessor for parsed large bio counts value. \end{DoxyCompactList}\item 
+int \hyperlink{class_particle_detection_belief_a8d535f5660148475fbb243a45f69b249}{getBioSmallCounts} ()
+\begin{DoxyCompactList}\small\item\em Accessor for parsed small bio counts value. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_ab0acda2a565abd8650e23cdb71d21efb}{setLargeCounts} (int counts)
+\begin{DoxyCompactList}\small\item\em Modifier for parsed large counts value. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_a92f6ba82b9789da6d8afea7fd0474ac5}{setSmallCounts} (int counts)
+\begin{DoxyCompactList}\small\item\em Modifier for parsed small counts value. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_aa79810f97904026f245dc96f24b6ae24}{setBioLargeCounts} (int counts)
+\begin{DoxyCompactList}\small\item\em Modifier for parsed large bio counts value. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_a089cfca70b6c8ff01b8ac998d3ce8a68}{setBioSmallCounts} (int counts)
+\begin{DoxyCompactList}\small\item\em Modifier for parsed small bio counts value. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_a72b09756119c7c94db4fcb6db5534104}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} currently doesn't display anything in OpenGL. Positive detections are displayed using \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_detection_belief_a16879c7ebd0a461297bc6064e0562b7a}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_particle_detection_belief_ad1eef5913edcc63652738bc3c8497f78}{parseDetectionMessage} ()
+\begin{DoxyCompactList}\small\item\em Parse detection message and extract particle counts information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_detection_belief_ae429dbb164c01e4805529217a38939fd}{
+char \hyperlink{class_particle_detection_belief_ae429dbb164c01e4805529217a38939fd}{m\_\-DetectionMessage} \mbox{[}256\mbox{]}}
+\label{class_particle_detection_belief_ae429dbb164c01e4805529217a38939fd}
+
+\begin{DoxyCompactList}\small\item\em Detection message text received from belief. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_a2f1b91e8e12c3da1235eda7287dc2ebc}{
+int \hyperlink{class_particle_detection_belief_a2f1b91e8e12c3da1235eda7287dc2ebc}{m\_\-LargeCounts}}
+\label{class_particle_detection_belief_a2f1b91e8e12c3da1235eda7287dc2ebc}
+
+\begin{DoxyCompactList}\small\item\em Large counts parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_aae60587ae6fe72421da7c492045bcf7e}{
+int \hyperlink{class_particle_detection_belief_aae60587ae6fe72421da7c492045bcf7e}{m\_\-SmallCounts}}
+\label{class_particle_detection_belief_aae60587ae6fe72421da7c492045bcf7e}
+
+\begin{DoxyCompactList}\small\item\em Small counts parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_a81ea65758f0f94af50c4ae3e07a44dfa}{
+int \hyperlink{class_particle_detection_belief_a81ea65758f0f94af50c4ae3e07a44dfa}{m\_\-BioLargeCounts}}
+\label{class_particle_detection_belief_a81ea65758f0f94af50c4ae3e07a44dfa}
+
+\begin{DoxyCompactList}\small\item\em Large Bio counts parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_detection_belief_a1cfb75d332057f1737a41345fcf814c7}{
+int \hyperlink{class_particle_detection_belief_a1cfb75d332057f1737a41345fcf814c7}{m\_\-BioSmallCounts}}
+\label{class_particle_detection_belief_a1cfb75d332057f1737a41345fcf814c7}
+
+\begin{DoxyCompactList}\small\item\em Small Bio counts parsed from detection message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a WACS Swarm belief -\/ detections from particle sensor. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_particle_detection_belief_a72b09756119c7c94db4fcb6db5534104}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_particle_detection_belief_a72b09756119c7c94db4fcb6db5534104}
+
+
+Paint the contents of this belief in an OpenGL scene. \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} currently doesn't display anything in OpenGL. Positive detections are displayed using \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_particle_detection_belief_a462db9afd1c1c26fa75e39e00452c50d}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!getBioLargeCounts@{getBioLargeCounts}}
+\index{getBioLargeCounts@{getBioLargeCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{getBioLargeCounts}]{\setlength{\rightskip}{0pt plus 5cm}int ParticleDetectionBelief::getBioLargeCounts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_a462db9afd1c1c26fa75e39e00452c50d}
+
+
+Accessor for parsed large bio counts value. 
+
+\begin{DoxyReturn}{Returns}
+Large bio counts 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a8d535f5660148475fbb243a45f69b249}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!getBioSmallCounts@{getBioSmallCounts}}
+\index{getBioSmallCounts@{getBioSmallCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{getBioSmallCounts}]{\setlength{\rightskip}{0pt plus 5cm}int ParticleDetectionBelief::getBioSmallCounts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_a8d535f5660148475fbb243a45f69b249}
+
+
+Accessor for parsed small bio counts value. 
+
+\begin{DoxyReturn}{Returns}
+Small bio counts 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a55c8bf69923ac0c45b606efba40c6d9c}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!getDetectionMessage@{getDetectionMessage}}
+\index{getDetectionMessage@{getDetectionMessage}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{getDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::getDetectionMessage (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_particle_detection_belief_a55c8bf69923ac0c45b606efba40c6d9c}
+
+
+Accessor for detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & After call, will be populated with detection message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_ac72de10bee646aeacad6dcacab4f13f1}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!getLargeCounts@{getLargeCounts}}
+\index{getLargeCounts@{getLargeCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{getLargeCounts}]{\setlength{\rightskip}{0pt plus 5cm}int ParticleDetectionBelief::getLargeCounts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_ac72de10bee646aeacad6dcacab4f13f1}
+
+
+Accessor for parsed large counts value. 
+
+\begin{DoxyReturn}{Returns}
+Large counts 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a9aa9b38cfd12ededaf6927722a6202d3}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!getSmallCounts@{getSmallCounts}}
+\index{getSmallCounts@{getSmallCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{getSmallCounts}]{\setlength{\rightskip}{0pt plus 5cm}int ParticleDetectionBelief::getSmallCounts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_a9aa9b38cfd12ededaf6927722a6202d3}
+
+
+Accessor for parsed small counts value. 
+
+\begin{DoxyReturn}{Returns}
+Small counts 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_ad1eef5913edcc63652738bc3c8497f78}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!parseDetectionMessage@{parseDetectionMessage}}
+\index{parseDetectionMessage@{parseDetectionMessage}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{parseDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::parseDetectionMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_particle_detection_belief_ad1eef5913edcc63652738bc3c8497f78}
+
+
+Parse detection message and extract particle counts information. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_aa79810f97904026f245dc96f24b6ae24}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!setBioLargeCounts@{setBioLargeCounts}}
+\index{setBioLargeCounts@{setBioLargeCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{setBioLargeCounts}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::setBioLargeCounts (
+\begin{DoxyParamCaption}
+\item[{int}]{counts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_aa79810f97904026f245dc96f24b6ae24}
+
+
+Modifier for parsed large bio counts value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counts} & New large bio counts value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a089cfca70b6c8ff01b8ac998d3ce8a68}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!setBioSmallCounts@{setBioSmallCounts}}
+\index{setBioSmallCounts@{setBioSmallCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{setBioSmallCounts}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::setBioSmallCounts (
+\begin{DoxyParamCaption}
+\item[{int}]{counts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_a089cfca70b6c8ff01b8ac998d3ce8a68}
+
+
+Modifier for parsed small bio counts value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counts} & New small bio counts value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_abbfb68557c50bf5d81380de02419d9ef}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!setDetectionMessage@{setDetectionMessage}}
+\index{setDetectionMessage@{setDetectionMessage}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{setDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::setDetectionMessage (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_particle_detection_belief_abbfb68557c50bf5d81380de02419d9ef}
+
+
+Modifier for detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & New detection message for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_ab0acda2a565abd8650e23cdb71d21efb}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!setLargeCounts@{setLargeCounts}}
+\index{setLargeCounts@{setLargeCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{setLargeCounts}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::setLargeCounts (
+\begin{DoxyParamCaption}
+\item[{int}]{counts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_ab0acda2a565abd8650e23cdb71d21efb}
+
+
+Modifier for parsed large counts value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counts} & New large counts value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a92f6ba82b9789da6d8afea7fd0474ac5}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!setSmallCounts@{setSmallCounts}}
+\index{setSmallCounts@{setSmallCounts}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{setSmallCounts}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::setSmallCounts (
+\begin{DoxyParamCaption}
+\item[{int}]{counts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_particle_detection_belief_a92f6ba82b9789da6d8afea7fd0474ac5}
+
+
+Modifier for parsed small counts value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counts} & New small counts value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_particle_detection_belief_a16879c7ebd0a461297bc6064e0562b7a}{
+\index{ParticleDetectionBelief@{ParticleDetectionBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!ParticleDetectionBelief@{ParticleDetectionBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void ParticleDetectionBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_particle_detection_belief_a16879c7ebd0a461297bc6064e0562b7a}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ParticleDetectionBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ParticleDetectionBelief.cpp\end{DoxyCompactItemize}

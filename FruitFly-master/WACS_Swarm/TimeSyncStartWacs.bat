@@ -1,0 +1,1 @@
+ant.bat wacsagent > LOGFILENAMETXT

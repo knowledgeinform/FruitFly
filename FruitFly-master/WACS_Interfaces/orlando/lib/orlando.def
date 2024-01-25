@@ -1,0 +1,22 @@
+;
+;	orlando.def
+;	function export file of orlando.dll
+;	Copyright (c) ARVOO 2006
+;
+;	$Id: orlando.def,v 1.4 2008-04-08 14:31:42 gertjan Exp $
+;	
+;
+LIBRARY ORLANDO
+DESCRIPTION	"Orlando library"
+
+EXPORTS
+OrlOpenLibrary = _OrlOpenLibrary@0
+OrlCloseLibrary = _OrlCloseLibrary@0
+OrlGetVersion = _OrlGetVersion@4
+OrlGetNumBoards = _OrlGetNumBoards@4
+OrlGetBoardType = _OrlGetBoardType@8
+OrlOpen = _OrlOpen@8
+OrlClose = _OrlClose@4
+OrlFunc = _OrlFunc@12
+OrlInitStruct = _OrlInitStruct@8
+OrlEnumToStr = _OrlEnumToStr@16

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  fruitfly-agent:
+    build: .
+    ports:
+      - "800:8000"
+    extra_hosts:
+      - "fruitfly-gcs:10.103.49.118"
+      # Use computer's internal ip address

@@ -1,0 +1,3230 @@
+defaultConfig:
+PiccoloAutopilotInterface.ComPort = COM3
+Piccolo.periodMs = 500
+Piccolo.source = Sim
+Piccolo.replayFilename = .\rawNmeaLogs\rawNmeaLog_display_1536769760080.txt
+PiccoloAutopilotInterface.isNMEAFormat = true
+
+Etd.ipaddr = 192.168.0.5
+Etd.mask = 255.255.255.0
+Etd.ipport = 5000
+Etd.periodMs = 500
+#Etd.dataType = CONC
+Etd.dataType = PA1
+Etd.source = Sim
+Etd.shouldFilter = true
+Etd.delayMs = 35000
+Etd.replayFilename = .\rawEtdLogs\rawEtdLog_display_1532708484644.txt
+
+EtdDetectionBelief.historyLength = 200
+EtdErrorsPanel.historyLength = 20
+Etd.markerSize = 10
+Etd.hoverRange = 100.0
+Etd.MinDisplayValue = 0;
+Etd.MaxDisplayValue = 50;
+
+FlightControl.usePiccoloGroundStationAction = true
+
+WACSAgent.simulate = false
+WACSAgent.useExternalSimulation = false
+WACSAgent.simulateOnlyCloudSensing = true
+WACSAgent.gimbalTargetName = gimbalTarget
+WACSAgent.gimbalTargetClassification = 5
+WACSAgent.Display.ShowDestinationOrbitsOnly = false
+
+#WACS Settings Panel Default Stuff
+WacsSettingsDefaults.useguiwind = false
+WacsSettingsDefaults.usegroundstationwind = false
+WacsSettingsDefaults.enableap = false
+WacsSettingsDefaults.loiterAltAGL_ft = 1000.0
+WacsSettingsDefaults.loiterAltAGLStandoff_ft = 3000.0
+WacsSettingsDefaults.loiterRad_m = 1000.0
+WacsSettingsDefaults.interceptMinAltAGL_ft = 400.0
+WacsSettingsDefaults.interceptRad_m = 425.0
+WacsSettingsDefaults.allowintercept = true
+WacsSettingsDefaults.UseExplosionTimer = true
+
+#Shadow stuff
+ShadowDriver.bearingToTurnRateCoefficient = 0.5
+ShadowDriver.centerVectorBias = 1.5
+ShadowDriver.commandedAirspeed_knots = 65.0
+ShadowDriver.IntegralGain =  0.01
+ShadowDriver.IntegralControlDistanceMeters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathMaxSpeedIncreaseScale = 0
+ShadowDriver.ToApproachPathVectorBias = 1.5
+ShadowDriver.maxBarometricAltitudeError_m = 0.0
+ShadowDriver.laserAltitudeDataTimeout_ms = 0.0
+ShadowDriver.RacetrackLoiter.FinalOrbitBufferPercentage = 0.05
+ShadowDriver.RacetrackLoiter.ApproachPathDistanceBuffer.Meters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathBearingBuffer.Degrees = 10.0
+ShadowDriver.RacetrackLoiter.ApproachPathTimeBuffer.Ms = 5000
+ShadowDriver.RacetrackLoiter.AltitudeDescentRate.fps = 10
+ShadowDriver.RacetrackLoiter.AltitudeAscentRate.fps = 6
+ShadowDriver.RacetrackLoiter.AirspeedDecelerationRate.ktspersec = .75
+ShadowDriver.RacetrackLoiter.AngleAroundFinalOrbitToWarn.Degrees = 45.0
+ShadowDriver.NumAltitudeSteps = 3
+ShadowDriver.AltitudeSteps = 75,90,95
+ShadowDriver.TimeAtEachAltitudeStep.Ms = 30000
+ShadowDriver.AltitudeStepBufferDistance.Meters = 5
+ShadowDriver.ForceDescentOnLoiterApproach = false
+ShadowDriver.RacetrackLoiter.FirstRangeDistanceFromTarget.Meters = 2500
+ShadowDriver.LogLoiterCircleData = false
+ShadowDriver.TimeDeltaToSwitchFromApproachPathMs = 60000
+ShadowDriver.MaxAltLeadingCommand.Meters = 100
+ShadowAutopilotInterface.logData = true
+
+
+#Dynamics of flight control
+FlightControl.maxBankAngle_deg = 20.0
+FlightControl.CameraOnRightWing = false
+FlightControl.ControlUavThroughGCS = true
+
+DtedGlobalMap.dtedFolder = ./dted_data
+
+#PHILIPs
+#DtedGlobalMap.dtedAnchorLatD = 39.4512
+#DtedGlobalMap.dtedAnchorLonD = -76.1864
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#NRL
+#DtedGlobalMap.dtedAnchorLatD = 38.816868
+#DtedGlobalMap.dtedAnchorLonD = -77.033111
+#DtedGlobalMap.dtedLatSecsCountD = 710
+#DtedGlobalMap.dtedLonSecsCountD = 1125
+
+#APL
+#DtedGlobalMap.dtedAnchorLatD = 39.146654
+#DtedGlobalMap.dtedAnchorLonD = -77.129096
+#DtedGlobalMap.dtedLatSecsCountD = 710
+#DtedGlobalMap.dtedLonSecsCountD = 1125
+
+#Dugway
+#DtedGlobalMap.dtedAnchorLatD = 40.066040
+#DtedGlobalMap.dtedAnchorLonD = -113.267132
+#DtedGlobalMap.dtedLatSecsCountD = 276
+#DtedGlobalMap.dtedLonSecsCountD = 453
+
+#Dugway 2
+DtedGlobalMap.dtedAnchorLatD = 40.0
+DtedGlobalMap.dtedAnchorLonD = -113.333
+DtedGlobalMap.dtedLatSecsCountD = 1500
+DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#AP Hill
+#DtedGlobalMap.dtedAnchorLatD = 38.05
+#DtedGlobalMap.dtedAnchorLonD = -77.4
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Redstone
+#DtedGlobalMap.dtedAnchorLatD = 34.4
+#DtedGlobalMap.dtedAnchorLonD = -86.9
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Sendai
+#DtedGlobalMap.dtedAnchorLatD = 37.3
+#DtedGlobalMap.dtedAnchorLonD = 140.75
+#DtedGlobalMap.dtedLatSecsCountD = 3600
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Podset 2
+#THControlPanel.DefaultServoOpenPwm.Pod0 = 85
+#THControlPanel.DefaultServoClosedPwm.Pod0 = 20
+#THControlPanel.DefaultServoOpenPwm.Pod1 = 100
+#THControlPanel.DefaultServoClosedPwm.Pod1 = 50
+
+#Podset 3
+THControlPanel.DefaultServoOpenPwm.Pod0 = 100
+THControlPanel.DefaultServoClosedPwm.Pod0 = 40
+THControlPanel.DefaultServoOpenPwm.Pod1 = 80
+THControlPanel.DefaultServoClosedPwm.Pod1 = 20
+
+THControlPanel.DefaultServoHumidityLimit.Percent = 90
+THControlPanel.DefaultServoTempLimit.FDeg = 35
+THControlPanel.DefaultFanHumidityLimit.Percent = 90
+THControlPanel.DefaultFanTempLimit.FDeg = 35
+THControlPanel.DefaultHeatHumidityLimit.Percent = 100
+THControlPanel.DefaultHeatTempLimit.FDeg = 10
+
+LocalIPAddress.preferrednetwork = 192
+
+cbrnPodsInterfaceTest.localport0 = 1313
+cbrnPodsInterfaceTest.remoteport0 = 1315
+cbrnPodsInterfaceTest.localport1 = 1314
+cbrnPodsInterfaceTest.remoteport1 = 1315
+cbrnPodsInterfaceTest.pod0ip = 192.168.100.52
+cbrnPodsInterfaceTest.pod1ip = 192.168.100.53
+cbrnPodsInterfaceLogger.OutputFolderName = ./MessageLogs
+
+RNTotalCountsTracker.GammaCountsToAverageTracker = 5
+RNTotalCountsTracker.GammaStdDevLimitTracker = 3
+RNTotalCountsTracker.GammaMinimumCountsTracker = 100
+RNTotalCountsTracker.AlphaCountsToAverageTracker = 5
+RNTotalCountsTracker.AlphaStdDevLimitTracker = 3
+RNTotalCountsTracker.AlphaMinimumCountsTracker = 10
+
+Metrics.path = ./metrics
+WACSMetrics.LogExtendedBeliefs = true
+SearchBelief.abortOnMatrixMismatch = false
+CloudDetectionBelief.swap = false
+CloudDetectionBelief.historyLength = 30
+
+SatComm.Enabled = false
+SatComm.BeliefNetworkAllowableLatency.Ms = 10000
+SatComm.ShowStopNetTxDialog = false
+SatComm.DefaultMessageSendPeriod.Ms = 5000
+SatComm.SafetyBoxSendPeriod.Ms = 2000
+SatComm.LoiterCenterSendPeriod.Ms = 2000
+SatComm.PodCommandSendPeriod.Ms = 2000
+SatComm.CloudTrackingTypeSendPeriod.Ms = 2000
+
+
+podAction.anaconda.agent1 = GA
+podAction.anaconda.agent2 = GB
+podAction.anaconda.agent3 = GD
+podAction.anaconda.agent4 = GF
+podAction.anaconda.agent5 = VX
+podAction.anaconda.agent6 = DPM
+podAction.anaconda.agent7 = VXR
+podAction.anaconda.agent8 = DMMP
+podAction.anaconda.agent9 = TEP
+podAction.anaconda.agent12 = CK
+podAction.anaconda.agent13 = HCN
+podAction.anaconda.agent14 = HD
+podAction.anaconda.agent15 = HN
+podAction.anaconda.agent16 = L
+podAction.anaconda.agent17 = MS
+podAction.anaconda.agent27 = DPM
+podAction.anaconda.agent31 = CG
+podAction.anaconda.agent32 = HS
+podAction.anaconda.agent33 = HF
+podAction.anaconda.agent34 = CI
+podAction.anaconda.agent35 = HCI
+podAction.anaconda.agent36 = HBR
+podAction.anaconda.agent37 = MS
+
+
+####################Swarm Stuff, can't change token names because they are (or might be?) used in swarm.jar
+groupAddr  = 225.0.0.175
+groupPort = 38116
+monitorPort = 8888  
+monitorPort2 = 8889  
+remoteGPSPort = 5650  
+commsSensorPort = 5558  
+commsSensorRange = 1000  
+tic = 100  
+updateRate = 700  
+minZipPacketSize = 128  
+discoveryUpdatePeriod = 8000  
+discoveryDecayPeriod = 16000  
+statsMulticastInterval = 8000  
+oamGuiRefershInterval = 10000  
+statsLogGuiRefereshCnt = 10  
+statsLogFile = CommsStats.log
+enableImpairmentEmulation false
+enableLoopBack = false  
+rxTxBuffSize = 131070  
+startOamGui = false
+startLanBridge = false  
+collectStats = false  
+disableMyOwnPackets = false
+zip = true  
+debug = false
+debugVerbose = false
+searchDecay = 0.01  
+cloudDecay = 0.01  
+SimulateComms = false
+multicast.useLoopback = true
+belief.earliestBeliefDate = 0
+latencyCompensation = 100  
+useRelativeTime = false  
+sendSingleBeliefs = true 
+multicast.ttl = 20
+
+#Decay time for beliefs, value of 0 means no decay
+bearingbelief.decaytime = 0  
+modebelief.decaytime = 0  
+positionbelief.decaytime = 0  
+modemapbelief.decaytime = 0  
+targetbelief.decaytime = 0
+METPositionBelief.decaytime = 0
+METBelief.decaytime = 0
+collect_all_positions = true
+
+
+agent.classification = 11  
+update.waitTime = 500
+
+transmission.broadcast_rate = 500  
+transmissionInterval.OperatorGoalBelief = 0  
+transmissionInterval.PacketInfoBelief = 0  
+transmissionInterval.SentelSensorBelief = 0  
+transmissionInterval.SNRBelief = 0  
+transmissionInterval.AgentPosBelief = 1  
+transmissionInterval.ClassificationBelief = 2  
+transmissionInterval.AgentBearingBelief = 1  
+transmissionInterval.AgentModeBelief = 10  
+transmissionInterval.TargetBelief = 1  
+transmissionInterval.SearchBelief = 4  
+transmissionInterval.CloudBeliefMatrix = 2  
+transmissionInterval.CloudBelief = 2  
+transmissionInterval.SearchGoalBelief = 2
+transmissionInterval.ConfigBelief = 1  
+transmissionInterval.DynamicNoGoBelief = 0  
+transmissionInterval.NoGoBelief = 1  
+transmissionInterval.PathBelief = 0  
+transmissionInterval.VideoBelief = 2  
+transmissionInterval.SensorCoverageBelief = 0  
+transmissionInterval.UAVWaypointBelief = 2
+transmissionInterval.KeepOutRegionBelief = 1
+transmissionInterval.TestCircularOrbitBelief = 1
+transmissionInterval.CircularOrbitBelief = 1
+transmissionInterval.METBelief = 1
+transmissionInterval.CloudPredictionBelief = 2
+transmissionInterval.ParticleCollectorStateBelief = 1
+transmissionInterval.PodCommandBelief = 1
+transmissionInterval.ThermalCommandBelief = 1
+transmissionInterval.ParticleDetectionBelief = 1
+transmissionInterval.CloudDetectionBelief = 2
+transmissionInterval.IrCameraFOVBelief = 1
+transmissionInterval.SafetyBoxBelief = 1
+transmissionInterval.cbrnHeartbeatBelief = 1
+transmissionInterval.METPositionBelief = 1
+transmissionInterval.WACSWaypointBelief = 1
+transmissionInterval.RacetrackDefinitionBelief = 1
+transmissionInterval.ExplosionTimeBelief = 1
+transmissionInterval.IrExplosionAlgorithmEnabledBelief = 1
+transmissionInterval.RacetrackOrbitBelief = 1
+transmissionInterval.ExplosionBelief = 1
+transmissionInterval.CloudProbabilityBelief = 1
+transmissionInterval.PiccoloTelemetryBelief =1
+transmissionInterval.LoiterApproachPathBelief = 1
+
+transmissionIntermittent.ConfigBelief = true  
+transmissionIntermittent.ClassificationBelief = false
+transmissionIntermittent.IrCameraFOVBelief = false
+transmissionIntermittent.AgentPosBelief = false
+transmissionIntermittent.AgentBearingBelief = false
+transmissionIntermittent.SearchBelief = false
+transmissionIntermittent.SafetyBoxBelief = false
+transmissionIntermittent.TargetBelief = false
+transmissionIntermittent.AgentModeBelief = false
+transmissionIntermittent.cbrnHeartbeatBelief = false
+transmissionIntermittent.ParticleCollectorStateBelief = false
+transmissionIntermittent.METPositionBelief = false
+transmissionIntermittent.NoGoBelief = false
+transmissionIntermittent.WACSWaypointBelief = false
+transmissionIntermittent.METBelief = false
+transmissionIntermittent.SearchGoalBelief = false
+transmissionIntermittent.RacetrackDefinitionBelief = false
+transmissionIntermittent.ExplosionTimeBelief = false
+transmissionIntermittent.IrExplosionAlgorithmEnabledBelief = false
+transmissionIntermittent.RacetrackOrbitBelief = false
+transmissionIntermittent.CloudProbabilityBelief = false
+transmissionIntermittent.KeepOutRegionBelief = false
+transmissionIntermittent.CircularOrbitBelief = false
+transmissionIntermittent.TestCircularOrbitBelief = false
+transmissionIntermittent.CloudDetectionBelief = false
+transmissionIntermittent.CloudBelief = false
+transmissionIntermittent.ExplosionBelief = false
+transmissionIntermittent.PiccoloTelemetryBelief =false
+transmissionIntermittent.LoiterApproachPathBelief = false
+
+transmissionOffset.CloudDetectionBelief = 0
+transmissionOffset.ParticleDetectionBelief = 0
+transmissionOffset.ParticleCollectorStateBelief = 0
+transmissionOffset.PodCommandBelief = 0
+transmissionOffset.ThermalCommandBelief = 0
+transmissionOffset.KeepOutRegionBelief = 1
+transmissionOffset.CircularOrbitBelief = 1
+transmissionOffset.TestCircularOrbitBelief = 1
+transmissionOffset.AgentPosBelief = 0  
+transmissionOffset.ClassificationBelief = 1  
+transmissionOffset.AgentBearingBelief = 0  
+transmissionOffset.AgentModeBelief = 2  
+transmissionOffset.TargetBelief = 0  
+transmissionOffset.SearchBelief = 0  
+transmissionOffset.CloudBeliefMatrix = 0  
+transmissionOffset.CloudBelief = 0  
+transmissionOffset.SearchGoalBelief = 4  
+transmissionOffset.ConfigBelief = 1
+transmissionOffset.DynamicNoGoBelief = 0  
+transmissionOffset.NoGoBelief = 0  
+transmissionOffset.PathBelief = 0  
+transmissionOffset.SensorCoverageBelief = 0  
+transmissionOffset.UAVWaypointBelief = 1
+transmissionOffset.METBelief = 1
+transmissionOffset.IrCameraFOVBelief = 0
+transmissionOffset.SafetyBoxBelief = 0
+transmissionOffset.cbrnHeartbeatBelief = 0
+transmissionOffset.METPositionBelief = 0
+transmissionOffset.WACSWaypointBelief = 0
+transmissionOffset.RacetrackDefinitionBelief = 0
+transmissionOffset.ExplosionTimeBelief = 0
+transmissionOffset.IrExplosionAlgorithmEnabledBelief = 0
+transmissionOffset.RacetrackOrbitBelief = 0
+transmissionOffset.ExplosionBelief = 0
+transmissionOffset.CloudProbabilityBelief = 0
+transmissionOffset.PiccoloTelemetryBelief = 0
+transmissionOffset.LoiterApproachPathBelief = 0
+
+ignoreOwnBeliefs = false
+comms.useUDP = false
+maxRxPacketSize = 65535
+####################End Swarm stuff
+end defaultConfig
+displayConfig:
+AglDisplay.WarningAgl.ft = 700.0
+AglDisplay.AlarmAgl.ft = 620.0
+AglDisplay.WarningColor.RGB = 16777011
+AglDisplay.AlarmColor.RGB = 16724787
+AglDisplay.ClearColor.RGB = 15526360
+WACSDisplay.UseAdvancedDisplay = false
+
+FlightControl.usePiccoloGroundStationAction = false
+FlightControl.useShadowDriver = true
+
+#Shadow stuff
+ShadowAutopilotInterface.localPort = 16004
+ShadowAutopilotInterface.remotePort = 16003
+#ShadowAutopilotInterface.remoteHostname = 10.4.72.80
+ShadowAutopilotInterface.remoteHostname = localhost
+ShadowAutopilotInterface.sendRateHz = 8
+ShadowAutopilotInterface.telemetryRepeaterEnabled = false
+ShadowAutopilotInterface.telemetryRepeaterHostname = 192.168.1.50
+ShadowAutopilotInterface.telemetryRepeaterPort = 16004
+
+#Piccolo stuff
+PiccoloGroundStationAction.useTCP = true
+#PiccoloGroundStationAction.port = 2000
+#PiccoloGroundStationAction.port = 2001
+PiccoloGroundStationAction.port = 2010
+#PiccoloGroundStationAction.ipaddr = 192.168.1.51
+PiccoloGroundStationAction.ipaddr = localhost
+#PiccoloGroundStationAction.planenum = 2749
+#PiccoloGroundStationAction.planenum = 2573
+PiccoloGroundStationAction.planenum = 1
+PiccoloGroundStationAction.ComPort = COM1
+PiccoloGroundStationAction.baud = 9600
+PiccoloGroundStationAction.InterceptUpdatePeriod.ms = 5000
+PiccoloGroundStationAction.LoiterUpdatePeriod.ms = 5000
+PiccoloGroundStationAction.commandedAirspeed_knots = 42
+PiccoloGroundStationAction.MinTurnRadius.Meters = 100
+PiccoloGroundStationAction.ToApproachPathVectorBias = 1.1
+PiccoloGroundStationAction.RacetrackOrbit.AltitudeDescentRate.fps = 10
+PiccoloGroundStationAction.RacetrackOrbit.AngleAroundFinalOrbitToWarn.Degrees = 45
+PiccoloGroundStationAction.RacetrackOrbit.FinalOrbitBufferPercentage =.05
+PiccoloGroundStationAction.DistCenterToFirstRange.FactorForPathStart = 0.999
+PicInterface.ShowPicDisplay = false
+PicInterface.UseAgl = true
+PicInterface.MaxAltLeadingCommand.Meters = 100
+
+#Display settings
+WACSSettingsPanel.ZeroAirData.PromptDialog = true
+WACSSettingsPanel.ZeroAirData.BasePressurePa = 101321
+SearchDisplay.UseImageryFetcher = true
+SearchCanvas.AgentCircleRadius.Meters = 250.0
+SearchCanvas.RaceTrackOrbit.TotalArrowTicks = 100
+SearchCanvas.CircularOrbit.TotalArrowTicks = 100
+SearchCanvas.RotationDirectionTailLength.Meters = 20
+SearchCanvas.PanDistance = 0.05
+SearchCanvas.ZoomFactor = 1.25
+SearchCanvas.RotationTickCount = 5
+SearchCanvas.gimbalDefaultAGL.Meters = 0.
+SearchCanvas.altdisplayheight = 150
+SearchCanvas.rndisplayheight = 300
+SearchCanvas.ApproachPathDotsSize = 10
+SearchCanvas.CountdownTimerFontSize = 20
+AltitudePanel.TimeWindowSpan.Ms = 300000
+AltitudePanel.NameAreaWidth.Pixels = 130
+AgentSettingsPanel.showWind = false
+
+AgentTracker.maxPositionHistoryAge.Ms = 300000
+AgentTracker.maxDetectionHistoryAge.Ms = 300000
+WindHistory.MaxHistoryAge.Ms = 240000
+
+##unit defaults
+DisplayUnitsManager.Default.Altitude = ft
+DisplayUnitsManager.Default.Range = m
+DisplayUnitsManager.Default.WindSpeed = m/s
+DisplayUnitsManager.Default.AirSpeed = m/s
+
+## Simulation settings
+SimulationMode.windspeed = 2.0  
+SimulationMode.windbearing = 1.0
+SimulationMode.changeWind = false
+SimulationMode.timeAccelerationCoefficient 1
+SimulationMode.initialSimulatedCloudHeight_ft = 300
+SimulatedRobotDriver.vehicleSpeed_knots = 65
+SimulatedRobotDriver.avoidObstacles = true  
+#SimulatedRobotDriver.verticalSpeed = 1.25  
+SimulatedRobotDriver.verticalSpeed = 2.00
+SimulatedRobotDriver.maxTurn = 15.0
+SimulatedRobotDriver.bankAngle = 25.0
+SimulatedRobotDriver.responseDelay = 0
+
+## Loss of Comms - Position Prediction settings
+AgentPrediction.ShowPredictionAfter.Ms = 5000
+AgentPrediction.UpdateFrequency.Ms = 1500
+AgentPrediction.Resolution = 0.2
+AgentPrediction.AirspeedBuffer.Knots = 5
+
+
+##APL Lawn
+#agent.startLat = 39.16129298
+#agent.startLon = -76.89942163
+#agent.launchHeight.Feet = 410
+
+#NRL
+#agent.startLat = 38.826868
+#agent.startLon = -77.023111
+#agent.launchHeight.Feet = 10
+
+#agent.startLat = 0.0
+#agent.startLon = 0.0
+#agent.launchHeight.Feet = 0
+
+##Philips
+#agent.startLat = 39.4716
+#agent.startLon = -76.1698
+#agent.launchHeight.Feet = 200
+agent.startLat = 39.462706
+agent.startLon = -76.171753
+agent.launchHeight.Feet = 40
+
+#dugway target R
+#agent.startLat = 40.103725
+#agent.startLon = -113.189115
+#agent.launchHeight.Feet = 4307.7
+
+#dugway 2 target
+#agent.startLat = 40.12167
+#agent.startLon = -113.149329
+#agent.launchHeight.Feet = 4307.7
+
+#Redstone
+#agent.startLat = 34.67513
+#agent.startLon = -86.68323
+#agent.launchHeight.Feet = 7300
+
+#Sendai
+#agent.startLat = 38.141183
+#agent.startLon = 140.926844
+#agent.launchHeight.Feet = 10
+
+#Fort AP Hill
+#agent.startLat = 38.09522
+#agent.startLon = -77.26476
+#agent.launchHeight.Feet = 200.0
+
+
+
+#Old falcon view stuff, should be removed in the future
+FalconviewRegion.eraseOldRegions = true
+FalconviewRegion.cotType = b-a-c-c
+FalconviewRegion.port = 18200
+FalconviewRegion.regionTTL = 3600000
+FalconviewRegion.address = 127.0.0.1
+
+#Controls green/red lights in control settings panel
+WACSControlPanel.PodCommsDelay.Sec 20
+WACSControlPanel.AnacondaCommsDelay.Sec  20
+WACSControlPanel.IBACCommsDelay.Sec  20
+WACSControlPanel.C100CommsDelay.Sec  20
+WACSControlPanel.GammaCommsDelay.Sec  20
+WACSControlPanel.AlphaCommsDelay.Sec  20
+WACSControlPanel.TempCommsDelay.Sec  20
+WACSSettingsPanel.APCommsDelay.Sec = 10
+WACSSettingsPanel.GimbalCommsDelay.Sec = 10
+
+#Test interface for display control panel
+cbrnPodsInterfaceTest.processAlpha = false
+cbrnPodsInterfaceTest.processGamma = false
+cbrnPodsInterfaceTest.connectBridgeport = false
+cbrnPodsInterfaceTest.connectCanberra = false
+
+SatComm.GcsSendToVsm.IPAddr = 233.1.3.4
+SatComm.GcsSendToVsm.Port = 47190
+SatComm.GcsRecvFromVsm.IPAddr = 233.1.3.4
+SatComm.GcsRecvFromVsm.Port = 47191
+SatComm.ExpTimeSendPeriod.Ms = 2000
+SatComm.IbacStateSendPeriod.Ms = 2000
+SatComm.WacsModeSendPeriod.Ms = 2000
+SatComm.WWBSendPeriod.Ms = 2000
+SatComm.ControlAPSendPeriod.Ms = 2000
+SatComm.TargetSendPeriod.Ms = 2000
+SatComm.AllowInterceptSendPeriod.Ms = 2000
+SatComm.AnacondaStateSendPeriod.Ms = 2000
+SatComm.C100StateSendPeriod.Ms = 2000
+SatComm.AlphaStateSendPeriod.Ms = 2000
+
+####################Swarm Stuff, can't change token names because they are (or might be?) used in swarm.jar
+systemUniqueID = 1
+####################End swarm stuff
+
+#For EthernetVideoClient
+EthernetVideoClient.RemoteIp = 192.168.100.51
+EthernetVideoClient.RemotePort = 3999
+EthernetVideoClient.LocalPort = 3995
+EthernetVideoClient.ReceivedFrameWaitTime.Ms = 100
+EthernetVideoClient.MaxRxPacketSize = 65535
+EthernetVideoClient.DefaultHeight = 240
+EthernetVideoClient.DefaultWidth = 320
+EthernetVideoClient.ConnectionDroppedTime.Ms = 3000
+end displayConfig
+time: 1548339081809
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+end time
+time: 1548339082270
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+end time
+time: 1548339082925
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50839614868164   -76.12544250488281   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.508397 Lon: -76.125443 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+wacswaypointbelief:
+ia:399.99999999999994 ft, ir:425.0 m, laf:999.9999999999999 ft, las:3000.0 ft, lr:1000.0 m, 
+end wacswaypointbelief
+cbrnheartbeatbelief:
+0: none
+1: none
+end cbrnheartbeatbelief
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+safetyboxbelief:
+Thu Jan 24 09:11:17 EST 2019, otheragent, 914.0 AGL, 152.0 AGL, 2000.0, 200.0, 40.31426378692493, -113.38126567955311, 39.928316539909, -112.79677791250654, true
+end safetyboxbelief
+end time
+time: 1548339083274
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50839614868164   -76.12544250488281   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.508397 Lon: -76.125443 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339083774
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.495365142822266   -76.14128112792969   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.495367 Lon: -76.141278 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339084289
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55068588256836   -76.07210540771484   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.550685 Lon: -76.072107 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339084805
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48123550415039   -76.15519714355469   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.481237 Lon: -76.155193 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339085298
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.478126525878906   -76.11540985107422   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.478125 Lon: -76.115412 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339085794
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.500736236572266   -76.14340209960938   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.500735 Lon: -76.143400 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339086313
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.54586410522461   -76.13482666015625   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.545865 Lon: -76.134825 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339086836
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55480194091797   -76.11505126953125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.554803 Lon: -76.115048 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339087311
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.549659729003906   -76.1246566772461   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.549660 Lon: -76.124655 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339087819
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55812454223633   -76.08936309814453   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.558125 Lon: -76.089365 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339088323
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.57071304321289   -76.08695983886719   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.570712 Lon: -76.086963 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339088840
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.49187088012695   -76.08988952636719   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.491872 Lon: -76.089888 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339089355
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.51764678955078   -76.09180450439453   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.517648 Lon: -76.091802 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339089839
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52597427368164   -76.1114501953125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.525973 Lon: -76.111450 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339090339
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48675537109375   -76.09976959228516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.486755 Lon: -76.099770 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339090839
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48675537109375   -76.09976959228516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+pic_telem:
+[Lat: 39.486755 Lon: -76.099770 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339091342
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50775146484375   -76.0898208618164   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.507750 Lon: -76.089823 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339091842
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.476585388183594   -76.14002990722656   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.476587 Lon: -76.140032 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339092372
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50115203857422   -76.07430267333984   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.501152 Lon: -76.074300 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339092856
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56062698364258   -76.1376724243164   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.560627 Lon: -76.137672 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339093374
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.478614807128906   -76.09414672851562   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.478613 Lon: -76.094145 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339093858
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55427551269531   -76.15693664550781   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.554275 Lon: -76.156940 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339094359
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.517574310302734   -76.09947967529297   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.517575 Lon: -76.099483 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339094863
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52962875366211   -76.11227416992188   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.529630 Lon: -76.112272 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339095377
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56837844848633   -76.10652160644531   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.568377 Lon: -76.106525 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339095884
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.51490783691406   -76.1021728515625   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.514908 Lon: -76.102170 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339096375
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.547969818115234   -76.08770751953125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.547968 Lon: -76.087707 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339096864
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.570777893066406   -76.15538787841797   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.570778 Lon: -76.155390 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339097362
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52878952026367   -76.12181854248047   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.528788 Lon: -76.121820 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339097869
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.505977630615234   -76.13200378417969   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.505977 Lon: -76.132000 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339098376
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.505977630615234   -76.13200378417969   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+pic_telem:
+[Lat: 39.505977 Lon: -76.132000 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339098888
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55031204223633   -76.12862396240234   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.550313 Lon: -76.128627 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339099403
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48635482788086   -76.11073303222656   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.486353 Lon: -76.110732 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339099935
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50011444091797   -76.09405517578125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.500113 Lon: -76.094052 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339100411
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53388977050781   -76.13121795654297   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.533892 Lon: -76.131222 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339100905
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.510154724121094   -76.11225128173828   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.510153 Lon: -76.112248 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339101410
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52988815307617   -76.12071228027344   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.511132 Lon: -76.136547 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339101910
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.519493103027344   -76.12874603271484   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.519493 Lon: -76.128745 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339102410
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.5482292175293   -76.12654113769531   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.548228 Lon: -76.126542 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339102910
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.490692138671875   -76.09587097167969   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.490692 Lon: -76.095873 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339103422
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48640823364258   -76.14260864257812   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.486410 Lon: -76.142607 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339103927
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50855255126953   -76.0907211303711   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.508553 Lon: -76.090722 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339104434
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50855255126953   -76.0907211303711   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+pic_telem:
+[Lat: 39.508553 Lon: -76.090722 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339104912
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48967742919922   -76.1389389038086   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.489678 Lon: -76.138942 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339105418
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.525943756103516   -76.08678436279297   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.525943 Lon: -76.086785 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339105913
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55101013183594   -76.07786560058594   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.551008 Lon: -76.077865 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339106421
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.543914794921875   -76.08500671386719   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.543915 Lon: -76.085003 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339106914
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56099319458008   -76.10916137695312   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.560993 Lon: -76.109162 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339107417
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.54771041870117   -76.09300231933594   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.547710 Lon: -76.093005 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339107914
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56779098510742   -76.13972473144531   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.567790 Lon: -76.139722 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339108423
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.47511672973633   -76.13864135742188   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.475115 Lon: -76.138642 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339108930
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.570274353027344   -76.12109375   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.570273 Lon: -76.121093 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339109435
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.505855560302734   -76.13954162597656   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.505855 Lon: -76.139540 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339109935
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50127410888672   -76.11943817138672   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.501273 Lon: -76.119442 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339110439
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.500038146972656   -76.116455078125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.500040 Lon: -76.116455 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339110936
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48462677001953   -76.10636138916016   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.484625 Lon: -76.106365 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339111439
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.571537017822266   -76.13812255859375   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.513863 Lon: -76.085405 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339111938
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.51386260986328   -76.08540344238281   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.513863 Lon: -76.085405 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339112441
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.555931091308594   -76.0888900756836   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.555932 Lon: -76.088892 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339112944
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53264617919922   -76.1341552734375   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339112640
+   latitude     : 39.497222900390625
+   longitude    : -76.13601684570312
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.550075 Lon: -76.071182 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339113439
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55007553100586   -76.07118225097656   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.550075 Lon: -76.071182 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339113941
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.51797103881836   -76.13556671142578   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339113643
+   latitude     : 39.562686920166016
+   longitude    : -76.16046142578125
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.517972 Lon: -76.135568 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339114442
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53834533691406   -76.07583618164062   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339114143
+   latitude     : 39.54652404785156
+   longitude    : -76.0781021118164
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.538347 Lon: -76.075837 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339114945
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53068542480469   -76.15528869628906   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.530685 Lon: -76.155288 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339115442
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48582458496094   -76.072998046875   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.485825 Lon: -76.073002 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339115942
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.566158294677734   -76.13610076904297   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339115645
+   latitude     : 39.56968688964844
+   longitude    : -76.07572937011719
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.566157 Lon: -76.136100 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339116451
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.495872497558594   -76.09202575683594   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:23.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.566157 Lon: -76.136100 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339116949
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.495872497558594   -76.09202575683594   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339116145
+   latitude     : 39.56308364868164
+   longitude    : -76.13896942138672
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+pic_telem:
+[Lat: 39.495872 Lon: -76.092025 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339117452
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.510257720947266   -76.1457290649414   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339116658
+   latitude     : 39.47480392456055
+   longitude    : -76.09941101074219
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.510257 Lon: -76.145732 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339117952
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.47946548461914   -76.07093811035156   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339117159
+   latitude     : 39.50839614868164
+   longitude    : -76.12544250488281
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.479465 Lon: -76.070942 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339118444
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56303405761719   -76.14561462402344   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339117660
+   latitude     : 39.495365142822266
+   longitude    : -76.14128112792969
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.563035 Lon: -76.145613 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339118950
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.5693473815918   -76.14159393310547   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.569347 Lon: -76.141597 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339119446
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.57041931152344   -76.08126068115234   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.570418 Lon: -76.081262 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339119946
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52299499511719   -76.15591430664062   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339119165
+   latitude     : 39.48123550415039
+   longitude    : -76.15519714355469
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.565445 Lon: -76.148108 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339120446
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56544494628906   -76.14810943603516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339119666
+   latitude     : 39.478126525878906
+   longitude    : -76.11540985107422
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.565445 Lon: -76.148108 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339120955
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.47645950317383   -76.07585906982422   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339120166
+   latitude     : 39.500736236572266
+   longitude    : -76.14340209960938
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.476458 Lon: -76.075858 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339121449
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55580139160156   -76.09498596191406   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339120667
+   latitude     : 39.54586410522461
+   longitude    : -76.13482666015625
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.555800 Lon: -76.094983 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339121949
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.49848175048828   -76.15667724609375   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339121168
+   latitude     : 39.55480194091797
+   longitude    : -76.11505126953125
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.498483 Lon: -76.156677 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339122448
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.537601470947266   -76.1600570678711   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.537602 Lon: -76.160057 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339122955
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.49099349975586   -76.149658203125   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.490995 Lon: -76.149662 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339123451
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.520565032958984   -76.16902160644531   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339122668
+   latitude     : 39.57071304321289
+   longitude    : -76.08695983886719
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.520565 Lon: -76.169020 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339123951
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.54465866088867   -76.08421325683594   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339123169
+   latitude     : 39.49187088012695
+   longitude    : -76.08988952636719
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.544660 Lon: -76.084213 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339124452
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53849792480469   -76.10355377197266   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339123669
+   latitude     : 39.51764678955078
+   longitude    : -76.09180450439453
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.538497 Lon: -76.103557 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339124959
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.546905517578125   -76.15530395507812   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339124170
+   latitude     : 39.52597427368164
+   longitude    : -76.1114501953125
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.546907 Lon: -76.155302 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339125453
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50707244873047   -76.07405853271484   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339124671
+   latitude     : 39.48675537109375
+   longitude    : -76.09976959228516
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.507072 Lon: -76.074062 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339125952
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52747344970703   -76.1373519897461   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.527475 Lon: -76.137353 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339126452
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48311233520508   -76.1169662475586   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.483112 Lon: -76.116965 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339126958
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.523311614990234   -76.12759399414062   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339126172
+   latitude     : 39.50115203857422
+   longitude    : -76.07430267333984
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.523310 Lon: -76.127595 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339127454
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53617477416992   -76.09004211425781   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339126672
+   latitude     : 39.56062698364258
+   longitude    : -76.1376724243164
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.536173 Lon: -76.090038 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339127954
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53349304199219   -76.07376861572266   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339127172
+   latitude     : 39.478614807128906
+   longitude    : -76.09414672851562
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.533492 Lon: -76.073765 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339128454
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.48815155029297   -76.09819793701172   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339127673
+   latitude     : 39.502655029296875
+   longitude    : -76.0885009765625
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.488153 Lon: -76.098202 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339128986
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56461715698242   -76.13175201416016   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339128173
+   latitude     : 39.55427551269531
+   longitude    : -76.15693664550781
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.564618 Lon: -76.131752 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339129463
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.486122131347656   -76.12664031982422   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.486122 Lon: -76.126643 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339129956
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.552738189697266   -76.10933685302734   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.552737 Lon: -76.109337 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339130464
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.47690963745117   -76.12422180175781   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339129675
+   latitude     : 39.56837844848633
+   longitude    : -76.10652160644531
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.513652 Lon: -76.124487 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339130963
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53732681274414   -76.10108947753906   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339130679
+   latitude     : 39.547969818115234
+   longitude    : -76.08770751953125
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.537325 Lon: -76.101087 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339131456
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50787353515625   -76.09757995605469   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339131179
+   latitude     : 39.570777893066406
+   longitude    : -76.15538787841797
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.507875 Lon: -76.097580 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339131957
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.54902648925781   -76.16648864746094   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339131679
+   latitude     : 39.52878952026367
+   longitude    : -76.12181854248047
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.549025 Lon: -76.166490 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339132457
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.525672912597656   -76.09091186523438   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.525672 Lon: -76.090910 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339132961
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.54536819458008   -76.12649536132812   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.545368 Lon: -76.126498 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339133465
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.532958984375   -76.14242553710938   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339133181
+   latitude     : 39.48635482788086
+   longitude    : -76.11073303222656
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.532960 Lon: -76.142425 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339133958
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55275344848633   -76.16897583007812   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339133683
+   latitude     : 39.50011444091797
+   longitude    : -76.09405517578125
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.552752 Lon: -76.168978 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339134458
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55390548706055   -76.12442779541016   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339134183
+   latitude     : 39.53388977050781
+   longitude    : -76.13121795654297
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.553907 Lon: -76.124428 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339134963
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.57135009765625   -76.13491821289062   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339134683
+   latitude     : 39.510154724121094
+   longitude    : -76.11225128173828
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.571348 Lon: -76.134915 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339135459
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.522884368896484   -76.13150787353516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339135183
+   latitude     : 39.52988815307617
+   longitude    : -76.12071228027344
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.522885 Lon: -76.131510 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339135959
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.56364440917969   -76.15662384033203   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.563643 Lon: -76.156623 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339136459
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.52495574951172   -76.12712860107422   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.524957 Lon: -76.127125 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339136963
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.51137161254883   -76.13004302978516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339136685
+   latitude     : 39.5482292175293
+   longitude    : -76.12654113769531
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.511370 Lon: -76.130045 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339137464
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.529144287109375   -76.13705444335938   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339137185
+   latitude     : 39.490692138671875
+   longitude    : -76.09587097167969
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.529143 Lon: -76.137052 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339137961
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.50131607055664   -76.07653045654297   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339137686
+   latitude     : 39.48640823364258
+   longitude    : -76.14260864257812
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.501315 Lon: -76.076533 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339138461
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.567874908447266   -76.10245513916016   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339138186
+   latitude     : 39.50855255126953
+   longitude    : -76.0907211303711
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.567873 Lon: -76.102455 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339138964
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.479530334472656   -76.1290054321289   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339138686
+   latitude     : 39.48967742919922
+   longitude    : -76.1389389038086
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.479530 Lon: -76.129003 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339139464
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.524330139160156   -76.12822723388672   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.524330 Lon: -76.128230 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339139961
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53179931640625   -76.14985656738281   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.534083 Lon: -76.159350 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339140463
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53408432006836   -76.15934753417969   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339140188
+   latitude     : 39.543914794921875
+   longitude    : -76.08500671386719
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.534083 Lon: -76.159350 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339140965
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.49965286254883   -76.15348052978516   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339140688
+   latitude     : 39.56099319458008
+   longitude    : -76.10916137695312
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 0, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.499653 Lon: -76.153483 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339141472
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55076599121094   -76.16019439697266   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339141188
+   latitude     : 39.54771041870117
+   longitude    : -76.09300231933594
+   altitude     : 200.0
+   concentration: 0.05
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: -15, BKG: 121.4, PA1: 0.05, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.474260 Lon: -76.133130 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339141964
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.47425842285156   -76.13313293457031   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339141689
+   latitude     : 39.56779098510742
+   longitude    : -76.13972473144531
+   altitude     : 200.0
+   concentration: 0.1
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 30, BKG: 121.4, PA1: 0.1, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.474260 Lon: -76.133130 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339142464
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.53190231323242   -76.16678619384766   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339142189
+   latitude     : 39.47511672973633
+   longitude    : -76.13864135742188
+   altitude     : 200.0
+   concentration: 1.0E-5
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 45, BKG: 121.4, PA1: 0.00001, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.531903 Lon: -76.166790 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339142965
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.4779052734375   -76.11273956298828   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:24.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.477905 Lon: -76.112737 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339143468
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.55022430419922   -76.14649963378906   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etdstatusmessagebelief:
+LTemp:30.06,ATemp: 29.95,PACTemp: 30.92,LPow: 1.05,RefSig: 1.12,Flow: 3.23,ExtSig: 0.00,ResFQ: 1662.0,Warn: None,LastSt: []
+end etdstatusmessagebelief
+pic_telem:
+[Lat: 39.550223 Lon: -76.146498 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time
+time: 1548339143965
+belief: agentPositionBelief
+display   39.462706   -76.171753   12.192   0.0
+otheragent   39.508968353271484   -76.15531158447266   200.0   0.0
+end agentPositionBelief
+metbelief:
+windSpeed: 5.0 kt
+windBearingTo: 0.0 deg(navy)
+end metbelief
+etddetectionbelief:
+   time         : 1548339143690
+   latitude     : 39.505855560302734
+   longitude    : -76.13954162597656
+   altitude     : 200.0
+   concentration: 0.04
+end etddetectionbelief
+etddetectionmessagebelief:
+Conc: 60, BKG: 121.4, PA1: 0.04, PA2: 0.05, L1: 1.05, L2: 1.06, N1: 2713, N2: 2695
+end etddetectionmessagebelief
+pic_telem:
+[Lat: 39.508970 Lon: -76.155312 AltWGS84: 200.000 AltMSL: 200.000 AltAGL_m: 0.000 AltLaserValid: N Roll: 0.000 Pitch: 0.000 Yaw: 0.000 TrueHeading: 0.000 WindSouth: 0.000 WindWest: 0.000 VelNorth: 0.000 VelEast: 0.000 VelDown: 0.000 IndAirSpeed: 0.000 PDOP: 0.000 GPS_Status: 0 StaticPressPa: 0.000 OutsideAirTempC: 0.000]
+end pic_telem
+agentmodebelief:
+otheragent   loiter mode
+end agentmodebelief
+end time

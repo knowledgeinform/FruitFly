@@ -1,0 +1,193 @@
+AglDisplay.WarningAgl.ft = 700.0
+AglDisplay.AlarmAgl.ft = 620.0
+AglDisplay.WarningColor.RGB = 16777011
+AglDisplay.AlarmColor.RGB = 16724787
+AglDisplay.ClearColor.RGB = 15526360
+
+FlightControl.usePiccoloGroundStationAction = false
+FlightControl.useShadowDriver = true
+
+#Shadow stuff
+ShadowDriver.bearingToTurnRateCoefficient = 0.5
+ShadowDriver.centerVectorBias = 1.5
+ShadowDriver.commandedAirspeed_knots = 65.0
+ShadowDriver.IntegralGain =  0.01
+ShadowDriver.IntegralControlDistanceMeters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathMaxSpeedIncreaseScale = 0
+ShadowDriver.ToApproachPathVectorBias = 1.5
+ShadowDriver.maxBarometricAltitudeError_m = 0.0
+ShadowDriver.laserAltitudeDataTimeout_ms = 0.0
+ShadowDriver.RacetrackLoiter.FinalOrbitBufferPercentage = 0.05
+ShadowDriver.RacetrackLoiter.ApproachPathDistanceBuffer.Meters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathBearingBuffer.Degrees = 10.0
+ShadowDriver.RacetrackLoiter.ApproachPathTimeBuffer.Ms = 5000
+ShadowDriver.RacetrackLoiter.AltitudeDescentRate.fps = 10
+ShadowDriver.RacetrackLoiter.AltitudeAscentRate.fps = 6
+ShadowDriver.RacetrackLoiter.AirspeedDecelerationRate.ktspersec = .75
+ShadowDriver.RacetrackLoiter.AngleAroundFinalOrbitToWarn.Degrees = 45.0
+ShadowDriver.NumAltitudeSteps = 3
+ShadowDriver.AltitudeSteps = 75,90,95
+ShadowDriver.TimeAtEachAltitudeStep.Ms = 30000
+ShadowDriver.AltitudeStepBufferDistance.Meters = 5
+ShadowDriver.ForceDescentOnLoiterApproach = false
+ShadowDriver.RacetrackLoiter.FirstRangeDistanceFromTarget.Meters = 2500
+ShadowDriver.RacetrackLoiter.ContactDistanceFromTarget.Meters = 1500
+ShadowDriver.LogLoiterCircleData = false
+ShadowDriver.TimeDeltaToSwitchFromApproachPathMs = 60000
+ShadowDriver.MaxAltLeadingCommand.Meters = 100
+ShadowAutopilotInterface.localPort = 16004
+ShadowAutopilotInterface.remotePort = 16003
+#ShadowAutopilotInterface.remoteHostname = 10.4.72.80
+ShadowAutopilotInterface.remoteHostname = localhost
+ShadowAutopilotInterface.sendRateHz = 8
+ShadowAutopilotInterface.logData = true
+ShadowAutopilotInterface.telemetryRepeaterEnabled = false
+ShadowAutopilotInterface.telemetryRepeaterHostname = 192.168.1.50
+ShadowAutopilotInterface.telemetryRepeaterPort = 16004
+
+#Piccolo stuff
+PiccoloGroundStationAction.useTCP = true
+#PiccoloGroundStationAction.port = 2000
+#PiccoloGroundStationAction.port = 2001
+PiccoloGroundStationAction.port = 2010
+#PiccoloGroundStationAction.ipaddr = 192.168.1.51
+PiccoloGroundStationAction.ipaddr = localhost
+#PiccoloGroundStationAction.planenum = 2749
+#PiccoloGroundStationAction.planenum = 2573
+PiccoloGroundStationAction.planenum = 1
+PiccoloGroundStationAction.ComPort = COM1
+PiccoloGroundStationAction.baud = 9600
+PiccoloGroundStationAction.InterceptUpdatePeriod.ms = 5000
+PiccoloGroundStationAction.LoiterUpdatePeriod.ms = 5000
+PiccoloGroundStationAction.commandedAirspeed_knots = 42
+PiccoloGroundStationAction.MinTurnRadius.Meters = 100
+PiccoloGroundStationAction.ToApproachPathVectorBias = 1.1
+PiccoloGroundStationAction.RacetrackOrbit.AltitudeDescentRate.fps = 10
+PiccoloGroundStationAction.RacetrackOrbit.AngleAroundFinalOrbitToWarn.Degrees = 45
+PiccoloGroundStationAction.RacetrackOrbit.FinalOrbitBufferPercentage =.05
+PiccoloGroundStationAction.DistCenterToFirstRange.FactorForPathStart = 0.999
+PicInterface.ShowPicDisplay = false
+PicInterface.UseAgl = true
+PicInterface.MaxAltLeadingCommand.Meters = 100
+
+#Display settings
+WACSSettingsPanel.ZeroAirData.PromptDialog = true
+WACSSettingsPanel.ZeroAirData.BasePressurePa = 101321
+SearchDisplay.UseImageryFetcher = false
+SearchDisplay.use2009gui = false
+SearchCanvas.AgentCircleRadius.Meters = 250.0
+SearchCanvas.RaceTrackOrbit.TotalArrowTicks = 100
+SearchCanvas.CircularOrbit.TotalArrowTicks = 100
+SearchCanvas.RotationDirectionTailLength.Meters = 20
+SearchCanvas.PanDistance = 0.05
+SearchCanvas.ZoomFactor = 1.25
+SearchCanvas.RotationTickCount = 5
+SearchCanvas.gimbalDefaultAGL.Meters = 0.
+SearchCanvas.altdisplayheight = 150
+SearchCanvas.rndisplayheight = 300
+SearchCanvas.ApproachPathDotsSize = 10
+SearchCanvas.CountdownTimerFontSize = 20
+AltitudePanel.TimeWindowSpan.Ms = 300000
+AltitudePanel.NameAreaWidth.Pixels = 130
+AgentSettingsPanel.showWind = false
+
+AgentTracker.maxPositionHistoryAge.Ms = 300000
+AgentTracker.maxDetectionHistoryAge.Ms = 300000
+WindHistory.MaxHistoryAge.Ms = 240000
+
+##unit defaults
+DisplayUnitsManager.Default.Altitude = ft
+DisplayUnitsManager.Default.Range = m
+DisplayUnitsManager.Default.WindSpeed = m/s
+DisplayUnitsManager.Default.AirSpeed = m/s
+
+## Simulation settings
+SimulationMode.windspeed = 2.0  
+SimulationMode.windbearing = 1.0
+SimulationMode.changeWind = false
+SimulationMode.timeAccelerationCoefficient 1
+SimulationMode.initialSimulatedCloudHeight_ft = 300
+SimulatedRobotDriver.vehicleSpeed_knots = 65
+SimulatedRobotDriver.avoidObstacles = true  
+#SimulatedRobotDriver.verticalSpeed = 1.25  
+SimulatedRobotDriver.verticalSpeed = 2.00
+SimulatedRobotDriver.maxTurn = 15.0
+SimulatedRobotDriver.bankAngle = 25.0
+SimulatedRobotDriver.responseDelay = 0  
+
+
+
+##APL Lawn
+#agent.startLat = 39.16129298
+#agent.startLon = -76.89942163
+#agent.launchHeight.Feet = 410
+
+##NRL
+#agent.startLat = 38.826868
+#agent.startLon = -77.023111
+#agent.launchHeight.Feet = 10
+
+#agent.startLat = 0.0
+#agent.startLon = 0.0
+#agent.launchHeight.Feet = 0
+
+##Philips
+#agent.startLat = 39.4716
+#agent.startLon = -76.1698
+#agent.launchHeight.Feet = 200
+
+#dugway target R
+#agent.startLat = 40.103725
+#agent.startLon = -113.189115
+#agent.launchHeight.Feet = 4307.7
+
+#dugway 2 target
+agent.startLat = 40.12167
+agent.startLon = -113.149329
+agent.launchHeight.Feet = 4307.7
+
+#Redstone
+#agent.startLat = 34.67513
+#agent.startLon = -86.68323
+#agent.launchHeight.Feet = 7300
+
+#Sendai
+#agent.startLat = 38.141183
+#agent.startLon = 140.926844
+#agent.launchHeight.Feet = 10
+
+#Fort AP Hill
+#agent.startLat = 38.09522
+#agent.startLon = -77.26476
+#agent.launchHeight.Feet = 200.0
+
+
+
+#Old falcon view stuff, should be removed in the future
+FalconviewRegion.eraseOldRegions = true
+FalconviewRegion.cotType = b-a-c-c
+FalconviewRegion.port = 18200
+FalconviewRegion.regionTTL = 3600000
+FalconviewRegion.address = 127.0.0.1
+
+#Controls green/red lights in control settings panel
+WACSControlPanel.PodCommsDelay.Sec 20
+WACSControlPanel.AnacondaCommsDelay.Sec  20
+WACSControlPanel.IBACCommsDelay.Sec  20
+WACSControlPanel.C100CommsDelay.Sec  20
+WACSControlPanel.GammaCommsDelay.Sec  20
+WACSControlPanel.AlphaCommsDelay.Sec  20
+WACSControlPanel.TempCommsDelay.Sec  20
+WACSSettingsPanel.APCommsDelay.Sec = 10
+WACSSettingsPanel.GimbalCommsDelay.Sec = 10
+
+#Test interface for display control panel
+cbrnPodsInterfaceTest.processAlpha = false
+cbrnPodsInterfaceTest.processGamma = false
+cbrnPodsInterfaceTest.connectBridgeport = false
+
+
+####################Swarm Stuff, can't change token names because they are (or might be?) used in swarm.jar
+systemUniqueID = 1
+####################End swarm stuff
+

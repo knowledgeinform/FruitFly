@@ -1,0 +1,199 @@
+\hypertarget{class_g_c_s_display}{
+\section{GCSDisplay Class Reference}
+\label{class_g_c_s_display}\index{GCSDisplay@{GCSDisplay}}
+}
+
+
+Class containing OpenGL calls to display GCS truck.  
+
+
+
+
+{\ttfamily \#include $<$GCSDisplay.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_s_display_ad816f1052bf3b3a24f830f560e3ec9c6}{
+\hyperlink{class_g_c_s_display_ad816f1052bf3b3a24f830f560e3ec9c6}{GCSDisplay} ()}
+\label{class_g_c_s_display_ad816f1052bf3b3a24f830f560e3ec9c6}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, generates display call list for truck display. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_aad39b4a2f467d190c3a9dfb8c886c201}{
+\hyperlink{class_g_c_s_display_aad39b4a2f467d190c3a9dfb8c886c201}{$\sim$GCSDisplay} ()}
+\label{class_g_c_s_display_aad39b4a2f467d190c3a9dfb8c886c201}
+
+\begin{DoxyCompactList}\small\item\em Destructor, destroys OpenGL allocated resources. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_c_s_display_a0cb97de205ce8a90de78be22f19cfec1}{displayGCS} ()
+\begin{DoxyCompactList}\small\item\em Call display list to paint truck in OpenGL scene. Truck must be positioned before calling this. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_g_c_s_display_a0609c23f5133b51b6459fa34c26776d1}{readConfig} ()
+\begin{DoxyCompactList}\small\item\em Read config settings from file for truck size/color. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_c_s_display_a2b69f994d5c30e19d166fb9a717bfed5}{generateCallList} ()
+\begin{DoxyCompactList}\small\item\em Generate display call list for OpenGL truck display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_s_display_adca85e2eb3a6bab16a0d2625618a3b65}{
+GLUquadricObj $\ast$ \hyperlink{class_g_c_s_display_adca85e2eb3a6bab16a0d2625618a3b65}{quadricObj}}
+\label{class_g_c_s_display_adca85e2eb3a6bab16a0d2625618a3b65}
+
+\begin{DoxyCompactList}\small\item\em Quadric object for GLU shape creation. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a74d2d05b68dedb897b6309f3f14c6cf1}{
+int \hyperlink{class_g_c_s_display_a74d2d05b68dedb897b6309f3f14c6cf1}{displayList}}
+\label{class_g_c_s_display_a74d2d05b68dedb897b6309f3f14c6cf1}
+
+\begin{DoxyCompactList}\small\item\em Display call list for displaying GCS truck. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_ac0ed13b6ffae58843e5d5ac16ed8b037}{
+double \hyperlink{class_g_c_s_display_ac0ed13b6ffae58843e5d5ac16ed8b037}{gcsScale}}
+\label{class_g_c_s_display_ac0ed13b6ffae58843e5d5ac16ed8b037}
+
+\begin{DoxyCompactList}\small\item\em Scale of GCS truck. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_ac2cc1b3f16a0d5e35601f11dea6d5320}{
+double \hyperlink{class_g_c_s_display_ac2cc1b3f16a0d5e35601f11dea6d5320}{truckColorRed}}
+\label{class_g_c_s_display_ac2cc1b3f16a0d5e35601f11dea6d5320}
+
+\begin{DoxyCompactList}\small\item\em Red component of color of truck. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a0959a06a9471599ca0260ddba0750bf3}{
+double \hyperlink{class_g_c_s_display_a0959a06a9471599ca0260ddba0750bf3}{truckColorBlue}}
+\label{class_g_c_s_display_a0959a06a9471599ca0260ddba0750bf3}
+
+\begin{DoxyCompactList}\small\item\em Blue component of color of truck. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_aa6eed7449e9037e045f1876858ae5b39}{
+double \hyperlink{class_g_c_s_display_aa6eed7449e9037e045f1876858ae5b39}{truckColorGreen}}
+\label{class_g_c_s_display_aa6eed7449e9037e045f1876858ae5b39}
+
+\begin{DoxyCompactList}\small\item\em Green component of color of truck. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_abdc6e41e27d219caac97ddccaebf6bae}{
+double \hyperlink{class_g_c_s_display_abdc6e41e27d219caac97ddccaebf6bae}{wheelColorRed}}
+\label{class_g_c_s_display_abdc6e41e27d219caac97ddccaebf6bae}
+
+\begin{DoxyCompactList}\small\item\em Red component of color of wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a5f0f5911788aa318cc7755791898aca9}{
+double \hyperlink{class_g_c_s_display_a5f0f5911788aa318cc7755791898aca9}{wheelColorBlue}}
+\label{class_g_c_s_display_a5f0f5911788aa318cc7755791898aca9}
+
+\begin{DoxyCompactList}\small\item\em Blue component of color of wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a3cec407374ba6e2afdecb87fc90da61a}{
+double \hyperlink{class_g_c_s_display_a3cec407374ba6e2afdecb87fc90da61a}{wheelColorGreen}}
+\label{class_g_c_s_display_a3cec407374ba6e2afdecb87fc90da61a}
+
+\begin{DoxyCompactList}\small\item\em Green component of color of wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_abb98e81b065640f1fd402b8214f25c96}{
+double \hyperlink{class_g_c_s_display_abb98e81b065640f1fd402b8214f25c96}{wheelRadiusM}}
+\label{class_g_c_s_display_abb98e81b065640f1fd402b8214f25c96}
+
+\begin{DoxyCompactList}\small\item\em Radius meters of wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a9c596b10d7f5cfbb12de780fce0402c6}{
+double \hyperlink{class_g_c_s_display_a9c596b10d7f5cfbb12de780fce0402c6}{wheelThicknessM}}
+\label{class_g_c_s_display_a9c596b10d7f5cfbb12de780fce0402c6}
+
+\begin{DoxyCompactList}\small\item\em Thickness/width meters of wheels. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_ad965a0a4af9597f41fabc06cc8fe480d}{
+double \hyperlink{class_g_c_s_display_ad965a0a4af9597f41fabc06cc8fe480d}{truckLengthM}}
+\label{class_g_c_s_display_ad965a0a4af9597f41fabc06cc8fe480d}
+
+\begin{DoxyCompactList}\small\item\em Truck cargo length meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_afb2ef61c8fb86afcc9a7dc733baac944}{
+double \hyperlink{class_g_c_s_display_afb2ef61c8fb86afcc9a7dc733baac944}{truckWidthM}}
+\label{class_g_c_s_display_afb2ef61c8fb86afcc9a7dc733baac944}
+
+\begin{DoxyCompactList}\small\item\em Truck cargo width meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a7e9b398b924b30d64e8af83713caa598}{
+double \hyperlink{class_g_c_s_display_a7e9b398b924b30d64e8af83713caa598}{truckHeightM}}
+\label{class_g_c_s_display_a7e9b398b924b30d64e8af83713caa598}
+
+\begin{DoxyCompactList}\small\item\em Truck cargo height meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_ab267dba87838cfda16a10f97a5bf4682}{
+double \hyperlink{class_g_c_s_display_ab267dba87838cfda16a10f97a5bf4682}{cabLengthM}}
+\label{class_g_c_s_display_ab267dba87838cfda16a10f97a5bf4682}
+
+\begin{DoxyCompactList}\small\item\em Truck cab length meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a5b206e68129acc0ffe40c4cec149434f}{
+double \hyperlink{class_g_c_s_display_a5b206e68129acc0ffe40c4cec149434f}{cabWidthM}}
+\label{class_g_c_s_display_a5b206e68129acc0ffe40c4cec149434f}
+
+\begin{DoxyCompactList}\small\item\em Truck cab width meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_abfa73d039578c067e80dd357091fb2c8}{
+double \hyperlink{class_g_c_s_display_abfa73d039578c067e80dd357091fb2c8}{cabHeightM}}
+\label{class_g_c_s_display_abfa73d039578c067e80dd357091fb2c8}
+
+\begin{DoxyCompactList}\small\item\em Truck cab height meters. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_display_a26f9311c878f193ed5a7666420a31400}{
+double \hyperlink{class_g_c_s_display_a26f9311c878f193ed5a7666420a31400}{headingDecDeg}}
+\label{class_g_c_s_display_a26f9311c878f193ed5a7666420a31400}
+
+\begin{DoxyCompactList}\small\item\em Truck heading decimal degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing OpenGL calls to display GCS truck. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_g_c_s_display_a0cb97de205ce8a90de78be22f19cfec1}{
+\index{GCSDisplay@{GCSDisplay}!displayGCS@{displayGCS}}
+\index{displayGCS@{displayGCS}!GCSDisplay@{GCSDisplay}}
+\subsubsection[{displayGCS}]{\setlength{\rightskip}{0pt plus 5cm}void GCSDisplay::displayGCS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_g_c_s_display_a0cb97de205ce8a90de78be22f19cfec1}
+
+
+Call display list to paint truck in OpenGL scene. Truck must be positioned before calling this. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_g_c_s_display_a2b69f994d5c30e19d166fb9a717bfed5}{
+\index{GCSDisplay@{GCSDisplay}!generateCallList@{generateCallList}}
+\index{generateCallList@{generateCallList}!GCSDisplay@{GCSDisplay}}
+\subsubsection[{generateCallList}]{\setlength{\rightskip}{0pt plus 5cm}void GCSDisplay::generateCallList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_g_c_s_display_a2b69f994d5c30e19d166fb9a717bfed5}
+
+
+Generate display call list for OpenGL truck display. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_g_c_s_display_a0609c23f5133b51b6459fa34c26776d1}{
+\index{GCSDisplay@{GCSDisplay}!readConfig@{readConfig}}
+\index{readConfig@{readConfig}!GCSDisplay@{GCSDisplay}}
+\subsubsection[{readConfig}]{\setlength{\rightskip}{0pt plus 5cm}void GCSDisplay::readConfig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_g_c_s_display_a0609c23f5133b51b6459fa34c26776d1}
+
+
+Read config settings from file for truck size/color. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/GCSDisplay.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/GCSDisplay.cpp\end{DoxyCompactItemize}

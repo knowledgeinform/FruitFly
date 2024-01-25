@@ -1,0 +1,15 @@
+MulticastIpAddr = 233.1.3.3
+MulticastSendPort = 47190
+MulticastRecvPort = 47191
+MulticastPeriod_ms = 250
+AllowRemoteSync = false
+SyncOption = 4
+UseTimeServerIpAddr = 192.168.1.1
+UsePiccoloComPort = COM1
+UseGpsComPort = COM1
+UseLocalTimeDelayMs = 3000
+ForbidTimeServerSync = true
+ForbidPiccoloSync = true
+ForbidGpsSync = true
+WindowCornerX = 910
+WindowCornerY = 293

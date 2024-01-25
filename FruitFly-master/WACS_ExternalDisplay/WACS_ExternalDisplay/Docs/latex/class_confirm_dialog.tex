@@ -1,0 +1,236 @@
+\hypertarget{class_confirm_dialog}{
+\section{ConfirmDialog Class Reference}
+\label{class_confirm_dialog}\index{ConfirmDialog@{ConfirmDialog}}
+}
+
+
+Class to present a dialog that will force the user to confirm an action. Keeps user from making stupid mistakes without knowing it.  
+
+
+
+
+{\ttfamily \#include $<$ConfirmDialog.h$>$}
+
+Inheritance diagram for ConfirmDialog:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_confirm_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_confirm_dialog_a0f44c7c9dce6ed26e1d8d7ce6e33edf3}{ConfirmDialog} (HINSTANCE newHinst, HWND newhParent)
+\begin{DoxyCompactList}\small\item\em Constructor, essentially does nothing. \end{DoxyCompactList}\item 
+\hypertarget{class_confirm_dialog_a357bcad7623b8f5cbf17bffdf1e5d856}{
+\hyperlink{class_confirm_dialog_a357bcad7623b8f5cbf17bffdf1e5d856}{$\sim$ConfirmDialog} ()}
+\label{class_confirm_dialog_a357bcad7623b8f5cbf17bffdf1e5d856}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+LRESULT \hyperlink{class_confirm_dialog_a9d8c945d463fbc0f816f24e3f353f94a}{processMessage} (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Non-\/static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. \end{DoxyCompactList}\item 
+bool \hyperlink{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}{show} ()
+\begin{DoxyCompactList}\small\item\em Function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. \end{DoxyCompactList}\item 
+void \hyperlink{class_confirm_dialog_ad7c4854ece123b88334f83344a750d49}{setType} (int newType)
+\begin{DoxyCompactList}\small\item\em Notify this window which type of confirmation it is asking for. \end{DoxyCompactList}\item 
+bool \hyperlink{class_confirm_dialog_a54aa8f38a6dfd4ed85acd5957f6fbb02}{containsWindow} (HWND hwnd)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified window is in this dialog. Used to determine how to handle messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static LRESULT CALLBACK \hyperlink{class_confirm_dialog_a0c48617ba20204c68533b3b900ac77ce}{processMsg} (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_confirm_dialog_af4593c9e5e948df99f51dcf88d6e30fd}{
+char \hyperlink{class_confirm_dialog_af4593c9e5e948df99f51dcf88d6e30fd}{text} \mbox{[}100\mbox{]}}
+\label{class_confirm_dialog_af4593c9e5e948df99f51dcf88d6e30fd}
+
+\begin{DoxyCompactList}\small\item\em The text to ask the user to confirm. \end{DoxyCompactList}\item 
+\hypertarget{class_confirm_dialog_a676d0fb22c8b85ac88c0eddb3ce03666}{
+int \hyperlink{class_confirm_dialog_a676d0fb22c8b85ac88c0eddb3ce03666}{type}}
+\label{class_confirm_dialog_a676d0fb22c8b85ac88c0eddb3ce03666}
+
+\begin{DoxyCompactList}\small\item\em A value corresponding to the text the user must confirm. \end{DoxyCompactList}\item 
+\hypertarget{class_confirm_dialog_ae632daa425b7baef5101e05d8d8263f9}{
+int \hyperlink{class_confirm_dialog_ae632daa425b7baef5101e05d8d8263f9}{offsetXFromCenter}}
+\label{class_confirm_dialog_ae632daa425b7baef5101e05d8d8263f9}
+
+\begin{DoxyCompactList}\small\item\em Amount from the center of the parent window to offset this window so it looks centered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to present a dialog that will force the user to confirm an action. Keeps user from making stupid mistakes without knowing it. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_confirm_dialog_a0f44c7c9dce6ed26e1d8d7ce6e33edf3}{
+\index{ConfirmDialog@{ConfirmDialog}!ConfirmDialog@{ConfirmDialog}}
+\index{ConfirmDialog@{ConfirmDialog}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{ConfirmDialog}]{\setlength{\rightskip}{0pt plus 5cm}ConfirmDialog::ConfirmDialog (
+\begin{DoxyParamCaption}
+\item[{HINSTANCE}]{newHinst, }
+\item[{HWND}]{newhParent}
+\end{DoxyParamCaption}
+)}}
+\label{class_confirm_dialog_a0f44c7c9dce6ed26e1d8d7ce6e33edf3}
+
+
+Constructor, essentially does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHinst} & Instance of application \\
+\hline
+{\em newhParent} & Parent window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_confirm_dialog_a54aa8f38a6dfd4ed85acd5957f6fbb02}{
+\index{ConfirmDialog@{ConfirmDialog}!containsWindow@{containsWindow}}
+\index{containsWindow@{containsWindow}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{containsWindow}]{\setlength{\rightskip}{0pt plus 5cm}bool ConfirmDialog::containsWindow (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hwnd}
+\end{DoxyParamCaption}
+)}}
+\label{class_confirm_dialog_a54aa8f38a6dfd4ed85acd5957f6fbb02}
+
+
+Returns whether the specified window is in this dialog. Used to determine how to handle messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hwnd} & Window to check for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ True if this dialog contiains the window, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_confirm_dialog_a9d8c945d463fbc0f816f24e3f353f94a}{
+\index{ConfirmDialog@{ConfirmDialog}!processMessage@{processMessage}}
+\index{processMessage@{processMessage}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{processMessage}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT ConfirmDialog::processMessage (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hDlg, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_confirm_dialog_a9d8c945d463fbc0f816f24e3f353f94a}
+
+
+Non-\/static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDlg} & HWND parameter for the object to receive the message \\
+\hline
+{\em message} & command to be processed \\
+\hline
+{\em wParam} & WPARAM for message \\
+\hline
+{\em lParam} & LPARAM for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LRESULT -\/ status of message processing 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_dialog_base_aac84de8c20f2b47ee3de73749922e880}{DialogBase}.
+
+\hypertarget{class_confirm_dialog_a0c48617ba20204c68533b3b900ac77ce}{
+\index{ConfirmDialog@{ConfirmDialog}!processMsg@{processMsg}}
+\index{processMsg@{processMsg}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{processMsg}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK ConfirmDialog::processMsg (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hDlg, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_confirm_dialog_a0c48617ba20204c68533b3b900ac77ce}
+
+
+Static message processing function that receives all messages for all instances of the class. Locates object based on hDlg parameters and passes the command to the object for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDlg} & HWND parameter for the object to receive the message \\
+\hline
+{\em message} & command to be processed \\
+\hline
+{\em wParam} & WPARAM for message \\
+\hline
+{\em lParam} & LPARAM for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LRESULT -\/ status of message processing 
+\end{DoxyReturn}
+\hypertarget{class_confirm_dialog_ad7c4854ece123b88334f83344a750d49}{
+\index{ConfirmDialog@{ConfirmDialog}!setType@{setType}}
+\index{setType@{setType}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{setType}]{\setlength{\rightskip}{0pt plus 5cm}void ConfirmDialog::setType (
+\begin{DoxyParamCaption}
+\item[{int}]{newType}
+\end{DoxyParamCaption}
+)}}
+\label{class_confirm_dialog_ad7c4854ece123b88334f83344a750d49}
+
+
+Notify this window which type of confirmation it is asking for. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newType} & Value corresponding to a type of confirmation message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}{
+\index{ConfirmDialog@{ConfirmDialog}!show@{show}}
+\index{show@{show}!ConfirmDialog@{ConfirmDialog}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}bool ConfirmDialog::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}
+
+
+Function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of operation to show dialog box 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{DialogBase}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ConfirmDialog.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ConfirmDialog.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,239 @@
+\hypertarget{class_shadow_uav_display}{
+\section{ShadowUavDisplay Class Reference}
+\label{class_shadow_uav_display}\index{ShadowUavDisplay@{ShadowUavDisplay}}
+}
+
+
+Class containing OpenGL calls to display Shadow UAV with WACS pods.  
+
+
+
+
+{\ttfamily \#include $<$ShadowUavDisplay.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shadow_uav_display_a7504aa5d4144589f3ade573247df92f6}{
+\hyperlink{class_shadow_uav_display_a7504aa5d4144589f3ade573247df92f6}{ShadowUavDisplay} ()}
+\label{class_shadow_uav_display_a7504aa5d4144589f3ade573247df92f6}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, generates display call list for UAV display. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_ad2804832e84626776a6b3ddcb7d05646}{
+\hyperlink{class_shadow_uav_display_ad2804832e84626776a6b3ddcb7d05646}{$\sim$ShadowUavDisplay} ()}
+\label{class_shadow_uav_display_ad2804832e84626776a6b3ddcb7d05646}
+
+\begin{DoxyCompactList}\small\item\em Destructor, destroys OpenGL allocated resources. \end{DoxyCompactList}\item 
+void \hyperlink{class_shadow_uav_display_ae0f3a3307ce300338edc19590941f21c}{displayUav} ()
+\begin{DoxyCompactList}\small\item\em Call display list to paint UAV in OpenGL scene. UAV must be positioned and oriented before calling this. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_shadow_uav_display_ae5c9e623f85e9eae3dceb06b34d87a83}{readConfig} ()
+\begin{DoxyCompactList}\small\item\em Read config settings from file for UAV size/color. \end{DoxyCompactList}\item 
+void \hyperlink{class_shadow_uav_display_a3e229649066ea16f015d41d1a0713eff}{generateCallList} ()
+\begin{DoxyCompactList}\small\item\em Generate display call list for OpenGL UAV display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shadow_uav_display_a5254b81f53ad907acf105f63ea4fba55}{
+GLUquadricObj $\ast$ \hyperlink{class_shadow_uav_display_a5254b81f53ad907acf105f63ea4fba55}{quadricObj}}
+\label{class_shadow_uav_display_a5254b81f53ad907acf105f63ea4fba55}
+
+\begin{DoxyCompactList}\small\item\em Quadric object for GLU shape creation. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a774c5fac9b8a599f2d9479e466ff8a87}{
+int \hyperlink{class_shadow_uav_display_a774c5fac9b8a599f2d9479e466ff8a87}{displayList}}
+\label{class_shadow_uav_display_a774c5fac9b8a599f2d9479e466ff8a87}
+
+\begin{DoxyCompactList}\small\item\em Display call list for displaying UAV. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_adae8b9044ee0f83508889f7939164e56}{
+double \hyperlink{class_shadow_uav_display_adae8b9044ee0f83508889f7939164e56}{planeScale}}
+\label{class_shadow_uav_display_adae8b9044ee0f83508889f7939164e56}
+
+\begin{DoxyCompactList}\small\item\em Scale of UAV. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_aca47da335117e77b98be154d27c364c3}{
+double \hyperlink{class_shadow_uav_display_aca47da335117e77b98be154d27c364c3}{uavColorRed}}
+\label{class_shadow_uav_display_aca47da335117e77b98be154d27c364c3}
+
+\begin{DoxyCompactList}\small\item\em Red component of UAV color. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a87eb3b200d54e0150b98cabb1cf5febd}{
+double \hyperlink{class_shadow_uav_display_a87eb3b200d54e0150b98cabb1cf5febd}{uavColorBlue}}
+\label{class_shadow_uav_display_a87eb3b200d54e0150b98cabb1cf5febd}
+
+\begin{DoxyCompactList}\small\item\em Blue component of UAV color. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a9164c55d20cf059218fffe401dc895cf}{
+double \hyperlink{class_shadow_uav_display_a9164c55d20cf059218fffe401dc895cf}{uavColorGreen}}
+\label{class_shadow_uav_display_a9164c55d20cf059218fffe401dc895cf}
+
+\begin{DoxyCompactList}\small\item\em Green component of UAV color. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_aea1910099a9841abbc3bd0a592713e74}{
+double \hyperlink{class_shadow_uav_display_aea1910099a9841abbc3bd0a592713e74}{fuselageLength}}
+\label{class_shadow_uav_display_aea1910099a9841abbc3bd0a592713e74}
+
+\begin{DoxyCompactList}\small\item\em Length of fuselage, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a65cf3a32bea103b2e29896e359e321c1}{
+double \hyperlink{class_shadow_uav_display_a65cf3a32bea103b2e29896e359e321c1}{fuselageWidth}}
+\label{class_shadow_uav_display_a65cf3a32bea103b2e29896e359e321c1}
+
+\begin{DoxyCompactList}\small\item\em Width of fuselage, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a0c54950c5781a9e698b7c26793f5b478}{
+double \hyperlink{class_shadow_uav_display_a0c54950c5781a9e698b7c26793f5b478}{fuselageHeight}}
+\label{class_shadow_uav_display_a0c54950c5781a9e698b7c26793f5b478}
+
+\begin{DoxyCompactList}\small\item\em Height of fuselage, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a677d4c09665208506408a6103fc90555}{
+double \hyperlink{class_shadow_uav_display_a677d4c09665208506408a6103fc90555}{fuselageFrontLength}}
+\label{class_shadow_uav_display_a677d4c09665208506408a6103fc90555}
+
+\begin{DoxyCompactList}\small\item\em Length of fuselage front, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_ad4c3b858136b21bd390ac63824cb7c52}{
+double \hyperlink{class_shadow_uav_display_ad4c3b858136b21bd390ac63824cb7c52}{fuselageFrontAngleRad}}
+\label{class_shadow_uav_display_ad4c3b858136b21bd390ac63824cb7c52}
+
+\begin{DoxyCompactList}\small\item\em Angle of the front nose of the fuselage, radians. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a92d095e39c10a87fc9d0208e20ff481e}{
+double \hyperlink{class_shadow_uav_display_a92d095e39c10a87fc9d0208e20ff481e}{wingSpan}}
+\label{class_shadow_uav_display_a92d095e39c10a87fc9d0208e20ff481e}
+
+\begin{DoxyCompactList}\small\item\em Wing span meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a915eb646eef7d1e529e8a7fd3db49947}{
+double \hyperlink{class_shadow_uav_display_a915eb646eef7d1e529e8a7fd3db49947}{wingDepth}}
+\label{class_shadow_uav_display_a915eb646eef7d1e529e8a7fd3db49947}
+
+\begin{DoxyCompactList}\small\item\em Wing depth meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a92bd1668450f324c6f408613e72d2729}{
+double \hyperlink{class_shadow_uav_display_a92bd1668450f324c6f408613e72d2729}{wingThickness}}
+\label{class_shadow_uav_display_a92bd1668450f324c6f408613e72d2729}
+
+\begin{DoxyCompactList}\small\item\em Wing thickness meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_ac5961250ac29fc6f4ca1256ae565baef}{
+double \hyperlink{class_shadow_uav_display_ac5961250ac29fc6f4ca1256ae565baef}{wingRearFromCenter}}
+\label{class_shadow_uav_display_ac5961250ac29fc6f4ca1256ae565baef}
+
+\begin{DoxyCompactList}\small\item\em Wing distance rear from fuselage center, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_ab12e388e9a8f019e80afe151ac810409}{
+double \hyperlink{class_shadow_uav_display_ab12e388e9a8f019e80afe151ac810409}{wingUpFromCenter}}
+\label{class_shadow_uav_display_ab12e388e9a8f019e80afe151ac810409}
+
+\begin{DoxyCompactList}\small\item\em Wing distance up from fuselage center, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a91c05e52fcc763c1e097910a24683098}{
+double \hyperlink{class_shadow_uav_display_a91c05e52fcc763c1e097910a24683098}{tailRearFromWingRear}}
+\label{class_shadow_uav_display_a91c05e52fcc763c1e097910a24683098}
+
+\begin{DoxyCompactList}\small\item\em Distance from rear of tail to rear of wing, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a1631e5f60e37892b967e29a2693ff12f}{
+double \hyperlink{class_shadow_uav_display_a1631e5f60e37892b967e29a2693ff12f}{tailRodDiameter}}
+\label{class_shadow_uav_display_a1631e5f60e37892b967e29a2693ff12f}
+
+\begin{DoxyCompactList}\small\item\em Diameter of tail rods, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a8ca62e1989b18a149e7ecadaa8807e84}{
+double \hyperlink{class_shadow_uav_display_a8ca62e1989b18a149e7ecadaa8807e84}{tailWidth}}
+\label{class_shadow_uav_display_a8ca62e1989b18a149e7ecadaa8807e84}
+
+\begin{DoxyCompactList}\small\item\em Tail width, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_abee96a8f8496690688aeffde71206f1b}{
+double \hyperlink{class_shadow_uav_display_abee96a8f8496690688aeffde71206f1b}{tailThickness}}
+\label{class_shadow_uav_display_abee96a8f8496690688aeffde71206f1b}
+
+\begin{DoxyCompactList}\small\item\em Tail thickness, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a354fec4141d1194c04c69a0d21cd040a}{
+double \hyperlink{class_shadow_uav_display_a354fec4141d1194c04c69a0d21cd040a}{tailHeight}}
+\label{class_shadow_uav_display_a354fec4141d1194c04c69a0d21cd040a}
+
+\begin{DoxyCompactList}\small\item\em Tail height, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a144a42f31be62c3957dd938d656525e4}{
+double \hyperlink{class_shadow_uav_display_a144a42f31be62c3957dd938d656525e4}{tailDepth}}
+\label{class_shadow_uav_display_a144a42f31be62c3957dd938d656525e4}
+
+\begin{DoxyCompactList}\small\item\em Tail depth, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a6812927f0dc8d4777c4a9b6876ef8248}{
+double \hyperlink{class_shadow_uav_display_a6812927f0dc8d4777c4a9b6876ef8248}{podDiameter}}
+\label{class_shadow_uav_display_a6812927f0dc8d4777c4a9b6876ef8248}
+
+\begin{DoxyCompactList}\small\item\em Pod diameter, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_af4d4fa05349b0bea58275be8788b17b0}{
+double \hyperlink{class_shadow_uav_display_af4d4fa05349b0bea58275be8788b17b0}{podLength}}
+\label{class_shadow_uav_display_af4d4fa05349b0bea58275be8788b17b0}
+
+\begin{DoxyCompactList}\small\item\em Pod length, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_aaccf5054c6efd6322c41a104a54cbf73}{
+double \hyperlink{class_shadow_uav_display_aaccf5054c6efd6322c41a104a54cbf73}{podOutFromCenter}}
+\label{class_shadow_uav_display_aaccf5054c6efd6322c41a104a54cbf73}
+
+\begin{DoxyCompactList}\small\item\em Lateral Distance from pod center to fuselage center, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_shadow_uav_display_a6fe4eb52031bc0bb9765dcf404d829ee}{
+double \hyperlink{class_shadow_uav_display_a6fe4eb52031bc0bb9765dcf404d829ee}{podRearOfWingCenter}}
+\label{class_shadow_uav_display_a6fe4eb52031bc0bb9765dcf404d829ee}
+
+\begin{DoxyCompactList}\small\item\em Distance backward from wing center for pod center, meters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing OpenGL calls to display Shadow UAV with WACS pods. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shadow_uav_display_ae0f3a3307ce300338edc19590941f21c}{
+\index{ShadowUavDisplay@{ShadowUavDisplay}!displayUav@{displayUav}}
+\index{displayUav@{displayUav}!ShadowUavDisplay@{ShadowUavDisplay}}
+\subsubsection[{displayUav}]{\setlength{\rightskip}{0pt plus 5cm}void ShadowUavDisplay::displayUav (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_shadow_uav_display_ae0f3a3307ce300338edc19590941f21c}
+
+
+Call display list to paint UAV in OpenGL scene. UAV must be positioned and oriented before calling this. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_shadow_uav_display_a3e229649066ea16f015d41d1a0713eff}{
+\index{ShadowUavDisplay@{ShadowUavDisplay}!generateCallList@{generateCallList}}
+\index{generateCallList@{generateCallList}!ShadowUavDisplay@{ShadowUavDisplay}}
+\subsubsection[{generateCallList}]{\setlength{\rightskip}{0pt plus 5cm}void ShadowUavDisplay::generateCallList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_shadow_uav_display_a3e229649066ea16f015d41d1a0713eff}
+
+
+Generate display call list for OpenGL UAV display. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_shadow_uav_display_ae5c9e623f85e9eae3dceb06b34d87a83}{
+\index{ShadowUavDisplay@{ShadowUavDisplay}!readConfig@{readConfig}}
+\index{readConfig@{readConfig}!ShadowUavDisplay@{ShadowUavDisplay}}
+\subsubsection[{readConfig}]{\setlength{\rightskip}{0pt plus 5cm}void ShadowUavDisplay::readConfig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_shadow_uav_display_ae5c9e623f85e9eae3dceb06b34d87a83}
+
+
+Read config settings from file for UAV size/color. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ShadowUavDisplay.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ShadowUavDisplay.cpp\end{DoxyCompactItemize}

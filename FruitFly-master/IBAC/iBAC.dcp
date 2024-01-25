@@ -1,0 +1,433 @@
+This is a machine generated file.
+Modifications by hand must be made carefully at one's own risk.
+Deleting an entry will result in factory default for that entry.
+----------------------------------------------------------------
+
+[COMM]
+port=7
+coldload baud=2400
+pilot baud=57600
+bios baud=115200
+Max Negotiated Baud=460800
+stop bits=2
+use TCP=0
+TCP Port=0
+TCP Name=
+Net Address=
+Serial Response Timeout=400
+Ethernet Response Timeout=8000
+Serial Retry Count=5
+Ethernet Retry Count=0
+Serial Poll Interval=3000
+Ethernet Poll Interval=30000
+Verify DSR=0
+Use USB to Serial Converter=1
+Disable Baud Negotiation=0
+USB to Serial Delay=500
+Pilot Bios Physical Address=0x4000
+Flash erase timeout=10000
+Use RabbitLink=0
+RabbitLink Port=0
+RabbitLink Address=
+RabbitLink Name=
+RS Console newline=\r\n
+RS Console greeting msg=220 Z-World RabbitSys Console
+RS Console username prompt=Username:
+RS Console password msg=331 Password required
+RS Console password prompt=Password:
+RS Console logged in msg=230 User logged in.
+RS Console bad uname msg=530 Bad Username/Password
+RS Console prompt=CON:
+RS Console targetmd command=targetmd
+RS Console targetmd msg=200 targetmd
+RS Console User Name=
+RS Console Password=
+Use RabbitSys=1
+RabbitSys Port=32023
+RabbitSys Address=
+[Compiler Options]
+Max Errors Shown=10
+Max Warnings Shown=10
+All Serious None=A
+RTC Indices=1
+RTC Pointers=0
+Optimize For Size=0
+Prototypes=1
+Demotion=1
+Pointers=1
+BIOS Memory Mode=0
+Restrict Watch Expressions=0
+Separate Instruction and Data=0
+Generate List Files=0
+Inline Internal IO Functions=1
+Detect Memory=1
+Flash type=32
+Memory type=8
+Default Compile Mode=0
+Detect Internal Memory=1
+RabbitSys Manual Detect=0
+RabbitSys Mode=0
+RabbitSys system binary=C:\DCRABBIT_9.62\Applications\RabbitSys\FastRAM\system.bin
+RabbitSys RFU path=C:\DCRABBIT_9.62\utilities\clrfu.exe
+RabbitSys Protected IO=0
+[Debug Options]
+Enable Breakpoints=1
+Enable Instruction Level Single Step=1
+Enable Watch Expressions=1
+Max Breakpoints=32
+Max Watch Expressions=8
+Watch Memory for Structs=512
+Enable Stack Tracing=1
+Stack Tracing Memory=4096
+Enable debug kernel=1
+Enable Tracing=0
+Trace Buf Size=8
+Enable Trace Buf Wrap=0
+Enable Trace RST=1
+Enable Trace Functions=1
+Trace Info Func=1
+Trace Info Action=1
+Trace Info Time=1
+Trace Info File=1
+Trace Info Line/Col=1
+Trace Info Reg=1
+Trace Info Repeat=0
+Enable Trace Auto Save=0
+Trace Auto Save File=
+[Include RST 28]
+Include RST=1
+[Include BIOS]
+Include BIOS=1
+[Poll Target]
+Poll target while running=1
+[Targetless Compile]
+Board ID=0x0101
+CPU ID=2000
+CPU Revision=3
+Crystal Speed MHz=29.4912
+RAM Size KBytes=128
+Flash Size KBytes=256
+Description=29MHz BL1800, 128K SRAM, 256K Flash
+Macros=CLK_DBL=1;BRD_OPT0=0x24;DFLASH0=0x11F2C;SBF=1;MD0=0x1;MD0_ID=0x1F2C;MD0_TYPE=0x2;MD0_SIZE=0x200;MD0_SECSIZE=0x210;MD0_SECNUM=0x1000;MD0_SPEED=0x46;MD0_MBC=0x80;MD2=0x1;MD2_ID=0x0;MD2_TYPE=0x0;MD2_SIZE=0x80;MD2_SECSIZE=0x0;MD2_SECNUM=0x0;MD2_SPEED=0x37;MD2_MBC=0xC6
+[Output File]
+Auto open STDIO=1
+Append=0
+Log STDIO=0
+Output File Name=DC.OUT
+[Dynamic C Files]
+Use Rabbit 4000 Libs=1
+Use Lib File=1
+Use BIOS File=0
+Use Default Source File=0
+LIB File=C:\DCRABBIT_10.50\LIB.DIR
+BIOS File=
+CS0 RAM Detect File=bios\checkRamCS0.bin
+Pre-Cold Loader File=bios\precoldload.bin
+Cold Loader File=bios\coldload.bin
+16-bit Cold Loader File=bios\coldload16bit.bin
+Serial Flash Cold Loader File=bios\coldloadserflash.bin
+Pilot BIOS File=bios\pilot.bin
+16-bit Pilot BIOS File=bios\pilot16bit.bin
+Serial Flash Pilot BIOS File=bios\pilotserflash.bin
+Default Source File=
+Start Dir=C:\DCRABBIT_10.50\Samples\
+[DEFINES]
+Defines=
+[Compression Utility]
+Zimport External Utility=ZCOMPRESS.EXE
+[MRU Files]
+FileCount=4
+[Open Files]
+Number Open=4
+[MRU 1]
+MRU 1 Path=C:\DCRABBIT_9.62\bios\Rabbitbios.c
+MRU 1 Read Only=0
+MRU 1 X=22
+MRU 1 Y=29
+MRU 1 W=1288
+MRU 1 H=689
+MRU 1 Top Row=0
+MRU 1 WindowState=0
+MRU 1 Cursor Row=14
+MRU 1 Cursor Col=99
+[MRU 2]
+MRU 2 Path=C:\DCRABBIT_10.50\Samples\PONG.C
+MRU 2 Read Only=0
+MRU 2 X=88
+MRU 2 Y=116
+MRU 2 W=1332
+MRU 2 H=754
+MRU 2 Top Row=0
+MRU 2 WindowState=0
+MRU 2 Cursor Row=5
+MRU 2 Cursor Col=44
+[OpenFile  1]
+OpenFile  1 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\IBAC\lib\log_line.C
+OpenFile  1 Read Only=0
+OpenFile  1 X=132
+OpenFile  1 Y=174
+OpenFile  1 W=1332
+OpenFile  1 H=724
+OpenFile  1 Top Row=180
+OpenFile  1 Top Col=0
+OpenFile  1 WindowState=0
+OpenFile  1 Cursor Row=184
+OpenFile  1 Cursor Col=39
+[OpenFile  2]
+OpenFile  2 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\IBAC\main.c
+OpenFile  2 Read Only=0
+OpenFile  2 X=93
+OpenFile  2 Y=138
+OpenFile  2 W=1332
+OpenFile  2 H=724
+OpenFile  2 Top Row=0
+OpenFile  2 Top Col=0
+OpenFile  2 WindowState=0
+OpenFile  2 Cursor Row=116
+OpenFile  2 Cursor Col=93
+[OpenFile  3]
+OpenFile  3 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\IBAC\lib\udp_server.c
+OpenFile  3 Read Only=0
+OpenFile  3 X=44
+OpenFile  3 Y=58
+OpenFile  3 W=1317
+OpenFile  3 H=724
+OpenFile  3 Top Row=6
+OpenFile  3 Top Col=0
+OpenFile  3 WindowState=0
+OpenFile  3 Cursor Row=29
+OpenFile  3 Cursor Col=46
+[MRU 3]
+MRU 3 Path=C:\DCRABBIT_10.50\bios\Rabbitbios.c
+MRU 3 Read Only=0
+MRU 3 X=94
+MRU 3 Y=122
+MRU 3 W=1332
+MRU 3 H=724
+MRU 3 Top Row=0
+MRU 3 WindowState=0
+MRU 3 Cursor Row=19
+MRU 3 Cursor Col=19
+[MRU 4]
+MRU 4 Path=C:\Documents and Settings\HumphJC1\My Documents\wacs\IBAC\cof_read_token.c
+MRU 4 Read Only=0
+MRU 4 X=66
+MRU 4 Y=87
+MRU 4 W=1332
+MRU 4 H=724
+MRU 4 Top Row=0
+MRU 4 WindowState=0
+MRU 4 Cursor Row=0
+MRU 4 Cursor Col=0
+[MRU 5]
+MRU 5 Path=C:\devtools\DCRABBIT_10.40\Samples\MEMORY_USAGE.C
+MRU 5 Read Only=0
+MRU 5 X=176
+MRU 5 Y=232
+MRU 5 W=1332
+MRU 5 H=720
+MRU 5 Top Row=0
+MRU 5 WindowState=0
+MRU 5 Cursor Row=36
+MRU 5 Cursor Col=31
+[MRU 6]
+MRU 6 Path=C:\DEVTOOLS\DCRABBIT_10.40\LIB\RABBIT4000\TCPIP\TCP_CONFIG.LIB
+MRU 6 Read Only=0
+MRU 6 X=176
+MRU 6 Y=232
+MRU 6 W=1332
+MRU 6 H=720
+MRU 6 Top Row=663
+MRU 6 WindowState=0
+MRU 6 Cursor Row=665
+MRU 6 Cursor Col=79
+[MRU 7]
+MRU 7 Path=C:\devtools\DCRABBIT_10.40\Samples\tcpip\udp\UDP_SRV.C
+MRU 7 Read Only=0
+MRU 7 X=138
+MRU 7 Y=150
+MRU 7 W=1332
+MRU 7 H=770
+MRU 7 Top Row=99
+MRU 7 WindowState=0
+MRU 7 Cursor Row=132
+MRU 7 Cursor Col=30
+[MRU 8]
+MRU 8 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\BIOSLIB\sysconfig.lib
+MRU 8 Read Only=0
+MRU 8 X=66
+MRU 8 Y=87
+MRU 8 W=1332
+MRU 8 H=703
+MRU 8 Top Row=43
+MRU 8 WindowState=0
+MRU 8 Cursor Row=69
+MRU 8 Cursor Col=80
+[MRU 9]
+MRU 9 Path=C:\devtools\DCRABBIT_10.40\Samples\tcpip\udp\UDP_SRV.C
+MRU 9 Read Only=0
+MRU 9 X=138
+MRU 9 Y=150
+MRU 9 W=1332
+MRU 9 H=770
+MRU 9 Top Row=99
+MRU 9 WindowState=0
+MRU 9 Cursor Row=132
+MRU 9 Cursor Col=30
+[MRU10]
+MRU10 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\BIOSLIB\sysconfig.lib
+MRU10 Read Only=0
+MRU10 X=66
+MRU10 Y=87
+MRU10 W=1332
+MRU10 H=703
+MRU10 Top Row=43
+MRU10 WindowState=0
+MRU10 Cursor Row=69
+MRU10 Cursor Col=80
+[MRU11]
+MRU11 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\RTCLOCK.LIB
+MRU11 Read Only=0
+MRU11 X=115
+MRU11 Y=82
+MRU11 W=1332
+MRU11 H=703
+MRU11 Top Row=0
+MRU11 WindowState=0
+MRU11 Cursor Row=2
+MRU11 Cursor Col=0
+[MRU12]
+MRU12 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\ERRNO.LIB
+MRU12 Read Only=0
+MRU12 X=134
+MRU12 Y=146
+MRU12 W=1332
+MRU12 H=702
+MRU12 Top Row=55
+MRU12 WindowState=0
+MRU12 Cursor Row=93
+MRU12 Cursor Col=0
+[MRU13]
+MRU13 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\FileSystem\fat.lib
+MRU13 Read Only=0
+MRU13 X=22
+MRU13 Y=29
+MRU13 W=1332
+MRU13 H=703
+MRU13 Top Row=2328
+MRU13 WindowState=0
+MRU13 Cursor Row=2388
+MRU13 Cursor Col=12
+[MRU14]
+MRU14 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\FileSystem\fat_config.lib
+MRU14 Read Only=0
+MRU14 X=44
+MRU14 Y=58
+MRU14 W=1332
+MRU14 H=703
+MRU14 Top Row=0
+MRU14 WindowState=0
+MRU14 Cursor Row=13
+MRU14 Cursor Col=68
+[MRU15]
+MRU15 Path=C:\devtools\DCRABBIT_10.40\Samples\RTCLOCK\RTC_TEST.C
+MRU15 Read Only=0
+MRU15 X=0
+MRU15 Y=0
+MRU15 W=1332
+MRU15 H=703
+MRU15 Top Row=48
+MRU15 WindowState=0
+MRU15 Cursor Row=43
+MRU15 Cursor Col=45
+[MRU16]
+MRU16 Path=C:\devtools\DCRABBIT_10.40\Lib\Rabbit4000\FileSystem\FAT_DEFS.LIB
+MRU16 Read Only=0
+MRU16 X=0
+MRU16 Y=0
+MRU16 W=1332
+MRU16 H=703
+MRU16 Top Row=30
+MRU16 WindowState=0
+MRU16 Cursor Row=13
+MRU16 Cursor Col=42
+[MRU17]
+MRU17 Path=C:\source\WACS\c\cof_read_token.c
+MRU17 Read Only=0
+MRU17 X=251
+MRU17 Y=298
+MRU17 W=1315
+MRU17 H=703
+MRU17 Top Row=0
+MRU17 WindowState=0
+MRU17 Cursor Row=11
+MRU17 Cursor Col=82
+[OpenFile  4]
+OpenFile  4 Path=C:\DOCUMENTS AND SETTINGS\HUMPHJC1\MY DOCUMENTS\WACS\IBAC\LIB\COF_IBAC_READ_SERIAL.C
+OpenFile  4 Read Only=0
+OpenFile  4 X=22
+OpenFile  4 Y=29
+OpenFile  4 W=1332
+OpenFile  4 H=724
+OpenFile  4 Top Row=0
+OpenFile  4 Top Col=0
+OpenFile  4 WindowState=0
+OpenFile  4 Cursor Row=1
+OpenFile  4 Cursor Col=71
+[OpenFile  5]
+OpenFile  5 Path=C:\DOCUMENTS AND SETTINGS\HUMPHJC1\MY DOCUMENTS\WACS\IBAC\LIB\COF_IBAC_READ_SERIAL.C
+OpenFile  5 Read Only=0
+OpenFile  5 X=22
+OpenFile  5 Y=29
+OpenFile  5 W=1332
+OpenFile  5 H=724
+OpenFile  5 Top Row=0
+OpenFile  5 Top Col=0
+OpenFile  5 WindowState=0
+OpenFile  5 Cursor Row=1
+OpenFile  5 Cursor Col=71
+[OpenFile  6]
+OpenFile  6 Path=C:\source\WACS\c\lib\cof_ibac_read_serial.c
+OpenFile  6 Read Only=0
+OpenFile  6 X=146
+OpenFile  6 Y=189
+OpenFile  6 W=1333
+OpenFile  6 H=720
+OpenFile  6 Top Row=0
+OpenFile  6 Top Col=0
+OpenFile  6 WindowState=0
+OpenFile  6 Cursor Row=10
+OpenFile  6 Cursor Col=147
+[OpenFile  7]
+OpenFile  7 Path=C:\devtools\DCRABBIT_10.40\Samples\tcpip\udp\UDP_SRV.C
+OpenFile  7 Read Only=0
+OpenFile  7 X=425
+OpenFile  7 Y=214
+OpenFile  7 W=1332
+OpenFile  7 H=720
+OpenFile  7 Top Row=99
+OpenFile  7 Top Col=0
+OpenFile  7 WindowState=0
+OpenFile  7 Cursor Row=132
+OpenFile  7 Cursor Col=30
+[MRU18]
+MRU18 Path=C:\devtools\DCRABBIT_10.40\Samples\SERIAL\Cof_EchoChr.C
+MRU18 Read Only=0
+MRU18 X=22
+MRU18 Y=206
+MRU18 W=1332
+MRU18 H=720
+MRU18 Top Row=27
+MRU18 WindowState=0
+MRU18 Cursor Row=37
+MRU18 Cursor Col=16
+[MRU19]
+MRU19 Path=C:\devtools\DCRABBIT_10.40\Samples\SERIAL\Cof_EchoStr.c
+MRU19 Read Only=0
+MRU19 X=66
+MRU19 Y=87
+MRU19 W=1332
+MRU19 H=720
+MRU19 Top Row=33
+MRU19 WindowState=0
+MRU19 Curs

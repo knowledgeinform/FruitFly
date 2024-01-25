@@ -1,0 +1,1 @@
+These files must be located in "C:\Program Files\JHUAPL\AETNAService\isotopeTemplateData"

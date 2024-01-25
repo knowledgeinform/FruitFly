@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="gmaps.css">
+<div id="floating-panel">
+  <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+  <button onclick="changeGradient()">Change gradient</button>
+  <button onclick="changeRadius()">Change radius</button>
+  <button onclick="changeOpacity()">Change opacity</button>
+  <button onclick="readInputStream()">Plot Points</button>
+</div>
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRb-PQzMBENUkuFO-xEZ7UOHYN9-Mhms&libraries=visualization&callback=initMap">
+    </script>
+<!-- <script async defer src="gmaps.js">readInputStream();</script> -->
+<script type="text/javascript" src="gmaps.js"></script>
+<!-- <script async defer>readInputStream();</script> -->

@@ -1,0 +1,35 @@
+ShadowSimulator.localPort = 16003
+ShadowSimulator.remotePort = 16004
+ShadowSimulator.remoteHostname = localhost
+#ShadowSimulator.remoteHostname = 192.168.1.13
+ShadowSimulator.sendRateHz = 10
+
+ShadowSimulator.updateRateHz = 20
+ShadowSimulator.minAirspeed_knots = 65
+ShadowSimulator.maxAirspeed_knots = 110
+Shadowsimulator.accelerationRate_knots_per_sec = 1
+ShadowSimulator.decelerationRate_knots_per_sec = .75
+ShadowSimulator.maxRoll_deg = 20
+ShadowSimulator.maxRollVelocity_deg_per_sec = 120
+ShadowSimulator.rollAcceleration_deg_per_sec2 = 300
+ShadowSimulator.rollDecelerationStartRatio = 11.0718
+ShadowSimulator.minAltitudeMSL_ft = -2000
+ShadowSimulator.maxAltitudeMSL_ft = 16000
+ShadowSimulator.ascendRate_ft_per_min = 400
+ShadowSimulator.descendRate_ft_per_min = 600
+
+ShadowSimulator.initialLatitude_deg = 40.15
+ShadowSimulator.initialLongitude_deg = -113.13
+ShadowSimulator.initialAltitudeMSL_ft = 4700
+
+#ShadowSimulator.initialLatitude_deg = 34.64776944
+#ShadowSimulator.initialLongitude_deg = -86.69876389
+#ShadowSimulator.initialAltitudeMSL_ft = 7700
+
+ShadowSimulator.windSpeed_mps = 5
+ShadowSimulator.windBlowingToDirection_deg = 260
+
+ShadowSimulator.enablePiccoloSim = true
+ShadowSimulator.piccoloSimAltitudeOffset_m = 0
+ShadowSimulator.piccoloSimOutputSerialPort = COM11
+ShadowSimulator.piccoloSimSerialBaudRate = 57600

@@ -1,0 +1,418 @@
+\hypertarget{class_logger}{
+\section{Logger Class Reference}
+\label{class_logger}\index{Logger@{Logger}}
+}
+
+
+Object to log all user actions/errors to a log file.  
+
+
+
+
+{\ttfamily \#include $<$Logger.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}{
+\hyperlink{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}{$\sim$Logger} ()}
+\label{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}
+
+\begin{DoxyCompactList}\small\item\em Destructor, makes sure log closes gracefully. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_afee2bab560c2db0190c980884d33868c}{
+void \hyperlink{class_logger_afee2bab560c2db0190c980884d33868c}{close} ()}
+\label{class_logger_afee2bab560c2db0190c980884d33868c}
+
+\begin{DoxyCompactList}\small\item\em Closes log file. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_ae731083d86f9bb1112b2063b54a8e708}{logMessage} (string message)
+\begin{DoxyCompactList}\small\item\em Add message to logging queue to be saved on internal thread. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_a60fa9ef21a0724f276f63d25a85e23a6}{logMessage} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Add message to logging queue to be saved on internal thread. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_afc56884e04c3fdaed86364491201ce1e}{immediateLogMessage} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Immediately log message, bypassing the log queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_a73c4ba19d62c077ce82138dfd1a4a3c6}{setListboxWnd} (HWND window)
+\begin{DoxyCompactList}\small\item\em Sets a handle to a listbox window to update with log data, if desired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_logger}{Logger} $\ast$ \hyperlink{class_logger_a21c1e2e01bd8f65dd7a4cfc179bfa9af}{getInstance} (string filename)
+\begin{DoxyCompactList}\small\item\em Static method to retrieve the singleton instance of this class. \end{DoxyCompactList}\item 
+static \hyperlink{class_logger}{Logger} $\ast$ \hyperlink{class_logger_afec28ae6d7bdf8f6a0734cb20756de10}{getInstance} ()
+\begin{DoxyCompactList}\small\item\em Static method to retrieve the singleton instance of this class. Will lock if the config object hasn't been created yet, by using the getInstance call specifying the filename to open. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a0a9aea6dcc43c134a1e0b97e44934f9b}{
+static void \hyperlink{class_logger_a0a9aea6dcc43c134a1e0b97e44934f9b}{releaseInstance} ()}
+\label{class_logger_a0a9aea6dcc43c134a1e0b97e44934f9b}
+
+\begin{DoxyCompactList}\small\item\em Static method to release the singleton object from memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_logger_a08ccb1b46d6ffef44052d289ecb4b04b}{Logger} (string filename)
+\begin{DoxyCompactList}\small\item\em Constructor, opens log file and starts write thread. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_ad4a86aaac1a3ee4f20d17870d42c3bd7}{startNewLog} ()
+\begin{DoxyCompactList}\small\item\em Starts a new log file. \end{DoxyCompactList}\item 
+FILE $\ast$ \hyperlink{class_logger_a500fbb10633823816dddf2c02399bd12}{getLogFile} ()
+\begin{DoxyCompactList}\small\item\em Returns the handle to the current log file. \end{DoxyCompactList}\item 
+list$<$ string $>$ $\ast$ \hyperlink{class_logger_a8c61058413834c09b30308a6dee2254a}{getQueuePointer} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the log queue. \end{DoxyCompactList}\item 
+int \hyperlink{class_logger_a141ece1d87b15875dfdc08061e45c597}{getTotalBytesLogged} ()
+\begin{DoxyCompactList}\small\item\em Returns the total number of bytes logged to the current log file. \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_a626bc2d1ba4cd32c6075a03ed6c9ee60}{addToTotalBytesLogged} (int addBytes)
+\begin{DoxyCompactList}\small\item\em Adds the parameter value to the running count of written bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_logger_a02d0f677ff19e119df217cad09f1f0d6}{writeToFile} (\hyperlink{class_logger}{Logger} $\ast$logger, char $\ast$logMessage)
+\begin{DoxyCompactList}\small\item\em Adds timestamp/etc to message and writes to file immediately. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a155ddfc5bb6f98a3e5bf75a9a7ca7298}{
+static void \hyperlink{class_logger_a155ddfc5bb6f98a3e5bf75a9a7ca7298}{writeThread} (void $\ast$params)}
+\label{class_logger_a155ddfc5bb6f98a3e5bf75a9a7ca7298}
+
+\begin{DoxyCompactList}\small\item\em Thread function to write logs to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_logger_a86aa66ebcf4c291967e183c99d65dc27}{
+int \hyperlink{class_logger_a86aa66ebcf4c291967e183c99d65dc27}{totalBytesLogged}}
+\label{class_logger_a86aa66ebcf4c291967e183c99d65dc27}
+
+\begin{DoxyCompactList}\small\item\em Number of bytes logged to the current file. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_ae1edce714a5ff78f0db68554ef87fc64}{
+string \hyperlink{class_logger_ae1edce714a5ff78f0db68554ef87fc64}{m\_\-Filename}}
+\label{class_logger_ae1edce714a5ff78f0db68554ef87fc64}
+
+\begin{DoxyCompactList}\small\item\em Filename of log. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_af5557c3fb29120e5eb8303b3f06f1219}{
+FILE $\ast$ \hyperlink{class_logger_af5557c3fb29120e5eb8303b3f06f1219}{m\_\-LogFile}}
+\label{class_logger_af5557c3fb29120e5eb8303b3f06f1219}
+
+\begin{DoxyCompactList}\small\item\em File pointer to log. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_ada328a5074245919b6e587bbe192d0b3}{
+bool \hyperlink{class_logger_ada328a5074245919b6e587bbe192d0b3}{m\_\-LogOpen}}
+\label{class_logger_ada328a5074245919b6e587bbe192d0b3}
+
+\begin{DoxyCompactList}\small\item\em Boolean status of log -\/ false once close has been called. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_aa5086e90b974c0eda04acfdbdb5b2be7}{
+bool \hyperlink{class_logger_aa5086e90b974c0eda04acfdbdb5b2be7}{m\_\-KillThread}}
+\label{class_logger_aa5086e90b974c0eda04acfdbdb5b2be7}
+
+\begin{DoxyCompactList}\small\item\em If true, thread should stop writing and shutdown. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a6a4c2e1e67f2b8f85dbdcec35f83c85f}{
+bool \hyperlink{class_logger_a6a4c2e1e67f2b8f85dbdcec35f83c85f}{m\_\-ThreadDone}}
+\label{class_logger_a6a4c2e1e67f2b8f85dbdcec35f83c85f}
+
+\begin{DoxyCompactList}\small\item\em If true, thread has finished its loop. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a55ff168a2ad3a40fdfd48b70ea63c416}{
+list$<$ string $>$ \hyperlink{class_logger_a55ff168a2ad3a40fdfd48b70ea63c416}{m\_\-LogQueue}}
+\label{class_logger_a55ff168a2ad3a40fdfd48b70ea63c416}
+
+\begin{DoxyCompactList}\small\item\em Queue of messages to write to log. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_ae481610560de4be304b49fd6798065f7}{
+\hyperlink{struct_logger_thread_params}{LoggerThreadParams} $\ast$ \hyperlink{class_logger_ae481610560de4be304b49fd6798065f7}{threadParams}}
+\label{class_logger_ae481610560de4be304b49fd6798065f7}
+
+\begin{DoxyCompactList}\small\item\em Parameters to send to thread function. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_ad664da49d002ee7ff0b8efa7ad92729d}{
+HANDLE \hyperlink{class_logger_ad664da49d002ee7ff0b8efa7ad92729d}{m\_\-LogThread}}
+\label{class_logger_ad664da49d002ee7ff0b8efa7ad92729d}
+
+\begin{DoxyCompactList}\small\item\em Internal thread to write messages to log. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a508b72da07e8320747d1cdd9103d242e}{
+HWND \hyperlink{class_logger_a508b72da07e8320747d1cdd9103d242e}{m\_\-ListBoxWnd}}
+\label{class_logger_a508b72da07e8320747d1cdd9103d242e}
+
+\begin{DoxyCompactList}\small\item\em Handle to listbox window to log to (in addition to file) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_logger_add521d8f1e6b2cf5074f1d4c02127736}{
+static int \hyperlink{class_logger_add521d8f1e6b2cf5074f1d4c02127736}{maxLogFileSize} = 10000000}
+\label{class_logger_add521d8f1e6b2cf5074f1d4c02127736}
+
+\begin{DoxyCompactList}\small\item\em Maximum number of bytes to log to each file. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a9818e071f2bba3d51d28781de9b80e4b}{
+static \hyperlink{class_logger}{Logger} $\ast$ \hyperlink{class_logger_a9818e071f2bba3d51d28781de9b80e4b}{m\_\-Logger} = NULL}
+\label{class_logger_a9818e071f2bba3d51d28781de9b80e4b}
+
+\begin{DoxyCompactList}\small\item\em Singleton instance of this class. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_af6934b5607ef66ab1a80cd2c43557e7d}{
+static char $\ast$ \hyperlink{class_logger_af6934b5607ef66ab1a80cd2c43557e7d}{fullMessage} = NULL}
+\label{class_logger_af6934b5607ef66ab1a80cd2c43557e7d}
+
+\begin{DoxyCompactList}\small\item\em Text to update when adding timestamp/etc to log message. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a2dbf94ee9b3fff1716ae7773a371c83b}{
+static int \hyperlink{class_logger_a2dbf94ee9b3fff1716ae7773a371c83b}{maxLogMessageSize} = 1096}
+\label{class_logger_a2dbf94ee9b3fff1716ae7773a371c83b}
+
+\begin{DoxyCompactList}\small\item\em Maximum size of log messages. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_ab59fb2de62d8f5bcf7b188c295e17094}{
+static CRITICAL\_\-SECTION \hyperlink{class_logger_ab59fb2de62d8f5bcf7b188c295e17094}{writeLock}}
+\label{class_logger_ab59fb2de62d8f5bcf7b188c295e17094}
+
+\begin{DoxyCompactList}\small\item\em Locking object for writing. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a767dd30eb9aa7a5fd3c689ad0845616e}{
+static CRITICAL\_\-SECTION \hyperlink{class_logger_a767dd30eb9aa7a5fd3c689ad0845616e}{queueLock}}
+\label{class_logger_a767dd30eb9aa7a5fd3c689ad0845616e}
+
+\begin{DoxyCompactList}\small\item\em Locking object for queue. \end{DoxyCompactList}\item 
+\hypertarget{class_logger_a184c4dafc41ef01ccf3eb24e0f1ef29f}{
+static CRITICAL\_\-SECTION \hyperlink{class_logger_a184c4dafc41ef01ccf3eb24e0f1ef29f}{listBoxLock}}
+\label{class_logger_a184c4dafc41ef01ccf3eb24e0f1ef29f}
+
+\begin{DoxyCompactList}\small\item\em Locking object for list box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object to log all user actions/errors to a log file. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_logger_a08ccb1b46d6ffef44052d289ecb4b04b}{
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\subsubsection[{Logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger::Logger (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_logger_a08ccb1b46d6ffef44052d289ecb4b04b}
+
+
+Constructor, opens log file and starts write thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Absolute path of filename to log to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_logger_a626bc2d1ba4cd32c6075a03ed6c9ee60}{
+\index{Logger@{Logger}!addToTotalBytesLogged@{addToTotalBytesLogged}}
+\index{addToTotalBytesLogged@{addToTotalBytesLogged}!Logger@{Logger}}
+\subsubsection[{addToTotalBytesLogged}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::addToTotalBytesLogged (
+\begin{DoxyParamCaption}
+\item[{int}]{addBytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}
+\label{class_logger_a626bc2d1ba4cd32c6075a03ed6c9ee60}
+
+
+Adds the parameter value to the running count of written bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addBytes} & Count to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_a21c1e2e01bd8f65dd7a4cfc179bfa9af}{
+\index{Logger@{Logger}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Logger@{Logger}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} $\ast$ Logger::getInstance (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_logger_a21c1e2e01bd8f65dd7a4cfc179bfa9af}
+
+
+Static method to retrieve the singleton instance of this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & If the singleton object doesn't exist yet, the filename to open at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance 
+\end{DoxyReturn}
+\hypertarget{class_logger_afec28ae6d7bdf8f6a0734cb20756de10}{
+\index{Logger@{Logger}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Logger@{Logger}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} $\ast$ Logger::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_logger_afec28ae6d7bdf8f6a0734cb20756de10}
+
+
+Static method to retrieve the singleton instance of this class. Will lock if the config object hasn't been created yet, by using the getInstance call specifying the filename to open. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance 
+\end{DoxyReturn}
+\hypertarget{class_logger_a500fbb10633823816dddf2c02399bd12}{
+\index{Logger@{Logger}!getLogFile@{getLogFile}}
+\index{getLogFile@{getLogFile}!Logger@{Logger}}
+\subsubsection[{getLogFile}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ Logger::getLogFile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}
+\label{class_logger_a500fbb10633823816dddf2c02399bd12}
+
+
+Returns the handle to the current log file. 
+
+\begin{DoxyReturn}{Returns}
+Handle to the current log file 
+\end{DoxyReturn}
+\hypertarget{class_logger_a8c61058413834c09b30308a6dee2254a}{
+\index{Logger@{Logger}!getQueuePointer@{getQueuePointer}}
+\index{getQueuePointer@{getQueuePointer}!Logger@{Logger}}
+\subsubsection[{getQueuePointer}]{\setlength{\rightskip}{0pt plus 5cm}list$<$string$>$$\ast$ Logger::getQueuePointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}
+\label{class_logger_a8c61058413834c09b30308a6dee2254a}
+
+
+Returns a pointer to the log queue. 
+
+\begin{DoxyReturn}{Returns}
+pointer to the log queue 
+\end{DoxyReturn}
+\hypertarget{class_logger_a141ece1d87b15875dfdc08061e45c597}{
+\index{Logger@{Logger}!getTotalBytesLogged@{getTotalBytesLogged}}
+\index{getTotalBytesLogged@{getTotalBytesLogged}!Logger@{Logger}}
+\subsubsection[{getTotalBytesLogged}]{\setlength{\rightskip}{0pt plus 5cm}int Logger::getTotalBytesLogged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, private\mbox{]}}}}
+\label{class_logger_a141ece1d87b15875dfdc08061e45c597}
+
+
+Returns the total number of bytes logged to the current log file. 
+
+\begin{DoxyReturn}{Returns}
+total number of bytes logged to the current log file 
+\end{DoxyReturn}
+\hypertarget{class_logger_afc56884e04c3fdaed86364491201ce1e}{
+\index{Logger@{Logger}!immediateLogMessage@{immediateLogMessage}}
+\index{immediateLogMessage@{immediateLogMessage}!Logger@{Logger}}
+\subsubsection[{immediateLogMessage}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::immediateLogMessage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}
+\label{class_logger_afc56884e04c3fdaed86364491201ce1e}
+
+
+Immediately log message, bypassing the log queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log, timestamp will be added before the message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_ae731083d86f9bb1112b2063b54a8e708}{
+\index{Logger@{Logger}!logMessage@{logMessage}}
+\index{logMessage@{logMessage}!Logger@{Logger}}
+\subsubsection[{logMessage}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::logMessage (
+\begin{DoxyParamCaption}
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)}}
+\label{class_logger_ae731083d86f9bb1112b2063b54a8e708}
+
+
+Add message to logging queue to be saved on internal thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log, timestamp will be added before the message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_a60fa9ef21a0724f276f63d25a85e23a6}{
+\index{Logger@{Logger}!logMessage@{logMessage}}
+\index{logMessage@{logMessage}!Logger@{Logger}}
+\subsubsection[{logMessage}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::logMessage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}
+\label{class_logger_a60fa9ef21a0724f276f63d25a85e23a6}
+
+
+Add message to logging queue to be saved on internal thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to log, timestamp will be added before the message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_a73c4ba19d62c077ce82138dfd1a4a3c6}{
+\index{Logger@{Logger}!setListboxWnd@{setListboxWnd}}
+\index{setListboxWnd@{setListboxWnd}!Logger@{Logger}}
+\subsubsection[{setListboxWnd}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::setListboxWnd (
+\begin{DoxyParamCaption}
+\item[{HWND}]{window}
+\end{DoxyParamCaption}
+)}}
+\label{class_logger_a73c4ba19d62c077ce82138dfd1a4a3c6}
+
+
+Sets a handle to a listbox window to update with log data, if desired. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Handle to listbox window \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_ad4a86aaac1a3ee4f20d17870d42c3bd7}{
+\index{Logger@{Logger}!startNewLog@{startNewLog}}
+\index{startNewLog@{startNewLog}!Logger@{Logger}}
+\subsubsection[{startNewLog}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::startNewLog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_logger_ad4a86aaac1a3ee4f20d17870d42c3bd7}
+
+
+Starts a new log file. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_logger_a02d0f677ff19e119df217cad09f1f0d6}{
+\index{Logger@{Logger}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!Logger@{Logger}}
+\subsubsection[{writeToFile}]{\setlength{\rightskip}{0pt plus 5cm}void Logger::writeToFile (
+\begin{DoxyParamCaption}
+\item[{{\bf Logger} $\ast$}]{logger, }
+\item[{char $\ast$}]{logMessage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_logger_a02d0f677ff19e119df217cad09f1f0d6}
+
+
+Adds timestamp/etc to message and writes to file immediately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Logging object with queue and file pointer \\
+\hline
+{\em logMessage} & Message to add timestamp to and print \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Logger.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/Logger.cpp\end{DoxyCompactItemize}

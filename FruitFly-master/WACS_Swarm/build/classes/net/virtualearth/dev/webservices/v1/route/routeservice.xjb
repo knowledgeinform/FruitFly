@@ -1,0 +1,9 @@
+<bindings version="1.0" xmlns="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    extensionBindingPrefixes="xjc">
+	<globalBindings localScoping="toplevel">
+		<xjc:serializable uid="2461660169443089969"/>
+		<xjc:generateElementProperty>false</xjc:generateElementProperty> 
+	</globalBindings>
+</bindings>

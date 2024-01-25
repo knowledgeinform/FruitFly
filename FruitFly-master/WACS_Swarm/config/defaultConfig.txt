@@ -1,0 +1,375 @@
+PiccoloAutopilotInterface.ComPort = COM3
+Piccolo.periodMs = 500
+Piccolo.source = Serial
+Piccolo.replayFilename = .\rawNmeaLogs\rawNmeaLog_display_1536769760080.txt
+PiccoloAutopilotInterface.isNMEAFormat = true
+
+Etd.ipaddr = 192.168.0.5
+Etd.mask = 255.255.255.0
+Etd.ipport = 5000
+Etd.periodMs = 500
+#Etd.dataType = CONC
+Etd.dataType = PA1
+Etd.source = Sim
+Etd.shouldFilter = true
+Etd.delayMs = 35000
+Etd.replayFilename = .\rawEtdLogs\rawEtdLog_display_1532708484644.txt
+
+EtdDetectionBelief.historyLength = 200
+EtdErrorsPanel.historyLength = 20
+Etd.markerSize = 10
+Etd.hoverRange = 100.0
+Etd.MinDisplayValue = 0;
+Etd.MaxDisplayValue = 50;
+
+FlightControl.usePiccoloGroundStationAction = true
+
+WACSAgent.simulate = false
+WACSAgent.useExternalSimulation = false
+WACSAgent.simulateOnlyCloudSensing = true
+WACSAgent.gimbalTargetName = gimbalTarget
+WACSAgent.gimbalTargetClassification = 5
+WACSAgent.Display.ShowDestinationOrbitsOnly = false
+
+#WACS Settings Panel Default Stuff
+WacsSettingsDefaults.useguiwind = false
+WacsSettingsDefaults.usegroundstationwind = false
+WacsSettingsDefaults.enableap = false
+WacsSettingsDefaults.loiterAltAGL_ft = 1000.0
+WacsSettingsDefaults.loiterAltAGLStandoff_ft = 3000.0
+WacsSettingsDefaults.loiterRad_m = 1000.0
+WacsSettingsDefaults.interceptMinAltAGL_ft = 400.0
+WacsSettingsDefaults.interceptRad_m = 425.0
+WacsSettingsDefaults.allowintercept = true
+WacsSettingsDefaults.UseExplosionTimer = true
+
+#Shadow stuff
+ShadowDriver.bearingToTurnRateCoefficient = 0.5
+ShadowDriver.centerVectorBias = 1.5
+ShadowDriver.commandedAirspeed_knots = 65.0
+ShadowDriver.IntegralGain =  0.01
+ShadowDriver.IntegralControlDistanceMeters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathMaxSpeedIncreaseScale = 0
+ShadowDriver.ToApproachPathVectorBias = 1.5
+ShadowDriver.maxBarometricAltitudeError_m = 0.0
+ShadowDriver.laserAltitudeDataTimeout_ms = 0.0
+ShadowDriver.RacetrackLoiter.FinalOrbitBufferPercentage = 0.05
+ShadowDriver.RacetrackLoiter.ApproachPathDistanceBuffer.Meters = 100.0
+ShadowDriver.RacetrackLoiter.ApproachPathBearingBuffer.Degrees = 10.0
+ShadowDriver.RacetrackLoiter.ApproachPathTimeBuffer.Ms = 5000
+ShadowDriver.RacetrackLoiter.AltitudeDescentRate.fps = 10
+ShadowDriver.RacetrackLoiter.AltitudeAscentRate.fps = 6
+ShadowDriver.RacetrackLoiter.AirspeedDecelerationRate.ktspersec = .75
+ShadowDriver.RacetrackLoiter.AngleAroundFinalOrbitToWarn.Degrees = 45.0
+ShadowDriver.NumAltitudeSteps = 3
+ShadowDriver.AltitudeSteps = 75,90,95
+ShadowDriver.TimeAtEachAltitudeStep.Ms = 30000
+ShadowDriver.AltitudeStepBufferDistance.Meters = 5
+ShadowDriver.ForceDescentOnLoiterApproach = false
+ShadowDriver.RacetrackLoiter.FirstRangeDistanceFromTarget.Meters = 2500
+ShadowDriver.LogLoiterCircleData = false
+ShadowDriver.TimeDeltaToSwitchFromApproachPathMs = 60000
+ShadowDriver.MaxAltLeadingCommand.Meters = 100
+ShadowAutopilotInterface.logData = true
+
+
+#Dynamics of flight control
+FlightControl.maxBankAngle_deg = 20.0
+FlightControl.CameraOnRightWing = false
+FlightControl.ControlUavThroughGCS = true
+
+DtedGlobalMap.dtedFolder = ./dted_data
+
+#PHILIPs
+#DtedGlobalMap.dtedAnchorLatD = 39.4512
+#DtedGlobalMap.dtedAnchorLonD = -76.1864
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#NRL
+#DtedGlobalMap.dtedAnchorLatD = 38.816868
+#DtedGlobalMap.dtedAnchorLonD = -77.033111
+#DtedGlobalMap.dtedLatSecsCountD = 710
+#DtedGlobalMap.dtedLonSecsCountD = 1125
+
+#APL
+#DtedGlobalMap.dtedAnchorLatD = 39.146654
+#DtedGlobalMap.dtedAnchorLonD = -77.129096
+#DtedGlobalMap.dtedLatSecsCountD = 710
+#DtedGlobalMap.dtedLonSecsCountD = 1125
+
+#Dugway
+#DtedGlobalMap.dtedAnchorLatD = 40.066040
+#DtedGlobalMap.dtedAnchorLonD = -113.267132
+#DtedGlobalMap.dtedLatSecsCountD = 276
+#DtedGlobalMap.dtedLonSecsCountD = 453
+
+#Dugway 2
+DtedGlobalMap.dtedAnchorLatD = 40.0
+DtedGlobalMap.dtedAnchorLonD = -113.333
+DtedGlobalMap.dtedLatSecsCountD = 1500
+DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#AP Hill
+#DtedGlobalMap.dtedAnchorLatD = 38.05
+#DtedGlobalMap.dtedAnchorLonD = -77.4
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Redstone
+#DtedGlobalMap.dtedAnchorLatD = 34.4
+#DtedGlobalMap.dtedAnchorLonD = -86.9
+#DtedGlobalMap.dtedLatSecsCountD = 1500
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Sendai
+#DtedGlobalMap.dtedAnchorLatD = 37.3
+#DtedGlobalMap.dtedAnchorLonD = 140.75
+#DtedGlobalMap.dtedLatSecsCountD = 3600
+#DtedGlobalMap.dtedLonSecsCountD = 1500
+
+#Podset 2
+#THControlPanel.DefaultServoOpenPwm.Pod0 = 85
+#THControlPanel.DefaultServoClosedPwm.Pod0 = 20
+#THControlPanel.DefaultServoOpenPwm.Pod1 = 100
+#THControlPanel.DefaultServoClosedPwm.Pod1 = 50
+
+#Podset 3
+THControlPanel.DefaultServoOpenPwm.Pod0 = 100
+THControlPanel.DefaultServoClosedPwm.Pod0 = 40
+THControlPanel.DefaultServoOpenPwm.Pod1 = 80
+THControlPanel.DefaultServoClosedPwm.Pod1 = 20
+
+THControlPanel.DefaultServoHumidityLimit.Percent = 90
+THControlPanel.DefaultServoTempLimit.FDeg = 35
+THControlPanel.DefaultFanHumidityLimit.Percent = 90
+THControlPanel.DefaultFanTempLimit.FDeg = 35
+THControlPanel.DefaultHeatHumidityLimit.Percent = 100
+THControlPanel.DefaultHeatTempLimit.FDeg = 10
+
+LocalIPAddress.preferrednetwork = 192
+
+cbrnPodsInterfaceTest.localport0 = 1313
+cbrnPodsInterfaceTest.remoteport0 = 1315
+cbrnPodsInterfaceTest.localport1 = 1314
+cbrnPodsInterfaceTest.remoteport1 = 1315
+cbrnPodsInterfaceTest.pod0ip = 192.168.100.52
+cbrnPodsInterfaceTest.pod1ip = 192.168.100.53
+cbrnPodsInterfaceLogger.OutputFolderName = ./MessageLogs
+
+RNTotalCountsTracker.GammaCountsToAverageTracker = 5
+RNTotalCountsTracker.GammaStdDevLimitTracker = 3
+RNTotalCountsTracker.GammaMinimumCountsTracker = 100
+RNTotalCountsTracker.AlphaCountsToAverageTracker = 5
+RNTotalCountsTracker.AlphaStdDevLimitTracker = 3
+RNTotalCountsTracker.AlphaMinimumCountsTracker = 10
+
+Metrics.path = ./metrics
+WACSMetrics.LogExtendedBeliefs = true
+SearchBelief.abortOnMatrixMismatch = false
+CloudDetectionBelief.swap = false
+CloudDetectionBelief.historyLength = 30
+
+SatComm.Enabled = false
+SatComm.BeliefNetworkAllowableLatency.Ms = 10000
+SatComm.ShowStopNetTxDialog = false
+SatComm.DefaultMessageSendPeriod.Ms = 5000
+SatComm.SafetyBoxSendPeriod.Ms = 2000
+SatComm.LoiterCenterSendPeriod.Ms = 2000
+SatComm.PodCommandSendPeriod.Ms = 2000
+SatComm.CloudTrackingTypeSendPeriod.Ms = 2000
+
+
+podAction.anaconda.agent1 = GA
+podAction.anaconda.agent2 = GB
+podAction.anaconda.agent3 = GD
+podAction.anaconda.agent4 = GF
+podAction.anaconda.agent5 = VX
+podAction.anaconda.agent6 = DPM
+podAction.anaconda.agent7 = VXR
+podAction.anaconda.agent8 = DMMP
+podAction.anaconda.agent9 = TEP
+podAction.anaconda.agent12 = CK
+podAction.anaconda.agent13 = HCN
+podAction.anaconda.agent14 = HD
+podAction.anaconda.agent15 = HN
+podAction.anaconda.agent16 = L
+podAction.anaconda.agent17 = MS
+podAction.anaconda.agent27 = DPM
+podAction.anaconda.agent31 = CG
+podAction.anaconda.agent32 = HS
+podAction.anaconda.agent33 = HF
+podAction.anaconda.agent34 = CI
+podAction.anaconda.agent35 = HCI
+podAction.anaconda.agent36 = HBR
+podAction.anaconda.agent37 = MS
+
+
+####################Swarm Stuff, can't change token names because they are (or might be?) used in swarm.jar
+groupAddr  = 225.0.0.175
+groupPort = 38116
+monitorPort = 8888  
+monitorPort2 = 8889  
+remoteGPSPort = 5650  
+commsSensorPort = 5558  
+commsSensorRange = 1000  
+tic = 100  
+updateRate = 700  
+minZipPacketSize = 128  
+discoveryUpdatePeriod = 8000  
+discoveryDecayPeriod = 16000  
+statsMulticastInterval = 8000  
+oamGuiRefershInterval = 10000  
+statsLogGuiRefereshCnt = 10  
+statsLogFile = CommsStats.log
+enableImpairmentEmulation false
+enableLoopBack = false  
+rxTxBuffSize = 131070  
+startOamGui = false
+startLanBridge = false  
+collectStats = false  
+disableMyOwnPackets = false
+zip = true  
+debug = false
+debugVerbose = false
+searchDecay = 0.01  
+cloudDecay = 0.01  
+SimulateComms = false
+multicast.useLoopback = true
+belief.earliestBeliefDate = 0
+latencyCompensation = 100  
+useRelativeTime = false  
+sendSingleBeliefs = true 
+multicast.ttl = 20
+
+#Decay time for beliefs, value of 0 means no decay
+bearingbelief.decaytime = 0  
+modebelief.decaytime = 0  
+positionbelief.decaytime = 0  
+modemapbelief.decaytime = 0  
+targetbelief.decaytime = 0
+METPositionBelief.decaytime = 0
+METBelief.decaytime = 0
+collect_all_positions = true
+
+
+agent.classification = 11  
+update.waitTime = 500
+
+transmission.broadcast_rate = 500  
+transmissionInterval.OperatorGoalBelief = 0  
+transmissionInterval.PacketInfoBelief = 0  
+transmissionInterval.SentelSensorBelief = 0  
+transmissionInterval.SNRBelief = 0  
+transmissionInterval.AgentPosBelief = 1  
+transmissionInterval.ClassificationBelief = 2  
+transmissionInterval.AgentBearingBelief = 1  
+transmissionInterval.AgentModeBelief = 10  
+transmissionInterval.TargetBelief = 1  
+transmissionInterval.SearchBelief = 4  
+transmissionInterval.CloudBeliefMatrix = 2  
+transmissionInterval.CloudBelief = 2  
+transmissionInterval.SearchGoalBelief = 2
+transmissionInterval.ConfigBelief = 1  
+transmissionInterval.DynamicNoGoBelief = 0  
+transmissionInterval.NoGoBelief = 1  
+transmissionInterval.PathBelief = 0  
+transmissionInterval.VideoBelief = 2  
+transmissionInterval.SensorCoverageBelief = 0  
+transmissionInterval.UAVWaypointBelief = 2
+transmissionInterval.KeepOutRegionBelief = 1
+transmissionInterval.TestCircularOrbitBelief = 1
+transmissionInterval.CircularOrbitBelief = 1
+transmissionInterval.METBelief = 1
+transmissionInterval.CloudPredictionBelief = 2
+transmissionInterval.ParticleCollectorStateBelief = 1
+transmissionInterval.PodCommandBelief = 1
+transmissionInterval.ThermalCommandBelief = 1
+transmissionInterval.ParticleDetectionBelief = 1
+transmissionInterval.CloudDetectionBelief = 2
+transmissionInterval.IrCameraFOVBelief = 1
+transmissionInterval.SafetyBoxBelief = 1
+transmissionInterval.cbrnHeartbeatBelief = 1
+transmissionInterval.METPositionBelief = 1
+transmissionInterval.WACSWaypointBelief = 1
+transmissionInterval.RacetrackDefinitionBelief = 1
+transmissionInterval.ExplosionTimeBelief = 1
+transmissionInterval.IrExplosionAlgorithmEnabledBelief = 1
+transmissionInterval.RacetrackOrbitBelief = 1
+transmissionInterval.ExplosionBelief = 1
+transmissionInterval.CloudProbabilityBelief = 1
+transmissionInterval.PiccoloTelemetryBelief =1
+transmissionInterval.LoiterApproachPathBelief = 1
+
+transmissionIntermittent.ConfigBelief = true  
+transmissionIntermittent.ClassificationBelief = false
+transmissionIntermittent.IrCameraFOVBelief = false
+transmissionIntermittent.AgentPosBelief = false
+transmissionIntermittent.AgentBearingBelief = false
+transmissionIntermittent.SearchBelief = false
+transmissionIntermittent.SafetyBoxBelief = false
+transmissionIntermittent.TargetBelief = false
+transmissionIntermittent.AgentModeBelief = false
+transmissionIntermittent.cbrnHeartbeatBelief = false
+transmissionIntermittent.ParticleCollectorStateBelief = false
+transmissionIntermittent.METPositionBelief = false
+transmissionIntermittent.NoGoBelief = false
+transmissionIntermittent.WACSWaypointBelief = false
+transmissionIntermittent.METBelief = false
+transmissionIntermittent.SearchGoalBelief = false
+transmissionIntermittent.RacetrackDefinitionBelief = false
+transmissionIntermittent.ExplosionTimeBelief = false
+transmissionIntermittent.IrExplosionAlgorithmEnabledBelief = false
+transmissionIntermittent.RacetrackOrbitBelief = false
+transmissionIntermittent.CloudProbabilityBelief = false
+transmissionIntermittent.KeepOutRegionBelief = false
+transmissionIntermittent.CircularOrbitBelief = false
+transmissionIntermittent.TestCircularOrbitBelief = false
+transmissionIntermittent.CloudDetectionBelief = false
+transmissionIntermittent.CloudBelief = false
+transmissionIntermittent.ExplosionBelief = false
+transmissionIntermittent.PiccoloTelemetryBelief =false
+transmissionIntermittent.LoiterApproachPathBelief = false
+
+transmissionOffset.CloudDetectionBelief = 0
+transmissionOffset.ParticleDetectionBelief = 0
+transmissionOffset.ParticleCollectorStateBelief = 0
+transmissionOffset.PodCommandBelief = 0
+transmissionOffset.ThermalCommandBelief = 0
+transmissionOffset.KeepOutRegionBelief = 1
+transmissionOffset.CircularOrbitBelief = 1
+transmissionOffset.TestCircularOrbitBelief = 1
+transmissionOffset.AgentPosBelief = 0  
+transmissionOffset.ClassificationBelief = 1  
+transmissionOffset.AgentBearingBelief = 0  
+transmissionOffset.AgentModeBelief = 2  
+transmissionOffset.TargetBelief = 0  
+transmissionOffset.SearchBelief = 0  
+transmissionOffset.CloudBeliefMatrix = 0  
+transmissionOffset.CloudBelief = 0  
+transmissionOffset.SearchGoalBelief = 4  
+transmissionOffset.ConfigBelief = 1
+transmissionOffset.DynamicNoGoBelief = 0  
+transmissionOffset.NoGoBelief = 0  
+transmissionOffset.PathBelief = 0  
+transmissionOffset.SensorCoverageBelief = 0  
+transmissionOffset.UAVWaypointBelief = 1
+transmissionOffset.METBelief = 1
+transmissionOffset.IrCameraFOVBelief = 0
+transmissionOffset.SafetyBoxBelief = 0
+transmissionOffset.cbrnHeartbeatBelief = 0
+transmissionOffset.METPositionBelief = 0
+transmissionOffset.WACSWaypointBelief = 0
+transmissionOffset.RacetrackDefinitionBelief = 0
+transmissionOffset.ExplosionTimeBelief = 0
+transmissionOffset.IrExplosionAlgorithmEnabledBelief = 0
+transmissionOffset.RacetrackOrbitBelief = 0
+transmissionOffset.ExplosionBelief = 0
+transmissionOffset.CloudProbabilityBelief = 0
+transmissionOffset.PiccoloTelemetryBelief = 0
+transmissionOffset.LoiterApproachPathBelief = 0
+
+ignoreOwnBeliefs = false
+comms.useUDP = false
+maxRxPacketSize = 65535
+####################End Swarm stuff

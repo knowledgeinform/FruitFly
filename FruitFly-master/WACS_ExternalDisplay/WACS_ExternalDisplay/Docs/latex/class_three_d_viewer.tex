@@ -1,0 +1,668 @@
+\hypertarget{class_three_d_viewer}{
+\section{ThreeDViewer Class Reference}
+\label{class_three_d_viewer}\index{ThreeDViewer@{ThreeDViewer}}
+}
+
+
+Main class for 3D Viewer application. Instantiating the class and calling \hyperlink{class_three_d_viewer_af0d2688c26f061516c739c4ebe5fdb62}{run()} on the object will start the application and everything else is taken care of.  
+
+
+
+
+{\ttfamily \#include $<$ThreeDViewer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_three_d_viewer_a92d7cedd73a319177f2823a698c2a56a}{ThreeDViewer} (HINSTANCE hInstance)
+\begin{DoxyCompactList}\small\item\em Constructor, sets default parameters and stores the HINSTANCE parameter. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ad0c7e11bbb7b24cec5039fe1ed6d6e12}{
+\hyperlink{class_three_d_viewer_ad0c7e11bbb7b24cec5039fe1ed6d6e12}{$\sim$ThreeDViewer} ()}
+\label{class_three_d_viewer_ad0c7e11bbb7b24cec5039fe1ed6d6e12}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_af0d2688c26f061516c739c4ebe5fdb62}{run} ()
+\begin{DoxyCompactList}\small\item\em Main processing method. Once called, the \hyperlink{class_three_d_viewer}{ThreeDViewer} application will load and be fully functional. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_three_d_viewer_a118e422d82fbbb9080b8c325b970ca7a}{initDialog} ()
+\begin{DoxyCompactList}\small\item\em Called from constructor to initialize the window and begin custructing the application. \end{DoxyCompactList}\item 
+bool \hyperlink{class_three_d_viewer_a90fb8e2f5b72ba9d8caaadef00c97b66}{createDialog} ()
+\begin{DoxyCompactList}\small\item\em Called from initDialog to actually create the window and space all components throughout. Also creates other necessary objects for program execution. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_aa100582896e1b771e6b25c9e0462f8fc}{runMsgLoop} ()
+\begin{DoxyCompactList}\small\item\em Runs a loop reading messages received for the application (NOT network messages, they are WINDOWS messages) and updates the application as necessary. The OpenGL scenes are updated in this loop. \end{DoxyCompactList}\item 
+ATOM \hyperlink{class_three_d_viewer_a6fc2bde69ead27c586347d873d011a63}{MyRegisterClass} ()
+\begin{DoxyCompactList}\small\item\em Registers the main window class so that Windows can instantiate the object. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a0b963795676d25baebc70627613351f5}{activate} ()
+\begin{DoxyCompactList}\small\item\em Activate the entire window, seems to refresh everything as if the program just started. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a82d4f55fa55abcb70afde12b8d410994}{updateWindows} ()
+\begin{DoxyCompactList}\small\item\em Updates all windows and repaints everything. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a15047086e77ebf717c3dae973ae88d53}{preLoadObjects} ()
+\begin{DoxyCompactList}\small\item\em Load objects that are required immediately before the main dialog is created and also perform any necessary updates/initializations. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a6c8ae9a10fc6d77c57a538aad76dfdef}{postLoadObjects} ()
+\begin{DoxyCompactList}\small\item\em Load objects that are required immediately after the main dialog is created and also perform any necessary updates/initializations. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a76cec54e4663833685e82faab564b2f5}{exit} (bool approved=false)
+\begin{DoxyCompactList}\small\item\em The user has chosen to close the window and shut down, but this version is safer because it requires approval from the \hyperlink{class_confirm_dialog}{ConfirmDialog} window. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a337e1531989b355746c1665b0322178c}{resizeWindow} ()
+\begin{DoxyCompactList}\small\item\em Should be called after the window has been resized so that all inner components will be scaled and moved as necessary to have all objects shown. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a6dd0ca9b3794ad6d269745281cef10b8}{setMinMaxInfo} (MINMAXINFO $\ast$info)
+\begin{DoxyCompactList}\small\item\em Sets the minimum size for the window based on how many buttons must fit in each direction. \end{DoxyCompactList}\item 
+LRESULT \hyperlink{class_three_d_viewer_ae9b4f76bd749a9db09f59ffb5944bae5}{processMsg} (HWND \hyperlink{class_three_d_viewer_ae7122f9f106f58afc902c77c89cf97c4}{hWnd}, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Non-\/static Main window message processing function. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a98d27353905010e6e4011b33353761ea}{
+void \hyperlink{class_three_d_viewer_a98d27353905010e6e4011b33353761ea}{setWindowPreferredSizes} ()}
+\label{class_three_d_viewer_a98d27353905010e6e4011b33353761ea}
+
+\begin{DoxyCompactList}\small\item\em Called once to determine how the window should be laid out, based on the resource file. Will attempt to maintain the layout during resizes based on the values computed here. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aba5ca684b6ae3d51c95d405a995e7770}{
+void \hyperlink{class_three_d_viewer_aba5ca684b6ae3d51c95d405a995e7770}{resetCamera} ()}
+\label{class_three_d_viewer_aba5ca684b6ae3d51c95d405a995e7770}
+
+\begin{DoxyCompactList}\small\item\em Called when user wants to reset the camera in the main view. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_ab6fdde8d62acb6847ca4f05371d91e76}{initSwarmSpy} ()
+\begin{DoxyCompactList}\small\item\em Initialize SwarmSpy connection and start threads to update current belief list. \end{DoxyCompactList}\item 
+void \hyperlink{class_three_d_viewer_a7062224b24a3e6834c7746964024d7b9}{updateRawDataDialog} ()
+\begin{DoxyCompactList}\small\item\em Update data is raw dialog. Uses \hyperlink{class_belief_collection}{BeliefCollection} to update tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_three_d_viewer_a021428227730324b5c2f9f179b9d6628}{glPaintThread} (void $\ast$params)
+\item 
+static LRESULT CALLBACK \hyperlink{class_three_d_viewer_afcb35237ccab9e6e4dffc176e1202803}{WndProc} (HWND \hyperlink{class_three_d_viewer_ae7122f9f106f58afc902c77c89cf97c4}{hWnd}, UINT message, WPARAM wParam, LPARAM lParam)
+\begin{DoxyCompactList}\small\item\em Main window message processing function. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aeac441d178003a7f6ecef723551a93f3}{
+static void \hyperlink{class_three_d_viewer_aeac441d178003a7f6ecef723551a93f3}{rawDataUpdateThread} (void $\ast$params)}
+\label{class_three_d_viewer_aeac441d178003a7f6ecef723551a93f3}
+
+\begin{DoxyCompactList}\small\item\em Thread function to update raw data tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_three_d_viewer_ae7122f9f106f58afc902c77c89cf97c4}{
+HWND \hyperlink{class_three_d_viewer_ae7122f9f106f58afc902c77c89cf97c4}{hWnd}}
+\label{class_three_d_viewer_ae7122f9f106f58afc902c77c89cf97c4}
+
+\begin{DoxyCompactList}\small\item\em HWND object for this window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a020f59746430cc3a73979c2618c51a4d}{
+HINSTANCE \hyperlink{class_three_d_viewer_a020f59746430cc3a73979c2618c51a4d}{hInst}}
+\label{class_three_d_viewer_a020f59746430cc3a73979c2618c51a4d}
+
+\begin{DoxyCompactList}\small\item\em HINSTANCE object for the application. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a021c6b1049ff46f8a880f58242e32ba1}{
+HWND \hyperlink{class_three_d_viewer_a021c6b1049ff46f8a880f58242e32ba1}{MapViewWnd}}
+\label{class_three_d_viewer_a021c6b1049ff46f8a880f58242e32ba1}
+
+\begin{DoxyCompactList}\small\item\em handle for 3D view window \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aebea18b45f3e32e143c49b3cfd7030aa}{
+\hyperlink{class_confirm_dialog}{ConfirmDialog} $\ast$ \hyperlink{class_three_d_viewer_aebea18b45f3e32e143c49b3cfd7030aa}{myConfirmDialog}}
+\label{class_three_d_viewer_aebea18b45f3e32e143c49b3cfd7030aa}
+
+\begin{DoxyCompactList}\small\item\em Dialog window that will ask for user confirmation before performing a certain action. \end{DoxyCompactList}\item 
+HANDLE \hyperlink{class_three_d_viewer_a0c47ff296f00914b1ff504ddea150223}{hGLPaintThread}
+\item 
+bool \hyperlink{class_three_d_viewer_a9e2ec7fef411ee9ba4dbbcbf3b2a5527}{m\_\-KillGLThread}
+\item 
+bool \hyperlink{class_three_d_viewer_ae3ba229fd72da44162660aa3d1bd4d02}{m\_\-GLThreadDone}
+\item 
+\hypertarget{class_three_d_viewer_ac9825e63d5c31167b31a1c7db1328319}{
+float \hyperlink{class_three_d_viewer_ac9825e63d5c31167b31a1c7db1328319}{frameRate}}
+\label{class_three_d_viewer_ac9825e63d5c31167b31a1c7db1328319}
+
+\begin{DoxyCompactList}\small\item\em Framerate of OpenGL refresh, seconds. Slow down if too much is being rendered. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a17da7bcd5e186a32764de710773f242a}{
+bool \hyperlink{class_three_d_viewer_a17da7bcd5e186a32764de710773f242a}{windowLoaded}}
+\label{class_three_d_viewer_a17da7bcd5e186a32764de710773f242a}
+
+\begin{DoxyCompactList}\small\item\em If true, the main window has been fully loaded -\/ Constructor completed. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a92fd4fc91498ce59cdb907f2d6d3fe69}{
+TCHAR \hyperlink{class_three_d_viewer_a92fd4fc91498ce59cdb907f2d6d3fe69}{szTitle} \mbox{[}MAX\_\-LOADSTRING\mbox{]}}
+\label{class_three_d_viewer_a92fd4fc91498ce59cdb907f2d6d3fe69}
+
+\begin{DoxyCompactList}\small\item\em Title bar text. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a35039eb5b10ab86181bac96dbe8ff8b6}{
+TCHAR \hyperlink{class_three_d_viewer_a35039eb5b10ab86181bac96dbe8ff8b6}{szWindowClass} \mbox{[}MAX\_\-LOADSTRING\mbox{]}}
+\label{class_three_d_viewer_a35039eb5b10ab86181bac96dbe8ff8b6}
+
+\begin{DoxyCompactList}\small\item\em Main window class name. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_af4096221fa3e7e92f59d6d6ba4aa8bc4}{
+int \hyperlink{class_three_d_viewer_af4096221fa3e7e92f59d6d6ba4aa8bc4}{wndWidth}}
+\label{class_three_d_viewer_af4096221fa3e7e92f59d6d6ba4aa8bc4}
+
+\begin{DoxyCompactList}\small\item\em Window width of entire window -\/ excluding border sizes. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a969c0fb64967c520cea251e3855a3064}{
+int \hyperlink{class_three_d_viewer_a969c0fb64967c520cea251e3855a3064}{wndHeight}}
+\label{class_three_d_viewer_a969c0fb64967c520cea251e3855a3064}
+
+\begin{DoxyCompactList}\small\item\em Window height of entire window -\/ excluding border sizes. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a11cdf1491917f63f0442f4773c4dec1b}{
+int \hyperlink{class_three_d_viewer_a11cdf1491917f63f0442f4773c4dec1b}{minWidth}}
+\label{class_three_d_viewer_a11cdf1491917f63f0442f4773c4dec1b}
+
+\begin{DoxyCompactList}\small\item\em Minimum window width of entire window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aeb16a4ee12975ae3dca8a69751a7b666}{
+int \hyperlink{class_three_d_viewer_aeb16a4ee12975ae3dca8a69751a7b666}{minHeight}}
+\label{class_three_d_viewer_aeb16a4ee12975ae3dca8a69751a7b666}
+
+\begin{DoxyCompactList}\small\item\em Minimum window height of entire window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ac0f5a52f02935b89dd3b27a50b9b79ab}{
+bool \hyperlink{class_three_d_viewer_ac0f5a52f02935b89dd3b27a50b9b79ab}{winNeedsResize}}
+\label{class_three_d_viewer_ac0f5a52f02935b89dd3b27a50b9b79ab}
+
+\begin{DoxyCompactList}\small\item\em Boolean whether the window needs to resize its components. True when WM\_\-SIZE message is received. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a9432edba6484d9de7ddf427632feebfb}{
+int \hyperlink{class_three_d_viewer_a9432edba6484d9de7ddf427632feebfb}{mapPrefDistFromLeft}}
+\label{class_three_d_viewer_a9432edba6484d9de7ddf427632feebfb}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance of the left edge of the main 3D window to the left edge of the entire window, when side bar is shown. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a38c39fa64616d7cd7e754c13a7e44556}{
+int \hyperlink{class_three_d_viewer_a38c39fa64616d7cd7e754c13a7e44556}{mapPrefDistFromTop}}
+\label{class_three_d_viewer_a38c39fa64616d7cd7e754c13a7e44556}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance of the top edge of the main 3D window to the top edge of the entire window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aa0bb32786f3a608cca7b11e56c18df91}{
+int \hyperlink{class_three_d_viewer_aa0bb32786f3a608cca7b11e56c18df91}{mapPrefDistFromRight}}
+\label{class_three_d_viewer_aa0bb32786f3a608cca7b11e56c18df91}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance of the right edge of the main 3D window to the right edge of the entire window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a47fd9ef4a19bc68502192b2423449684}{
+int \hyperlink{class_three_d_viewer_a47fd9ef4a19bc68502192b2423449684}{mapPrefDistFromBottom}}
+\label{class_three_d_viewer_a47fd9ef4a19bc68502192b2423449684}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance of the bottom edge of the main 3D window to the bottom edge of the entire window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a718c6698151357508ca72bc9a432a3a0}{
+int \hyperlink{class_three_d_viewer_a718c6698151357508ca72bc9a432a3a0}{topBuffer}}
+\label{class_three_d_viewer_a718c6698151357508ca72bc9a432a3a0}
+
+\begin{DoxyCompactList}\small\item\em Apparent height of the border at the top of the window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a20bded39c1e8aa840228739d14b56f40}{
+int \hyperlink{class_three_d_viewer_a20bded39c1e8aa840228739d14b56f40}{sideBuffer}}
+\label{class_three_d_viewer_a20bded39c1e8aa840228739d14b56f40}
+
+\begin{DoxyCompactList}\small\item\em Apparent width of the border at the sides of the window. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a8184520e3b28bb4f0f451e677ebe2db3}{
+int \hyperlink{class_three_d_viewer_a8184520e3b28bb4f0f451e677ebe2db3}{mouseLabelPrefDistFromRight}}
+\label{class_three_d_viewer_a8184520e3b28bb4f0f451e677ebe2db3}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance from right edge of window for mouse label. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_af86803483382c6f283c9d211820e75ef}{
+int \hyperlink{class_three_d_viewer_af86803483382c6f283c9d211820e75ef}{mouseLabelPrefDistFromBottom}}
+\label{class_three_d_viewer_af86803483382c6f283c9d211820e75ef}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance from bottom edge of window for mouse label. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a9127e9e8aa38bee0daa616066fb64130}{
+int \hyperlink{class_three_d_viewer_a9127e9e8aa38bee0daa616066fb64130}{mouseLabelPrefWidth}}
+\label{class_three_d_viewer_a9127e9e8aa38bee0daa616066fb64130}
+
+\begin{DoxyCompactList}\small\item\em Preferred width of window for mouse label. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a0a075e8859f3a085846a2d009e88a726}{
+int \hyperlink{class_three_d_viewer_a0a075e8859f3a085846a2d009e88a726}{mouseLabelPrefHeight}}
+\label{class_three_d_viewer_a0a075e8859f3a085846a2d009e88a726}
+
+\begin{DoxyCompactList}\small\item\em Preferred height of window for mouse label. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aa188aca632c5e1856711e329c66900c1}{
+int \hyperlink{class_three_d_viewer_aa188aca632c5e1856711e329c66900c1}{mouseOutputPrefDistFromRight}}
+\label{class_three_d_viewer_aa188aca632c5e1856711e329c66900c1}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance from left edge of window for mouse output. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ab03d0a66af25f5efba7b59d542130154}{
+int \hyperlink{class_three_d_viewer_ab03d0a66af25f5efba7b59d542130154}{mouseOutputPrefDistFromBottom}}
+\label{class_three_d_viewer_ab03d0a66af25f5efba7b59d542130154}
+
+\begin{DoxyCompactList}\small\item\em Preferred distance from bottom edge of window for mouse output. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a66308587c9e953a2c33a19e0da908339}{
+int \hyperlink{class_three_d_viewer_a66308587c9e953a2c33a19e0da908339}{mouseOutputPrefWidth}}
+\label{class_three_d_viewer_a66308587c9e953a2c33a19e0da908339}
+
+\begin{DoxyCompactList}\small\item\em Preferred width of window for mouse output. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a29a397a18da97f9fc127d559bf975db4}{
+int \hyperlink{class_three_d_viewer_a29a397a18da97f9fc127d559bf975db4}{mouseOutputPrefHeight}}
+\label{class_three_d_viewer_a29a397a18da97f9fc127d559bf975db4}
+
+\begin{DoxyCompactList}\small\item\em Preferred height of window for mouse output. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a3998821904db82bb49a897da24353c08}{
+int \hyperlink{class_three_d_viewer_a3998821904db82bb49a897da24353c08}{usedStatusSpace}}
+\label{class_three_d_viewer_a3998821904db82bb49a897da24353c08}
+
+\begin{DoxyCompactList}\small\item\em Default amount of space used in the status bar. Used to resize. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_aa58c57c1708b3eb68ccef47912b7b8c8}{
+int \hyperlink{class_three_d_viewer_aa58c57c1708b3eb68ccef47912b7b8c8}{clearStatusSpace}}
+\label{class_three_d_viewer_aa58c57c1708b3eb68ccef47912b7b8c8}
+
+\begin{DoxyCompactList}\small\item\em Default amount of clear space used in the status bar. Used to resize. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a717ba9e552a9b2e29a33242995440ca5}{
+\hyperlink{struct_thread_params}{ThreadParams} $\ast$ \hyperlink{class_three_d_viewer_a717ba9e552a9b2e29a33242995440ca5}{glThreadParams}}
+\label{class_three_d_viewer_a717ba9e552a9b2e29a33242995440ca5}
+
+\begin{DoxyCompactList}\small\item\em Params to send to gl paint thread. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a7626fed08d2676ae976a8f33f1d172e6}{
+\hyperlink{class_belief_collection}{BeliefCollection} $\ast$ \hyperlink{class_three_d_viewer_a7626fed08d2676ae976a8f33f1d172e6}{m\_\-BeliefCollection}}
+\label{class_three_d_viewer_a7626fed08d2676ae976a8f33f1d172e6}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_belief_collection}{BeliefCollection} object storing all of the current beliefs from the WACS Swarm network. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a08073c902d3400e44f347cb104b21213}{
+bool \hyperlink{class_three_d_viewer_a08073c902d3400e44f347cb104b21213}{m\_\-DoSocketSpy}}
+\label{class_three_d_viewer_a08073c902d3400e44f347cb104b21213}
+
+\begin{DoxyCompactList}\small\item\em If true, SwarmSpy should be initialized to connect to the multicast port. If false, should replay log data from file. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a62ef0f273d8a9ae7c9edc6dc16acc9a3}{
+bool \hyperlink{class_three_d_viewer_a62ef0f273d8a9ae7c9edc6dc16acc9a3}{m\_\-SwarmSpyInitialized}}
+\label{class_three_d_viewer_a62ef0f273d8a9ae7c9edc6dc16acc9a3}
+
+\begin{DoxyCompactList}\small\item\em If true, SwarmSpy has been initialized and should be running. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a9f1f84724f43ade6d7021f8f766bebf4}{
+\hyperlink{class_swarm_spy_handler}{SwarmSpyHandler} $\ast$ \hyperlink{class_three_d_viewer_a9f1f84724f43ade6d7021f8f766bebf4}{m\_\-SwarmSpyHandler}}
+\label{class_three_d_viewer_a9f1f84724f43ade6d7021f8f766bebf4}
+
+\begin{DoxyCompactList}\small\item\em Handler for SwarmSpy messages. Updates the \hyperlink{class_belief_collection}{BeliefCollection} object. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a9572ea596c4f86e1c7570784eae5e1a3}{
+\hyperlink{class_raw_data_dialog}{RawDataDialog} $\ast$ \hyperlink{class_three_d_viewer_a9572ea596c4f86e1c7570784eae5e1a3}{myRawDataDialog}}
+\label{class_three_d_viewer_a9572ea596c4f86e1c7570784eae5e1a3}
+
+\begin{DoxyCompactList}\small\item\em Dialog window with raw data display. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ad44192b1c9817758328b7a3705b47e13}{
+HANDLE \hyperlink{class_three_d_viewer_ad44192b1c9817758328b7a3705b47e13}{hRawDataUpdateThread}}
+\label{class_three_d_viewer_ad44192b1c9817758328b7a3705b47e13}
+
+\begin{DoxyCompactList}\small\item\em Handle to the raw data updater thread. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ab5706913085db6c9599ed27e92eb6f3b}{
+bool \hyperlink{class_three_d_viewer_ab5706913085db6c9599ed27e92eb6f3b}{m\_\-KillRawUpdateThread}}
+\label{class_three_d_viewer_ab5706913085db6c9599ed27e92eb6f3b}
+
+\begin{DoxyCompactList}\small\item\em If true, request has been sent to end the raw data updater thread. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_ab62c47b1003a7e4ca1a624e52e079655}{
+bool \hyperlink{class_three_d_viewer_ab62c47b1003a7e4ca1a624e52e079655}{m\_\-RawUpdateThreadDone}}
+\label{class_three_d_viewer_ab62c47b1003a7e4ca1a624e52e079655}
+
+\begin{DoxyCompactList}\small\item\em If true, the raw data updater thread has completed gracefully. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a494bee4b1da357ce55763a4682d65a14}{
+float \hyperlink{class_three_d_viewer_a494bee4b1da357ce55763a4682d65a14}{frameRateRawUpdate}}
+\label{class_three_d_viewer_a494bee4b1da357ce55763a4682d65a14}
+
+\begin{DoxyCompactList}\small\item\em Framerate of raw data updater thread, seconds. Slow down if updated too quickly. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_a29bf7d225801957f1430d94fef9f9582}{
+bool \hyperlink{class_three_d_viewer_a29bf7d225801957f1430d94fef9f9582}{updateRawDataNext}}
+\label{class_three_d_viewer_a29bf7d225801957f1430d94fef9f9582}
+
+\begin{DoxyCompactList}\small\item\em If true, the raw data dialog needs to be updated as soon as possible. Currently, this is done when the next message is received to keep the updates in the main thread. A paint message should be generated when this flag is set to true to ensure a message is received quickly. \end{DoxyCompactList}\item 
+\hypertarget{class_three_d_viewer_abecd5783691d6035fbcd044009f7116d}{
+\hyperlink{struct_thread_params}{ThreadParams} $\ast$ \hyperlink{class_three_d_viewer_abecd5783691d6035fbcd044009f7116d}{rawUpdateThreadParams}}
+\label{class_three_d_viewer_abecd5783691d6035fbcd044009f7116d}
+
+\begin{DoxyCompactList}\small\item\em Params to send to raw data update thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_three_d_viewer_a45094fa7bc89699d13d425e301fbafe7}{
+static bool \hyperlink{class_three_d_viewer_a45094fa7bc89699d13d425e301fbafe7}{beingDestroyed} = false}
+\label{class_three_d_viewer_a45094fa7bc89699d13d425e301fbafe7}
+
+\begin{DoxyCompactList}\small\item\em If true, the dialog is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main class for 3D Viewer application. Instantiating the class and calling \hyperlink{class_three_d_viewer_af0d2688c26f061516c739c4ebe5fdb62}{run()} on the object will start the application and everything else is taken care of. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2010 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_three_d_viewer_a92d7cedd73a319177f2823a698c2a56a}{
+\index{ThreeDViewer@{ThreeDViewer}!ThreeDViewer@{ThreeDViewer}}
+\index{ThreeDViewer@{ThreeDViewer}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{ThreeDViewer}]{\setlength{\rightskip}{0pt plus 5cm}ThreeDViewer::ThreeDViewer (
+\begin{DoxyParamCaption}
+\item[{HINSTANCE}]{hInstance}
+\end{DoxyParamCaption}
+)}}
+\label{class_three_d_viewer_a92d7cedd73a319177f2823a698c2a56a}
+
+
+Constructor, sets default parameters and stores the HINSTANCE parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hInstance} & HINSTANCE parameter received at application startup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_three_d_viewer_a0b963795676d25baebc70627613351f5}{
+\index{ThreeDViewer@{ThreeDViewer}!activate@{activate}}
+\index{activate@{activate}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{activate}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::activate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a0b963795676d25baebc70627613351f5}
+
+
+Activate the entire window, seems to refresh everything as if the program just started. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a90fb8e2f5b72ba9d8caaadef00c97b66}{
+\index{ThreeDViewer@{ThreeDViewer}!createDialog@{createDialog}}
+\index{createDialog@{createDialog}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{createDialog}]{\setlength{\rightskip}{0pt plus 5cm}bool ThreeDViewer::createDialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a90fb8e2f5b72ba9d8caaadef00c97b66}
+
+
+Called from initDialog to actually create the window and space all components throughout. Also creates other necessary objects for program execution. 
+
+\begin{DoxyReturn}{Returns}
+Boolean status of dialog creation 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a76cec54e4663833685e82faab564b2f5}{
+\index{ThreeDViewer@{ThreeDViewer}!exit@{exit}}
+\index{exit@{exit}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{exit}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::exit (
+\begin{DoxyParamCaption}
+\item[{bool}]{approved = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a76cec54e4663833685e82faab564b2f5}
+
+
+The user has chosen to close the window and shut down, but this version is safer because it requires approval from the \hyperlink{class_confirm_dialog}{ConfirmDialog} window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em approved} & If true, the user has already approved this action, false otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a021428227730324b5c2f9f179b9d6628}{
+\index{ThreeDViewer@{ThreeDViewer}!glPaintThread@{glPaintThread}}
+\index{glPaintThread@{glPaintThread}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{glPaintThread}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::glPaintThread (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_three_d_viewer_a021428227730324b5c2f9f179b9d6628}
+Thread function to update OpenGL \hypertarget{class_three_d_viewer_a118e422d82fbbb9080b8c325b970ca7a}{
+\index{ThreeDViewer@{ThreeDViewer}!initDialog@{initDialog}}
+\index{initDialog@{initDialog}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{initDialog}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::initDialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a118e422d82fbbb9080b8c325b970ca7a}
+
+
+Called from constructor to initialize the window and begin custructing the application. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_ab6fdde8d62acb6847ca4f05371d91e76}{
+\index{ThreeDViewer@{ThreeDViewer}!initSwarmSpy@{initSwarmSpy}}
+\index{initSwarmSpy@{initSwarmSpy}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{initSwarmSpy}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::initSwarmSpy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_ab6fdde8d62acb6847ca4f05371d91e76}
+
+
+Initialize SwarmSpy connection and start threads to update current belief list. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a6fc2bde69ead27c586347d873d011a63}{
+\index{ThreeDViewer@{ThreeDViewer}!MyRegisterClass@{MyRegisterClass}}
+\index{MyRegisterClass@{MyRegisterClass}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{MyRegisterClass}]{\setlength{\rightskip}{0pt plus 5cm}ATOM ThreeDViewer::MyRegisterClass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a6fc2bde69ead27c586347d873d011a63}
+
+
+Registers the main window class so that Windows can instantiate the object. 
+
+\begin{DoxyReturn}{Returns}
+ATOM 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a6c8ae9a10fc6d77c57a538aad76dfdef}{
+\index{ThreeDViewer@{ThreeDViewer}!postLoadObjects@{postLoadObjects}}
+\index{postLoadObjects@{postLoadObjects}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{postLoadObjects}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::postLoadObjects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a6c8ae9a10fc6d77c57a538aad76dfdef}
+
+
+Load objects that are required immediately after the main dialog is created and also perform any necessary updates/initializations. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a15047086e77ebf717c3dae973ae88d53}{
+\index{ThreeDViewer@{ThreeDViewer}!preLoadObjects@{preLoadObjects}}
+\index{preLoadObjects@{preLoadObjects}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{preLoadObjects}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::preLoadObjects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a15047086e77ebf717c3dae973ae88d53}
+
+
+Load objects that are required immediately before the main dialog is created and also perform any necessary updates/initializations. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_ae9b4f76bd749a9db09f59ffb5944bae5}{
+\index{ThreeDViewer@{ThreeDViewer}!processMsg@{processMsg}}
+\index{processMsg@{processMsg}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{processMsg}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT ThreeDViewer::processMsg (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hWnd, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_ae9b4f76bd749a9db09f59ffb5944bae5}
+
+
+Non-\/static Main window message processing function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hWnd} & HWND handle of object receiving the message \\
+\hline
+{\em message} & Message being received \\
+\hline
+{\em wParam} & WPARAM parameter for message \\
+\hline
+{\em lParam} & LPARAM parameter for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of message processing 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a337e1531989b355746c1665b0322178c}{
+\index{ThreeDViewer@{ThreeDViewer}!resizeWindow@{resizeWindow}}
+\index{resizeWindow@{resizeWindow}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{resizeWindow}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::resizeWindow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a337e1531989b355746c1665b0322178c}
+
+
+Should be called after the window has been resized so that all inner components will be scaled and moved as necessary to have all objects shown. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_af0d2688c26f061516c739c4ebe5fdb62}{
+\index{ThreeDViewer@{ThreeDViewer}!run@{run}}
+\index{run@{run}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_three_d_viewer_af0d2688c26f061516c739c4ebe5fdb62}
+
+
+Main processing method. Once called, the \hyperlink{class_three_d_viewer}{ThreeDViewer} application will load and be fully functional. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_aa100582896e1b771e6b25c9e0462f8fc}{
+\index{ThreeDViewer@{ThreeDViewer}!runMsgLoop@{runMsgLoop}}
+\index{runMsgLoop@{runMsgLoop}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{runMsgLoop}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::runMsgLoop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_aa100582896e1b771e6b25c9e0462f8fc}
+
+
+Runs a loop reading messages received for the application (NOT network messages, they are WINDOWS messages) and updates the application as necessary. The OpenGL scenes are updated in this loop. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a6dd0ca9b3794ad6d269745281cef10b8}{
+\index{ThreeDViewer@{ThreeDViewer}!setMinMaxInfo@{setMinMaxInfo}}
+\index{setMinMaxInfo@{setMinMaxInfo}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{setMinMaxInfo}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::setMinMaxInfo (
+\begin{DoxyParamCaption}
+\item[{MINMAXINFO $\ast$}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a6dd0ca9b3794ad6d269745281cef10b8}
+
+
+Sets the minimum size for the window based on how many buttons must fit in each direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & MINMAXINFO object to hold the minimum size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a7062224b24a3e6834c7746964024d7b9}{
+\index{ThreeDViewer@{ThreeDViewer}!updateRawDataDialog@{updateRawDataDialog}}
+\index{updateRawDataDialog@{updateRawDataDialog}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{updateRawDataDialog}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::updateRawDataDialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a7062224b24a3e6834c7746964024d7b9}
+
+
+Update data is raw dialog. Uses \hyperlink{class_belief_collection}{BeliefCollection} to update tables. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_a82d4f55fa55abcb70afde12b8d410994}{
+\index{ThreeDViewer@{ThreeDViewer}!updateWindows@{updateWindows}}
+\index{updateWindows@{updateWindows}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{updateWindows}]{\setlength{\rightskip}{0pt plus 5cm}void ThreeDViewer::updateWindows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a82d4f55fa55abcb70afde12b8d410994}
+
+
+Updates all windows and repaints everything. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_three_d_viewer_afcb35237ccab9e6e4dffc176e1202803}{
+\index{ThreeDViewer@{ThreeDViewer}!WndProc@{WndProc}}
+\index{WndProc@{WndProc}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{WndProc}]{\setlength{\rightskip}{0pt plus 5cm}LRESULT CALLBACK ThreeDViewer::WndProc (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hWnd, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_three_d_viewer_afcb35237ccab9e6e4dffc176e1202803}
+
+
+Main window message processing function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hWnd} & HWND handle of object receiving the message \\
+\hline
+{\em message} & Message being received \\
+\hline
+{\em wParam} & WPARAM parameter for message \\
+\hline
+{\em lParam} & LPARAM parameter for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of message processing 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_three_d_viewer_a0c47ff296f00914b1ff504ddea150223}{
+\index{ThreeDViewer@{ThreeDViewer}!hGLPaintThread@{hGLPaintThread}}
+\index{hGLPaintThread@{hGLPaintThread}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{hGLPaintThread}]{\setlength{\rightskip}{0pt plus 5cm}HANDLE {\bf ThreeDViewer::hGLPaintThread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a0c47ff296f00914b1ff504ddea150223}
+Handle to the GL paint thread \hypertarget{class_three_d_viewer_ae3ba229fd72da44162660aa3d1bd4d02}{
+\index{ThreeDViewer@{ThreeDViewer}!m\_\-GLThreadDone@{m\_\-GLThreadDone}}
+\index{m\_\-GLThreadDone@{m\_\-GLThreadDone}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{m\_\-GLThreadDone}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ThreeDViewer::m\_\-GLThreadDone}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_ae3ba229fd72da44162660aa3d1bd4d02}
+If true, the gl thread has completed gracefully \hypertarget{class_three_d_viewer_a9e2ec7fef411ee9ba4dbbcbf3b2a5527}{
+\index{ThreeDViewer@{ThreeDViewer}!m\_\-KillGLThread@{m\_\-KillGLThread}}
+\index{m\_\-KillGLThread@{m\_\-KillGLThread}!ThreeDViewer@{ThreeDViewer}}
+\subsubsection[{m\_\-KillGLThread}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ThreeDViewer::m\_\-KillGLThread}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_three_d_viewer_a9e2ec7fef411ee9ba4dbbcbf3b2a5527}
+If true, request has been sent to end the gl thread 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ThreeDViewer.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/ThreeDViewer.cpp\end{DoxyCompactItemize}

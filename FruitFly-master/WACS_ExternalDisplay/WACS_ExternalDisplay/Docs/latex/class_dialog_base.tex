@@ -1,0 +1,358 @@
+\hypertarget{class_dialog_base}{
+\section{DialogBase Class Reference}
+\label{class_dialog_base}\index{DialogBase@{DialogBase}}
+}
+
+
+An abstract object to be inherited to make dialog boxes for the application. Must implement abstract functions as well as a static message handling procedure in children.  
+
+
+
+
+{\ttfamily \#include $<$DialogBase.h$>$}
+
+Inheritance diagram for DialogBase:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dialog_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dialog_base_a103817014aa779e00818e0602aac659e}{DialogBase} (HINSTANCE newHinst, HWND newhParent)
+\begin{DoxyCompactList}\small\item\em Constructor for object, must pass in pointer to the the HINSTANCE and HWND parameters from the owner. \end{DoxyCompactList}\item 
+\hypertarget{class_dialog_base_aa8db7393a807fdde47f0d5d3b7bccbf1}{
+\hyperlink{class_dialog_base_aa8db7393a807fdde47f0d5d3b7bccbf1}{$\sim$DialogBase} ()}
+\label{class_dialog_base_aa8db7393a807fdde47f0d5d3b7bccbf1}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{show} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. \end{DoxyCompactList}\item 
+bool \hyperlink{class_dialog_base_af5164bdea83014336fc32167fffb7ed9}{isVisible} ()
+\begin{DoxyCompactList}\small\item\em Return true if the dialog box is visible (from a call to \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{show()}), or return false if the dialog has never been raised or has since been closed. \end{DoxyCompactList}\item 
+void \hyperlink{class_dialog_base_a88c45a624dc4c6eda42c211b1af31d8e}{setHWnd} (HWND newHwnd)
+\begin{DoxyCompactList}\small\item\em Mutator function for hWnd. \end{DoxyCompactList}\item 
+HWND \hyperlink{class_dialog_base_a1ce06608bb887ba63e7f41f8f4cf0083}{gethWnd} ()
+\begin{DoxyCompactList}\small\item\em Accessor function for hWnd. \end{DoxyCompactList}\item 
+void \hyperlink{class_dialog_base_a03d9bd9fcd7546fdd0b717ae6089d9b6}{getWindowPosition} (int \&winLeft, int \&winTop)
+\begin{DoxyCompactList}\small\item\em Store the current window location into the specified parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_dialog_base_a82265919140a1dacca70d73bc5a3399a}{getWindowPosition} (HWND window, int \&winLeft, int \&winTop)
+\begin{DoxyCompactList}\small\item\em Static functoin to store the specified window location into the specified parameters. \end{DoxyCompactList}\item 
+static void \hyperlink{class_dialog_base_a0b0be03a8583864accb55d7f1627b594}{getWindowSize} (HWND window, int \&winWidth, int \&winHeight)
+\begin{DoxyCompactList}\small\item\em Static function to store the specified window size into the specified parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_dialog_base_a2e8348ef1fed6e6ec68c2dbe86a16dc2}{positionWindow} (int winLeft, int winTop)
+\begin{DoxyCompactList}\small\item\em Function to move this window to the specified screen coordinates. \end{DoxyCompactList}\item 
+BOOL \hyperlink{class_dialog_base_a94d2ce4729c7ae992f4c4be4461859da}{checkwindow} (HWND mywin)
+\begin{DoxyCompactList}\small\item\em Determine if window pointed to by mywin is a valid window and is visible. \end{DoxyCompactList}\item 
+virtual LRESULT \hyperlink{class_dialog_base_aac84de8c20f2b47ee3de73749922e880}{processMessage} (HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)=0
+\begin{DoxyCompactList}\small\item\em Abstract, non-\/static message processing function that must be overridden by child classes. Receives parameters from static function and handles commands as necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_dialog_base_ac59c26088bd7e6baffc587efee8c63d8}{
+HWND \hyperlink{class_dialog_base_ac59c26088bd7e6baffc587efee8c63d8}{hWnd}}
+\label{class_dialog_base_ac59c26088bd7e6baffc587efee8c63d8}
+
+\begin{DoxyCompactList}\small\item\em Handle to this window. \end{DoxyCompactList}\item 
+\hypertarget{class_dialog_base_af79895093345bc9b7fa25c4de611033b}{
+HWND \hyperlink{class_dialog_base_af79895093345bc9b7fa25c4de611033b}{hParent}}
+\label{class_dialog_base_af79895093345bc9b7fa25c4de611033b}
+
+\begin{DoxyCompactList}\small\item\em Handle to the owner's window. \end{DoxyCompactList}\item 
+\hypertarget{class_dialog_base_ab8f922c7d765d366999cfd737740557a}{
+HINSTANCE \hyperlink{class_dialog_base_ab8f922c7d765d366999cfd737740557a}{hInst}}
+\label{class_dialog_base_ab8f922c7d765d366999cfd737740557a}
+
+\begin{DoxyCompactList}\small\item\em Application instance. \end{DoxyCompactList}\item 
+\hypertarget{class_dialog_base_a42e069e716bb04f4a529321a6f9fe0dd}{
+bool \hyperlink{class_dialog_base_a42e069e716bb04f4a529321a6f9fe0dd}{visible}}
+\label{class_dialog_base_a42e069e716bb04f4a529321a6f9fe0dd}
+
+\begin{DoxyCompactList}\small\item\em Boolean status of whether this dialog box is visible or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract object to be inherited to make dialog boxes for the application. Must implement abstract functions as well as a static message handling procedure in children. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_dialog_base_a103817014aa779e00818e0602aac659e}{
+\index{DialogBase@{DialogBase}!DialogBase@{DialogBase}}
+\index{DialogBase@{DialogBase}!DialogBase@{DialogBase}}
+\subsubsection[{DialogBase}]{\setlength{\rightskip}{0pt plus 5cm}DialogBase::DialogBase (
+\begin{DoxyParamCaption}
+\item[{HINSTANCE}]{newHinst, }
+\item[{HWND}]{newhParent}
+\end{DoxyParamCaption}
+)}}
+\label{class_dialog_base_a103817014aa779e00818e0602aac659e}
+
+
+Constructor for object, must pass in pointer to the the HINSTANCE and HWND parameters from the owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHinst} & HINSTANCE parameter defined by owner \\
+\hline
+{\em newhParent} & HWND parameter of owner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_dialog_base_a94d2ce4729c7ae992f4c4be4461859da}{
+\index{DialogBase@{DialogBase}!checkwindow@{checkwindow}}
+\index{checkwindow@{checkwindow}!DialogBase@{DialogBase}}
+\subsubsection[{checkwindow}]{\setlength{\rightskip}{0pt plus 5cm}BOOL DialogBase::checkwindow (
+\begin{DoxyParamCaption}
+\item[{HWND}]{mywin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_dialog_base_a94d2ce4729c7ae992f4c4be4461859da}
+
+
+Determine if window pointed to by mywin is a valid window and is visible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mywin} & HWND object to check status for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Boolean status of window validity 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_a1ce06608bb887ba63e7f41f8f4cf0083}{
+\index{DialogBase@{DialogBase}!gethWnd@{gethWnd}}
+\index{gethWnd@{gethWnd}!DialogBase@{DialogBase}}
+\subsubsection[{gethWnd}]{\setlength{\rightskip}{0pt plus 5cm}HWND DialogBase::gethWnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_dialog_base_a1ce06608bb887ba63e7f41f8f4cf0083}
+
+
+Accessor function for hWnd. 
+
+\begin{DoxyReturn}{Returns}
+HWND hWnd 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_a03d9bd9fcd7546fdd0b717ae6089d9b6}{
+\index{DialogBase@{DialogBase}!getWindowPosition@{getWindowPosition}}
+\index{getWindowPosition@{getWindowPosition}!DialogBase@{DialogBase}}
+\subsubsection[{getWindowPosition}]{\setlength{\rightskip}{0pt plus 5cm}void DialogBase::getWindowPosition (
+\begin{DoxyParamCaption}
+\item[{int \&}]{winLeft, }
+\item[{int \&}]{winTop}
+\end{DoxyParamCaption}
+)}}
+\label{class_dialog_base_a03d9bd9fcd7546fdd0b717ae6089d9b6}
+
+
+Store the current window location into the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winLeft} & Will be loaded with the current 'left' position of the window \\
+\hline
+{\em winTop} & Will be loaded with the current 'top' position of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_a82265919140a1dacca70d73bc5a3399a}{
+\index{DialogBase@{DialogBase}!getWindowPosition@{getWindowPosition}}
+\index{getWindowPosition@{getWindowPosition}!DialogBase@{DialogBase}}
+\subsubsection[{getWindowPosition}]{\setlength{\rightskip}{0pt plus 5cm}void DialogBase::getWindowPosition (
+\begin{DoxyParamCaption}
+\item[{HWND}]{window, }
+\item[{int \&}]{winLeft, }
+\item[{int \&}]{winTop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_dialog_base_a82265919140a1dacca70d73bc5a3399a}
+
+
+Static functoin to store the specified window location into the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Handle to the window to record window positions from \\
+\hline
+{\em winLeft} & Will be loaded with the current 'left' position of the window \\
+\hline
+{\em winTop} & Will be loaded with the current 'top' position of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_a0b0be03a8583864accb55d7f1627b594}{
+\index{DialogBase@{DialogBase}!getWindowSize@{getWindowSize}}
+\index{getWindowSize@{getWindowSize}!DialogBase@{DialogBase}}
+\subsubsection[{getWindowSize}]{\setlength{\rightskip}{0pt plus 5cm}void DialogBase::getWindowSize (
+\begin{DoxyParamCaption}
+\item[{HWND}]{window, }
+\item[{int \&}]{winWidth, }
+\item[{int \&}]{winHeight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_dialog_base_a0b0be03a8583864accb55d7f1627b594}
+
+
+Static function to store the specified window size into the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Handle to the window to record size positions from \\
+\hline
+{\em winWidth} & Will be loaded with the current width of the window \\
+\hline
+{\em winHeight} & Will be loaded with the current height of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_af5164bdea83014336fc32167fffb7ed9}{
+\index{DialogBase@{DialogBase}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!DialogBase@{DialogBase}}
+\subsubsection[{isVisible}]{\setlength{\rightskip}{0pt plus 5cm}bool DialogBase::isVisible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_dialog_base_af5164bdea83014336fc32167fffb7ed9}
+
+
+Return true if the dialog box is visible (from a call to \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{show()}), or return false if the dialog has never been raised or has since been closed. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of dialog visibility 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_a2e8348ef1fed6e6ec68c2dbe86a16dc2}{
+\index{DialogBase@{DialogBase}!positionWindow@{positionWindow}}
+\index{positionWindow@{positionWindow}!DialogBase@{DialogBase}}
+\subsubsection[{positionWindow}]{\setlength{\rightskip}{0pt plus 5cm}void DialogBase::positionWindow (
+\begin{DoxyParamCaption}
+\item[{int}]{winLeft, }
+\item[{int}]{winTop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_dialog_base_a2e8348ef1fed6e6ec68c2dbe86a16dc2}
+
+
+Function to move this window to the specified screen coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winLeft} & 'Left' position to move window to \\
+\hline
+{\em winTop} & 'Top' position to move window to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_aac84de8c20f2b47ee3de73749922e880}{
+\index{DialogBase@{DialogBase}!processMessage@{processMessage}}
+\index{processMessage@{processMessage}!DialogBase@{DialogBase}}
+\subsubsection[{processMessage}]{\setlength{\rightskip}{0pt plus 5cm}virtual LRESULT DialogBase::processMessage (
+\begin{DoxyParamCaption}
+\item[{HWND}]{hDlg, }
+\item[{UINT}]{message, }
+\item[{WPARAM}]{wParam, }
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{class_dialog_base_aac84de8c20f2b47ee3de73749922e880}
+
+
+Abstract, non-\/static message processing function that must be overridden by child classes. Receives parameters from static function and handles commands as necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDlg} & HWND parameter for the message-\/receiving object \\
+\hline
+{\em message} & command to be processed \\
+\hline
+{\em wParam} & WPARAM for message \\
+\hline
+{\em lParam} & LPARAM for message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of message processing 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_confirm_dialog_a9d8c945d463fbc0f816f24e3f353f94a}{ConfirmDialog}, and \hyperlink{class_raw_data_dialog_a7a2e12f99118f2ba69bee51c07e04631}{RawDataDialog}.
+
+\hypertarget{class_dialog_base_a88c45a624dc4c6eda42c211b1af31d8e}{
+\index{DialogBase@{DialogBase}!setHWnd@{setHWnd}}
+\index{setHWnd@{setHWnd}!DialogBase@{DialogBase}}
+\subsubsection[{setHWnd}]{\setlength{\rightskip}{0pt plus 5cm}void DialogBase::setHWnd (
+\begin{DoxyParamCaption}
+\item[{HWND}]{newHwnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_dialog_base_a88c45a624dc4c6eda42c211b1af31d8e}
+
+
+Mutator function for hWnd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHwnd} & new hWnd value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{
+\index{DialogBase@{DialogBase}!show@{show}}
+\index{show@{show}!DialogBase@{DialogBase}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool DialogBase::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}
+
+
+Abstract function to call to make this dialog visible and useful. After instantiation, dialog is still hidden and \hyperlink{class_dialog_base_af8691afb498d533ac21653fe6bb3aae7}{show()} must be called to raise the dialog box. May be called again to re-\/show dialog box if it has been closed. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of operation to show dialog box 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_confirm_dialog_a143280be0bdd15d67c774aad34e5c436}{ConfirmDialog}, and \hyperlink{class_raw_data_dialog_ab7a8dfabd539dc198f2ea97aec3c0b9c}{RawDataDialog}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DialogBase.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DialogBase.cpp\end{DoxyCompactItemize}

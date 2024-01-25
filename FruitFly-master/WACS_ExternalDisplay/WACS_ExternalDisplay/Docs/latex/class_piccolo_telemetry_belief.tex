@@ -1,0 +1,1077 @@
+\hypertarget{class_piccolo_telemetry_belief}{
+\section{PiccoloTelemetryBelief Class Reference}
+\label{class_piccolo_telemetry_belief}\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+}
+
+
+Class representing a WACS Swarm belief -\/ telemetry from on-\/board Piccolo autopilot.  
+
+
+
+
+{\ttfamily \#include $<$PiccoloTelemetryBelief.h$>$}
+
+Inheritance diagram for PiccoloTelemetryBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_piccolo_telemetry_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_piccolo_telemetry_belief_a9e492de607bfe7688859ced00f81e22d}{
+\hyperlink{class_piccolo_telemetry_belief_a9e492de607bfe7688859ced00f81e22d}{PiccoloTelemetryBelief} ()}
+\label{class_piccolo_telemetry_belief_a9e492de607bfe7688859ced00f81e22d}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, sets invalid values. \end{DoxyCompactList}\item 
+\hyperlink{class_piccolo_telemetry_belief_a86fd07a7d8a95aa2c83d5f6f9a3f6e92}{PiccoloTelemetryBelief} (double altitudeWGS84\_\-m, int GpsStatus, double indicatedAirSpeed\_\-mps, double latitude\_\-deg, double longitude\_\-deg, double gpsPDOP, double pitch\_\-deg, double roll\_\-deg, double trueHeading\_\-deg, double velocityDown\_\-mps, double velocityEast\_\-mps, double velocityNorth\_\-mps, double windFromSouth\_\-mps, double windFromWest\_\-mps, double yaw\_\-deg, double staticPressure\_\-pa, double outsideAirTemperature\_\-C, double altLaser\_\-m, bool altLaserValid)
+\begin{DoxyCompactList}\small\item\em Constructor, sets specified parameters. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a083fd22adcc2e8785900d560ef51c7bf}{
+\hyperlink{class_piccolo_telemetry_belief_a083fd22adcc2e8785900d560ef51c7bf}{$\sim$PiccoloTelemetryBelief} ()}
+\label{class_piccolo_telemetry_belief_a083fd22adcc2e8785900d560ef51c7bf}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_af5fbaed4222906597b078eb5e97b35a4}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. Display UAV with proper location and orientation. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_piccolo_telemetry_belief_a64a65f46bda72414e6d1760e4117d519}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_aae70dc510f5c142ac38ab3dcaf4d3e55}{getAltitudeWGS84\_\-m} ()
+\begin{DoxyCompactList}\small\item\em Accessor for altitude. \end{DoxyCompactList}\item 
+int \hyperlink{class_piccolo_telemetry_belief_ae924a7ddcff81067fc1f9f1e8c68256f}{getGpsStatus} ()
+\begin{DoxyCompactList}\small\item\em Accessor for GPS status. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a0fa33080238205cfdc2cb28c29e7bf86}{getIndicatedAirSpeed\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for IAS. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_aa548d5394d3348f6990b603a3875eab3}{getLatitude\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for Latitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a16939f4b7c9216cafe97690925eecc6e}{getLongitude\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for Longitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a34dc4653d95c018ea50b40c5021e0f33}{getGpsPDOP} ()
+\begin{DoxyCompactList}\small\item\em Accessor for GPS PDOP. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_ad44b003a97513c6b60985305f540c764}{getPitch\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for pitch. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a333b28984f684b9346e548e72afd66c5}{getRoll\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for roll. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a5caa5461c071f2b6e1014b402abda6b5}{getTrueHeading\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for true heading. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a7ca96a97b41a78ef1cf48cb6ed245770}{getVelocityDown\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for velocity down component. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a86daa05446b47f26aa1c01facc077af7}{getVelocityEast\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for velocity east component. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a909d2ca7962638d378277d76ffca6789}{getVelocityNorth\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for velocity north component. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_abf669b99f1d137870ca418d03121801e}{getWindFromSouth\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for wind from south component. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a2ff4382f656f12e1a7bdec51af4bbd93}{getWindFromWest\_\-mps} ()
+\begin{DoxyCompactList}\small\item\em Accessor for wind from west component. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a662f8a0adf70dd55a9db133ee23759fc}{getYaw\_\-deg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for yaw. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a98c6fdd8a68bbb750758ff1cb1bb6f74}{getStaticPressure\_\-pa} ()
+\begin{DoxyCompactList}\small\item\em Accessor for static pressure. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a98d3aaca093a3fbdd633227b7f4df4dc}{getOutsideAirTemperature\_\-C} ()
+\begin{DoxyCompactList}\small\item\em Accessor for OAT. \end{DoxyCompactList}\item 
+double \hyperlink{class_piccolo_telemetry_belief_a9829aeb648adce4bd9a90dfe24023d9e}{getAltLaser\_\-m} ()
+\begin{DoxyCompactList}\small\item\em Accessor for laser altimeter reading. \end{DoxyCompactList}\item 
+bool \hyperlink{class_piccolo_telemetry_belief_ac4e7a21e2b2308448e7b415b198c7f75}{getAltLaserValid} ()
+\begin{DoxyCompactList}\small\item\em Accessor for whether laser altimeter reading is valid or not. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a9241964a6ca7501a79a3329ad9a9308b}{setAltitudeWGS84\_\-m} (double altitudeWGS84\_\-m)
+\begin{DoxyCompactList}\small\item\em Modifier for altitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_abc4c1ab9658367ac849a17d0eb342e7a}{setGpsStatus} (int GpsStatus)
+\begin{DoxyCompactList}\small\item\em Modifier for GPS status flags. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_aefac63a184ec2a61be1fa787649599d5}{setIndicatedAirSpeed\_\-mps} (double indicatedAirSpeed\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for IAS. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a59da7ccb31ed323314f31e83bfd86306}{setLatitude\_\-deg} (double latitude\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for latitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a8cd3f298e9139821e41a19adac8a4e45}{setLongitude\_\-deg} (double longitude\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for longitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a221b9d4413eb54074a90bbcfd269542f}{setGpsPDOP} (double gpsPDOP)
+\begin{DoxyCompactList}\small\item\em Modifier for GPS PDOP. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a7be0e19555cd2e456b7b46206c4bf820}{setPitch\_\-deg} (double pitch\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for pitch. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a7a48f89cbc2eef8c61e5565c71082b1d}{setRoll\_\-deg} (double roll\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for roll. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a00c8f3d355823071ae1068a3ca3832ff}{setTrueHeading\_\-deg} (double trueHeading\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for true heading. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_afaea9b441386061b4b2ca94672b8bdb9}{setVelocityDown\_\-mps} (double velocityDown\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for velocity down. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_aa34da048ccdb78a2520228e6ae277963}{setVelocityEast\_\-mps} (double velocityEast\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for velocity east. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a527d6189a31f4c02aa2a18608ce6bcc9}{setVelocityNorth\_\-mps} (double velocityNorth\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for velocity north. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_ae5636e8c2ba40f1e9a96f7b58b9ec03e}{setWindFromSouth\_\-mps} (double windFromSouth\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for wind from south. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_ac69442189a8d3c5ce105d5e4538bc4c4}{setWindFromWest\_\-mps} (double windFromWest\_\-mps)
+\begin{DoxyCompactList}\small\item\em Modifier for wind from west. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a6bb59d17dc3365365d091cce2830e417}{setYaw\_\-deg} (double yaw\_\-deg)
+\begin{DoxyCompactList}\small\item\em Modifier for yaw. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a8c1e9e61cecabd31cc80ea182aa7c79a}{setStaticPressure\_\-pa} (double staticPressure\_\-pa)
+\begin{DoxyCompactList}\small\item\em Modifier for static pressure. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_ac61e0cafff804ef85e90cbc25802f6f6}{setOutsideAirTemperature\_\-C} (double outsideAirTemperature\_\-C)
+\begin{DoxyCompactList}\small\item\em Modifier for OAT. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a9aeddc8587c1000d207de4decc655aed}{setAltLaser\_\-m} (double altLaser\_\-m)
+\begin{DoxyCompactList}\small\item\em Modifier for laser AGL value. \end{DoxyCompactList}\item 
+void \hyperlink{class_piccolo_telemetry_belief_a1781ae1125112a8ded32e0e20bace78c}{setAltLaserValid} (bool altLaserValid)
+\begin{DoxyCompactList}\small\item\em Modifier for whether laser AGL value is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_piccolo_telemetry_belief_a8961ef7c02265570e69a702beecb4e99}{
+static \hyperlink{class_shadow_uav_display}{ShadowUavDisplay} $\ast$ \hyperlink{class_piccolo_telemetry_belief_a8961ef7c02265570e69a702beecb4e99}{m\_\-ShadowDisplay} = NULL}
+\label{class_piccolo_telemetry_belief_a8961ef7c02265570e69a702beecb4e99}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_shadow_uav_display}{ShadowUavDisplay} object that displays a Shadow with wing-\/mounted pods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_piccolo_telemetry_belief_affefc5a6cb355992d5249793760a1da7}{
+double \hyperlink{class_piccolo_telemetry_belief_affefc5a6cb355992d5249793760a1da7}{m\_\-AltitudeWGS84\_\-m}}
+\label{class_piccolo_telemetry_belief_affefc5a6cb355992d5249793760a1da7}
+
+\begin{DoxyCompactList}\small\item\em Altitude above WGS84 ellipsoid, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_aa0a44420b8b00a76440707b0fcbbc14a}{
+int \hyperlink{class_piccolo_telemetry_belief_aa0a44420b8b00a76440707b0fcbbc14a}{m\_\-GpsStatus}}
+\label{class_piccolo_telemetry_belief_aa0a44420b8b00a76440707b0fcbbc14a}
+
+\begin{DoxyCompactList}\small\item\em GPS status flags. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_ac889724ebc93c2b5b8acbe2444ad7aad}{
+double \hyperlink{class_piccolo_telemetry_belief_ac889724ebc93c2b5b8acbe2444ad7aad}{m\_\-IndicatedAirSpeed\_\-mps}}
+\label{class_piccolo_telemetry_belief_ac889724ebc93c2b5b8acbe2444ad7aad}
+
+\begin{DoxyCompactList}\small\item\em IAS, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_aaf13c243be60c745a8d51423356b9166}{
+double \hyperlink{class_piccolo_telemetry_belief_aaf13c243be60c745a8d51423356b9166}{m\_\-Latitude\_\-deg}}
+\label{class_piccolo_telemetry_belief_aaf13c243be60c745a8d51423356b9166}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a0cd4c97ee7eb06fc7de39eefe4511b14}{
+double \hyperlink{class_piccolo_telemetry_belief_a0cd4c97ee7eb06fc7de39eefe4511b14}{m\_\-Longitude\_\-deg}}
+\label{class_piccolo_telemetry_belief_a0cd4c97ee7eb06fc7de39eefe4511b14}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_aa1910608c4532d06358142de33e29ec4}{
+double \hyperlink{class_piccolo_telemetry_belief_aa1910608c4532d06358142de33e29ec4}{m\_\-GpsPDOP}}
+\label{class_piccolo_telemetry_belief_aa1910608c4532d06358142de33e29ec4}
+
+\begin{DoxyCompactList}\small\item\em GPS PDOP value. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_aae15aa8bbe1ab6d9ca94ab70ae2caaa4}{
+double \hyperlink{class_piccolo_telemetry_belief_aae15aa8bbe1ab6d9ca94ab70ae2caaa4}{m\_\-Pitch\_\-deg}}
+\label{class_piccolo_telemetry_belief_aae15aa8bbe1ab6d9ca94ab70ae2caaa4}
+
+\begin{DoxyCompactList}\small\item\em Pitch decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a184f3b92b232ecf75914e80fecf018cb}{
+double \hyperlink{class_piccolo_telemetry_belief_a184f3b92b232ecf75914e80fecf018cb}{m\_\-Roll\_\-deg}}
+\label{class_piccolo_telemetry_belief_a184f3b92b232ecf75914e80fecf018cb}
+
+\begin{DoxyCompactList}\small\item\em Roll decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a337d73bba9e516e7acf89a44676d774b}{
+double \hyperlink{class_piccolo_telemetry_belief_a337d73bba9e516e7acf89a44676d774b}{m\_\-TrueHeading\_\-deg}}
+\label{class_piccolo_telemetry_belief_a337d73bba9e516e7acf89a44676d774b}
+
+\begin{DoxyCompactList}\small\item\em True heading decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a5b7faf39ece9aff84ecd13ab383504c9}{
+double \hyperlink{class_piccolo_telemetry_belief_a5b7faf39ece9aff84ecd13ab383504c9}{m\_\-VelocityDown\_\-mps}}
+\label{class_piccolo_telemetry_belief_a5b7faf39ece9aff84ecd13ab383504c9}
+
+\begin{DoxyCompactList}\small\item\em Velocity down component, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a4d5c2ae85f26b7c6591fb9fc40213f62}{
+double \hyperlink{class_piccolo_telemetry_belief_a4d5c2ae85f26b7c6591fb9fc40213f62}{m\_\-VelocityEast\_\-mps}}
+\label{class_piccolo_telemetry_belief_a4d5c2ae85f26b7c6591fb9fc40213f62}
+
+\begin{DoxyCompactList}\small\item\em Velocity East component, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_adc4fb6468dbe1171eaa69bf6c54a194b}{
+double \hyperlink{class_piccolo_telemetry_belief_adc4fb6468dbe1171eaa69bf6c54a194b}{m\_\-VelocityNorth\_\-mps}}
+\label{class_piccolo_telemetry_belief_adc4fb6468dbe1171eaa69bf6c54a194b}
+
+\begin{DoxyCompactList}\small\item\em Velocity North component, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a6a3568aa024e4b2ddb3cb0a7e2a3136b}{
+double \hyperlink{class_piccolo_telemetry_belief_a6a3568aa024e4b2ddb3cb0a7e2a3136b}{m\_\-WindFromSouth\_\-mps}}
+\label{class_piccolo_telemetry_belief_a6a3568aa024e4b2ddb3cb0a7e2a3136b}
+
+\begin{DoxyCompactList}\small\item\em Wind from South component, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_ab24e6d52bcb44428e4c26d090fe0c7aa}{
+double \hyperlink{class_piccolo_telemetry_belief_ab24e6d52bcb44428e4c26d090fe0c7aa}{m\_\-WindFromWest\_\-mps}}
+\label{class_piccolo_telemetry_belief_ab24e6d52bcb44428e4c26d090fe0c7aa}
+
+\begin{DoxyCompactList}\small\item\em Wind from West component, meters per second. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_ab00073a7d95b368f79b1689b7a2cbac6}{
+double \hyperlink{class_piccolo_telemetry_belief_ab00073a7d95b368f79b1689b7a2cbac6}{m\_\-Yaw\_\-deg}}
+\label{class_piccolo_telemetry_belief_ab00073a7d95b368f79b1689b7a2cbac6}
+
+\begin{DoxyCompactList}\small\item\em Yaw decimal degreers. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_ae0073530294cf46d6014891e3ade0ea8}{
+double \hyperlink{class_piccolo_telemetry_belief_ae0073530294cf46d6014891e3ade0ea8}{m\_\-StaticPressure\_\-pa}}
+\label{class_piccolo_telemetry_belief_ae0073530294cf46d6014891e3ade0ea8}
+
+\begin{DoxyCompactList}\small\item\em Static pressure Pascals. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_af970a072ba67cfbe8dbcb6ddeeee23f3}{
+double \hyperlink{class_piccolo_telemetry_belief_af970a072ba67cfbe8dbcb6ddeeee23f3}{m\_\-OutsideAirTemperature\_\-C}}
+\label{class_piccolo_telemetry_belief_af970a072ba67cfbe8dbcb6ddeeee23f3}
+
+\begin{DoxyCompactList}\small\item\em OAT, Celcius. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a0a876ff0c2f66dbf2a74d7f42329b4fa}{
+double \hyperlink{class_piccolo_telemetry_belief_a0a876ff0c2f66dbf2a74d7f42329b4fa}{m\_\-AltLaser\_\-m}}
+\label{class_piccolo_telemetry_belief_a0a876ff0c2f66dbf2a74d7f42329b4fa}
+
+\begin{DoxyCompactList}\small\item\em Laser altimeter range, meters. \end{DoxyCompactList}\item 
+\hypertarget{class_piccolo_telemetry_belief_a075e67c0fdc179385116a15a957f4a21}{
+bool \hyperlink{class_piccolo_telemetry_belief_a075e67c0fdc179385116a15a957f4a21}{m\_\-AltLaserValid}}
+\label{class_piccolo_telemetry_belief_a075e67c0fdc179385116a15a957f4a21}
+
+\begin{DoxyCompactList}\small\item\em If true, m\_\-AltLaser\_\-m is valid data. If false, invalid data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a WACS Swarm belief -\/ telemetry from on-\/board Piccolo autopilot. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_piccolo_telemetry_belief_a86fd07a7d8a95aa2c83d5f6f9a3f6e92}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{PiccoloTelemetryBelief}]{\setlength{\rightskip}{0pt plus 5cm}PiccoloTelemetryBelief::PiccoloTelemetryBelief (
+\begin{DoxyParamCaption}
+\item[{double}]{altitudeWGS84\_\-m, }
+\item[{int}]{GpsStatus, }
+\item[{double}]{indicatedAirSpeed\_\-mps, }
+\item[{double}]{latitude\_\-deg, }
+\item[{double}]{longitude\_\-deg, }
+\item[{double}]{gpsPDOP, }
+\item[{double}]{pitch\_\-deg, }
+\item[{double}]{roll\_\-deg, }
+\item[{double}]{trueHeading\_\-deg, }
+\item[{double}]{velocityDown\_\-mps, }
+\item[{double}]{velocityEast\_\-mps, }
+\item[{double}]{velocityNorth\_\-mps, }
+\item[{double}]{windFromSouth\_\-mps, }
+\item[{double}]{windFromWest\_\-mps, }
+\item[{double}]{yaw\_\-deg, }
+\item[{double}]{staticPressure\_\-pa, }
+\item[{double}]{outsideAirTemperature\_\-C, }
+\item[{double}]{altLaser\_\-m, }
+\item[{bool}]{altLaserValid}
+\end{DoxyParamCaption}
+)}}
+\label{class_piccolo_telemetry_belief_a86fd07a7d8a95aa2c83d5f6f9a3f6e92}
+
+
+Constructor, sets specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em altitudeWGS84\_\-m} & Altitude above WGS84 ellipsoid, meters \\
+\hline
+{\em GpsStatus} & GPS status flags \\
+\hline
+{\em indicatedAirSpeed\_\-mps} & IAS, meters per second \\
+\hline
+{\em latitude\_\-deg} & Latitude decimal degrees \\
+\hline
+{\em longitude\_\-deg} & Longitude decimal degrees \\
+\hline
+{\em gpsPDOP} & GPS PDOP value \\
+\hline
+{\em pitch\_\-deg} & Pitch decimal degrees \\
+\hline
+{\em roll\_\-deg} & Roll decimal degrees \\
+\hline
+{\em trueHeading\_\-deg} & True heading decimal degrees \\
+\hline
+{\em velocityDown\_\-mps} & Velocity down component, meters per second \\
+\hline
+{\em velocityEast\_\-mps} & Velocity East component, meters per second \\
+\hline
+{\em velocityNorth\_\-mps} & Velocity North component, meters per second \\
+\hline
+{\em windFromSouth\_\-mps} & Wind from South component, meters per second \\
+\hline
+{\em windFromWest\_\-mps} & Wind from West component, meters per second \\
+\hline
+{\em yaw\_\-deg} & Yaw decimal degreers \\
+\hline
+{\em staticPressure\_\-pa} & Static pressure Pascals \\
+\hline
+{\em outsideAirTemperature\_\-C} & OAT, Celcius \\
+\hline
+{\em altLaser\_\-m} & Laser altimeter range, meters \\
+\hline
+{\em altLaserValid} & If true, altLaser\_\-m is valid data. If false, invalid data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_piccolo_telemetry_belief_af5fbaed4222906597b078eb5e97b35a4}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_af5fbaed4222906597b078eb5e97b35a4}
+
+
+Paint the contents of this belief in an OpenGL scene. Display UAV with proper location and orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_piccolo_telemetry_belief_aae70dc510f5c142ac38ab3dcaf4d3e55}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getAltitudeWGS84\_\-m@{getAltitudeWGS84\_\-m}}
+\index{getAltitudeWGS84\_\-m@{getAltitudeWGS84\_\-m}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getAltitudeWGS84\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getAltitudeWGS84\_\-m (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_aae70dc510f5c142ac38ab3dcaf4d3e55}
+
+
+Accessor for altitude. 
+
+\begin{DoxyReturn}{Returns}
+Altitude above WGS84, meters 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a9829aeb648adce4bd9a90dfe24023d9e}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getAltLaser\_\-m@{getAltLaser\_\-m}}
+\index{getAltLaser\_\-m@{getAltLaser\_\-m}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getAltLaser\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getAltLaser\_\-m (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a9829aeb648adce4bd9a90dfe24023d9e}
+
+
+Accessor for laser altimeter reading. 
+
+\begin{DoxyReturn}{Returns}
+Laser AGL reading, meters 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ac4e7a21e2b2308448e7b415b198c7f75}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getAltLaserValid@{getAltLaserValid}}
+\index{getAltLaserValid@{getAltLaserValid}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getAltLaserValid}]{\setlength{\rightskip}{0pt plus 5cm}bool PiccoloTelemetryBelief::getAltLaserValid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ac4e7a21e2b2308448e7b415b198c7f75}
+
+
+Accessor for whether laser altimeter reading is valid or not. 
+
+\begin{DoxyReturn}{Returns}
+True if laser altimeter is valid, false if invalid 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a34dc4653d95c018ea50b40c5021e0f33}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getGpsPDOP@{getGpsPDOP}}
+\index{getGpsPDOP@{getGpsPDOP}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getGpsPDOP}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getGpsPDOP (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a34dc4653d95c018ea50b40c5021e0f33}
+
+
+Accessor for GPS PDOP. 
+
+\begin{DoxyReturn}{Returns}
+GPS PDOP 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ae924a7ddcff81067fc1f9f1e8c68256f}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getGpsStatus@{getGpsStatus}}
+\index{getGpsStatus@{getGpsStatus}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getGpsStatus}]{\setlength{\rightskip}{0pt plus 5cm}int PiccoloTelemetryBelief::getGpsStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ae924a7ddcff81067fc1f9f1e8c68256f}
+
+
+Accessor for GPS status. 
+
+\begin{DoxyReturn}{Returns}
+GPS status 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a0fa33080238205cfdc2cb28c29e7bf86}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getIndicatedAirSpeed\_\-mps@{getIndicatedAirSpeed\_\-mps}}
+\index{getIndicatedAirSpeed\_\-mps@{getIndicatedAirSpeed\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getIndicatedAirSpeed\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getIndicatedAirSpeed\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a0fa33080238205cfdc2cb28c29e7bf86}
+
+
+Accessor for IAS. 
+
+\begin{DoxyReturn}{Returns}
+IAS, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_aa548d5394d3348f6990b603a3875eab3}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getLatitude\_\-deg@{getLatitude\_\-deg}}
+\index{getLatitude\_\-deg@{getLatitude\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getLatitude\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getLatitude\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_aa548d5394d3348f6990b603a3875eab3}
+
+
+Accessor for Latitude. 
+
+\begin{DoxyReturn}{Returns}
+Latitude, decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a16939f4b7c9216cafe97690925eecc6e}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getLongitude\_\-deg@{getLongitude\_\-deg}}
+\index{getLongitude\_\-deg@{getLongitude\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getLongitude\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getLongitude\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a16939f4b7c9216cafe97690925eecc6e}
+
+
+Accessor for Longitude. 
+
+\begin{DoxyReturn}{Returns}
+Longitude, decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a98d3aaca093a3fbdd633227b7f4df4dc}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getOutsideAirTemperature\_\-C@{getOutsideAirTemperature\_\-C}}
+\index{getOutsideAirTemperature\_\-C@{getOutsideAirTemperature\_\-C}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getOutsideAirTemperature\_\-C}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getOutsideAirTemperature\_\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a98d3aaca093a3fbdd633227b7f4df4dc}
+
+
+Accessor for OAT. 
+
+\begin{DoxyReturn}{Returns}
+OAT, Celcius 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ad44b003a97513c6b60985305f540c764}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getPitch\_\-deg@{getPitch\_\-deg}}
+\index{getPitch\_\-deg@{getPitch\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getPitch\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getPitch\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ad44b003a97513c6b60985305f540c764}
+
+
+Accessor for pitch. 
+
+\begin{DoxyReturn}{Returns}
+Pitch decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a333b28984f684b9346e548e72afd66c5}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getRoll\_\-deg@{getRoll\_\-deg}}
+\index{getRoll\_\-deg@{getRoll\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getRoll\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getRoll\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a333b28984f684b9346e548e72afd66c5}
+
+
+Accessor for roll. 
+
+\begin{DoxyReturn}{Returns}
+Roll decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a98c6fdd8a68bbb750758ff1cb1bb6f74}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getStaticPressure\_\-pa@{getStaticPressure\_\-pa}}
+\index{getStaticPressure\_\-pa@{getStaticPressure\_\-pa}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getStaticPressure\_\-pa}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getStaticPressure\_\-pa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a98c6fdd8a68bbb750758ff1cb1bb6f74}
+
+
+Accessor for static pressure. 
+
+\begin{DoxyReturn}{Returns}
+Static pressure, Pa 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a5caa5461c071f2b6e1014b402abda6b5}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getTrueHeading\_\-deg@{getTrueHeading\_\-deg}}
+\index{getTrueHeading\_\-deg@{getTrueHeading\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getTrueHeading\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getTrueHeading\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a5caa5461c071f2b6e1014b402abda6b5}
+
+
+Accessor for true heading. 
+
+\begin{DoxyReturn}{Returns}
+True heading from magnetometer, decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a7ca96a97b41a78ef1cf48cb6ed245770}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getVelocityDown\_\-mps@{getVelocityDown\_\-mps}}
+\index{getVelocityDown\_\-mps@{getVelocityDown\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getVelocityDown\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getVelocityDown\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a7ca96a97b41a78ef1cf48cb6ed245770}
+
+
+Accessor for velocity down component. 
+
+\begin{DoxyReturn}{Returns}
+velocity down component, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a86daa05446b47f26aa1c01facc077af7}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getVelocityEast\_\-mps@{getVelocityEast\_\-mps}}
+\index{getVelocityEast\_\-mps@{getVelocityEast\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getVelocityEast\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getVelocityEast\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a86daa05446b47f26aa1c01facc077af7}
+
+
+Accessor for velocity east component. 
+
+\begin{DoxyReturn}{Returns}
+velocity east component, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a909d2ca7962638d378277d76ffca6789}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getVelocityNorth\_\-mps@{getVelocityNorth\_\-mps}}
+\index{getVelocityNorth\_\-mps@{getVelocityNorth\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getVelocityNorth\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getVelocityNorth\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a909d2ca7962638d378277d76ffca6789}
+
+
+Accessor for velocity north component. 
+
+\begin{DoxyReturn}{Returns}
+velocity north component, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_abf669b99f1d137870ca418d03121801e}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getWindFromSouth\_\-mps@{getWindFromSouth\_\-mps}}
+\index{getWindFromSouth\_\-mps@{getWindFromSouth\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getWindFromSouth\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getWindFromSouth\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_abf669b99f1d137870ca418d03121801e}
+
+
+Accessor for wind from south component. 
+
+\begin{DoxyReturn}{Returns}
+wind from south component, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a2ff4382f656f12e1a7bdec51af4bbd93}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getWindFromWest\_\-mps@{getWindFromWest\_\-mps}}
+\index{getWindFromWest\_\-mps@{getWindFromWest\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getWindFromWest\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getWindFromWest\_\-mps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a2ff4382f656f12e1a7bdec51af4bbd93}
+
+
+Accessor for wind from west component. 
+
+\begin{DoxyReturn}{Returns}
+wind from west component, meters per second 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a662f8a0adf70dd55a9db133ee23759fc}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!getYaw\_\-deg@{getYaw\_\-deg}}
+\index{getYaw\_\-deg@{getYaw\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{getYaw\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}double PiccoloTelemetryBelief::getYaw\_\-deg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a662f8a0adf70dd55a9db133ee23759fc}
+
+
+Accessor for yaw. 
+
+\begin{DoxyReturn}{Returns}
+Yaw, decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a9241964a6ca7501a79a3329ad9a9308b}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setAltitudeWGS84\_\-m@{setAltitudeWGS84\_\-m}}
+\index{setAltitudeWGS84\_\-m@{setAltitudeWGS84\_\-m}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setAltitudeWGS84\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setAltitudeWGS84\_\-m (
+\begin{DoxyParamCaption}
+\item[{double}]{altitudeWGS84\_\-m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a9241964a6ca7501a79a3329ad9a9308b}
+
+
+Modifier for altitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em altitudeWGS84\_\-m} & New altitude above WGS84 ellipsoid, meters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a9aeddc8587c1000d207de4decc655aed}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setAltLaser\_\-m@{setAltLaser\_\-m}}
+\index{setAltLaser\_\-m@{setAltLaser\_\-m}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setAltLaser\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setAltLaser\_\-m (
+\begin{DoxyParamCaption}
+\item[{double}]{altLaser\_\-m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a9aeddc8587c1000d207de4decc655aed}
+
+
+Modifier for laser AGL value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em altLaser\_\-m} & new laser AGL reading, meters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a1781ae1125112a8ded32e0e20bace78c}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setAltLaserValid@{setAltLaserValid}}
+\index{setAltLaserValid@{setAltLaserValid}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setAltLaserValid}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setAltLaserValid (
+\begin{DoxyParamCaption}
+\item[{bool}]{altLaserValid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a1781ae1125112a8ded32e0e20bace78c}
+
+
+Modifier for whether laser AGL value is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em altLaserValid} & True if laser AGL value is valid, false if invalid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a221b9d4413eb54074a90bbcfd269542f}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setGpsPDOP@{setGpsPDOP}}
+\index{setGpsPDOP@{setGpsPDOP}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setGpsPDOP}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setGpsPDOP (
+\begin{DoxyParamCaption}
+\item[{double}]{gpsPDOP}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a221b9d4413eb54074a90bbcfd269542f}
+
+
+Modifier for GPS PDOP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpsPDOP} & new GPS PDOP value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_abc4c1ab9658367ac849a17d0eb342e7a}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setGpsStatus@{setGpsStatus}}
+\index{setGpsStatus@{setGpsStatus}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setGpsStatus}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setGpsStatus (
+\begin{DoxyParamCaption}
+\item[{int}]{GpsStatus}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_abc4c1ab9658367ac849a17d0eb342e7a}
+
+
+Modifier for GPS status flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GpsStatus} & New GPS status flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_aefac63a184ec2a61be1fa787649599d5}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setIndicatedAirSpeed\_\-mps@{setIndicatedAirSpeed\_\-mps}}
+\index{setIndicatedAirSpeed\_\-mps@{setIndicatedAirSpeed\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setIndicatedAirSpeed\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setIndicatedAirSpeed\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{indicatedAirSpeed\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_aefac63a184ec2a61be1fa787649599d5}
+
+
+Modifier for IAS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indicatedAirSpeed\_\-mps} & New IAS meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a59da7ccb31ed323314f31e83bfd86306}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setLatitude\_\-deg@{setLatitude\_\-deg}}
+\index{setLatitude\_\-deg@{setLatitude\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setLatitude\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setLatitude\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a59da7ccb31ed323314f31e83bfd86306}
+
+
+Modifier for latitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude\_\-deg} & New latitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a8cd3f298e9139821e41a19adac8a4e45}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setLongitude\_\-deg@{setLongitude\_\-deg}}
+\index{setLongitude\_\-deg@{setLongitude\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setLongitude\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setLongitude\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{longitude\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a8cd3f298e9139821e41a19adac8a4e45}
+
+
+Modifier for longitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em longitude\_\-deg} & New longitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ac61e0cafff804ef85e90cbc25802f6f6}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setOutsideAirTemperature\_\-C@{setOutsideAirTemperature\_\-C}}
+\index{setOutsideAirTemperature\_\-C@{setOutsideAirTemperature\_\-C}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setOutsideAirTemperature\_\-C}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setOutsideAirTemperature\_\-C (
+\begin{DoxyParamCaption}
+\item[{double}]{outsideAirTemperature\_\-C}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ac61e0cafff804ef85e90cbc25802f6f6}
+
+
+Modifier for OAT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outsideAirTemperature\_\-C} & New OAT value, celcius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a7be0e19555cd2e456b7b46206c4bf820}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setPitch\_\-deg@{setPitch\_\-deg}}
+\index{setPitch\_\-deg@{setPitch\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setPitch\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setPitch\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{pitch\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a7be0e19555cd2e456b7b46206c4bf820}
+
+
+Modifier for pitch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pitch\_\-deg} & New pitch decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a7a48f89cbc2eef8c61e5565c71082b1d}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setRoll\_\-deg@{setRoll\_\-deg}}
+\index{setRoll\_\-deg@{setRoll\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setRoll\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setRoll\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{roll\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a7a48f89cbc2eef8c61e5565c71082b1d}
+
+
+Modifier for roll. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em roll\_\-deg} & New roll decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a8c1e9e61cecabd31cc80ea182aa7c79a}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setStaticPressure\_\-pa@{setStaticPressure\_\-pa}}
+\index{setStaticPressure\_\-pa@{setStaticPressure\_\-pa}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setStaticPressure\_\-pa}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setStaticPressure\_\-pa (
+\begin{DoxyParamCaption}
+\item[{double}]{staticPressure\_\-pa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a8c1e9e61cecabd31cc80ea182aa7c79a}
+
+
+Modifier for static pressure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em staticPressure\_\-pa} & New static pressure value, pascals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a00c8f3d355823071ae1068a3ca3832ff}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setTrueHeading\_\-deg@{setTrueHeading\_\-deg}}
+\index{setTrueHeading\_\-deg@{setTrueHeading\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setTrueHeading\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setTrueHeading\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{trueHeading\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a00c8f3d355823071ae1068a3ca3832ff}
+
+
+Modifier for true heading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trueHeading\_\-deg} & New true heading decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_afaea9b441386061b4b2ca94672b8bdb9}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setVelocityDown\_\-mps@{setVelocityDown\_\-mps}}
+\index{setVelocityDown\_\-mps@{setVelocityDown\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setVelocityDown\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setVelocityDown\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{velocityDown\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_afaea9b441386061b4b2ca94672b8bdb9}
+
+
+Modifier for velocity down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocityDown\_\-mps} & New velocity down-\/component, meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_aa34da048ccdb78a2520228e6ae277963}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setVelocityEast\_\-mps@{setVelocityEast\_\-mps}}
+\index{setVelocityEast\_\-mps@{setVelocityEast\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setVelocityEast\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setVelocityEast\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{velocityEast\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_aa34da048ccdb78a2520228e6ae277963}
+
+
+Modifier for velocity east. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocityEast\_\-mps} & New velocity east-\/component, meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a527d6189a31f4c02aa2a18608ce6bcc9}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setVelocityNorth\_\-mps@{setVelocityNorth\_\-mps}}
+\index{setVelocityNorth\_\-mps@{setVelocityNorth\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setVelocityNorth\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setVelocityNorth\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{velocityNorth\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a527d6189a31f4c02aa2a18608ce6bcc9}
+
+
+Modifier for velocity north. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocityNorth\_\-mps} & New velocity north-\/component, meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ae5636e8c2ba40f1e9a96f7b58b9ec03e}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setWindFromSouth\_\-mps@{setWindFromSouth\_\-mps}}
+\index{setWindFromSouth\_\-mps@{setWindFromSouth\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setWindFromSouth\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setWindFromSouth\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{windFromSouth\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ae5636e8c2ba40f1e9a96f7b58b9ec03e}
+
+
+Modifier for wind from south. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em windFromSouth\_\-mps} & New wind from south meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_ac69442189a8d3c5ce105d5e4538bc4c4}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setWindFromWest\_\-mps@{setWindFromWest\_\-mps}}
+\index{setWindFromWest\_\-mps@{setWindFromWest\_\-mps}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setWindFromWest\_\-mps}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setWindFromWest\_\-mps (
+\begin{DoxyParamCaption}
+\item[{double}]{windFromWest\_\-mps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_ac69442189a8d3c5ce105d5e4538bc4c4}
+
+
+Modifier for wind from west. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em windFromWest\_\-mps} & New wind from west meters per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a6bb59d17dc3365365d091cce2830e417}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!setYaw\_\-deg@{setYaw\_\-deg}}
+\index{setYaw\_\-deg@{setYaw\_\-deg}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{setYaw\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::setYaw\_\-deg (
+\begin{DoxyParamCaption}
+\item[{double}]{yaw\_\-deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a6bb59d17dc3365365d091cce2830e417}
+
+
+Modifier for yaw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw\_\-deg} & New yaw decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_piccolo_telemetry_belief_a64a65f46bda72414e6d1760e4117d519}{
+\index{PiccoloTelemetryBelief@{PiccoloTelemetryBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!PiccoloTelemetryBelief@{PiccoloTelemetryBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void PiccoloTelemetryBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_piccolo_telemetry_belief_a64a65f46bda72414e6d1760e4117d519}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/PiccoloTelemetryBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/PiccoloTelemetryBelief.cpp\end{DoxyCompactItemize}

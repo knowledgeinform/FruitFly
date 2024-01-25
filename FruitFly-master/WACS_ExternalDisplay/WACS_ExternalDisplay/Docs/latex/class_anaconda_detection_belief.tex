@@ -1,0 +1,379 @@
+\hypertarget{class_anaconda_detection_belief}{
+\section{AnacondaDetectionBelief Class Reference}
+\label{class_anaconda_detection_belief}\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+}
+
+
+Class representing a WACS Swarm belief -\/ detections from Anaconda sensor.  
+
+
+
+
+{\ttfamily \#include $<$AnacondaDetectionBelief.h$>$}
+
+Inheritance diagram for AnacondaDetectionBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_anaconda_detection_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_anaconda_detection_belief_a66764554ec7d33b77f635272ee5fea90}{
+\hyperlink{class_anaconda_detection_belief_a66764554ec7d33b77f635272ee5fea90}{AnacondaDetectionBelief} ()}
+\label{class_anaconda_detection_belief_a66764554ec7d33b77f635272ee5fea90}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. Clears detection message and parsed values. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_a9b99d8c44fdaf565ab5b0d0f572c4a48}{
+\hyperlink{class_anaconda_detection_belief_a9b99d8c44fdaf565ab5b0d0f572c4a48}{AnacondaDetectionBelief} (char $\ast$detectionMessage)}
+\label{class_anaconda_detection_belief_a9b99d8c44fdaf565ab5b0d0f572c4a48}
+
+\begin{DoxyCompactList}\small\item\em Constructor, sets detection message and parses values from it. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_a0806ac92b77f2a8749c3047ae853ca6c}{
+\hyperlink{class_anaconda_detection_belief_a0806ac92b77f2a8749c3047ae853ca6c}{$\sim$AnacondaDetectionBelief} ()}
+\label{class_anaconda_detection_belief_a0806ac92b77f2a8749c3047ae853ca6c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a79cb61174222d6181c9e9e5dcf932606}{getDetectionMessage} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Accessor for detection message. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a9a139a40efa81384f52e4d0c109bc3b0}{setDetectionMessage} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Modifier for detection message. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a7ca0e63c930a766c558ec3632228bdc3}{getLcdaAgentID} (char retVal\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Accessor for LCDA agent ID parsed from detection message. \end{DoxyCompactList}\item 
+int \hyperlink{class_anaconda_detection_belief_a6ae60cd7b973cf9f92f6ab8fe6ad2980}{getLcdaBars} ()
+\begin{DoxyCompactList}\small\item\em Accessor for LCDA bars parsed from detection message. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_ab1576b46dff2d17a528839fd1d4f7aa4}{getLcdbAgentID} (char retVal\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Accessor for LCDB agent ID parsed from detection message. \end{DoxyCompactList}\item 
+int \hyperlink{class_anaconda_detection_belief_a32a36124c707cd78fea96cbb1c449c30}{getLcdbBars} ()
+\begin{DoxyCompactList}\small\item\em Accessor for LCDA bars parsed from detection message. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a21f5b543fbbae67acf12af7c1c99f2cc}{setLcdaAgentID} (char newVal\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Modifier for LCDA agent ID. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a94a2292287a1cf0d19e4b036ba6fe4f0}{setLcdaBars} (int newVal)
+\begin{DoxyCompactList}\small\item\em Modifier for LCDA Bars. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a1161e709a9d4950c66de8a42667aac0a}{setLcdbAgentID} (char newVal\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Modifier for LCDB agent ID. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_afcd45d9ef7138817faf4739a39a5253a}{setLcdbBars} (int newVal)
+\begin{DoxyCompactList}\small\item\em Modifier for LCDB Bars. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_ad708581488abdb968a9412d955ca9b8f}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} currently doesn't display anything in OpenGL. Positive detections are displayed using \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}. \end{DoxyCompactList}\item 
+void \hyperlink{class_anaconda_detection_belief_a5e9699b6543d9cc1cd4fbfbecb6ea8f9}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_anaconda_detection_belief_a42f8d5048b0409107a9b10e302c35a15}{parseDetectionMessage} ()
+\begin{DoxyCompactList}\small\item\em Parse detection message and extract LCDA/LCDB information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_anaconda_detection_belief_ad0dd18df8bfdde94ba3ab686c68b8d2a}{
+char \hyperlink{class_anaconda_detection_belief_ad0dd18df8bfdde94ba3ab686c68b8d2a}{m\_\-DetectionMessage} \mbox{[}256\mbox{]}}
+\label{class_anaconda_detection_belief_ad0dd18df8bfdde94ba3ab686c68b8d2a}
+
+\begin{DoxyCompactList}\small\item\em Detection message text received from belief. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_afd9ad715ece3d9686ff605bdc391ed67}{
+char \hyperlink{class_anaconda_detection_belief_afd9ad715ece3d9686ff605bdc391ed67}{m\_\-LcdaAgentID} \mbox{[}128\mbox{]}}
+\label{class_anaconda_detection_belief_afd9ad715ece3d9686ff605bdc391ed67}
+
+\begin{DoxyCompactList}\small\item\em LCDA Agent ID text parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_a360a0badb6433bf68653659c82141f2e}{
+int \hyperlink{class_anaconda_detection_belief_a360a0badb6433bf68653659c82141f2e}{m\_\-LcdaBars}}
+\label{class_anaconda_detection_belief_a360a0badb6433bf68653659c82141f2e}
+
+\begin{DoxyCompactList}\small\item\em LCDA bars value parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_a1e284fecbd403df34a20011a34b4c73d}{
+char \hyperlink{class_anaconda_detection_belief_a1e284fecbd403df34a20011a34b4c73d}{m\_\-LcdbAgentID} \mbox{[}128\mbox{]}}
+\label{class_anaconda_detection_belief_a1e284fecbd403df34a20011a34b4c73d}
+
+\begin{DoxyCompactList}\small\item\em LCDB Agent ID text parsed from detection message. \end{DoxyCompactList}\item 
+\hypertarget{class_anaconda_detection_belief_a3ea4b218b249e54227c21989cfd2ab30}{
+int \hyperlink{class_anaconda_detection_belief_a3ea4b218b249e54227c21989cfd2ab30}{m\_\-LcdbBars}}
+\label{class_anaconda_detection_belief_a3ea4b218b249e54227c21989cfd2ab30}
+
+\begin{DoxyCompactList}\small\item\em LCDB bars value parsed from detection message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a WACS Swarm belief -\/ detections from Anaconda sensor. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_anaconda_detection_belief_ad708581488abdb968a9412d955ca9b8f}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_anaconda_detection_belief_ad708581488abdb968a9412d955ca9b8f}
+
+
+Paint the contents of this belief in an OpenGL scene. \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} currently doesn't display anything in OpenGL. Positive detections are displayed using \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_anaconda_detection_belief_a79cb61174222d6181c9e9e5dcf932606}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!getDetectionMessage@{getDetectionMessage}}
+\index{getDetectionMessage@{getDetectionMessage}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{getDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::getDetectionMessage (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_a79cb61174222d6181c9e9e5dcf932606}
+
+
+Accessor for detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & After call, will be populated with detection message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a7ca0e63c930a766c558ec3632228bdc3}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!getLcdaAgentID@{getLcdaAgentID}}
+\index{getLcdaAgentID@{getLcdaAgentID}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{getLcdaAgentID}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::getLcdaAgentID (
+\begin{DoxyParamCaption}
+\item[{char}]{retVal\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_a7ca0e63c930a766c558ec3632228bdc3}
+
+
+Accessor for LCDA agent ID parsed from detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em retVal} & After call, will be populated with LCDA agent ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a6ae60cd7b973cf9f92f6ab8fe6ad2980}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!getLcdaBars@{getLcdaBars}}
+\index{getLcdaBars@{getLcdaBars}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{getLcdaBars}]{\setlength{\rightskip}{0pt plus 5cm}int AnacondaDetectionBelief::getLcdaBars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_anaconda_detection_belief_a6ae60cd7b973cf9f92f6ab8fe6ad2980}
+
+
+Accessor for LCDA bars parsed from detection message. 
+
+\begin{DoxyReturn}{Returns}
+LCDA bars value, -\/1 if detection message wasn't set/is invalid 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_ab1576b46dff2d17a528839fd1d4f7aa4}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!getLcdbAgentID@{getLcdbAgentID}}
+\index{getLcdbAgentID@{getLcdbAgentID}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{getLcdbAgentID}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::getLcdbAgentID (
+\begin{DoxyParamCaption}
+\item[{char}]{retVal\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_ab1576b46dff2d17a528839fd1d4f7aa4}
+
+
+Accessor for LCDB agent ID parsed from detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em retVal} & After call, will be populated with LCDB agent ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a32a36124c707cd78fea96cbb1c449c30}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!getLcdbBars@{getLcdbBars}}
+\index{getLcdbBars@{getLcdbBars}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{getLcdbBars}]{\setlength{\rightskip}{0pt plus 5cm}int AnacondaDetectionBelief::getLcdbBars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_anaconda_detection_belief_a32a36124c707cd78fea96cbb1c449c30}
+
+
+Accessor for LCDA bars parsed from detection message. 
+
+\begin{DoxyReturn}{Returns}
+LCDA bars value, -\/1 if detection message wasn't set/is invalid 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a42f8d5048b0409107a9b10e302c35a15}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!parseDetectionMessage@{parseDetectionMessage}}
+\index{parseDetectionMessage@{parseDetectionMessage}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{parseDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::parseDetectionMessage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_anaconda_detection_belief_a42f8d5048b0409107a9b10e302c35a15}
+
+
+Parse detection message and extract LCDA/LCDB information. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a9a139a40efa81384f52e4d0c109bc3b0}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!setDetectionMessage@{setDetectionMessage}}
+\index{setDetectionMessage@{setDetectionMessage}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{setDetectionMessage}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::setDetectionMessage (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_a9a139a40efa81384f52e4d0c109bc3b0}
+
+
+Modifier for detection message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & New detection message for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a21f5b543fbbae67acf12af7c1c99f2cc}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!setLcdaAgentID@{setLcdaAgentID}}
+\index{setLcdaAgentID@{setLcdaAgentID}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{setLcdaAgentID}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::setLcdaAgentID (
+\begin{DoxyParamCaption}
+\item[{char}]{newVal\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_a21f5b543fbbae67acf12af7c1c99f2cc}
+
+
+Modifier for LCDA agent ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newVal} & Text to set for LCDA agent ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a94a2292287a1cf0d19e4b036ba6fe4f0}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!setLcdaBars@{setLcdaBars}}
+\index{setLcdaBars@{setLcdaBars}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{setLcdaBars}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::setLcdaBars (
+\begin{DoxyParamCaption}
+\item[{int}]{newVal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_anaconda_detection_belief_a94a2292287a1cf0d19e4b036ba6fe4f0}
+
+
+Modifier for LCDA Bars. 
+
+\begin{DoxyReturn}{Returns}
+LCDA Bars 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a1161e709a9d4950c66de8a42667aac0a}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!setLcdbAgentID@{setLcdbAgentID}}
+\index{setLcdbAgentID@{setLcdbAgentID}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{setLcdbAgentID}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::setLcdbAgentID (
+\begin{DoxyParamCaption}
+\item[{char}]{newVal\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_anaconda_detection_belief_a1161e709a9d4950c66de8a42667aac0a}
+
+
+Modifier for LCDB agent ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newVal} & Text to set for LCDB agent ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_afcd45d9ef7138817faf4739a39a5253a}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!setLcdbBars@{setLcdbBars}}
+\index{setLcdbBars@{setLcdbBars}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{setLcdbBars}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::setLcdbBars (
+\begin{DoxyParamCaption}
+\item[{int}]{newVal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_anaconda_detection_belief_afcd45d9ef7138817faf4739a39a5253a}
+
+
+Modifier for LCDB Bars. 
+
+\begin{DoxyReturn}{Returns}
+LCDB Bars 
+\end{DoxyReturn}
+\hypertarget{class_anaconda_detection_belief_a5e9699b6543d9cc1cd4fbfbecb6ea8f9}{
+\index{AnacondaDetectionBelief@{AnacondaDetectionBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!AnacondaDetectionBelief@{AnacondaDetectionBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void AnacondaDetectionBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_anaconda_detection_belief_a5e9699b6543d9cc1cd4fbfbecb6ea8f9}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AnacondaDetectionBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AnacondaDetectionBelief.cpp\end{DoxyCompactItemize}

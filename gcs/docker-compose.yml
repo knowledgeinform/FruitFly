@@ -1,0 +1,13 @@
+version: '3'
+services:
+  fruitfly-gcs:
+    build: .
+    ports:
+      - "8000:8000"
+    hostname: fruitfly-gcs
+  # fruitfly-agent:
+  #   build: ../agent/
+  #   ports:
+  #     - "8001:8010"
+  #   depends_on:
+  #     - fruitfly-gcs

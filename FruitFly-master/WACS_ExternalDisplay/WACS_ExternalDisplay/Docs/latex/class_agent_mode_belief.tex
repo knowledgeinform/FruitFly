@@ -1,0 +1,264 @@
+\hypertarget{class_agent_mode_belief}{
+\section{AgentModeBelief Class Reference}
+\label{class_agent_mode_belief}\index{AgentModeBelief@{AgentModeBelief}}
+}
+
+
+Class representing a WACS Swarm belief -\/ current mode of an agent.  
+
+
+
+
+{\ttfamily \#include $<$AgentModeBelief.h$>$}
+
+Inheritance diagram for AgentModeBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_agent_mode_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_mode_belief_a8fce5be405fbe25693767878e3e13dcf}{
+\hyperlink{class_agent_mode_belief_a8fce5be405fbe25693767878e3e13dcf}{AgentModeBelief} ()}
+\label{class_agent_mode_belief_a8fce5be405fbe25693767878e3e13dcf}
+
+\begin{DoxyCompactList}\small\item\em Constructor, clears mode text and timestamp. \end{DoxyCompactList}\item 
+\hyperlink{class_agent_mode_belief_ac44a4acd6034041616ed98e94ff562ec}{AgentModeBelief} (long long timestampMs, char mode\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor, sets specified timestamp and mode text. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_mode_belief_a869c82abe3e7facbce5c9916588b9688}{
+\hyperlink{class_agent_mode_belief_a869c82abe3e7facbce5c9916588b9688}{$\sim$AgentModeBelief} ()}
+\label{class_agent_mode_belief_a869c82abe3e7facbce5c9916588b9688}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_mode_belief_affc67b173b75fcb310b2c344ee64b6ee}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. Currently, \hyperlink{class_agent_mode_belief}{AgentModeBelief} is not displayed in OpenGL. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_mode_belief_a96d89f34b7d27bb5e90b4c5e78cc0c38}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_mode_belief_ab25cfceb40d3012dc8f8f7b4ba03d011}{getMode} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Accessor for current mode. Returns mode text in parameter. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_mode_belief_a3412415eb43a76689a5d8f4ff9ff7f38}{setMode} (char msg\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Modifier for current mode. Sets current mode to text in parameter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_agent_mode_belief_aa81eb9d01eb75a4513c8532bc9b6dff9}{modeEquals} (char checkMode\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Comparison check current mode. Return true if current mode matches mode passed in. \end{DoxyCompactList}\item 
+long long \hyperlink{class_agent_mode_belief_a85712eb1af408ac5505387c47659875b}{getMsgTimestampMs} ()
+\begin{DoxyCompactList}\small\item\em Accessor for timestamp value. \end{DoxyCompactList}\item 
+void \hyperlink{class_agent_mode_belief_a6f538e8560045eb16f9c9ccf79693667}{setMsgTimestampMs} (long long newMsgTimestampMs)
+\begin{DoxyCompactList}\small\item\em Modifier for timestamp value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_mode_belief_a55ca0d8eb6328d18a39349bdfb38b64c}{
+char \hyperlink{class_agent_mode_belief_a55ca0d8eb6328d18a39349bdfb38b64c}{m\_\-Mode} \mbox{[}128\mbox{]}}
+\label{class_agent_mode_belief_a55ca0d8eb6328d18a39349bdfb38b64c}
+
+\begin{DoxyCompactList}\small\item\em Text of current agent mode. \end{DoxyCompactList}\item 
+\hypertarget{class_agent_mode_belief_a08c327333408b48e880d09fe041a24af}{
+long long \hyperlink{class_agent_mode_belief_a08c327333408b48e880d09fe041a24af}{m\_\-MsgTimestampMs}}
+\label{class_agent_mode_belief_a08c327333408b48e880d09fe041a24af}
+
+\begin{DoxyCompactList}\small\item\em Timestamp milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a WACS Swarm belief -\/ current mode of an agent. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_agent_mode_belief_ac44a4acd6034041616ed98e94ff562ec}{
+\index{AgentModeBelief@{AgentModeBelief}!AgentModeBelief@{AgentModeBelief}}
+\index{AgentModeBelief@{AgentModeBelief}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{AgentModeBelief}]{\setlength{\rightskip}{0pt plus 5cm}AgentModeBelief::AgentModeBelief (
+\begin{DoxyParamCaption}
+\item[{long long}]{timestampMs, }
+\item[{char}]{mode\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_mode_belief_ac44a4acd6034041616ed98e94ff562ec}
+
+
+Constructor, sets specified timestamp and mode text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestampMs} & Milliseconds timestamp \\
+\hline
+{\em mode} & Text to use as agent mode \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_agent_mode_belief_affc67b173b75fcb310b2c344ee64b6ee}{
+\index{AgentModeBelief@{AgentModeBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void AgentModeBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_agent_mode_belief_affc67b173b75fcb310b2c344ee64b6ee}
+
+
+Paint the contents of this belief in an OpenGL scene. Currently, \hyperlink{class_agent_mode_belief}{AgentModeBelief} is not displayed in OpenGL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_agent_mode_belief_ab25cfceb40d3012dc8f8f7b4ba03d011}{
+\index{AgentModeBelief@{AgentModeBelief}!getMode@{getMode}}
+\index{getMode@{getMode}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{getMode}]{\setlength{\rightskip}{0pt plus 5cm}void AgentModeBelief::getMode (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_mode_belief_ab25cfceb40d3012dc8f8f7b4ba03d011}
+
+
+Accessor for current mode. Returns mode text in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & After call, will be populated with current mode text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_mode_belief_a85712eb1af408ac5505387c47659875b}{
+\index{AgentModeBelief@{AgentModeBelief}!getMsgTimestampMs@{getMsgTimestampMs}}
+\index{getMsgTimestampMs@{getMsgTimestampMs}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{getMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}long long AgentModeBelief::getMsgTimestampMs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_mode_belief_a85712eb1af408ac5505387c47659875b}
+
+
+Accessor for timestamp value. 
+
+\begin{DoxyReturn}{Returns}
+Timestamp milliseconds 
+\end{DoxyReturn}
+\hypertarget{class_agent_mode_belief_aa81eb9d01eb75a4513c8532bc9b6dff9}{
+\index{AgentModeBelief@{AgentModeBelief}!modeEquals@{modeEquals}}
+\index{modeEquals@{modeEquals}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{modeEquals}]{\setlength{\rightskip}{0pt plus 5cm}bool AgentModeBelief::modeEquals (
+\begin{DoxyParamCaption}
+\item[{char}]{checkMode\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_mode_belief_aa81eb9d01eb75a4513c8532bc9b6dff9}
+
+
+Comparison check current mode. Return true if current mode matches mode passed in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checkMode} & Mode text to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if mode matches passed in text, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_agent_mode_belief_a3412415eb43a76689a5d8f4ff9ff7f38}{
+\index{AgentModeBelief@{AgentModeBelief}!setMode@{setMode}}
+\index{setMode@{setMode}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{setMode}]{\setlength{\rightskip}{0pt plus 5cm}void AgentModeBelief::setMode (
+\begin{DoxyParamCaption}
+\item[{char}]{msg\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{class_agent_mode_belief_a3412415eb43a76689a5d8f4ff9ff7f38}
+
+
+Modifier for current mode. Sets current mode to text in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & New mode text for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_mode_belief_a6f538e8560045eb16f9c9ccf79693667}{
+\index{AgentModeBelief@{AgentModeBelief}!setMsgTimestampMs@{setMsgTimestampMs}}
+\index{setMsgTimestampMs@{setMsgTimestampMs}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{setMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}void AgentModeBelief::setMsgTimestampMs (
+\begin{DoxyParamCaption}
+\item[{long long}]{newMsgTimestampMs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_agent_mode_belief_a6f538e8560045eb16f9c9ccf79693667}
+
+
+Modifier for timestamp value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newMsgTimestampMs} & New timestamp milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_agent_mode_belief_a96d89f34b7d27bb5e90b4c5e78cc0c38}{
+\index{AgentModeBelief@{AgentModeBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!AgentModeBelief@{AgentModeBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void AgentModeBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_agent_mode_belief_a96d89f34b7d27bb5e90b4c5e78cc0c38}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentModeBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/AgentModeBelief.cpp\end{DoxyCompactItemize}

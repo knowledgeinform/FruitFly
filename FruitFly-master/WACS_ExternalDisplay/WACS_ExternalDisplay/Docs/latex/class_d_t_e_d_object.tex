@@ -1,0 +1,227 @@
+\hypertarget{class_d_t_e_d_object}{
+\section{DTEDObject Class Reference}
+\label{class_d_t_e_d_object}\index{DTEDObject@{DTEDObject}}
+}
+
+
+An object to hold the entirety of the data from a DTED dataset, including a list of \hyperlink{class_d_t_e_d_point}{DTEDPoint} objects to represent each point and some general information about the dataset.  
+
+
+
+
+{\ttfamily \#include $<$DTEDObject.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_t_e_d_object_a94b6a1f803201182e5debf32179f1566}{DTEDObject} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, no parameters set. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a23cdb3326b5945de71523f6e422653d2}{
+\hyperlink{class_d_t_e_d_object_a23cdb3326b5945de71523f6e422653d2}{$\sim$DTEDObject} ()}
+\label{class_d_t_e_d_object_a23cdb3326b5945de71523f6e422653d2}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_t_e_d_object_a07b55972135146b6c6a423c547362285}{getMinZ} (double latitude, double longitude)
+\begin{DoxyCompactList}\small\item\em Return the minimum value of altitude (plus some buffer room) to be above ground at this location. \end{DoxyCompactList}\item 
+bool \hyperlink{class_d_t_e_d_object_adeb1f9b5246620509195d5855415b4aa}{setZ} (double latDecDeg, double lonDecDeg, double elevM)
+\begin{DoxyCompactList}\small\item\em Set altitude value at a given location. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_t_e_d_object_a3f4b010704450faff09e2f3de1a5e28a}{getZ} (double latDecDeg, double lonDecDeg)
+\begin{DoxyCompactList}\small\item\em Accessor for DTED elevation value at a given location. \end{DoxyCompactList}\item 
+double \hyperlink{class_d_t_e_d_object_af148f810e6defb01360fdaafdca8daff}{getZ} (int latIdx, int lonIdx)
+\begin{DoxyCompactList}\small\item\em Accessor for DTED elevation value at a given index to the internal DTED array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_t_e_d_object_ae9e6db315cc1fe401ca8f8bef6055bb8}{
+char \hyperlink{class_d_t_e_d_object_ae9e6db315cc1fe401ca8f8bef6055bb8}{filename} \mbox{[}1024\mbox{]}}
+\label{class_d_t_e_d_object_ae9e6db315cc1fe401ca8f8bef6055bb8}
+
+\begin{DoxyCompactList}\small\item\em DTED file that this DTEDData object has/will read from. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a5707244eed1e3d52bfa6046861d1690b}{
+double \hyperlink{class_d_t_e_d_object_a5707244eed1e3d52bfa6046861d1690b}{anchorLon}}
+\label{class_d_t_e_d_object_a5707244eed1e3d52bfa6046861d1690b}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees position of the anchor point for this data set. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a7889492090fe5c8b54ff6e4c56574168}{
+double \hyperlink{class_d_t_e_d_object_a7889492090fe5c8b54ff6e4c56574168}{anchorLat}}
+\label{class_d_t_e_d_object_a7889492090fe5c8b54ff6e4c56574168}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees position of the anchor point for this data set. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a0e60a284185094cbd3ba5423a5200631}{
+int \hyperlink{class_d_t_e_d_object_a0e60a284185094cbd3ba5423a5200631}{numLon}}
+\label{class_d_t_e_d_object_a0e60a284185094cbd3ba5423a5200631}
+
+\begin{DoxyCompactList}\small\item\em Number of longitude points in the dataset. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a0131ef554035b8bb2f4c792f62aab615}{
+int \hyperlink{class_d_t_e_d_object_a0131ef554035b8bb2f4c792f62aab615}{numLat}}
+\label{class_d_t_e_d_object_a0131ef554035b8bb2f4c792f62aab615}
+
+\begin{DoxyCompactList}\small\item\em Number of latitude points in the dataset. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a3b827c8df3b1358b0e1d373ce44d6916}{
+double \hyperlink{class_d_t_e_d_object_a3b827c8df3b1358b0e1d373ce44d6916}{resLon}}
+\label{class_d_t_e_d_object_a3b827c8df3b1358b0e1d373ce44d6916}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees resolution of data points, degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_a39397fc0da3a27cadd17233e41a20ca1}{
+double \hyperlink{class_d_t_e_d_object_a39397fc0da3a27cadd17233e41a20ca1}{resLat}}
+\label{class_d_t_e_d_object_a39397fc0da3a27cadd17233e41a20ca1}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees reslolution of data points, degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_d_t_e_d_object_adcc8b8a480df215cf49b34697feb02be}{
+double \hyperlink{class_d_t_e_d_object_adcc8b8a480df215cf49b34697feb02be}{m\_\-MinZOffsetM}}
+\label{class_d_t_e_d_object_adcc8b8a480df215cf49b34697feb02be}
+
+\begin{DoxyCompactList}\small\item\em Offset m to terrain data when requesting minimum terrain data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_t_e_d_object_a6b7c2c309e1c0a2f78f349499d07a643}{
+\hyperlink{class_d_t_e_d_point}{DTEDPoint} $\ast$$\ast$$\ast$ \hyperlink{class_d_t_e_d_object_a6b7c2c309e1c0a2f78f349499d07a643}{dataArray}}
+\label{class_d_t_e_d_object_a6b7c2c309e1c0a2f78f349499d07a643}
+
+\begin{DoxyCompactList}\small\item\em List of \hyperlink{class_d_t_e_d_point}{DTEDPoint} objects that represent each datapoint from the DTED dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_t_e_d_object_a939fe676f76f938e4af5fe82fec65fe4}{
+class \hyperlink{class_d_t_e_d_object_a939fe676f76f938e4af5fe82fec65fe4}{DTEDLoader}}
+\label{class_d_t_e_d_object_a939fe676f76f938e4af5fe82fec65fe4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object to hold the entirety of the data from a DTED dataset, including a list of \hyperlink{class_d_t_e_d_point}{DTEDPoint} objects to represent each point and some general information about the dataset. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+Copyright (c) 2008 Johns Hopkins University 
+
+Applied Physics Laboratory. All Rights Reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_d_t_e_d_object_a94b6a1f803201182e5debf32179f1566}{
+\index{DTEDObject@{DTEDObject}!DTEDObject@{DTEDObject}}
+\index{DTEDObject@{DTEDObject}!DTEDObject@{DTEDObject}}
+\subsubsection[{DTEDObject}]{\setlength{\rightskip}{0pt plus 5cm}DTEDObject::DTEDObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_object_a94b6a1f803201182e5debf32179f1566}
+
+
+Default constructor, no parameters set. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_t_e_d_object_a07b55972135146b6c6a423c547362285}{
+\index{DTEDObject@{DTEDObject}!getMinZ@{getMinZ}}
+\index{getMinZ@{getMinZ}!DTEDObject@{DTEDObject}}
+\subsubsection[{getMinZ}]{\setlength{\rightskip}{0pt plus 5cm}double DTEDObject::getMinZ (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_object_a07b55972135146b6c6a423c547362285}
+
+
+Return the minimum value of altitude (plus some buffer room) to be above ground at this location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & Latitude decmial degrees at point of interest \\
+\hline
+{\em longitude} & Longitude decmial degrees at point of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Minimum altitude MSL m to guarantee height above ground 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_object_af148f810e6defb01360fdaafdca8daff}{
+\index{DTEDObject@{DTEDObject}!getZ@{getZ}}
+\index{getZ@{getZ}!DTEDObject@{DTEDObject}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double DTEDObject::getZ (
+\begin{DoxyParamCaption}
+\item[{int}]{latIdx, }
+\item[{int}]{lonIdx}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_object_af148f810e6defb01360fdaafdca8daff}
+
+
+Accessor for DTED elevation value at a given index to the internal DTED array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latIdx} & Latitude index at point of interest \\
+\hline
+{\em lonIdx} & Longitude index at point of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elevation MSL m at point of interest 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_object_a3f4b010704450faff09e2f3de1a5e28a}{
+\index{DTEDObject@{DTEDObject}!getZ@{getZ}}
+\index{getZ@{getZ}!DTEDObject@{DTEDObject}}
+\subsubsection[{getZ}]{\setlength{\rightskip}{0pt plus 5cm}double DTEDObject::getZ (
+\begin{DoxyParamCaption}
+\item[{double}]{latDecDeg, }
+\item[{double}]{lonDecDeg}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_object_a3f4b010704450faff09e2f3de1a5e28a}
+
+
+Accessor for DTED elevation value at a given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latDecDeg} & Latitude decimal degrees at point of interest \\
+\hline
+{\em lonDecDeg} & Longitude decimal degrees at point of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elevation MSL m at point of interest 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_object_adeb1f9b5246620509195d5855415b4aa}{
+\index{DTEDObject@{DTEDObject}!setZ@{setZ}}
+\index{setZ@{setZ}!DTEDObject@{DTEDObject}}
+\subsubsection[{setZ}]{\setlength{\rightskip}{0pt plus 5cm}bool DTEDObject::setZ (
+\begin{DoxyParamCaption}
+\item[{double}]{latDecDeg, }
+\item[{double}]{lonDecDeg, }
+\item[{double}]{elevM}
+\end{DoxyParamCaption}
+)}}
+\label{class_d_t_e_d_object_adeb1f9b5246620509195d5855415b4aa}
+
+
+Set altitude value at a given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latDecDeg} & Latitude decimal degrees at point to set altitude for \\
+\hline
+{\em lonDecDeg} & Longitude decimal degrees at point to set altitude for \\
+\hline
+{\em elevM} & Elevation MSL m to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDObject.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDObject.cpp\end{DoxyCompactItemize}

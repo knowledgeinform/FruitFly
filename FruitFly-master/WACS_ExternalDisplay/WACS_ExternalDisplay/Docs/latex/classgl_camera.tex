@@ -1,0 +1,312 @@
+\hypertarget{classgl_camera}{
+\section{glCamera Class Reference}
+\label{classgl_camera}\index{glCamera@{glCamera}}
+}
+
+
+An object to represent a camera in an OpenGL scene.  
+
+
+
+
+{\ttfamily \#include $<$glCamera.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgl_camera_a8339c3cd03f2c15ea28cc4f7d473d3cd}{glCamera} ()
+\begin{DoxyCompactList}\small\item\em Constructor, set all values to default. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a4f5818f0d43ab3d97a316d4f5834fb63}{
+virtual \hyperlink{classgl_camera_a4f5818f0d43ab3d97a316d4f5834fb63}{$\sim$glCamera} ()}
+\label{classgl_camera_a4f5818f0d43ab3d97a316d4f5834fb63}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_a4affefbc0e15ca7747c4fb25790350ea}{ChangeVelocity} (GLfloat vel)
+\begin{DoxyCompactList}\small\item\em Change the velocity of the camera through space. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_af2961305265249b76e770fd7d309af8a}{ChangeHeading} (GLfloat degrees)
+\begin{DoxyCompactList}\small\item\em Change the heading of the camera in space. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_aa5472308ca342ae6c69d44065b1b7123}{ChangePitch} (GLfloat degrees)
+\begin{DoxyCompactList}\small\item\em Change the pitch of the camera in space. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_a012f9ac34e8f19f9410443eb897f056b}{SetPerspective} (bool position)
+\begin{DoxyCompactList}\small\item\em Call a series of OpenGL functions to establish this cameras position in space. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_aa04b3632c93a048b700997a24178bbeb}{MovePerspective} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Moves the camera to the specified position, but doesn't update OpenGL scenery. Updates will occur next time OpenGL is rendered. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_ae9b316dc3ba9b63e3b1e536556a91b8e}{updateTrig} ()
+\begin{DoxyCompactList}\small\item\em Calculate sin/cos values for Heading and Pitch. \end{DoxyCompactList}\item 
+void \hyperlink{classgl_camera_a2eba229c45cd313c3cf411ecc6cb4625}{calcFromOffsets} (double xOffset, double yOffset, double zOffset, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Calculate the camera position based on the specified offsets using the heading/pitch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgl_camera_acdf55308d9979c5ba9d8089667ac30d6}{
+GLfloat \hyperlink{classgl_camera_acdf55308d9979c5ba9d8089667ac30d6}{m\_\-MaxPitchRate}}
+\label{classgl_camera_acdf55308d9979c5ba9d8089667ac30d6}
+
+\begin{DoxyCompactList}\small\item\em Max rate of change for pitch. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_abfd5f2c24a7a39611d26ff8f999a6085}{
+GLfloat \hyperlink{classgl_camera_abfd5f2c24a7a39611d26ff8f999a6085}{m\_\-MaxHeadingRate}}
+\label{classgl_camera_abfd5f2c24a7a39611d26ff8f999a6085}
+
+\begin{DoxyCompactList}\small\item\em Max rate of change for heading. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a24938ca39d5e9bb8b96daa699f737b84}{
+GLfloat \hyperlink{classgl_camera_a24938ca39d5e9bb8b96daa699f737b84}{m\_\-HeadingDegrees}}
+\label{classgl_camera_a24938ca39d5e9bb8b96daa699f737b84}
+
+\begin{DoxyCompactList}\small\item\em Current camera heading. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_ad739e692207e3f47875c13fe3631179e}{
+GLfloat \hyperlink{classgl_camera_ad739e692207e3f47875c13fe3631179e}{m\_\-PitchDegrees}}
+\label{classgl_camera_ad739e692207e3f47875c13fe3631179e}
+
+\begin{DoxyCompactList}\small\item\em Current camera pitch. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a04cd8c661f77229cca31498e188df357}{
+GLfloat \hyperlink{classgl_camera_a04cd8c661f77229cca31498e188df357}{m\_\-MaxForwardVelocity}}
+\label{classgl_camera_a04cd8c661f77229cca31498e188df357}
+
+\begin{DoxyCompactList}\small\item\em Maximum rate of change of velocity. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_ad008d68e6efa17fc0d42b448b0c0772a}{
+GLfloat \hyperlink{classgl_camera_ad008d68e6efa17fc0d42b448b0c0772a}{m\_\-ForwardVelocity}}
+\label{classgl_camera_ad008d68e6efa17fc0d42b448b0c0772a}
+
+\begin{DoxyCompactList}\small\item\em Current forward velocity. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_ad3e2d36b3f63c2f4763e27f3e68c713e}{
+\hyperlink{classgl_quaternion}{glQuaternion} \hyperlink{classgl_camera_ad3e2d36b3f63c2f4763e27f3e68c713e}{m\_\-qHeading}}
+\label{classgl_camera_ad3e2d36b3f63c2f4763e27f3e68c713e}
+
+\begin{DoxyCompactList}\small\item\em Matrix representing camera heading. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a8a7f36c94e7701422021368216851e8f}{
+\hyperlink{classgl_quaternion}{glQuaternion} \hyperlink{classgl_camera_a8a7f36c94e7701422021368216851e8f}{m\_\-qPitch}}
+\label{classgl_camera_a8a7f36c94e7701422021368216851e8f}
+
+\begin{DoxyCompactList}\small\item\em Matrix representing camera pitch. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_ad4d000e4a0510819dc62d7fa4dd9813d}{
+\hyperlink{classgl_point}{glPoint} \hyperlink{classgl_camera_ad4d000e4a0510819dc62d7fa4dd9813d}{m\_\-Position}}
+\label{classgl_camera_ad4d000e4a0510819dc62d7fa4dd9813d}
+
+\begin{DoxyCompactList}\small\item\em Position of camera. \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_ab19cf659b98d5c174b5f3ed86e696e85}{
+double \hyperlink{classgl_camera_ab19cf659b98d5c174b5f3ed86e696e85}{cosHeading}}
+\label{classgl_camera_ab19cf659b98d5c174b5f3ed86e696e85}
+
+\begin{DoxyCompactList}\small\item\em cos of the Heading value \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_afd38ee0baf86cdb087f170082476313f}{
+double \hyperlink{classgl_camera_afd38ee0baf86cdb087f170082476313f}{sinHeading}}
+\label{classgl_camera_afd38ee0baf86cdb087f170082476313f}
+
+\begin{DoxyCompactList}\small\item\em sin of the Heading value \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a731d4aaf2e4119682122569c9577a3b0}{
+double \hyperlink{classgl_camera_a731d4aaf2e4119682122569c9577a3b0}{cosPitch}}
+\label{classgl_camera_a731d4aaf2e4119682122569c9577a3b0}
+
+\begin{DoxyCompactList}\small\item\em cos of the Heading value \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_a9b27108de8f8e261990d07656f51f760}{
+double \hyperlink{classgl_camera_a9b27108de8f8e261990d07656f51f760}{sinPitch}}
+\label{classgl_camera_a9b27108de8f8e261990d07656f51f760}
+
+\begin{DoxyCompactList}\small\item\em sin of the Pitch value \end{DoxyCompactList}\item 
+\hypertarget{classgl_camera_af92f443fd13b3ffc48df913c2b25ec3c}{
+\hyperlink{classgl_vector}{glVector} \hyperlink{classgl_camera_af92f443fd13b3ffc48df913c2b25ec3c}{m\_\-DirectionVector}}
+\label{classgl_camera_af92f443fd13b3ffc48df913c2b25ec3c}
+
+\begin{DoxyCompactList}\small\item\em Pointing direction of camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object to represent a camera in an OpenGL scene. 
+
+\begin{DoxyAuthor}{Author}
+Kevin Murphy, John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgl_camera_a8339c3cd03f2c15ea28cc4f7d473d3cd}{
+\index{glCamera@{glCamera}!glCamera@{glCamera}}
+\index{glCamera@{glCamera}!glCamera@{glCamera}}
+\subsubsection[{glCamera}]{\setlength{\rightskip}{0pt plus 5cm}glCamera::glCamera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_a8339c3cd03f2c15ea28cc4f7d473d3cd}
+
+
+Constructor, set all values to default. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgl_camera_a2eba229c45cd313c3cf411ecc6cb4625}{
+\index{glCamera@{glCamera}!calcFromOffsets@{calcFromOffsets}}
+\index{calcFromOffsets@{calcFromOffsets}!glCamera@{glCamera}}
+\subsubsection[{calcFromOffsets}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::calcFromOffsets (
+\begin{DoxyParamCaption}
+\item[{double}]{xOffset, }
+\item[{double}]{yOffset, }
+\item[{double}]{zOffset, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_a2eba229c45cd313c3cf411ecc6cb4625}
+
+
+Calculate the camera position based on the specified offsets using the heading/pitch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xOffset} & Lateral movement of camera \\
+\hline
+{\em yOffset} & Forward movement of camera \\
+\hline
+{\em zOffset} & Vertical movement of camera \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_af2961305265249b76e770fd7d309af8a}{
+\index{glCamera@{glCamera}!ChangeHeading@{ChangeHeading}}
+\index{ChangeHeading@{ChangeHeading}!glCamera@{glCamera}}
+\subsubsection[{ChangeHeading}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::ChangeHeading (
+\begin{DoxyParamCaption}
+\item[{GLfloat}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_af2961305265249b76e770fd7d309af8a}
+
+
+Change the heading of the camera in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & Incremental change to heading \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_aa5472308ca342ae6c69d44065b1b7123}{
+\index{glCamera@{glCamera}!ChangePitch@{ChangePitch}}
+\index{ChangePitch@{ChangePitch}!glCamera@{glCamera}}
+\subsubsection[{ChangePitch}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::ChangePitch (
+\begin{DoxyParamCaption}
+\item[{GLfloat}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_aa5472308ca342ae6c69d44065b1b7123}
+
+
+Change the pitch of the camera in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & Incremental change to pitch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_a4affefbc0e15ca7747c4fb25790350ea}{
+\index{glCamera@{glCamera}!ChangeVelocity@{ChangeVelocity}}
+\index{ChangeVelocity@{ChangeVelocity}!glCamera@{glCamera}}
+\subsubsection[{ChangeVelocity}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::ChangeVelocity (
+\begin{DoxyParamCaption}
+\item[{GLfloat}]{vel}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_a4affefbc0e15ca7747c4fb25790350ea}
+
+
+Change the velocity of the camera through space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & Incremental change to velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_aa04b3632c93a048b700997a24178bbeb}{
+\index{glCamera@{glCamera}!MovePerspective@{MovePerspective}}
+\index{MovePerspective@{MovePerspective}!glCamera@{glCamera}}
+\subsubsection[{MovePerspective}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::MovePerspective (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_aa04b3632c93a048b700997a24178bbeb}
+
+
+Moves the camera to the specified position, but doesn't update OpenGL scenery. Updates will occur next time OpenGL is rendered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & New x position for camera \\
+\hline
+{\em y} & New y position for camera \\
+\hline
+{\em z} & New z position for camera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_a012f9ac34e8f19f9410443eb897f056b}{
+\index{glCamera@{glCamera}!SetPerspective@{SetPerspective}}
+\index{SetPerspective@{SetPerspective}!glCamera@{glCamera}}
+\subsubsection[{SetPerspective}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::SetPerspective (
+\begin{DoxyParamCaption}
+\item[{bool}]{position}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_a012f9ac34e8f19f9410443eb897f056b}
+
+
+Call a series of OpenGL functions to establish this cameras position in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & If true, position will be changed. If false, only rotations will happen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classgl_camera_ae9b316dc3ba9b63e3b1e536556a91b8e}{
+\index{glCamera@{glCamera}!updateTrig@{updateTrig}}
+\index{updateTrig@{updateTrig}!glCamera@{glCamera}}
+\subsubsection[{updateTrig}]{\setlength{\rightskip}{0pt plus 5cm}void glCamera::updateTrig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classgl_camera_ae9b316dc3ba9b63e3b1e536556a91b8e}
+
+
+Calculate sin/cos values for Heading and Pitch. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/glCamera.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/glCamera.cpp\end{DoxyCompactItemize}

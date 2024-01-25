@@ -1,0 +1,841 @@
+\hypertarget{class_mosaic_base}{
+\section{MosaicBase Class Reference}
+\label{class_mosaic_base}\index{MosaicBase@{MosaicBase}}
+}
+
+
+An abstract object to show the mosaic in OpenGL. Abilities depend on child class.  
+
+
+
+
+{\ttfamily \#include $<$MosaicBase.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mosaic_base_a60e70f981bf3442cb141f813496bca38}{MosaicBase} (MosaicViewType newType)
+\begin{DoxyCompactList}\small\item\em Constructor, store parameters and determine if this is the first GL object ever created. The first GL object created must not be destroyed until the program terminates because all shared rendering contexts are kept in the first GL object. Subsequent GL objects can be removed as appropriate. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a5d1ef024e82f32a189a497f965ed4241}{
+\hyperlink{class_mosaic_base_a5d1ef024e82f32a189a497f965ed4241}{$\sim$MosaicBase} ()}
+\label{class_mosaic_base_a5d1ef024e82f32a189a497f965ed4241}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mosaic_base_a7896df52ec0fe72fad2c51b65ec10751}{paint} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract paint function that contains the OpenGL rendering code. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mosaic_base_acaa9d026932ab6e17b1bf70552a2ed66}{initGL} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract paint function that contains the OpenGL initialization code. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mosaic_base_a633c3604b2a5b4672baaa22d0b610095}{resetView} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function that resets the camera location for the scene to the default location. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_mosaic_base_ae5ba0fe64d0664c7fd4c6f783f3f1701}{makeCurrent} ()
+\begin{DoxyCompactList}\small\item\em Activates this object's rendering context. \end{DoxyCompactList}\item 
+MosaicViewType \hyperlink{class_mosaic_base_a4869a3db601bf263770518d2ca6528fd}{getViewType} ()
+\begin{DoxyCompactList}\small\item\em Accessor for MosaicViewType value. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_a8292be2cea305151314a6721207fef4b}{setViewType} (MosaicViewType newViewType)
+\begin{DoxyCompactList}\small\item\em Mutator function for MosaicViewType value. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_a1344fd9c7a396e630b0c44328b24ef52}{setHWnd} (HWND newHwnd)
+\begin{DoxyCompactList}\small\item\em Mutator function for hWnd. \end{DoxyCompactList}\item 
+HWND \hyperlink{class_mosaic_base_a0979962f316f25260d7c79f710623257}{getHWnd} ()
+\begin{DoxyCompactList}\small\item\em Accessor function for hWnd. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_ae3bac64c9cd05be167b3066fa6ae6451}{setSize} (int newW, int newH)
+\begin{DoxyCompactList}\small\item\em Sets the size of the GL scene to the specified width and height. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_ac053a437b189c8b3e815cd8d83953f30}{clearContexts} ()
+\begin{DoxyCompactList}\small\item\em Clears the values for hDC and hRC. \end{DoxyCompactList}\item 
+HGLRC \hyperlink{class_mosaic_base_a0823750a26c7168592117ee04128248d}{gethRC} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mosaic_base_a8bef36bb483c9525b05a483775954ecc}{freezeViews} (bool freeze=true)
+\begin{DoxyCompactList}\small\item\em Toggles whether all GL windows are temporarily restricted from updating -\/ used to prevent flash at times. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a06a5cd17565b3bf24d904913b865e38e}{
+static bool \hyperlink{class_mosaic_base_a06a5cd17565b3bf24d904913b865e38e}{setCurrentAction} (UserAction newAction)}
+\label{class_mosaic_base_a06a5cd17565b3bf24d904913b865e38e}
+
+\begin{DoxyCompactList}\small\item\em Sets the current action for this window based on user input to the main window  Action for user. \end{DoxyCompactList}\item 
+static UserAction \hyperlink{class_mosaic_base_a9cec5c864b2b1b12322d36c7ae0e9784}{getCurrentAction} ()
+\item 
+\hypertarget{class_mosaic_base_af352e4439fca8fa2c9bbbc5815270331}{
+static void \hyperlink{class_mosaic_base_af352e4439fca8fa2c9bbbc5815270331}{setSlingshotStatus} (SlingShotStatus newStatus)}
+\label{class_mosaic_base_af352e4439fca8fa2c9bbbc5815270331}
+
+\begin{DoxyCompactList}\small\item\em Sets the current slingshot status for this window based on user input to the main window  Action for user. \end{DoxyCompactList}\item 
+static SlingShotStatus \hyperlink{class_mosaic_base_a572fff9e1e87029704ce7986d16b30be}{getSlingshotStatus} ()
+\item 
+\hypertarget{class_mosaic_base_a78abeaf30501c45e42c23ae5e0c55f61}{
+static void \hyperlink{class_mosaic_base_a78abeaf30501c45e42c23ae5e0c55f61}{setZoomAction} (ZoomAction newAction)}
+\label{class_mosaic_base_a78abeaf30501c45e42c23ae5e0c55f61}
+
+\begin{DoxyCompactList}\small\item\em Sets the current zoom action for this window based on user input to the main window  Zoom Action for user. \end{DoxyCompactList}\item 
+static ZoomAction \hyperlink{class_mosaic_base_aa352e68854016959a4b765a700b2d196}{getZoomAction} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static HGLRC \hyperlink{class_mosaic_base_a450fb048b4345e6547721b3e14f07176}{textureGeneratorRC}
+\item 
+\hypertarget{class_mosaic_base_a6fbc2c6f41130ae1a0cca6fc7f234119}{
+static \hyperlink{class_belief_collection}{BeliefCollection} $\ast$ {\bfseries m\_\-BeliefCollection}}
+\label{class_mosaic_base_a6fbc2c6f41130ae1a0cca6fc7f234119}
+
+\item 
+static bool \hyperlink{class_mosaic_base_a3a0a70f84bf767ff0f42bbac37123754}{mainWinHasFocus}
+\item 
+static bool \hyperlink{class_mosaic_base_a4bfbec52e7e71d6e89b62f45384c330b}{mouseDragged}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_mosaic_base_afd97e8814dd0d5a6388ee4ad86fef234}{
+void \hyperlink{class_mosaic_base_afd97e8814dd0d5a6388ee4ad86fef234}{adjustCamera} (\hyperlink{classgl_camera}{glCamera} newPos, double currImageWidth, double currImageHeight, double currMinX, double currMaxX, double currMinY, double currMaxY)}
+\label{class_mosaic_base_afd97e8814dd0d5a6388ee4ad86fef234}
+
+\begin{DoxyCompactList}\small\item\em Moves the current camera view point, but first makes sure we're not going out of bounds. Uses specified values for the image to check against. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a27cf4cea213eecd9354522c5fb0ee5f2}{
+void \hyperlink{class_mosaic_base_a27cf4cea213eecd9354522c5fb0ee5f2}{adjustCamera} (\hyperlink{classgl_camera}{glCamera} newPos)}
+\label{class_mosaic_base_a27cf4cea213eecd9354522c5fb0ee5f2}
+
+\begin{DoxyCompactList}\small\item\em Moves the current camera view point, but first makes sure we're not going out of bounds. Uses the current mosaic as the image to check against. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_a19162a8c03a7555b8aea3cbb5bb40db9}{updateViewBox} ()
+\item 
+void \hyperlink{class_mosaic_base_aa40da6c1d73e45023971dbaf8f7be95e}{resizeGL} (int newW, int newH)
+\begin{DoxyCompactList}\small\item\em Resize OpenGL scene based on the new dimensions of the window. \end{DoxyCompactList}\item 
+bool \hyperlink{class_mosaic_base_a74a8a3299be4793a00cb33bdf32b3308}{setupContexts} ()
+\begin{DoxyCompactList}\small\item\em Initialize contexts and formatting for the OpenGL scene -\/ must be called before any OpenGL commands. \end{DoxyCompactList}\item 
+void \hyperlink{class_mosaic_base_ab426c891209b8da2f04de998a0268aa3}{calcCursorPos} (LPARAM lParam)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static WNDCLASSEX \hyperlink{class_mosaic_base_a62557155e7252d0013d6488c070d01e8}{wcGlobalInit} ()
+\begin{DoxyCompactList}\small\item\em Global initialization function for a WNDCLASSEX. Called by a child class to fill in the standard values. \end{DoxyCompactList}\item 
+static PIXELFORMATDESCRIPTOR \hyperlink{class_mosaic_base_a146c275a444860c2047e8fef2f2bd129}{pfdGlobalInit} ()
+\begin{DoxyCompactList}\small\item\em Global initialization function for a PIXELFORMATDESCRIPTOR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_mosaic_base_a039a0f469a7ac331c39319a0cc5c3ba1}{
+HWND \hyperlink{class_mosaic_base_a039a0f469a7ac331c39319a0cc5c3ba1}{hWnd}}
+\label{class_mosaic_base_a039a0f469a7ac331c39319a0cc5c3ba1}
+
+\begin{DoxyCompactList}\small\item\em HWND object for this GL window. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a44379a31e7295cc167deabf110ac4f46}{
+HGLRC \hyperlink{class_mosaic_base_a44379a31e7295cc167deabf110ac4f46}{hRC}}
+\label{class_mosaic_base_a44379a31e7295cc167deabf110ac4f46}
+
+\begin{DoxyCompactList}\small\item\em Rendering context for this GL window. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a872bcf01eb3dee6b04d3f22bba0e00bd}{
+HDC \hyperlink{class_mosaic_base_a872bcf01eb3dee6b04d3f22bba0e00bd}{hDC}}
+\label{class_mosaic_base_a872bcf01eb3dee6b04d3f22bba0e00bd}
+
+\begin{DoxyCompactList}\small\item\em Drawing context for this GL window. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_aa6e80aa5db2862a16d5f400bc3e45d35}{
+MosaicViewType \hyperlink{class_mosaic_base_aa6e80aa5db2862a16d5f400bc3e45d35}{viewType}}
+\label{class_mosaic_base_aa6e80aa5db2862a16d5f400bc3e45d35}
+
+\begin{DoxyCompactList}\small\item\em Type of GL child class that this is. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a6db0fc2785ef22f57ae21a2435e486ff}{
+bool \hyperlink{class_mosaic_base_a6db0fc2785ef22f57ae21a2435e486ff}{needReset}}
+\label{class_mosaic_base_a6db0fc2785ef22f57ae21a2435e486ff}
+
+\begin{DoxyCompactList}\small\item\em If true, the OpenGL scene needs to be reinitialized. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_aa3b3c5cae203cb6484ff3a94b8bae577}{
+int \hyperlink{class_mosaic_base_aa3b3c5cae203cb6484ff3a94b8bae577}{winW}}
+\label{class_mosaic_base_aa3b3c5cae203cb6484ff3a94b8bae577}
+
+\begin{DoxyCompactList}\small\item\em Window width for this object. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_ab920c0e00ebeec542d5ac9b51bb98fbd}{
+int \hyperlink{class_mosaic_base_ab920c0e00ebeec542d5ac9b51bb98fbd}{winH}}
+\label{class_mosaic_base_ab920c0e00ebeec542d5ac9b51bb98fbd}
+
+\begin{DoxyCompactList}\small\item\em Window height for this object. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_abf94ba18f2233ffbe7ff7f6f8bec7df1}{
+\hyperlink{classgl_camera}{glCamera} \hyperlink{class_mosaic_base_abf94ba18f2233ffbe7ff7f6f8bec7df1}{actCam}}
+\label{class_mosaic_base_abf94ba18f2233ffbe7ff7f6f8bec7df1}
+
+\begin{DoxyCompactList}\small\item\em Object to represent the viewing camera in the OpenGL scene. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_a70e549971719968b8396fe0c964c7dc9}{
+double \hyperlink{class_mosaic_base_a70e549971719968b8396fe0c964c7dc9}{orthoscale}}
+\label{class_mosaic_base_a70e549971719968b8396fe0c964c7dc9}
+
+\begin{DoxyCompactList}\small\item\em Orthographic scale factor. \end{DoxyCompactList}\item 
+\hypertarget{class_mosaic_base_afebd7f30ebfadaa62ce049e4f6ca33cc}{
+double \hyperlink{class_mosaic_base_afebd7f30ebfadaa62ce049e4f6ca33cc}{invorthoscale}}
+\label{class_mosaic_base_afebd7f30ebfadaa62ce049e4f6ca33cc}
+
+\begin{DoxyCompactList}\small\item\em Inverse of the orthographic scale factor. \end{DoxyCompactList}\item 
+double \hyperlink{class_mosaic_base_a743ebc8ce0afa0e9dbe869cad1b258bc}{offsetX}
+\item 
+double \hyperlink{class_mosaic_base_a7f85154572a64ea2b945d9582a002720}{offsetY}
+\item 
+bool \hyperlink{class_mosaic_base_a2c756e948372a8b472527b20fd80c6b6}{windowHasFocus}
+\item 
+double \hyperlink{class_mosaic_base_a1a8e2dce7bdb32457491c8037e72001e}{slingshotXIncrement}
+\item 
+double \hyperlink{class_mosaic_base_ac9782032891a2795ebd2a6e54c6e4ad9}{slingshotYIncrement}
+\item 
+float \hyperlink{class_mosaic_base_aaf5affe6645477a71b08d9a7250db9a9}{slingshotColorRed}
+\item 
+float \hyperlink{class_mosaic_base_a8b48adbc5cc23b8960ae0cd2974c631e}{slingshotColorGreen}
+\item 
+float \hyperlink{class_mosaic_base_a13c2c5a15d344a293dbefb5d8192f650}{slingshotColorBlue}
+\item 
+float \hyperlink{class_mosaic_base_a575b5ec3d304ec28fea8cec362110adc}{slingshotLineWidth}
+\item 
+int \hyperlink{class_mosaic_base_a9c134c7473ad9884d1b63e7029485036}{slingshotMagnitudePixels}
+\item 
+bool \hyperlink{class_mosaic_base_a4533c102656a9ea23c248740eca72bc2}{smoothShading}
+\item 
+bool \hyperlink{class_mosaic_base_aa38a3dd84d23829c9aa818d117b75d80}{passedDragBuffer}
+\item 
+int \hyperlink{class_mosaic_base_a7bdf4216affd6e30fc134a3eb300861b}{mouseDragBuffer}
+\item 
+int \hyperlink{class_mosaic_base_a25d029dec46301eee1e657d700e3e273}{slingshotArrowMagnitude}
+\item 
+double \hyperlink{class_mosaic_base_a9b2306b8335a0b7528a32b6d85759e08}{slingshotArrowDir1}
+\item 
+double \hyperlink{class_mosaic_base_a9c1669497925f491578950e209315fb0}{slingshotArrowDir2}
+\item 
+int \hyperlink{class_mosaic_base_a42f2ff99dc054743a0012864a9ede20d}{joyCenterBuffer}
+\item 
+double \hyperlink{class_mosaic_base_a34e740e98eebf938581b45f1f52cfdc9}{joyXDiffMultiplier}
+\item 
+double \hyperlink{class_mosaic_base_a2525d465488cb3369cffb853be10371e}{joyYDiffMultiplier}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static UserAction \hyperlink{class_mosaic_base_a4eced8c64162103aec35721994c4ea17}{currentAction}
+\item 
+static SlingShotStatus \hyperlink{class_mosaic_base_afa06f2fefb998724242cd4cb6e826a36}{currentSlingshotStatus}
+\item 
+static ZoomAction \hyperlink{class_mosaic_base_afb5a97e1bb4327d259143054c3a95c41}{zoomAction}
+\item 
+static double \hyperlink{class_mosaic_base_a7fa3598e3deadf8a5f501ef8d7469d1c}{minXView}
+\item 
+static double \hyperlink{class_mosaic_base_ab0d0a72f9f9028e90d92b059f60b7a5e}{maxXView}
+\item 
+static double \hyperlink{class_mosaic_base_abb0507d536e6e7c01ef631a2aa31bd66}{minYView}
+\item 
+static double \hyperlink{class_mosaic_base_a55f96772dbfa0f25143a2927bbb12688}{maxYView}
+\item 
+static double \hyperlink{class_mosaic_base_a3912a0636e2b6f62a841deddb077fc4e}{mouseClickEast}
+\item 
+static double \hyperlink{class_mosaic_base_a1e81373afe810ac058ae8ef28dd12b16}{mouseClickNorth}
+\item 
+static double \hyperlink{class_mosaic_base_a12652beb1b47d423245ff09bf57a1161}{mouseCurrEast}
+\item 
+static double \hyperlink{class_mosaic_base_a6c6508870f5713bbccb1363e6795c27d}{mouseCurrNorth}
+\item 
+static POINT \hyperlink{class_mosaic_base_a9ece442dc14d54587bdbc3dabdace5c2}{mouseClickPoint}
+\item 
+\hypertarget{class_mosaic_base_a8603449b7a419aee0ec6067e2e3836a0}{
+static bool \hyperlink{class_mosaic_base_a8603449b7a419aee0ec6067e2e3836a0}{freezeView}}
+\label{class_mosaic_base_a8603449b7a419aee0ec6067e2e3836a0}
+
+\begin{DoxyCompactList}\small\item\em If true, OpenGL scenes will not update to prevent flicker. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_mosaic_base_a0cdf3eb3384123e976d0d3855e5f620c}{mouseInUse}
+\item 
+static HWND \hyperlink{class_mosaic_base_a9f29d02425823a27e125921b013d6999}{mouseInUseWnd}
+\item 
+static bool \hyperlink{class_mosaic_base_a8548f7a8fd7373fb4833edf8bdc30292}{needStatusUpdated}
+\item 
+static double \hyperlink{class_mosaic_base_aef0ccb3e15d613168c83b7b36838ff43}{slingshotAngle}
+\item 
+static bool \hyperlink{class_mosaic_base_a996c3daa013813dc46cd9b0e5a86c97b}{newSlingshotAngle}
+\item 
+static bool \hyperlink{class_mosaic_base_a04340d5d715dd9a4f8eabe65c8c728cd}{reverseSlingshot}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract object to show the mosaic in OpenGL. Abilities depend on child class. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mosaic_base_a60e70f981bf3442cb141f813496bca38}{
+\index{MosaicBase@{MosaicBase}!MosaicBase@{MosaicBase}}
+\index{MosaicBase@{MosaicBase}!MosaicBase@{MosaicBase}}
+\subsubsection[{MosaicBase}]{\setlength{\rightskip}{0pt plus 5cm}MosaicBase::MosaicBase (
+\begin{DoxyParamCaption}
+\item[{MosaicViewType}]{newType}
+\end{DoxyParamCaption}
+)}}
+\label{class_mosaic_base_a60e70f981bf3442cb141f813496bca38}
+
+
+Constructor, store parameters and determine if this is the first GL object ever created. The first GL object created must not be destroyed until the program terminates because all shared rendering contexts are kept in the first GL object. Subsequent GL objects can be removed as appropriate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newData} & Object to hold global data \\
+\hline
+{\em newType} & Which type of GL object is being created, see MosaicViewType enumeration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mosaic_base_ab426c891209b8da2f04de998a0268aa3}{
+\index{MosaicBase@{MosaicBase}!calcCursorPos@{calcCursorPos}}
+\index{calcCursorPos@{calcCursorPos}!MosaicBase@{MosaicBase}}
+\subsubsection[{calcCursorPos}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::calcCursorPos (
+\begin{DoxyParamCaption}
+\item[{LPARAM}]{lParam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_ab426c891209b8da2f04de998a0268aa3}
+Calculate where the mouse is in world space 
+\begin{DoxyParams}{Parameters}
+{\em lParam} & value received from message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_mosaic_base_ac053a437b189c8b3e815cd8d83953f30}{
+\index{MosaicBase@{MosaicBase}!clearContexts@{clearContexts}}
+\index{clearContexts@{clearContexts}!MosaicBase@{MosaicBase}}
+\subsubsection[{clearContexts}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::clearContexts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_mosaic_base_ac053a437b189c8b3e815cd8d83953f30}
+
+
+Clears the values for hDC and hRC. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a8bef36bb483c9525b05a483775954ecc}{
+\index{MosaicBase@{MosaicBase}!freezeViews@{freezeViews}}
+\index{freezeViews@{freezeViews}!MosaicBase@{MosaicBase}}
+\subsubsection[{freezeViews}]{\setlength{\rightskip}{0pt plus 5cm}static void MosaicBase::freezeViews (
+\begin{DoxyParamCaption}
+\item[{bool}]{freeze = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_mosaic_base_a8bef36bb483c9525b05a483775954ecc}
+
+
+Toggles whether all GL windows are temporarily restricted from updating -\/ used to prevent flash at times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freeze} & If true, views will be frozen. If false, they are unfrozen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a9cec5c864b2b1b12322d36c7ae0e9784}{
+\index{MosaicBase@{MosaicBase}!getCurrentAction@{getCurrentAction}}
+\index{getCurrentAction@{getCurrentAction}!MosaicBase@{MosaicBase}}
+\subsubsection[{getCurrentAction}]{\setlength{\rightskip}{0pt plus 5cm}static UserAction MosaicBase::getCurrentAction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_mosaic_base_a9cec5c864b2b1b12322d36c7ae0e9784}
+Accessor for the current action that the user has selected \begin{DoxyReturn}{Returns}
+Current action 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a0823750a26c7168592117ee04128248d}{
+\index{MosaicBase@{MosaicBase}!gethRC@{gethRC}}
+\index{gethRC@{gethRC}!MosaicBase@{MosaicBase}}
+\subsubsection[{gethRC}]{\setlength{\rightskip}{0pt plus 5cm}HGLRC MosaicBase::gethRC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_mosaic_base_a0823750a26c7168592117ee04128248d}
+Accessor for the rendering context of this mosaic window \begin{DoxyReturn}{Returns}
+rendering context 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a0979962f316f25260d7c79f710623257}{
+\index{MosaicBase@{MosaicBase}!getHWnd@{getHWnd}}
+\index{getHWnd@{getHWnd}!MosaicBase@{MosaicBase}}
+\subsubsection[{getHWnd}]{\setlength{\rightskip}{0pt plus 5cm}HWND MosaicBase::getHWnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_mosaic_base_a0979962f316f25260d7c79f710623257}
+
+
+Accessor function for hWnd. 
+
+\begin{DoxyReturn}{Returns}
+HWND value of hWnd 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a572fff9e1e87029704ce7986d16b30be}{
+\index{MosaicBase@{MosaicBase}!getSlingshotStatus@{getSlingshotStatus}}
+\index{getSlingshotStatus@{getSlingshotStatus}!MosaicBase@{MosaicBase}}
+\subsubsection[{getSlingshotStatus}]{\setlength{\rightskip}{0pt plus 5cm}static SlingShotStatus MosaicBase::getSlingshotStatus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_mosaic_base_a572fff9e1e87029704ce7986d16b30be}
+Accessor for the current slingshot status that the user has selected \begin{DoxyReturn}{Returns}
+Current action 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a4869a3db601bf263770518d2ca6528fd}{
+\index{MosaicBase@{MosaicBase}!getViewType@{getViewType}}
+\index{getViewType@{getViewType}!MosaicBase@{MosaicBase}}
+\subsubsection[{getViewType}]{\setlength{\rightskip}{0pt plus 5cm}MosaicViewType MosaicBase::getViewType (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_mosaic_base_a4869a3db601bf263770518d2ca6528fd}
+
+
+Accessor for MosaicViewType value. 
+
+\begin{DoxyReturn}{Returns}
+MosaicViewType Type of OpenGL child this object is 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_aa352e68854016959a4b765a700b2d196}{
+\index{MosaicBase@{MosaicBase}!getZoomAction@{getZoomAction}}
+\index{getZoomAction@{getZoomAction}!MosaicBase@{MosaicBase}}
+\subsubsection[{getZoomAction}]{\setlength{\rightskip}{0pt plus 5cm}static ZoomAction MosaicBase::getZoomAction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_mosaic_base_aa352e68854016959a4b765a700b2d196}
+Accessor for the current zoom action that the user has selected \begin{DoxyReturn}{Returns}
+Current zom action 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_acaa9d026932ab6e17b1bf70552a2ed66}{
+\index{MosaicBase@{MosaicBase}!initGL@{initGL}}
+\index{initGL@{initGL}!MosaicBase@{MosaicBase}}
+\subsubsection[{initGL}]{\setlength{\rightskip}{0pt plus 5cm}virtual void MosaicBase::initGL (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_mosaic_base_acaa9d026932ab6e17b1bf70552a2ed66}
+
+
+Abstract paint function that contains the OpenGL initialization code. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_ae5ba0fe64d0664c7fd4c6f783f3f1701}{
+\index{MosaicBase@{MosaicBase}!makeCurrent@{makeCurrent}}
+\index{makeCurrent@{makeCurrent}!MosaicBase@{MosaicBase}}
+\subsubsection[{makeCurrent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool MosaicBase::makeCurrent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_mosaic_base_ae5ba0fe64d0664c7fd4c6f783f3f1701}
+
+
+Activates this object's rendering context. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of activation 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a7896df52ec0fe72fad2c51b65ec10751}{
+\index{MosaicBase@{MosaicBase}!paint@{paint}}
+\index{paint@{paint}!MosaicBase@{MosaicBase}}
+\subsubsection[{paint}]{\setlength{\rightskip}{0pt plus 5cm}virtual void MosaicBase::paint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_mosaic_base_a7896df52ec0fe72fad2c51b65ec10751}
+
+
+Abstract paint function that contains the OpenGL rendering code. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a146c275a444860c2047e8fef2f2bd129}{
+\index{MosaicBase@{MosaicBase}!pfdGlobalInit@{pfdGlobalInit}}
+\index{pfdGlobalInit@{pfdGlobalInit}!MosaicBase@{MosaicBase}}
+\subsubsection[{pfdGlobalInit}]{\setlength{\rightskip}{0pt plus 5cm}static PIXELFORMATDESCRIPTOR MosaicBase::pfdGlobalInit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a146c275a444860c2047e8fef2f2bd129}
+
+
+Global initialization function for a PIXELFORMATDESCRIPTOR. 
+
+\begin{DoxyReturn}{Returns}
+PIXELFORMATDESCRIPTOR -\/ Fully populated PIXELFORMATDESCRIPTOR object 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a633c3604b2a5b4672baaa22d0b610095}{
+\index{MosaicBase@{MosaicBase}!resetView@{resetView}}
+\index{resetView@{resetView}!MosaicBase@{MosaicBase}}
+\subsubsection[{resetView}]{\setlength{\rightskip}{0pt plus 5cm}virtual void MosaicBase::resetView (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{class_mosaic_base_a633c3604b2a5b4672baaa22d0b610095}
+
+
+Abstract function that resets the camera location for the scene to the default location. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_aa40da6c1d73e45023971dbaf8f7be95e}{
+\index{MosaicBase@{MosaicBase}!resizeGL@{resizeGL}}
+\index{resizeGL@{resizeGL}!MosaicBase@{MosaicBase}}
+\subsubsection[{resizeGL}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::resizeGL (
+\begin{DoxyParamCaption}
+\item[{int}]{newW, }
+\item[{int}]{newH}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_aa40da6c1d73e45023971dbaf8f7be95e}
+
+
+Resize OpenGL scene based on the new dimensions of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newW} & New width of the window \\
+\hline
+{\em newH} & New height of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a1344fd9c7a396e630b0c44328b24ef52}{
+\index{MosaicBase@{MosaicBase}!setHWnd@{setHWnd}}
+\index{setHWnd@{setHWnd}!MosaicBase@{MosaicBase}}
+\subsubsection[{setHWnd}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::setHWnd (
+\begin{DoxyParamCaption}
+\item[{HWND}]{newHwnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_mosaic_base_a1344fd9c7a396e630b0c44328b24ef52}
+
+
+Mutator function for hWnd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newHwnd} & new value to set hWnd to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_ae3bac64c9cd05be167b3066fa6ae6451}{
+\index{MosaicBase@{MosaicBase}!setSize@{setSize}}
+\index{setSize@{setSize}!MosaicBase@{MosaicBase}}
+\subsubsection[{setSize}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::setSize (
+\begin{DoxyParamCaption}
+\item[{int}]{newW, }
+\item[{int}]{newH}
+\end{DoxyParamCaption}
+)}}
+\label{class_mosaic_base_ae3bac64c9cd05be167b3066fa6ae6451}
+
+
+Sets the size of the GL scene to the specified width and height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newW} & new window width \\
+\hline
+{\em newH} & new window height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a74a8a3299be4793a00cb33bdf32b3308}{
+\index{MosaicBase@{MosaicBase}!setupContexts@{setupContexts}}
+\index{setupContexts@{setupContexts}!MosaicBase@{MosaicBase}}
+\subsubsection[{setupContexts}]{\setlength{\rightskip}{0pt plus 5cm}bool MosaicBase::setupContexts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a74a8a3299be4793a00cb33bdf32b3308}
+
+
+Initialize contexts and formatting for the OpenGL scene -\/ must be called before any OpenGL commands. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Boolean status of set-\/up process 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a8292be2cea305151314a6721207fef4b}{
+\index{MosaicBase@{MosaicBase}!setViewType@{setViewType}}
+\index{setViewType@{setViewType}!MosaicBase@{MosaicBase}}
+\subsubsection[{setViewType}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::setViewType (
+\begin{DoxyParamCaption}
+\item[{MosaicViewType}]{newViewType}
+\end{DoxyParamCaption}
+)}}
+\label{class_mosaic_base_a8292be2cea305151314a6721207fef4b}
+
+
+Mutator function for MosaicViewType value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newViewType} & new value for viewType \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_mosaic_base_a19162a8c03a7555b8aea3cbb5bb40db9}{
+\index{MosaicBase@{MosaicBase}!updateViewBox@{updateViewBox}}
+\index{updateViewBox@{updateViewBox}!MosaicBase@{MosaicBase}}
+\subsubsection[{updateViewBox}]{\setlength{\rightskip}{0pt plus 5cm}void MosaicBase::updateViewBox (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a19162a8c03a7555b8aea3cbb5bb40db9}
+Updates the view limits of the main mosaic window so that other mosaic windows know where it is looking \hypertarget{class_mosaic_base_a62557155e7252d0013d6488c070d01e8}{
+\index{MosaicBase@{MosaicBase}!wcGlobalInit@{wcGlobalInit}}
+\index{wcGlobalInit@{wcGlobalInit}!MosaicBase@{MosaicBase}}
+\subsubsection[{wcGlobalInit}]{\setlength{\rightskip}{0pt plus 5cm}static WNDCLASSEX MosaicBase::wcGlobalInit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a62557155e7252d0013d6488c070d01e8}
+
+
+Global initialization function for a WNDCLASSEX. Called by a child class to fill in the standard values. 
+
+\begin{DoxyReturn}{Returns}
+WNDCLASSEX -\/ Partially populated WNDCLASSEX object, remaining components are handled by a child 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_mosaic_base_a4eced8c64162103aec35721994c4ea17}{
+\index{MosaicBase@{MosaicBase}!currentAction@{currentAction}}
+\index{currentAction@{currentAction}!MosaicBase@{MosaicBase}}
+\subsubsection[{currentAction}]{\setlength{\rightskip}{0pt plus 5cm}UserAction {\bf MosaicBase::currentAction}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a4eced8c64162103aec35721994c4ea17}
+Current action of the user \hypertarget{class_mosaic_base_afa06f2fefb998724242cd4cb6e826a36}{
+\index{MosaicBase@{MosaicBase}!currentSlingshotStatus@{currentSlingshotStatus}}
+\index{currentSlingshotStatus@{currentSlingshotStatus}!MosaicBase@{MosaicBase}}
+\subsubsection[{currentSlingshotStatus}]{\setlength{\rightskip}{0pt plus 5cm}SlingShotStatus {\bf MosaicBase::currentSlingshotStatus}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_afa06f2fefb998724242cd4cb6e826a36}
+Current status of slingshot action \hypertarget{class_mosaic_base_a42f2ff99dc054743a0012864a9ede20d}{
+\index{MosaicBase@{MosaicBase}!joyCenterBuffer@{joyCenterBuffer}}
+\index{joyCenterBuffer@{joyCenterBuffer}!MosaicBase@{MosaicBase}}
+\subsubsection[{joyCenterBuffer}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MosaicBase::joyCenterBuffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a42f2ff99dc054743a0012864a9ede20d}
+Center buffer to reduce sensitivity of the joystick \hypertarget{class_mosaic_base_a34e740e98eebf938581b45f1f52cfdc9}{
+\index{MosaicBase@{MosaicBase}!joyXDiffMultiplier@{joyXDiffMultiplier}}
+\index{joyXDiffMultiplier@{joyXDiffMultiplier}!MosaicBase@{MosaicBase}}
+\subsubsection[{joyXDiffMultiplier}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::joyXDiffMultiplier}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a34e740e98eebf938581b45f1f52cfdc9}
+Multiplier to modify speed of scrolling with joystick in X direction \hypertarget{class_mosaic_base_a2525d465488cb3369cffb853be10371e}{
+\index{MosaicBase@{MosaicBase}!joyYDiffMultiplier@{joyYDiffMultiplier}}
+\index{joyYDiffMultiplier@{joyYDiffMultiplier}!MosaicBase@{MosaicBase}}
+\subsubsection[{joyYDiffMultiplier}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::joyYDiffMultiplier}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a2525d465488cb3369cffb853be10371e}
+Multiplier to modify speed of scrolling with joystick in Y direction \hypertarget{class_mosaic_base_a3a0a70f84bf767ff0f42bbac37123754}{
+\index{MosaicBase@{MosaicBase}!mainWinHasFocus@{mainWinHasFocus}}
+\index{mainWinHasFocus@{mainWinHasFocus}!MosaicBase@{MosaicBase}}
+\subsubsection[{mainWinHasFocus}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::mainWinHasFocus}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_mosaic_base_a3a0a70f84bf767ff0f42bbac37123754}
+If true, the main window has mouse focus \hypertarget{class_mosaic_base_ab0d0a72f9f9028e90d92b059f60b7a5e}{
+\index{MosaicBase@{MosaicBase}!maxXView@{maxXView}}
+\index{maxXView@{maxXView}!MosaicBase@{MosaicBase}}
+\subsubsection[{maxXView}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::maxXView}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_ab0d0a72f9f9028e90d92b059f60b7a5e}
+Maximum x-\/value where main mosaic window is looking \hypertarget{class_mosaic_base_a55f96772dbfa0f25143a2927bbb12688}{
+\index{MosaicBase@{MosaicBase}!maxYView@{maxYView}}
+\index{maxYView@{maxYView}!MosaicBase@{MosaicBase}}
+\subsubsection[{maxYView}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::maxYView}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a55f96772dbfa0f25143a2927bbb12688}
+Maximum y-\/value where main mosaic window is looking \hypertarget{class_mosaic_base_a7fa3598e3deadf8a5f501ef8d7469d1c}{
+\index{MosaicBase@{MosaicBase}!minXView@{minXView}}
+\index{minXView@{minXView}!MosaicBase@{MosaicBase}}
+\subsubsection[{minXView}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::minXView}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a7fa3598e3deadf8a5f501ef8d7469d1c}
+Minimum x-\/value where main mosaic window is looking \hypertarget{class_mosaic_base_abb0507d536e6e7c01ef631a2aa31bd66}{
+\index{MosaicBase@{MosaicBase}!minYView@{minYView}}
+\index{minYView@{minYView}!MosaicBase@{MosaicBase}}
+\subsubsection[{minYView}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::minYView}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_abb0507d536e6e7c01ef631a2aa31bd66}
+Minimum y-\/value where main mosaic window is looking \hypertarget{class_mosaic_base_a3912a0636e2b6f62a841deddb077fc4e}{
+\index{MosaicBase@{MosaicBase}!mouseClickEast@{mouseClickEast}}
+\index{mouseClickEast@{mouseClickEast}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseClickEast}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::mouseClickEast}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a3912a0636e2b6f62a841deddb077fc4e}
+Easting value where the mouse was last clicked \hypertarget{class_mosaic_base_a1e81373afe810ac058ae8ef28dd12b16}{
+\index{MosaicBase@{MosaicBase}!mouseClickNorth@{mouseClickNorth}}
+\index{mouseClickNorth@{mouseClickNorth}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseClickNorth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::mouseClickNorth}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a1e81373afe810ac058ae8ef28dd12b16}
+Northing value where the mouse was last clicked \hypertarget{class_mosaic_base_a9ece442dc14d54587bdbc3dabdace5c2}{
+\index{MosaicBase@{MosaicBase}!mouseClickPoint@{mouseClickPoint}}
+\index{mouseClickPoint@{mouseClickPoint}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseClickPoint}]{\setlength{\rightskip}{0pt plus 5cm}POINT {\bf MosaicBase::mouseClickPoint}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a9ece442dc14d54587bdbc3dabdace5c2}
+Screen position where the moust was last clicked \hypertarget{class_mosaic_base_a12652beb1b47d423245ff09bf57a1161}{
+\index{MosaicBase@{MosaicBase}!mouseCurrEast@{mouseCurrEast}}
+\index{mouseCurrEast@{mouseCurrEast}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseCurrEast}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::mouseCurrEast}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a12652beb1b47d423245ff09bf57a1161}
+Easting value where the mouse is (if in the mosaic window) \hypertarget{class_mosaic_base_a6c6508870f5713bbccb1363e6795c27d}{
+\index{MosaicBase@{MosaicBase}!mouseCurrNorth@{mouseCurrNorth}}
+\index{mouseCurrNorth@{mouseCurrNorth}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseCurrNorth}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::mouseCurrNorth}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a6c6508870f5713bbccb1363e6795c27d}
+Northing value where the mouse is (if in the mosaic window) \hypertarget{class_mosaic_base_a7bdf4216affd6e30fc134a3eb300861b}{
+\index{MosaicBase@{MosaicBase}!mouseDragBuffer@{mouseDragBuffer}}
+\index{mouseDragBuffer@{mouseDragBuffer}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseDragBuffer}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MosaicBase::mouseDragBuffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a7bdf4216affd6e30fc134a3eb300861b}
+Size of mouse drag buffer. Until the mouse moves this far, we will say we haven't dragged yet \hypertarget{class_mosaic_base_a4bfbec52e7e71d6e89b62f45384c330b}{
+\index{MosaicBase@{MosaicBase}!mouseDragged@{mouseDragged}}
+\index{mouseDragged@{mouseDragged}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseDragged}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::mouseDragged}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_mosaic_base_a4bfbec52e7e71d6e89b62f45384c330b}
+Boolean if mouse dragged while user has clicked \hypertarget{class_mosaic_base_a0cdf3eb3384123e976d0d3855e5f620c}{
+\index{MosaicBase@{MosaicBase}!mouseInUse@{mouseInUse}}
+\index{mouseInUse@{mouseInUse}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseInUse}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::mouseInUse}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a0cdf3eb3384123e976d0d3855e5f620c}
+If true, the mouse is currently in use by an OpenGL window \hypertarget{class_mosaic_base_a9f29d02425823a27e125921b013d6999}{
+\index{MosaicBase@{MosaicBase}!mouseInUseWnd@{mouseInUseWnd}}
+\index{mouseInUseWnd@{mouseInUseWnd}!MosaicBase@{MosaicBase}}
+\subsubsection[{mouseInUseWnd}]{\setlength{\rightskip}{0pt plus 5cm}HWND {\bf MosaicBase::mouseInUseWnd}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a9f29d02425823a27e125921b013d6999}
+If mouseInUse is true, this is the window that is being controlled by the mouse \hypertarget{class_mosaic_base_a8548f7a8fd7373fb4833edf8bdc30292}{
+\index{MosaicBase@{MosaicBase}!needStatusUpdated@{needStatusUpdated}}
+\index{needStatusUpdated@{needStatusUpdated}!MosaicBase@{MosaicBase}}
+\subsubsection[{needStatusUpdated}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::needStatusUpdated}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a8548f7a8fd7373fb4833edf8bdc30292}
+If true, the status window should be updated on the next repaint \hypertarget{class_mosaic_base_a996c3daa013813dc46cd9b0e5a86c97b}{
+\index{MosaicBase@{MosaicBase}!newSlingshotAngle@{newSlingshotAngle}}
+\index{newSlingshotAngle@{newSlingshotAngle}!MosaicBase@{MosaicBase}}
+\subsubsection[{newSlingshotAngle}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::newSlingshotAngle}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a996c3daa013813dc46cd9b0e5a86c97b}
+If true, the angle set for slingshot is new and needs to be processed \hypertarget{class_mosaic_base_a743ebc8ce0afa0e9dbe869cad1b258bc}{
+\index{MosaicBase@{MosaicBase}!offsetX@{offsetX}}
+\index{offsetX@{offsetX}!MosaicBase@{MosaicBase}}
+\subsubsection[{offsetX}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::offsetX}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a743ebc8ce0afa0e9dbe869cad1b258bc}
+Offset in x-\/direction to position image to help with double precision accuracy \hypertarget{class_mosaic_base_a7f85154572a64ea2b945d9582a002720}{
+\index{MosaicBase@{MosaicBase}!offsetY@{offsetY}}
+\index{offsetY@{offsetY}!MosaicBase@{MosaicBase}}
+\subsubsection[{offsetY}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::offsetY}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a7f85154572a64ea2b945d9582a002720}
+Offset in y-\/direction to position image to help with double precision accuracy \hypertarget{class_mosaic_base_aa38a3dd84d23829c9aa818d117b75d80}{
+\index{MosaicBase@{MosaicBase}!passedDragBuffer@{passedDragBuffer}}
+\index{passedDragBuffer@{passedDragBuffer}!MosaicBase@{MosaicBase}}
+\subsubsection[{passedDragBuffer}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::passedDragBuffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_aa38a3dd84d23829c9aa818d117b75d80}
+If true, we are dragging the mouse and moved far enough past the buffer to count as dragging \hypertarget{class_mosaic_base_a04340d5d715dd9a4f8eabe65c8c728cd}{
+\index{MosaicBase@{MosaicBase}!reverseSlingshot@{reverseSlingshot}}
+\index{reverseSlingshot@{reverseSlingshot}!MosaicBase@{MosaicBase}}
+\subsubsection[{reverseSlingshot}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::reverseSlingshot}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_a04340d5d715dd9a4f8eabe65c8c728cd}
+True if slingshot direction should be reversed \hypertarget{class_mosaic_base_aef0ccb3e15d613168c83b7b36838ff43}{
+\index{MosaicBase@{MosaicBase}!slingshotAngle@{slingshotAngle}}
+\index{slingshotAngle@{slingshotAngle}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotAngle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::slingshotAngle}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_aef0ccb3e15d613168c83b7b36838ff43}
+Angle set for slingshot \hypertarget{class_mosaic_base_a9b2306b8335a0b7528a32b6d85759e08}{
+\index{MosaicBase@{MosaicBase}!slingshotArrowDir1@{slingshotArrowDir1}}
+\index{slingshotArrowDir1@{slingshotArrowDir1}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotArrowDir1}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::slingshotArrowDir1}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a9b2306b8335a0b7528a32b6d85759e08}
+Slingshot arrow tail magnitude, one component \hypertarget{class_mosaic_base_a9c1669497925f491578950e209315fb0}{
+\index{MosaicBase@{MosaicBase}!slingshotArrowDir2@{slingshotArrowDir2}}
+\index{slingshotArrowDir2@{slingshotArrowDir2}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotArrowDir2}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::slingshotArrowDir2}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a9c1669497925f491578950e209315fb0}
+Slingshot arrow tail magnitude, other component \hypertarget{class_mosaic_base_a25d029dec46301eee1e657d700e3e273}{
+\index{MosaicBase@{MosaicBase}!slingshotArrowMagnitude@{slingshotArrowMagnitude}}
+\index{slingshotArrowMagnitude@{slingshotArrowMagnitude}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotArrowMagnitude}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MosaicBase::slingshotArrowMagnitude}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a25d029dec46301eee1e657d700e3e273}
+Slingshot arrow tail magnitude \hypertarget{class_mosaic_base_a13c2c5a15d344a293dbefb5d8192f650}{
+\index{MosaicBase@{MosaicBase}!slingshotColorBlue@{slingshotColorBlue}}
+\index{slingshotColorBlue@{slingshotColorBlue}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotColorBlue}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MosaicBase::slingshotColorBlue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a13c2c5a15d344a293dbefb5d8192f650}
+Blue component of color to draw slingshot definition \hypertarget{class_mosaic_base_a8b48adbc5cc23b8960ae0cd2974c631e}{
+\index{MosaicBase@{MosaicBase}!slingshotColorGreen@{slingshotColorGreen}}
+\index{slingshotColorGreen@{slingshotColorGreen}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotColorGreen}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MosaicBase::slingshotColorGreen}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a8b48adbc5cc23b8960ae0cd2974c631e}
+Green component of color to draw slingshot definition \hypertarget{class_mosaic_base_aaf5affe6645477a71b08d9a7250db9a9}{
+\index{MosaicBase@{MosaicBase}!slingshotColorRed@{slingshotColorRed}}
+\index{slingshotColorRed@{slingshotColorRed}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotColorRed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MosaicBase::slingshotColorRed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_aaf5affe6645477a71b08d9a7250db9a9}
+Red component of color to draw slingshot definition \hypertarget{class_mosaic_base_a575b5ec3d304ec28fea8cec362110adc}{
+\index{MosaicBase@{MosaicBase}!slingshotLineWidth@{slingshotLineWidth}}
+\index{slingshotLineWidth@{slingshotLineWidth}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotLineWidth}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf MosaicBase::slingshotLineWidth}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a575b5ec3d304ec28fea8cec362110adc}
+Line width of line to draw slingshot definition \hypertarget{class_mosaic_base_a9c134c7473ad9884d1b63e7029485036}{
+\index{MosaicBase@{MosaicBase}!slingshotMagnitudePixels@{slingshotMagnitudePixels}}
+\index{slingshotMagnitudePixels@{slingshotMagnitudePixels}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotMagnitudePixels}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MosaicBase::slingshotMagnitudePixels}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a9c134c7473ad9884d1b63e7029485036}
+Speed magnitude in pixels of slingshot motion. Move this many pixels every refresh \hypertarget{class_mosaic_base_a1a8e2dce7bdb32457491c8037e72001e}{
+\index{MosaicBase@{MosaicBase}!slingshotXIncrement@{slingshotXIncrement}}
+\index{slingshotXIncrement@{slingshotXIncrement}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotXIncrement}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::slingshotXIncrement}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a1a8e2dce7bdb32457491c8037e72001e}
+If currently slingshotting, the increment to add in the x-\/direction every GL update, meters \hypertarget{class_mosaic_base_ac9782032891a2795ebd2a6e54c6e4ad9}{
+\index{MosaicBase@{MosaicBase}!slingshotYIncrement@{slingshotYIncrement}}
+\index{slingshotYIncrement@{slingshotYIncrement}!MosaicBase@{MosaicBase}}
+\subsubsection[{slingshotYIncrement}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf MosaicBase::slingshotYIncrement}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_ac9782032891a2795ebd2a6e54c6e4ad9}
+If currently slingshotting, the increment to add in the y-\/direction every GL update, meters \hypertarget{class_mosaic_base_a4533c102656a9ea23c248740eca72bc2}{
+\index{MosaicBase@{MosaicBase}!smoothShading@{smoothShading}}
+\index{smoothShading@{smoothShading}!MosaicBase@{MosaicBase}}
+\subsubsection[{smoothShading}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::smoothShading}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a4533c102656a9ea23c248740eca72bc2}
+If true, we will smooth shade images. If false, images will be pixelated \hypertarget{class_mosaic_base_a450fb048b4345e6547721b3e14f07176}{
+\index{MosaicBase@{MosaicBase}!textureGeneratorRC@{textureGeneratorRC}}
+\index{textureGeneratorRC@{textureGeneratorRC}!MosaicBase@{MosaicBase}}
+\subsubsection[{textureGeneratorRC}]{\setlength{\rightskip}{0pt plus 5cm}HGLRC {\bf MosaicBase::textureGeneratorRC}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_mosaic_base_a450fb048b4345e6547721b3e14f07176}
+The rendering context that creates the texture objects. All mosaic objects must share lists from this RC to access textures \hypertarget{class_mosaic_base_a2c756e948372a8b472527b20fd80c6b6}{
+\index{MosaicBase@{MosaicBase}!windowHasFocus@{windowHasFocus}}
+\index{windowHasFocus@{windowHasFocus}!MosaicBase@{MosaicBase}}
+\subsubsection[{windowHasFocus}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MosaicBase::windowHasFocus}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{class_mosaic_base_a2c756e948372a8b472527b20fd80c6b6}
+True if this window has the keyboard focus \hypertarget{class_mosaic_base_afb5a97e1bb4327d259143054c3a95c41}{
+\index{MosaicBase@{MosaicBase}!zoomAction@{zoomAction}}
+\index{zoomAction@{zoomAction}!MosaicBase@{MosaicBase}}
+\subsubsection[{zoomAction}]{\setlength{\rightskip}{0pt plus 5cm}ZoomAction {\bf MosaicBase::zoomAction}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{class_mosaic_base_afb5a97e1bb4327d259143054c3a95c41}
+Current zoom action of the user 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/MosaicBase.h\end{DoxyCompactItemize}

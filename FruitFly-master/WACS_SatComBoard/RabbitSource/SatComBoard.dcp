@@ -1,0 +1,776 @@
+This is a machine generated file.
+Modifications by hand must be made carefully at one's own risk.
+Deleting an entry will result in factory default for that entry.
+----------------------------------------------------------------
+
+[COMM]
+port=8
+coldload baud=2400
+pilot baud=57600
+bios baud=115200
+Max Negotiated Baud=460800
+stop bits=2
+use TCP=0
+TCP Port=0
+TCP Name=
+Net Address=
+Serial Response Timeout=400
+Ethernet Response Timeout=8000
+Serial Retry Count=5
+Ethernet Retry Count=0
+Serial Poll Interval=3000
+Ethernet Poll Interval=30000
+Verify DSR=1
+Use USB to Serial Converter=1
+Disable Baud Negotiation=0
+USB to Serial Delay=500
+Begin Probe Delay=100
+End Probe Delay=300
+Begin Pilot Delay=0
+End Pilot Delay=0
+Pilot Bios Physical Address=0x4000
+Flash erase timeout=10000
+Use RabbitLink=0
+RabbitLink Port=0
+RabbitLink Address=
+RabbitLink Name=
+[Compiler Options]
+Max Errors Shown=10
+Max Warnings Shown=10
+All Serious None=A
+RTC Indices=1
+RTC Pointers=0
+Optimize For Size=0
+Prototypes=1
+Demotion=1
+Pointers=1
+BIOS Memory Mode=1
+Restrict Watch Expressions=0
+Separate Instruction and Data=1
+Generate List Files=0
+Inline Internal IO Functions=0
+Detect Internal Memory=1
+Detect Memory=1
+Flash type=64
+Memory type=8
+Default Compile Mode=0
+[Debug Options]
+Enable Breakpoints=1
+Enable Instruction Level Single Step=1
+Enable Watch Expressions=1
+Max Breakpoints=32
+Max Watch Expressions=8
+Watch Memory for Structs=512
+Enable Stack Tracing=1
+Stack Tracing Memory=4096
+Enable debug kernel=1
+[Include RST 28]
+Include RST=2
+[Include BIOS]
+Include BIOS=1
+[Poll Target]
+Poll target while running=1
+[Targetless Compile]
+Board ID=0x3404
+CPU ID=6000
+CPU Revision=0
+Crystal Speed MHz=25.0000
+RAM Size KBytes=1024
+Flash Size KBytes=4096
+Description=162MHz, RCM6750, 1M+32K+1M RAM, 4M serial program flash
+Macros=CLK_DBL=0;BRD_OPT0=0x22;SBF=1;MD0=0x1;MD0_ID=0x1F34;MD0_TYPE=0x2;MD0_SIZE=0x400;MD0_SECSIZE=0x210;MD0_SECNUM=0x2000;MD0_SPEED=0x0;MD0_MBC=0x0;MD2=0x1;MD2_ID=0x0;MD2_TYPE=0x0;MD2_SIZE=0x100;MD2_SECSIZE=0x0;MD2_SECNUM=0x0;MD2_SPEED=0x0;MD2_MBC=0xC3;MD3=0x1;MD3_ID=0x0;MD3_TYPE=0x0;MD3_SIZE=0x8;MD3_SECSIZE=0x0;MD3_SECNUM=0x0;MD3_SPEED=0x0;MD3_MBC=0xC7;MD4=0x1;MD4_ID=0x0;MD4_TYPE=0x0;MD4_SIZE=0x100;MD4_SECSIZE=0x0;MD4_SECNUM=0x0;MD4_SPEED=0x2D;MD4_MBC=0x05
+[Output File]
+Auto open STDIO=1
+Append=0
+Log STDIO=0
+Output File Name=DC.OUT
+[Dynamic C Files]
+Use Rabbit 4000 Libs=1
+Use Lib File=1
+Use BIOS File=0
+Use Default Source File=1
+LIB File=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\LIB.DIR
+BIOS File=
+CS0 RAM Detect File=bios\checkRamCS0.bin
+Pre-Cold Loader File=bios\precoldload.bin
+Cold Loader File=bios\coldload.bin
+16-bit Cold Loader File=bios\coldload16bit.bin
+Serial Flash Cold Loader File=bios\coldloadserflash.bin
+Pilot BIOS File=bios\pilot.bin
+16-bit Pilot BIOS File=bios\pilot16bit.bin
+Serial Flash Pilot BIOS File=bios\pilotserflash.bin
+Default Source File=SatComMain.c
+Start Dir=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\web\
+[DEFINES]
+Defines=
+[Compression Utility]
+Zimport External Utility=ZCOMPRESS.EXE
+[MRU Files]
+FileCount=10
+[Open Files]
+Number Open=12
+[INCLUDES]
+Includes=C:\DCRABBIT_10.72\Include;C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib;C:\Projects\WACS\WACS_SatComBoard\RabbitSource;
+[C FILES]
+C Files=SatComMain.c;	lib\SatComBoard.c;	lib\ConfigFile.c;	lib\Web.c;	lib\RTC_Commands.c;	lib\SatMessages.c;	lib\SatModem.c;	lib\Network.c;	lib\NetworkDefs.c;	lib\WebVariables.c;	lib\SatModemDefs.c;
+[OpenFile  1]
+OpenFile  1 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\Web.c
+OpenFile  1 Read Only=0
+OpenFile  1 X=75
+OpenFile  1 Y=27
+OpenFile  1 W=1186
+OpenFile  1 H=724
+OpenFile  1 Top Row=480
+OpenFile  1 Top Col=0
+OpenFile  1 WindowState=0
+OpenFile  1 Cursor Row=511
+OpenFile  1 Cursor Col=10
+[Project Explorer]
+ProjEx Window Open=1
+ProjEx Window X=1290
+ProjEx Window Y=0
+ProjEx Window W=600
+ProjEx Window H=400
+ProjEx Window State=0
+[MRU 1]
+MRU 1 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatComBoard.c
+MRU 1 Read Only=0
+MRU 1 X=121
+MRU 1 Y=254
+MRU 1 W=800
+MRU 1 H=500
+MRU 1 Top Row=18
+MRU 1 WindowState=0
+MRU 1 Cursor Row=23
+MRU 1 Cursor Col=0
+[MRU 2]
+MRU 2 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatModem.c
+MRU 2 Read Only=0
+MRU 2 X=868
+MRU 2 Y=67
+MRU 2 W=912
+MRU 2 H=840
+MRU 2 Top Row=161
+MRU 2 WindowState=0
+MRU 2 Cursor Row=181
+MRU 2 Cursor Col=36
+[MRU 3]
+MRU 3 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\MulticastTest.C
+MRU 3 Read Only=0
+MRU 3 X=240
+MRU 3 Y=240
+MRU 3 W=800
+MRU 3 H=500
+MRU 3 Top Row=245
+MRU 3 WindowState=0
+MRU 3 Cursor Row=180
+MRU 3 Cursor Col=29
+[MRU 4]
+MRU 4 Path=C:\DCRABBIT_10.72\Lib\Rabbit4000\tcpip\IGMP.LIB
+MRU 4 Read Only=0
+MRU 4 X=300
+MRU 4 Y=300
+MRU 4 W=800
+MRU 4 H=500
+MRU 4 Top Row=589
+MRU 4 WindowState=0
+MRU 4 Cursor Row=609
+MRU 4 Cursor Col=0
+[OpenFile  2]
+OpenFile  2 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\SatComMain.c
+OpenFile  2 Read Only=0
+OpenFile  2 X=90
+OpenFile  2 Y=90
+OpenFile  2 W=800
+OpenFile  2 H=500
+OpenFile  2 Top Row=58
+OpenFile  2 Top Col=0
+OpenFile  2 WindowState=0
+OpenFile  2 Cursor Row=78
+OpenFile  2 Cursor Col=3
+[OpenFile  3]
+OpenFile  3 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\Network.c
+OpenFile  3 Read Only=0
+OpenFile  3 X=129
+OpenFile  3 Y=-14
+OpenFile  3 W=1586
+OpenFile  3 H=915
+OpenFile  3 Top Row=397
+OpenFile  3 Top Col=0
+OpenFile  3 WindowState=0
+OpenFile  3 Cursor Row=438
+OpenFile  3 Cursor Col=9
+[OpenFile  4]
+OpenFile  4 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\web\INDEX.SHTML
+OpenFile  4 Read Only=0
+OpenFile  4 X=120
+OpenFile  4 Y=120
+OpenFile  4 W=800
+OpenFile  4 H=500
+OpenFile  4 Top Row=253
+OpenFile  4 Top Col=0
+OpenFile  4 WindowState=0
+OpenFile  4 Cursor Row=273
+OpenFile  4 Cursor Col=33
+[OpenFile  5]
+OpenFile  5 Path=C:\PROJECTS\WACS\WACS_SATCOMBOARD\RABBITSOURCE\LIB\SATMODEMDEFS.C
+OpenFile  5 Read Only=0
+OpenFile  5 X=266
+OpenFile  5 Y=160
+OpenFile  5 W=800
+OpenFile  5 H=500
+OpenFile  5 Top Row=131
+OpenFile  5 Top Col=0
+OpenFile  5 WindowState=0
+OpenFile  5 Cursor Row=151
+OpenFile  5 Cursor Col=6
+[OpenFile  6]
+OpenFile  6 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatMessages.c
+OpenFile  6 Read Only=0
+OpenFile  6 X=694
+OpenFile  6 Y=6
+OpenFile  6 W=800
+OpenFile  6 H=928
+OpenFile  6 Top Row=115
+OpenFile  6 Top Col=0
+OpenFile  6 WindowState=0
+OpenFile  6 Cursor Row=137
+OpenFile  6 Cursor Col=5
+[OpenFile  7]
+OpenFile  7 Path=C:\PROJECTS\WACS\WACS_SATCOMBOARD\RABBITSOURCE\LIB\WEB.C
+OpenFile  7 Read Only=0
+OpenFile  7 X=157
+OpenFile  7 Y=17
+OpenFile  7 W=911
+OpenFile  7 H=646
+OpenFile  7 Top Row=48
+OpenFile  7 Top Col=0
+OpenFile  7 WindowState=0
+OpenFile  7 Cursor Row=511
+OpenFile  7 Cursor Col=10
+[MRU 5]
+MRU 5 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\UCOS2\UCOS2.LIB
+MRU 5 Read Only=0
+MRU 5 X=172
+MRU 5 Y=204
+MRU 5 W=800
+MRU 5 H=500
+MRU 5 Top Row=848
+MRU 5 WindowState=0
+MRU 5 Cursor Row=866
+MRU 5 Cursor Col=64
+[MRU 6]
+MRU 6 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\TimeServer.C
+MRU 6 Read Only=0
+MRU 6 X=210
+MRU 6 Y=210
+MRU 6 W=800
+MRU 6 H=500
+MRU 6 Top Row=167
+MRU 6 WindowState=2
+MRU 6 Cursor Row=189
+MRU 6 Cursor Col=15
+[MRU 7]
+MRU 7 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\BIOSLIB\SYSIO.LIB
+MRU 7 Read Only=0
+MRU 7 X=270
+MRU 7 Y=270
+MRU 7 W=800
+MRU 7 H=500
+MRU 7 Top Row=0
+MRU 7 WindowState=2
+MRU 7 Cursor Row=30
+MRU 7 Cursor Col=0
+[MRU 8]
+MRU 8 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\IGMP.LIB
+MRU 8 Read Only=0
+MRU 8 X=240
+MRU 8 Y=240
+MRU 8 W=800
+MRU 8 H=500
+MRU 8 Top Row=649
+MRU 8 WindowState=0
+MRU 8 Cursor Row=670
+MRU 8 Cursor Col=3
+[OpenFile  8]
+OpenFile  8 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\web\STATUS.SHTML
+OpenFile  8 Read Only=0
+OpenFile  8 X=1089
+OpenFile  8 Y=65
+OpenFile  8 W=1240
+OpenFile  8 H=500
+OpenFile  8 Top Row=0
+OpenFile  8 Top Col=0
+OpenFile  8 WindowState=0
+OpenFile  8 Cursor Row=12
+OpenFile  8 Cursor Col=33
+[OpenFile  9]
+OpenFile  9 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\WebVariables.c
+OpenFile  9 Read Only=0
+OpenFile  9 X=0
+OpenFile  9 Y=0
+OpenFile  9 W=800
+OpenFile  9 H=757
+OpenFile  9 Top Row=5
+OpenFile  9 Top Col=0
+OpenFile  9 WindowState=0
+OpenFile  9 Cursor Row=30
+OpenFile  9 Cursor Col=33
+[MRU 9]
+MRU 9 Path=C:\DC_526\LIB\NETWORK.LIB
+MRU 9 Read Only=0
+MRU 9 X=270
+MRU 9 Y=270
+MRU 9 W=800
+MRU 9 H=500
+MRU 9 Top Row=560
+MRU 9 WindowState=2
+MRU 9 Cursor Row=31
+MRU 9 Cursor Col=43
+[MRU10]
+MRU10 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\mikesSerialTester.C
+MRU10 Read Only=0
+MRU10 X=441
+MRU10 Y=127
+MRU10 W=800
+MRU10 H=500
+MRU10 Top Row=0
+MRU10 WindowState=2
+MRU10 Cursor Row=0
+MRU10 Cursor Col=0
+[MRU11]
+MRU11 Path=C:\DCRABBIT_10.72\Samples\UCos-II\UCOSTCPIP.C
+MRU11 Read Only=0
+MRU11 X=172
+MRU11 Y=204
+MRU11 W=800
+MRU11 H=500
+MRU11 Top Row=60
+MRU11 WindowState=2
+MRU11 Cursor Row=0
+MRU11 Cursor Col=0
+[MRU12]
+MRU12 Path=C:\DCRABBIT_10.72\Samples\AES_Encryption\AES_BENCH.C
+MRU12 Read Only=0
+MRU12 X=737
+MRU12 Y=63
+MRU12 W=800
+MRU12 H=877
+MRU12 Top Row=29
+MRU12 WindowState=2
+MRU12 Cursor Row=68
+MRU12 Cursor Col=72
+[OpenFile 10]
+OpenFile 10 Path=C:\PROJECTS\WACS\WACS_SATCOMBOARD\RABBITSOURCE\LIB\RTC_COMMANDS.C
+OpenFile 10 Read Only=0
+OpenFile 10 X=240
+OpenFile 10 Y=240
+OpenFile 10 W=800
+OpenFile 10 H=500
+OpenFile 10 Top Row=2
+OpenFile 10 Top Col=0
+OpenFile 10 WindowState=0
+OpenFile 10 Cursor Row=10
+OpenFile 10 Cursor Col=36
+[OpenFile 11]
+OpenFile 11 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\WebInterface.c
+OpenFile 11 Read Only=0
+OpenFile 11 X=300
+OpenFile 11 Y=300
+OpenFile 11 W=800
+OpenFile 11 H=500
+OpenFile 11 Top Row=175
+OpenFile 11 Top Col=0
+OpenFile 11 WindowState=0
+OpenFile 11 Cursor Row=185
+OpenFile 11 Cursor Col=29
+[OpenFile 12]
+OpenFile 12 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\NetworkDefs.c
+OpenFile 12 Read Only=0
+OpenFile 12 X=953
+OpenFile 12 Y=81
+OpenFile 12 W=1184
+OpenFile 12 H=865
+OpenFile 12 Top Row=0
+OpenFile 12 Top Col=0
+OpenFile 12 WindowState=0
+OpenFile 12 Cursor Row=7
+OpenFile 12 Cursor Col=27
+[OpenFile 13]
+OpenFile 13 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\NetworkDefs.c
+OpenFile 13 Read Only=0
+OpenFile 13 X=60
+OpenFile 13 Y=60
+OpenFile 13 W=1184
+OpenFile 13 H=865
+OpenFile 13 Top Row=0
+OpenFile 13 Top Col=0
+OpenFile 13 WindowState=1
+OpenFile 13 Cursor Row=236
+OpenFile 13 Cursor Col=58
+[OpenFile 14]
+OpenFile 14 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\MulticastTest.C
+OpenFile 14 Read Only=0
+OpenFile 14 X=240
+OpenFile 14 Y=240
+OpenFile 14 W=800
+OpenFile 14 H=500
+OpenFile 14 Top Row=245
+OpenFile 14 Top Col=0
+OpenFile 14 WindowState=0
+OpenFile 14 Cursor Row=180
+OpenFile 14 Cursor Col=29
+[OpenFile 15]
+OpenFile 15 Path=C:\DCRABBIT_10.72\Lib\Rabbit4000\tcpip\IGMP.LIB
+OpenFile 15 Read Only=0
+OpenFile 15 X=300
+OpenFile 15 Y=300
+OpenFile 15 W=800
+OpenFile 15 H=500
+OpenFile 15 Top Row=589
+OpenFile 15 Top Col=0
+OpenFile 15 WindowState=0
+OpenFile 15 Cursor Row=609
+OpenFile 15 Cursor Col=0
+[MRU13]
+MRU13 Path=C:\DCRABBIT_10.72\Samples\AES_Encryption\AES_CBC.C
+MRU13 Read Only=0
+MRU13 X=52
+MRU13 Y=84
+MRU13 W=1057
+MRU13 H=830
+MRU13 Top Row=277
+MRU13 WindowState=2
+MRU13 Cursor Row=0
+MRU13 Cursor Col=0
+[MRU14]
+MRU14 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\mikesSerialTester.C
+MRU14 Read Only=0
+MRU14 X=441
+MRU14 Y=127
+MRU14 W=800
+MRU14 H=500
+MRU14 Top Row=0
+MRU14 WindowState=2
+MRU14 Cursor Row=0
+MRU14 Cursor Col=0
+[OpenFile 16]
+OpenFile 16 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\UCOS2\UCOS2.LIB
+OpenFile 16 Read Only=0
+OpenFile 16 X=172
+OpenFile 16 Y=204
+OpenFile 16 W=800
+OpenFile 16 H=500
+OpenFile 16 Top Row=848
+OpenFile 16 Top Col=0
+OpenFile 16 WindowState=0
+OpenFile 16 Cursor Row=866
+OpenFile 16 Cursor Col=64
+[OpenFile 17]
+OpenFile 17 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\UCOS2\UCOS2.LIB
+OpenFile 17 Read Only=0
+OpenFile 17 X=172
+OpenFile 17 Y=204
+OpenFile 17 W=800
+OpenFile 17 H=500
+OpenFile 17 Top Row=848
+OpenFile 17 Top Col=0
+OpenFile 17 WindowState=0
+OpenFile 17 Cursor Row=866
+OpenFile 17 Cursor Col=64
+[MRU15]
+MRU15 Path=C:\DCRABBIT_10.72\Samples\UCos-II\UCOSTCPIP.C
+MRU15 Read Only=0
+MRU15 X=172
+MRU15 Y=204
+MRU15 W=800
+MRU15 H=500
+MRU15 Top Row=60
+MRU15 WindowState=2
+MRU15 Cursor Row=0
+MRU15 Cursor Col=0
+[MRU16]
+MRU16 Path=C:\DCRABBIT_10.72\Samples\AES_Encryption\AES_BENCH.C
+MRU16 Read Only=0
+MRU16 X=737
+MRU16 Y=63
+MRU16 W=800
+MRU16 H=877
+MRU16 Top Row=29
+MRU16 WindowState=2
+MRU16 Cursor Row=68
+MRU16 Cursor Col=72
+[MRU17]
+MRU17 Path=C:\DCRABBIT_10.72\Samples\AES_Encryption\AES_CBC.C
+MRU17 Read Only=0
+MRU17 X=52
+MRU17 Y=84
+MRU17 W=1057
+MRU17 H=830
+MRU17 Top Row=277
+MRU17 WindowState=2
+MRU17 Cursor Row=0
+MRU17 Cursor Col=0
+[MRU18]
+MRU18 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\Network.c
+MRU18 Read Only=0
+MRU18 X=137
+MRU18 Y=22
+MRU18 W=1285
+MRU18 H=830
+MRU18 Top Row=242
+MRU18 WindowState=2
+MRU18 Cursor Row=279
+MRU18 Cursor Col=15
+[MRU19]
+MRU19 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatModem.c
+MRU19 Read Only=0
+MRU19 X=611
+MRU19 Y=141
+MRU19 W=800
+MRU19 H=500
+MRU19 Top Row=0
+MRU19 WindowState=2
+MRU19 Cursor Row=29
+MRU19 Cursor Col=26
+[MRU20]
+MRU20 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatModemDefs.c
+MRU20 Read Only=0
+MRU20 X=154
+MRU20 Y=79
+MRU20 W=800
+MRU20 H=757
+MRU20 Top Row=24
+MRU20 WindowState=2
+MRU20 Cursor Row=45
+MRU20 Cursor Col=13
+[MRU21]
+MRU21 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\NetworkDefs.c
+MRU21 Read Only=0
+MRU21 X=301
+MRU21 Y=142
+MRU21 W=800
+MRU21 H=639
+MRU21 Top Row=172
+MRU21 WindowState=2
+MRU21 Cursor Row=175
+MRU21 Cursor Col=23
+[MRU22]
+MRU22 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\ConfigFile.c
+MRU22 Read Only=0
+MRU22 X=596
+MRU22 Y=388
+MRU22 W=800
+MRU22 H=500
+MRU22 Top Row=0
+MRU22 WindowState=2
+MRU22 Cursor Row=4
+MRU22 Cursor Col=12
+[MRU23]
+MRU23 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\TCPIP\TCP_CONFIG.LIB
+MRU23 Read Only=0
+MRU23 X=90
+MRU23 Y=90
+MRU23 W=800
+MRU23 H=500
+MRU23 Top Row=1036
+MRU23 WindowState=0
+MRU23 Cursor Row=1040
+MRU23 Cursor Col=17
+[MRU24]
+MRU24 Path=C:\Projects\WACS\BL2600\lib\message_handling.c
+MRU24 Read Only=0
+MRU24 X=120
+MRU24 Y=120
+MRU24 W=1620
+MRU24 H=632
+MRU24 Top Row=579
+MRU24 WindowState=0
+MRU24 Cursor Row=606
+MRU24 Cursor Col=18
+[MRU25]
+MRU25 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\ConfigFile.c
+MRU25 Read Only=0
+MRU25 X=90
+MRU25 Y=90
+MRU25 W=1620
+MRU25 H=632
+MRU25 Top Row=0
+MRU25 WindowState=0
+MRU25 Cursor Row=2
+MRU25 Cursor Col=0
+[MRU26]
+MRU26 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatModem.c
+MRU26 Read Only=0
+MRU26 X=60
+MRU26 Y=60
+MRU26 W=1620
+MRU26 H=632
+MRU26 Top Row=0
+MRU26 WindowState=0
+MRU26 Cursor Row=0
+MRU26 Cursor Col=0
+[MRU27]
+MRU27 Path=C:\DCRABBIT_10.72\Samples\SERIAL\Cof_EchoBlk.c
+MRU27 Read Only=0
+MRU27 X=0
+MRU27 Y=0
+MRU27 W=1620
+MRU27 H=632
+MRU27 Top Row=45
+MRU27 WindowState=0
+MRU27 Cursor Row=0
+MRU27 Cursor Col=0
+[MRU28]
+MRU28 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\mikesSerialTester.C
+MRU28 Read Only=0
+MRU28 X=300
+MRU28 Y=300
+MRU28 W=1620
+MRU28 H=632
+MRU28 Top Row=69
+MRU28 WindowState=0
+MRU28 Cursor Row=94
+MRU28 Cursor Col=23
+[MRU29]
+MRU29 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\SatComBoard.c
+MRU29 Read Only=0
+MRU29 X=90
+MRU29 Y=90
+MRU29 W=1620
+MRU29 H=632
+MRU29 Top Row=2
+MRU29 WindowState=0
+MRU29 Cursor Row=2
+MRU29 Cursor Col=0
+[OpenFile 18]
+OpenFile 18 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\mikesSerialTester.C
+OpenFile 18 Read Only=0
+OpenFile 18 X=441
+OpenFile 18 Y=127
+OpenFile 18 W=800
+OpenFile 18 H=500
+OpenFile 18 Top Row=0
+OpenFile 18 Top Col=0
+OpenFile 18 WindowState=0
+OpenFile 18 Cursor Row=0
+OpenFile 18 Cursor Col=0
+[OpenFile 19]
+OpenFile 19 Path=C:\Projects\WACS\WACS_SatComBoard\RabbitSource\lib\Network.c
+OpenFile 19 Read Only=0
+OpenFile 19 X=137
+OpenFile 19 Y=22
+OpenFile 19 W=1285
+OpenFile 19 H=830
+OpenFile 19 Top Row=242
+OpenFile 19 Top Col=0
+OpenFile 19 WindowState=1
+OpenFile 19 Cursor Row=279
+OpenFile 19 Cursor Col=15
+[OpenFile 20]
+OpenFile 20 Path=C:\DCRABBIT_10.72\Lib\Rabbit4000\UCOS2\UCOS2.LIB
+OpenFile 20 Read Only=0
+OpenFile 20 X=202
+OpenFile 20 Y=234
+OpenFile 20 W=800
+OpenFile 20 H=500
+OpenFile 20 Top Row=866
+OpenFile 20 Top Col=0
+OpenFile 20 WindowState=0
+OpenFile 20 Cursor Row=866
+OpenFile 20 Cursor Col=64
+[MRU30]
+MRU30 Path=C:\Projects\WACS\BL2600\main.c
+MRU30 Read Only=0
+MRU30 X=60
+MRU30 Y=60
+MRU30 W=1620
+MRU30 H=632
+MRU30 Top Row=111
+MRU30 WindowState=0
+MRU30 Cursor Row=0
+MRU30 Cursor Col=0
+[OpenFile 21]
+OpenFile 21 Path=C:\DCRABBIT_10.72\Samples\UCos-II\UCOSTCPIP.C
+OpenFile 21 Read Only=0
+OpenFile 21 X=172
+OpenFile 21 Y=204
+OpenFile 21 W=800
+OpenFile 21 H=500
+OpenFile 21 Top Row=60
+OpenFile 21 Top Col=0
+OpenFile 21 WindowState=0
+OpenFile 21 Cursor Row=0
+OpenFile 21 Cursor Col=0
+[OpenFile 22]
+OpenFile 22 Path=C:\DCRABBIT_10.72\LIB\RABBIT4000\UCOS2\UCOS2.LIB
+OpenFile 22 Read Only=0
+OpenFile 22 X=172
+OpenFile 22 Y=204
+OpenFile 22 W=800
+OpenFile 22 H=500
+OpenFile 22 Top Row=863
+OpenFile 22 Top Col=0
+OpenFile 22 WindowState=0
+OpenFile 22 Cursor Row=866
+OpenFile 22 Cursor Col=64
+[OpenFile 23]
+OpenFile 23 Path=C:\Projects\WACS\WACS_SatComBoard\TestCode\mikesSerialTester.C
+OpenFile 23 Read Only=0
+OpenFile 23 X=441
+OpenFile 23 Y=127
+OpenFile 23 W=800
+OpenFile 23 H=500
+OpenFile 23 Top Row=0
+OpenFile 23 Top Col=0
+OpenFile 23 WindowState=0
+OpenFile 23 Cursor Row=0
+OpenFile 23 Cursor Col=0
+[OpenFile 24]
+OpenFile 24 Path=C:\Projects\WACS\BL2600\main.c
+OpenFile 24 Read Only=0
+OpenFile 24 X=60
+OpenFile 24 Y=60
+OpenFile 24 W=1620
+OpenFile 24 H=632
+OpenFile 24 Top Row=111
+OpenFile 24 Top Col=0
+OpenFile 24 WindowState=0
+OpenFile 24 Cursor Row=0
+OpenFile 24 Cursor Col=0
+[OpenFile 25]
+OpenFile 25 Path=C:\Projects\ARCHIVE\Air Backbone\Source Code\AirBACKBONE.C
+OpenFile 25 Read Only=0
+OpenFile 25 X=0
+OpenFile 25 Y=0
+OpenFile 25 W=1620
+OpenFile 25 H=632
+OpenFile 25 Top Row=190
+OpenFile 25 Top Col=0
+OpenFile 25 WindowState=0
+OpenFile 25 Cursor Row=210
+OpenFile 25 Cursor Col=0
+[OpenFile 26]
+OpenFile 26 Path=C:\DCRABBIT_10.72\Lib\Rabbit4000\CBUF.LIB
+OpenFile 26 Read Only=0
+OpenFile 26 X=240
+OpenFile 26 Y=240
+OpenFile 26 W=800
+OpenFile 26 H=500
+OpenFile 26 Top Row=814
+OpenFile 26 Top Col=5
+OpenFile 26 WindowState=1
+OpenFile 26 Cursor Row=834
+OpenFile 26 Cursor Col=77
+[OpenFile 27]
+OpenFile 27 Path=C:\Projects\ARCHIVE\Air Backbone\Source Code\AirBACKBONE.C
+OpenFile 27 Read Only=0
+OpenFile 27 X=0
+OpenFile 27 Y=0
+OpenFile 27 W=1620
+OpenFile 27 H=632
+OpenFile 27 Top Row=190
+OpenFile 27 Top Col=0
+OpenFile 27 WindowState=0
+OpenFile 27 Cursor Row=210
+OpenFile 27 Cursor Col=0

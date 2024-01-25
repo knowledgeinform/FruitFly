@@ -1,0 +1,176 @@
+\hypertarget{class_d_t_e_d_loader}{
+\section{DTEDLoader Class Reference}
+\label{class_d_t_e_d_loader}\index{DTEDLoader@{DTEDLoader}}
+}
+
+
+Static class to load DTED files into memory and store as a \hyperlink{class_d_t_e_d_object}{DTEDObject}.  
+
+
+
+
+{\ttfamily \#include $<$DTEDLoader.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$ \hyperlink{class_d_t_e_d_loader_a7d7d76fc4749c71cd8923aa771b07ee5}{loadDTED} (double lat1, double lon1, double lat2, double lon2, char dtExt\mbox{[}10\mbox{]}, int spacing)
+\begin{DoxyCompactList}\small\item\em Loads a DTED file containing the specified lat/lon points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$ \hyperlink{class_d_t_e_d_loader_a4c08c924e0866229242b87454245deb8}{analyzeDTED} (char filename\mbox{[}$\,$\mbox{]}, double minLat, double minLon, double maxLat, double maxLon, int spacing, \hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$dtedObject, bool \&firstTile)
+\begin{DoxyCompactList}\small\item\em Loads a DTED file from file and adds it to dtedObject. If first file being loaded, dtedObject is populated with general data of the region to be loaded. \end{DoxyCompactList}\item 
+static void \hyperlink{class_d_t_e_d_loader_a0c8d977e840335567aee9905fa28eb73}{swapShort} (short \&val)
+\begin{DoxyCompactList}\small\item\em Swaps bytes in a short value. \end{DoxyCompactList}\item 
+static void \hyperlink{class_d_t_e_d_loader_ac343c0a56c397f3dcd229526c312a33b}{getDtedTileFilename} (int latInt, int lonInt, char filename\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get filename for dted file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Static class to load DTED files into memory and store as a \hyperlink{class_d_t_e_d_object}{DTEDObject}. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_t_e_d_loader_a4c08c924e0866229242b87454245deb8}{
+\index{DTEDLoader@{DTEDLoader}!analyzeDTED@{analyzeDTED}}
+\index{analyzeDTED@{analyzeDTED}!DTEDLoader@{DTEDLoader}}
+\subsubsection[{analyzeDTED}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DTEDObject} $\ast$ DTEDLoader::analyzeDTED (
+\begin{DoxyParamCaption}
+\item[{char}]{filename\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{minLat, }
+\item[{double}]{minLon, }
+\item[{double}]{maxLat, }
+\item[{double}]{maxLon, }
+\item[{int}]{spacing, }
+\item[{{\bf DTEDObject} $\ast$}]{dtedObject, }
+\item[{bool \&}]{firstTile}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_d_t_e_d_loader_a4c08c924e0866229242b87454245deb8}
+
+
+Loads a DTED file from file and adds it to dtedObject. If first file being loaded, dtedObject is populated with general data of the region to be loaded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename of DTED file to merge into dtedObject \\
+\hline
+{\em minLat} & Bottom-\/left corner of region of interest of dtedObject. Latitude decimal degrees \\
+\hline
+{\em minLon} & Bottom-\/left corner of region of interest of dtedObject. Longitude decimal degrees \\
+\hline
+{\em maxLat} & Upper-\/right corner of region of interest of dtedObject. Latitude decimal degrees \\
+\hline
+{\em maxLon} & Upper-\/right corner of region of interest of dtedObject. Longitude decimal degrees \\
+\hline
+{\em spacing} & Interval to load data. If 2, load every other point. If 3, load every 3rd point. Used to downsample large areas for memory preservation \\
+\hline
+{\em dtedObject} & \hyperlink{class_d_t_e_d_object}{DTEDObject} to fill with DTED elevation data. Will have sizes and limits set the first time, then elevations udpated with each subsequent call with different files \\
+\hline
+{\em firstTile} & If true, this if the first tile generating data for dtedObject. dtedObject needs its limits and sizes established \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_d_t_e_d_object}{DTEDObject} pointer to DTED object 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_loader_ac343c0a56c397f3dcd229526c312a33b}{
+\index{DTEDLoader@{DTEDLoader}!getDtedTileFilename@{getDtedTileFilename}}
+\index{getDtedTileFilename@{getDtedTileFilename}!DTEDLoader@{DTEDLoader}}
+\subsubsection[{getDtedTileFilename}]{\setlength{\rightskip}{0pt plus 5cm}void DTEDLoader::getDtedTileFilename (
+\begin{DoxyParamCaption}
+\item[{int}]{latInt, }
+\item[{int}]{lonInt, }
+\item[{char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_d_t_e_d_loader_ac343c0a56c397f3dcd229526c312a33b}
+
+
+Get filename for dted file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latInt} & Integer latitude value of Southern side of DTED tile \\
+\hline
+{\em lonInt} & Integer longitude value of Western side of DTED tile \\
+\hline
+{\em filename} & After call, will have the filename of the desired DTED file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_loader_a7d7d76fc4749c71cd8923aa771b07ee5}{
+\index{DTEDLoader@{DTEDLoader}!loadDTED@{loadDTED}}
+\index{loadDTED@{loadDTED}!DTEDLoader@{DTEDLoader}}
+\subsubsection[{loadDTED}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DTEDObject} $\ast$ DTEDLoader::loadDTED (
+\begin{DoxyParamCaption}
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2, }
+\item[{char}]{dtExt\mbox{[}10\mbox{]}, }
+\item[{int}]{spacing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_d_t_e_d_loader_a7d7d76fc4749c71cd8923aa771b07ee5}
+
+
+Loads a DTED file containing the specified lat/lon points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & Bottom-\/left corner of region of interest to load DTED for. Latitude decimal degrees \\
+\hline
+{\em lon1} & Bottom-\/left corner of region of interest to load DTED for. Longitude decimal degrees \\
+\hline
+{\em lat2} & Upper-\/right corner of region of interest to load DTED for. Latitude decimal degrees \\
+\hline
+{\em lon2} & Upper-\/right corner of region of interest to load DTED for. Longitude decimal degrees \\
+\hline
+{\em dtExt} & Filename extension (including the dot) of DTED files to load \\
+\hline
+{\em spacing} & Interval to load data. If 2, load every other point. If 3, load every 3rd point. Used to downsample large areas for memory preservation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_d_t_e_d_object}{DTEDObject} pointer to DTED object 
+\end{DoxyReturn}
+\hypertarget{class_d_t_e_d_loader_a0c8d977e840335567aee9905fa28eb73}{
+\index{DTEDLoader@{DTEDLoader}!swapShort@{swapShort}}
+\index{swapShort@{swapShort}!DTEDLoader@{DTEDLoader}}
+\subsubsection[{swapShort}]{\setlength{\rightskip}{0pt plus 5cm}void DTEDLoader::swapShort (
+\begin{DoxyParamCaption}
+\item[{short \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, private\mbox{]}}}}
+\label{class_d_t_e_d_loader_a0c8d977e840335567aee9905fa28eb73}
+
+
+Swaps bytes in a short value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & short value to swap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDLoader.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/DTEDLoader.cpp\end{DoxyCompactItemize}

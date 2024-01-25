@@ -1,0 +1,344 @@
+\hypertarget{class_cloud_detection_belief}{
+\section{CloudDetectionBelief Class Reference}
+\label{class_cloud_detection_belief}\index{CloudDetectionBelief@{CloudDetectionBelief}}
+}
+
+
+Historical collection of \hyperlink{class_cloud_detection}{CloudDetection} datapoints.  
+
+
+
+
+{\ttfamily \#include $<$CloudDetectionBelief.h$>$}
+
+Inheritance diagram for CloudDetectionBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cloud_detection_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_cloud_detection_belief_abe902ea58955b0bcc48fee23b0b858dc}{
+\hyperlink{class_cloud_detection_belief_abe902ea58955b0bcc48fee23b0b858dc}{CloudDetectionBelief} ()}
+\label{class_cloud_detection_belief_abe902ea58955b0bcc48fee23b0b858dc}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, generate lists and GLUquadricObj instance. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_ac30de9e0028b1c3ffe472ff4be556f6c}{
+\hyperlink{class_cloud_detection_belief_ac30de9e0028b1c3ffe472ff4be556f6c}{$\sim$CloudDetectionBelief} ()}
+\label{class_cloud_detection_belief_ac30de9e0028b1c3ffe472ff4be556f6c}
+
+\begin{DoxyCompactList}\small\item\em Destructor, destroy GLUquadricObj instance and delete lists. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_a0746f012d3f23d972906c923876f5251}{addCloudDetection} (\hyperlink{class_cloud_detection}{CloudDetection} $\ast$newDetection)
+\begin{DoxyCompactList}\small\item\em Add newDetection to the appropriate \hyperlink{class_cloud_detection}{CloudDetection} list based on newDetection's source value. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_aada5e49a56a2d2dadd2b727715294ed2}{addChemicalDetection} (\hyperlink{class_cloud_detection}{CloudDetection} $\ast$newDetection)
+\begin{DoxyCompactList}\small\item\em Add newDetection to the chemical \hyperlink{class_cloud_detection}{CloudDetection} list. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_a5f27971fd0f784a06b5f14c761fdbd6c}{addParticleDetection} (\hyperlink{class_cloud_detection}{CloudDetection} $\ast$newDetection)
+\begin{DoxyCompactList}\small\item\em Add newDetection to the particle \hyperlink{class_cloud_detection}{CloudDetection} list. \end{DoxyCompactList}\item 
+const list$<$ \hyperlink{class_cloud_detection}{CloudDetection} $\ast$ $>$ $\ast$const \hyperlink{class_cloud_detection_belief_ae6828096f9c0f5ef24bb8f7f0379c287}{getChemicalDetections} ()
+\begin{DoxyCompactList}\small\item\em Accessor for chemical detections list. \end{DoxyCompactList}\item 
+const list$<$ \hyperlink{class_cloud_detection}{CloudDetection} $\ast$ $>$ $\ast$const \hyperlink{class_cloud_detection_belief_a7f349653637a639ac52a729559e80b32}{getParticleDetections} ()
+\begin{DoxyCompactList}\small\item\em Accessor for particle detections list. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_ae726016b9e1146d02fb242a04989a944}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. Display spheres for all cloud detections in lists. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_aca53d51cdf1df9ff57bc0565967c78d4}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_a468a6f4a6944e7aa913ff78335b47307}{toggleDisplayParticles} (bool drawParticleDetections)
+\begin{DoxyCompactList}\small\item\em Toggle whether particle detections are displayed by calls to drawGL. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_belief_a8ad53e97d8fca597c2c3d4f1b1337b83}{toggleDisplayChemical} (bool drawChemicalDetections)
+\begin{DoxyCompactList}\small\item\em Toggle whether chemical detections are displayed by calls to drawGL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_cloud_detection_belief_a5d7392e247387220a3542a0cfa8f817a}{
+list$<$ \hyperlink{class_cloud_detection}{CloudDetection} $\ast$ $>$ $\ast$ \hyperlink{class_cloud_detection_belief_a5d7392e247387220a3542a0cfa8f817a}{m\_\-ChemicalDetections}}
+\label{class_cloud_detection_belief_a5d7392e247387220a3542a0cfa8f817a}
+
+\begin{DoxyCompactList}\small\item\em List of all chemical detections collected. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_ae3d512a58c50aa9f1fef915732e318fa}{
+list$<$ \hyperlink{class_cloud_detection}{CloudDetection} $\ast$ $>$ $\ast$ \hyperlink{class_cloud_detection_belief_ae3d512a58c50aa9f1fef915732e318fa}{m\_\-ParticleDetections}}
+\label{class_cloud_detection_belief_ae3d512a58c50aa9f1fef915732e318fa}
+
+\begin{DoxyCompactList}\small\item\em List of all particle detections collected. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_ab0105044a74037c3a153daee908282c6}{
+bool \hyperlink{class_cloud_detection_belief_ab0105044a74037c3a153daee908282c6}{m\_\-DisplayChemicalDetections}}
+\label{class_cloud_detection_belief_ab0105044a74037c3a153daee908282c6}
+
+\begin{DoxyCompactList}\small\item\em If true, drawGL will paint particle detections. If false, drawGL will ignore particle detections. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_a6540cd54ef473e72cbba7b49f8e4f536}{
+bool \hyperlink{class_cloud_detection_belief_a6540cd54ef473e72cbba7b49f8e4f536}{m\_\-DisplayParticleDetections}}
+\label{class_cloud_detection_belief_a6540cd54ef473e72cbba7b49f8e4f536}
+
+\begin{DoxyCompactList}\small\item\em If true, drawGL will paint chemical detections. If false, drawGL will ignore chemical detections. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_ab0da10f697659f9f0204c0da99e7a38a}{
+GLUquadricObj $\ast$ \hyperlink{class_cloud_detection_belief_ab0da10f697659f9f0204c0da99e7a38a}{quadricObj}}
+\label{class_cloud_detection_belief_ab0da10f697659f9f0204c0da99e7a38a}
+
+\begin{DoxyCompactList}\small\item\em GL Quadric object to use for displaying detection spheres. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_aab2093ec0ef10a7f9f03883ac8827617}{
+int \hyperlink{class_cloud_detection_belief_aab2093ec0ef10a7f9f03883ac8827617}{displayList}}
+\label{class_cloud_detection_belief_aab2093ec0ef10a7f9f03883ac8827617}
+
+\begin{DoxyCompactList}\small\item\em GL display list to display detection spheres. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_a38c9c32783f1f316a3f3733e1cd70e4c}{
+double \hyperlink{class_cloud_detection_belief_a38c9c32783f1f316a3f3733e1cd70e4c}{m\_\-ParticleDetectionColorRed}}
+\label{class_cloud_detection_belief_a38c9c32783f1f316a3f3733e1cd70e4c}
+
+\begin{DoxyCompactList}\small\item\em Particle detection sphere red color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_adbf87539dcb2860932514c88dbe06151}{
+double \hyperlink{class_cloud_detection_belief_adbf87539dcb2860932514c88dbe06151}{m\_\-ParticleDetectionColorGreen}}
+\label{class_cloud_detection_belief_adbf87539dcb2860932514c88dbe06151}
+
+\begin{DoxyCompactList}\small\item\em Particle detection sphere green color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_a43be602ca973613e828b247a0b4e0e64}{
+double \hyperlink{class_cloud_detection_belief_a43be602ca973613e828b247a0b4e0e64}{m\_\-ParticleDetectionColorBlue}}
+\label{class_cloud_detection_belief_a43be602ca973613e828b247a0b4e0e64}
+
+\begin{DoxyCompactList}\small\item\em Particle detection sphere blue color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_aa6dfb8364f06ffaca7b7fc4ae867c06b}{
+double \hyperlink{class_cloud_detection_belief_aa6dfb8364f06ffaca7b7fc4ae867c06b}{m\_\-ParticleDetectionColorAlpha}}
+\label{class_cloud_detection_belief_aa6dfb8364f06ffaca7b7fc4ae867c06b}
+
+\begin{DoxyCompactList}\small\item\em Particle detection sphere alpha color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_ac8a7755a9b678e1c76cfa97bfb11de87}{
+double \hyperlink{class_cloud_detection_belief_ac8a7755a9b678e1c76cfa97bfb11de87}{m\_\-CloudDetectionSizeM}}
+\label{class_cloud_detection_belief_ac8a7755a9b678e1c76cfa97bfb11de87}
+
+\begin{DoxyCompactList}\small\item\em Radius meters of detection spheres. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_aa37cc6619a8bfb97c75a29658b2616bb}{
+double \hyperlink{class_cloud_detection_belief_aa37cc6619a8bfb97c75a29658b2616bb}{m\_\-ChemicalDetectionColorRed}}
+\label{class_cloud_detection_belief_aa37cc6619a8bfb97c75a29658b2616bb}
+
+\begin{DoxyCompactList}\small\item\em Chemical detection sphere red color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_acf991b8ee27b2337390c23c32c473494}{
+double \hyperlink{class_cloud_detection_belief_acf991b8ee27b2337390c23c32c473494}{m\_\-ChemicalDetectionColorGreen}}
+\label{class_cloud_detection_belief_acf991b8ee27b2337390c23c32c473494}
+
+\begin{DoxyCompactList}\small\item\em Chemical detection sphere green color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_a6770d83085eb1673e76ad9a6044dbc21}{
+double \hyperlink{class_cloud_detection_belief_a6770d83085eb1673e76ad9a6044dbc21}{m\_\-ChemicalDetectionColorBlue}}
+\label{class_cloud_detection_belief_a6770d83085eb1673e76ad9a6044dbc21}
+
+\begin{DoxyCompactList}\small\item\em Chemical detection sphere blue color component. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_belief_abb07237a2a032d51face77da8249103b}{
+double \hyperlink{class_cloud_detection_belief_abb07237a2a032d51face77da8249103b}{m\_\-ChemicalDetectionColorAlpha}}
+\label{class_cloud_detection_belief_abb07237a2a032d51face77da8249103b}
+
+\begin{DoxyCompactList}\small\item\em Chemical detection sphere alpha color component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Historical collection of \hyperlink{class_cloud_detection}{CloudDetection} datapoints. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cloud_detection_belief_aada5e49a56a2d2dadd2b727715294ed2}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!addChemicalDetection@{addChemicalDetection}}
+\index{addChemicalDetection@{addChemicalDetection}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{addChemicalDetection}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::addChemicalDetection (
+\begin{DoxyParamCaption}
+\item[{{\bf CloudDetection} $\ast$}]{newDetection}
+\end{DoxyParamCaption}
+)}}
+\label{class_cloud_detection_belief_aada5e49a56a2d2dadd2b727715294ed2}
+
+
+Add newDetection to the chemical \hyperlink{class_cloud_detection}{CloudDetection} list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newDetection} & New \hyperlink{class_cloud_detection}{CloudDetection} to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_a0746f012d3f23d972906c923876f5251}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!addCloudDetection@{addCloudDetection}}
+\index{addCloudDetection@{addCloudDetection}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{addCloudDetection}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::addCloudDetection (
+\begin{DoxyParamCaption}
+\item[{{\bf CloudDetection} $\ast$}]{newDetection}
+\end{DoxyParamCaption}
+)}}
+\label{class_cloud_detection_belief_a0746f012d3f23d972906c923876f5251}
+
+
+Add newDetection to the appropriate \hyperlink{class_cloud_detection}{CloudDetection} list based on newDetection's source value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newDetection} & New \hyperlink{class_cloud_detection}{CloudDetection} to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_a5f27971fd0f784a06b5f14c761fdbd6c}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!addParticleDetection@{addParticleDetection}}
+\index{addParticleDetection@{addParticleDetection}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{addParticleDetection}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::addParticleDetection (
+\begin{DoxyParamCaption}
+\item[{{\bf CloudDetection} $\ast$}]{newDetection}
+\end{DoxyParamCaption}
+)}}
+\label{class_cloud_detection_belief_a5f27971fd0f784a06b5f14c761fdbd6c}
+
+
+Add newDetection to the particle \hyperlink{class_cloud_detection}{CloudDetection} list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newDetection} & New \hyperlink{class_cloud_detection}{CloudDetection} to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_ae726016b9e1146d02fb242a04989a944}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_cloud_detection_belief_ae726016b9e1146d02fb242a04989a944}
+
+
+Paint the contents of this belief in an OpenGL scene. Display spheres for all cloud detections in lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_cloud_detection_belief_ae6828096f9c0f5ef24bb8f7f0379c287}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!getChemicalDetections@{getChemicalDetections}}
+\index{getChemicalDetections@{getChemicalDetections}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{getChemicalDetections}]{\setlength{\rightskip}{0pt plus 5cm}const list$<${\bf CloudDetection}$\ast$$>$$\ast$ const CloudDetectionBelief::getChemicalDetections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_belief_ae6828096f9c0f5ef24bb8f7f0379c287}
+
+
+Accessor for chemical detections list. 
+
+\begin{DoxyReturn}{Returns}
+Constant pointer to internal chemical detections list. Can not be modified 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_a7f349653637a639ac52a729559e80b32}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!getParticleDetections@{getParticleDetections}}
+\index{getParticleDetections@{getParticleDetections}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{getParticleDetections}]{\setlength{\rightskip}{0pt plus 5cm}const list$<${\bf CloudDetection}$\ast$$>$$\ast$ const CloudDetectionBelief::getParticleDetections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_belief_a7f349653637a639ac52a729559e80b32}
+
+
+Accessor for particle detections list. 
+
+\begin{DoxyReturn}{Returns}
+Constant pointer to internal particle detections list. Can not be modified 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_a8ad53e97d8fca597c2c3d4f1b1337b83}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!toggleDisplayChemical@{toggleDisplayChemical}}
+\index{toggleDisplayChemical@{toggleDisplayChemical}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{toggleDisplayChemical}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::toggleDisplayChemical (
+\begin{DoxyParamCaption}
+\item[{bool}]{drawChemicalDetections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_belief_a8ad53e97d8fca597c2c3d4f1b1337b83}
+
+
+Toggle whether chemical detections are displayed by calls to drawGL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawChemicalDetections} & If true, drawGL will paint chemical detections. If false, drawGL will ignore chemical detections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_a468a6f4a6944e7aa913ff78335b47307}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!toggleDisplayParticles@{toggleDisplayParticles}}
+\index{toggleDisplayParticles@{toggleDisplayParticles}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{toggleDisplayParticles}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::toggleDisplayParticles (
+\begin{DoxyParamCaption}
+\item[{bool}]{drawParticleDetections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_belief_a468a6f4a6944e7aa913ff78335b47307}
+
+
+Toggle whether particle detections are displayed by calls to drawGL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawParticleDetections} & If true, drawGL will paint particle detections. If false, drawGL will ignore particle detections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_belief_aca53d51cdf1df9ff57bc0565967c78d4}{
+\index{CloudDetectionBelief@{CloudDetectionBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!CloudDetectionBelief@{CloudDetectionBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetectionBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_cloud_detection_belief_aca53d51cdf1df9ff57bc0565967c78d4}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CloudDetectionBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CloudDetectionBelief.cpp\end{DoxyCompactItemize}

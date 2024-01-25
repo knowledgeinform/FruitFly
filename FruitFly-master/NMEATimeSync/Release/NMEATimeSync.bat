@@ -1,0 +1,1 @@
+NMEATimeSync.exe COM8 xp gps

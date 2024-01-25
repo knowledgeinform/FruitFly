@@ -1,0 +1,18 @@
+Bladewerx.dll -- ./Bladewerx
+JNI_SystemTime.dll -- ./WACS_Swarm/classes/edu/jhuapl/nstd/util/SystemTime.class
+PlumeDetector.dll -- ./PlumeDetectorDLL (cpp)
+RecordingProcessor.dll -- ./WACS_Recording/ (cpp)
+bwPFAPL.dll -- ./Bladewerx/Bladewerx/ (cpp)
+cv100.dll -- ./common/OpenCV/ (hpp)
+cvaux100.dll -- ./common/OpenCV/ (hpp)
+cvcam100.dll -- ./common/OpenCV/ (hpp)
+cxcore100.dll -- ./common/OpenCV/ (hpp)
+cxts001.dll -- ./common/OpenCV/ (hpp)
+highgui100.dll -- ./common/OpenCV/ (hpp)
+libguide40.dll -- ./common/OpenCV/ (hpp)
+ml100.dll -- ./common/OpenCV/ (hpp)
+pthreadVC2.dll -- ./common/PThread (cpp)
+rxtxParallel.dll -- ?
+rxtxSerial.dll -- ./tags/July2009Final/WACS_Swarm/lib/rxtx-2.1-7-bins-r2/INSTALL:25:librxtxSerial.so
+win32com.dll -- ?
+xvidcore.dll -- ./WACS_EthernetVideo/xvid/ (c)

@@ -1,0 +1,251 @@
+\hypertarget{class_swarm_spy_handler}{
+\section{SwarmSpyHandler Class Reference}
+\label{class_swarm_spy_handler}\index{SwarmSpyHandler@{SwarmSpyHandler}}
+}
+
+
+Manager for WACS Swarm beliefs coming from SwarmSpy. Handles incoming beliefs and loads them into a \hyperlink{class_belief_collection}{BeliefCollection} object.  
+
+
+
+
+{\ttfamily \#include $<$SwarmSpyHandler.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_swarm_spy_handler_a395b2484a128445cd8b2ce02182c8b79}{SwarmSpyHandler} (\hyperlink{class_belief_collection}{BeliefCollection} $\ast$beliefCollection)
+\begin{DoxyCompactList}\small\item\em Constructor, Stores reference to \hyperlink{class_belief_collection}{BeliefCollection}. \end{DoxyCompactList}\item 
+\hypertarget{class_swarm_spy_handler_ad0afea71fb86aea82aa3d39fc8e8281f}{
+\hyperlink{class_swarm_spy_handler_ad0afea71fb86aea82aa3d39fc8e8281f}{$\sim$SwarmSpyHandler} ()}
+\label{class_swarm_spy_handler_ad0afea71fb86aea82aa3d39fc8e8281f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a1fe5a42aaa0d7bd524383eca6daa59ad}{initSocketSpy} (bool logData, char $\ast$multicastAddress, int multicastPortNum)
+\begin{DoxyCompactList}\small\item\em Intialize the SwarmSpy instance to listen on a multicast socket for messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_ab7b8b960ff7b67964bde1a58da002c55}{initReplaySpy} (bool logData, char $\ast$filename, int replaySpeed)
+\begin{DoxyCompactList}\small\item\em Intialize the SwarmSpy instance to read messages from a log file. \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a01ac184506912d0dbc8832e7b7ea575f}{registerForAgentPositionBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_agent_position_belief}{AgentPositionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a1807278c692ee145e1b4d9bd7523981d}{registerForCircularOrbitBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a0c4c8e7b62a601fd8958ab8deebaf44f}{registerForPiccoloTelemetryBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_ad078a719f458b35687f39b3ab64f426f}{registerForParticleDetectionBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_aae9ba5945d62803409399fe491c925fb}{registerForAnacondaDetectionBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a3244d08deb26b669f34333ccbdd4eac3}{registerForAgentModeBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_agent_mode_belief}{AgentModeBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\item 
+void \hyperlink{class_swarm_spy_handler_a7c3066eba552e312b67398eacec99819}{registerForCloudDetectionBelief} ()
+\begin{DoxyCompactList}\small\item\em Register to receive \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manager for WACS Swarm beliefs coming from SwarmSpy. Handles incoming beliefs and loads them into a \hyperlink{class_belief_collection}{BeliefCollection} object. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_swarm_spy_handler_a395b2484a128445cd8b2ce02182c8b79}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!SwarmSpyHandler@{SwarmSpyHandler}}
+\index{SwarmSpyHandler@{SwarmSpyHandler}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{SwarmSpyHandler}]{\setlength{\rightskip}{0pt plus 5cm}SwarmSpyHandler::SwarmSpyHandler (
+\begin{DoxyParamCaption}
+\item[{{\bf BeliefCollection} $\ast$}]{beliefCollection}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a395b2484a128445cd8b2ce02182c8b79}
+
+
+Constructor, Stores reference to \hyperlink{class_belief_collection}{BeliefCollection}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beliefCollection} & \hyperlink{class_belief_collection}{BeliefCollection} object to populate with beliefs received \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_swarm_spy_handler_ab7b8b960ff7b67964bde1a58da002c55}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!initReplaySpy@{initReplaySpy}}
+\index{initReplaySpy@{initReplaySpy}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{initReplaySpy}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::initReplaySpy (
+\begin{DoxyParamCaption}
+\item[{bool}]{logData, }
+\item[{char $\ast$}]{filename, }
+\item[{int}]{replaySpeed}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_ab7b8b960ff7b67964bde1a58da002c55}
+
+
+Intialize the SwarmSpy instance to read messages from a log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logData} & If true, all bytes read will be logged to a replayable file \\
+\hline
+{\em filename} & Filename to read log data from \\
+\hline
+{\em replaySpeed} & Replay speed of file reading. This number scales the delay between sent messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a1fe5a42aaa0d7bd524383eca6daa59ad}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!initSocketSpy@{initSocketSpy}}
+\index{initSocketSpy@{initSocketSpy}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{initSocketSpy}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::initSocketSpy (
+\begin{DoxyParamCaption}
+\item[{bool}]{logData, }
+\item[{char $\ast$}]{multicastAddress, }
+\item[{int}]{multicastPortNum}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a1fe5a42aaa0d7bd524383eca6daa59ad}
+
+
+Intialize the SwarmSpy instance to listen on a multicast socket for messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logData} & If true, all bytes received will be logged to a replayable file \\
+\hline
+{\em multicastAddress} & IP Address to connect to \\
+\hline
+{\em multicastPortNum} & Port number to connect to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a3244d08deb26b669f34333ccbdd4eac3}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForAgentModeBelief@{registerForAgentModeBelief}}
+\index{registerForAgentModeBelief@{registerForAgentModeBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForAgentModeBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForAgentModeBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a3244d08deb26b669f34333ccbdd4eac3}
+
+
+Register to receive \hyperlink{class_agent_mode_belief}{AgentModeBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a01ac184506912d0dbc8832e7b7ea575f}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForAgentPositionBelief@{registerForAgentPositionBelief}}
+\index{registerForAgentPositionBelief@{registerForAgentPositionBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForAgentPositionBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForAgentPositionBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a01ac184506912d0dbc8832e7b7ea575f}
+
+
+Register to receive \hyperlink{class_agent_position_belief}{AgentPositionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_aae9ba5945d62803409399fe491c925fb}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForAnacondaDetectionBelief@{registerForAnacondaDetectionBelief}}
+\index{registerForAnacondaDetectionBelief@{registerForAnacondaDetectionBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForAnacondaDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForAnacondaDetectionBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_aae9ba5945d62803409399fe491c925fb}
+
+
+Register to receive \hyperlink{class_anaconda_detection_belief}{AnacondaDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a1807278c692ee145e1b4d9bd7523981d}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForCircularOrbitBelief@{registerForCircularOrbitBelief}}
+\index{registerForCircularOrbitBelief@{registerForCircularOrbitBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForCircularOrbitBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForCircularOrbitBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a1807278c692ee145e1b4d9bd7523981d}
+
+
+Register to receive \hyperlink{class_circular_orbit_belief}{CircularOrbitBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a7c3066eba552e312b67398eacec99819}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForCloudDetectionBelief@{registerForCloudDetectionBelief}}
+\index{registerForCloudDetectionBelief@{registerForCloudDetectionBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForCloudDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForCloudDetectionBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a7c3066eba552e312b67398eacec99819}
+
+
+Register to receive \hyperlink{class_cloud_detection_belief}{CloudDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_ad078a719f458b35687f39b3ab64f426f}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForParticleDetectionBelief@{registerForParticleDetectionBelief}}
+\index{registerForParticleDetectionBelief@{registerForParticleDetectionBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForParticleDetectionBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForParticleDetectionBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_ad078a719f458b35687f39b3ab64f426f}
+
+
+Register to receive \hyperlink{class_particle_detection_belief}{ParticleDetectionBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_swarm_spy_handler_a0c4c8e7b62a601fd8958ab8deebaf44f}{
+\index{SwarmSpyHandler@{SwarmSpyHandler}!registerForPiccoloTelemetryBelief@{registerForPiccoloTelemetryBelief}}
+\index{registerForPiccoloTelemetryBelief@{registerForPiccoloTelemetryBelief}!SwarmSpyHandler@{SwarmSpyHandler}}
+\subsubsection[{registerForPiccoloTelemetryBelief}]{\setlength{\rightskip}{0pt plus 5cm}void SwarmSpyHandler::registerForPiccoloTelemetryBelief (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_swarm_spy_handler_a0c4c8e7b62a601fd8958ab8deebaf44f}
+
+
+Register to receive \hyperlink{class_piccolo_telemetry_belief}{PiccoloTelemetryBelief} beliefs from the SwarmSpy to the appropriate global function (defined below) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/SwarmSpyHandler.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/SwarmSpyHandler.cpp\end{DoxyCompactItemize}

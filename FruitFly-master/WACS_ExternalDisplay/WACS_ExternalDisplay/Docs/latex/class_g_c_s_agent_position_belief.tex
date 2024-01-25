@@ -1,0 +1,119 @@
+\hypertarget{class_g_c_s_agent_position_belief}{
+\section{GCSAgentPositionBelief Class Reference}
+\label{class_g_c_s_agent_position_belief}\index{GCSAgentPositionBelief@{GCSAgentPositionBelief}}
+}
+
+
+Child class of \hyperlink{class_agent_position_belief}{AgentPositionBelief} implemented to draw a GCS truck for the agent.  
+
+
+
+
+{\ttfamily \#include $<$GCSAgentPositionBelief.h$>$}
+
+Inheritance diagram for GCSAgentPositionBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_g_c_s_agent_position_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_s_agent_position_belief_ad5e7c4c06e8be7a26d76e688e0cc2656}{
+\hyperlink{class_g_c_s_agent_position_belief_ad5e7c4c06e8be7a26d76e688e0cc2656}{GCSAgentPositionBelief} ()}
+\label{class_g_c_s_agent_position_belief_ad5e7c4c06e8be7a26d76e688e0cc2656}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, calls parent constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_g_c_s_agent_position_belief_aa1e5147ed3e89f1fe4ae68abfc5d3a4b}{GCSAgentPositionBelief} (\hyperlink{class_agent_position}{AgentPosition} $\ast$firstPosition)
+\begin{DoxyCompactList}\small\item\em Constructor, calls parent constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_g_c_s_agent_position_belief_a18e062448cdcd24775d059bffa17cb3f}{
+\hyperlink{class_g_c_s_agent_position_belief_a18e062448cdcd24775d059bffa17cb3f}{$\sim$GCSAgentPositionBelief} ()}
+\label{class_g_c_s_agent_position_belief_a18e062448cdcd24775d059bffa17cb3f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_c_s_agent_position_belief_a148cf93f40d6a0517c4cd02f714b443a}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. Displays PGCS truck. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_s_agent_position_belief_a1626b75868c3f69a0bbc45aa049796f8}{
+static \hyperlink{class_g_c_s_display}{GCSDisplay} $\ast$ \hyperlink{class_g_c_s_agent_position_belief_a1626b75868c3f69a0bbc45aa049796f8}{m\_\-GCSDisplay} = NULL}
+\label{class_g_c_s_agent_position_belief_a1626b75868c3f69a0bbc45aa049796f8}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g_c_s_display}{GCSDisplay} object that displays a PGCS truck. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Child class of \hyperlink{class_agent_position_belief}{AgentPositionBelief} implemented to draw a GCS truck for the agent. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_g_c_s_agent_position_belief_aa1e5147ed3e89f1fe4ae68abfc5d3a4b}{
+\index{GCSAgentPositionBelief@{GCSAgentPositionBelief}!GCSAgentPositionBelief@{GCSAgentPositionBelief}}
+\index{GCSAgentPositionBelief@{GCSAgentPositionBelief}!GCSAgentPositionBelief@{GCSAgentPositionBelief}}
+\subsubsection[{GCSAgentPositionBelief}]{\setlength{\rightskip}{0pt plus 5cm}GCSAgentPositionBelief::GCSAgentPositionBelief (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{firstPosition}
+\end{DoxyParamCaption}
+)}}
+\label{class_g_c_s_agent_position_belief_aa1e5147ed3e89f1fe4ae68abfc5d3a4b}
+
+
+Constructor, calls parent constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em firstPosition} & Position to locate GCS at \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_g_c_s_agent_position_belief_a148cf93f40d6a0517c4cd02f714b443a}{
+\index{GCSAgentPositionBelief@{GCSAgentPositionBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!GCSAgentPositionBelief@{GCSAgentPositionBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void GCSAgentPositionBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_g_c_s_agent_position_belief_a148cf93f40d6a0517c4cd02f714b443a}
+
+
+Paint the contents of this belief in an OpenGL scene. Displays PGCS truck. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_agent_position_belief_a7022bf540e04f7f830af8c331a051c64}{AgentPositionBelief}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/GCSAgentPositionBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/GCSAgentPositionBelief.cpp\end{DoxyCompactItemize}

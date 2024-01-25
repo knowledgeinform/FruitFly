@@ -1,0 +1,374 @@
+\hypertarget{class_cloud_detection}{
+\section{CloudDetection Class Reference}
+\label{class_cloud_detection}\index{CloudDetection@{CloudDetection}}
+}
+
+
+A single cloud detection datapoint: location, strength, and type.  
+
+
+
+
+{\ttfamily \#include $<$CloudDetection.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_cloud_detection_a55ae8bbb53ed63efe71dea0d1fd912ea}{
+\hyperlink{class_cloud_detection_a55ae8bbb53ed63efe71dea0d1fd912ea}{CloudDetection} ()}
+\label{class_cloud_detection_a55ae8bbb53ed63efe71dea0d1fd912ea}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, sets invalid parameters. \end{DoxyCompactList}\item 
+\hyperlink{class_cloud_detection_a12711360e868bd7dac8eb1ad733653b3}{CloudDetection} (long msgTimestampMs, double latDecDeg, double lonDecDeg, double altMslM, float value, int source)
+\begin{DoxyCompactList}\small\item\em Constructor, sets specified parameters. \end{DoxyCompactList}\item 
+long long \hyperlink{class_cloud_detection_a7c08546a06dbb224f9937d5c78313b73}{getMsgTimestampMs} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection timestamp. \end{DoxyCompactList}\item 
+double \hyperlink{class_cloud_detection_a006ffdad9b3c205b10c342ef8f6ea91e}{getLatDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection latitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_cloud_detection_abd87d304838c9d764a4ceb0d070fa0c8}{getLonDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection longitude. \end{DoxyCompactList}\item 
+double \hyperlink{class_cloud_detection_a49dbb860f39a8023094f0f9ac1072689}{getAltMslM} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection altitude. \end{DoxyCompactList}\item 
+float \hyperlink{class_cloud_detection_a4e4a5e121f98f857263c998171ac92bc}{getValue} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection value. \end{DoxyCompactList}\item 
+int \hyperlink{class_cloud_detection_abae618ee83e7b59df7bb09bcd49fc691}{getSource} ()
+\begin{DoxyCompactList}\small\item\em Accessor for detection source. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_a974add57b48557bda5825722be6827e4}{setMsgTimestampMs} (long long newMsgTimestampMs)
+\begin{DoxyCompactList}\small\item\em Modifier for detection timestamp. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_acea0d4ecec08d243cec9700d1a23bd82}{setLatDecDeg} (double newLatDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for detection latitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_afc368a8a313809f2a135583534ddce57}{setLonDecDeg} (double newLonDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for detection longitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_a57ad9d093b506088c74b718290bcbe91}{setAltMslM} (double newAltMslM)
+\begin{DoxyCompactList}\small\item\em Modifier for detection altitude. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_a977ead331d055c18647e21ab57b53e3d}{setValue} (float newValue)
+\begin{DoxyCompactList}\small\item\em Modifier for detection value. \end{DoxyCompactList}\item 
+void \hyperlink{class_cloud_detection_aa5382a15a5a87cfc779636426b12258d}{getSource} (int newSource)
+\begin{DoxyCompactList}\small\item\em Modifier for detection source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_cloud_detection_ae1384e255610bb8910a57a8cbb602f7c}{
+static const int \hyperlink{class_cloud_detection_ae1384e255610bb8910a57a8cbb602f7c}{PARTICLE\_\-DETECTION} = 1}
+\label{class_cloud_detection_ae1384e255610bb8910a57a8cbb602f7c}
+
+\begin{DoxyCompactList}\small\item\em Enumeration value for detection being from a particle sensor source. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_aa5d2007719dc9d18b404d0275f7a1fdf}{
+static const int \hyperlink{class_cloud_detection_aa5d2007719dc9d18b404d0275f7a1fdf}{CHEMICAL\_\-DETECTION} = 0}
+\label{class_cloud_detection_aa5d2007719dc9d18b404d0275f7a1fdf}
+
+\begin{DoxyCompactList}\small\item\em Enumeration value for detection being from a chemical sensor source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_cloud_detection_abbcb74720f588679828c5047f21b7b33}{
+long long \hyperlink{class_cloud_detection_abbcb74720f588679828c5047f21b7b33}{m\_\-MsgTimestampMs}}
+\label{class_cloud_detection_abbcb74720f588679828c5047f21b7b33}
+
+\begin{DoxyCompactList}\small\item\em Timestamp milliseconds. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_ada4d893a0b3823b496f9ba9defde0fcc}{
+double \hyperlink{class_cloud_detection_ada4d893a0b3823b496f9ba9defde0fcc}{m\_\-LatDecDeg}}
+\label{class_cloud_detection_ada4d893a0b3823b496f9ba9defde0fcc}
+
+\begin{DoxyCompactList}\small\item\em Latitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_ae4a850d84c514a82efc820a9bf0cf0f2}{
+double \hyperlink{class_cloud_detection_ae4a850d84c514a82efc820a9bf0cf0f2}{m\_\-LonDecDeg}}
+\label{class_cloud_detection_ae4a850d84c514a82efc820a9bf0cf0f2}
+
+\begin{DoxyCompactList}\small\item\em Longitude decimal degrees. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_aa0844c5d996f2e56422ed9a16f08b282}{
+double \hyperlink{class_cloud_detection_aa0844c5d996f2e56422ed9a16f08b282}{m\_\-AltMslM}}
+\label{class_cloud_detection_aa0844c5d996f2e56422ed9a16f08b282}
+
+\begin{DoxyCompactList}\small\item\em Altitude MSL m. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_a3e154b9e4e370b9d8e83c3ae8bb044b4}{
+float \hyperlink{class_cloud_detection_a3e154b9e4e370b9d8e83c3ae8bb044b4}{m\_\-Value}}
+\label{class_cloud_detection_a3e154b9e4e370b9d8e83c3ae8bb044b4}
+
+\begin{DoxyCompactList}\small\item\em Strength value. \end{DoxyCompactList}\item 
+\hypertarget{class_cloud_detection_abf0bf46eeb9624794b736191a8a739b6}{
+int \hyperlink{class_cloud_detection_abf0bf46eeb9624794b736191a8a739b6}{m\_\-Source}}
+\label{class_cloud_detection_abf0bf46eeb9624794b736191a8a739b6}
+
+\begin{DoxyCompactList}\small\item\em Detection source index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A single cloud detection datapoint: location, strength, and type. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cloud_detection_a12711360e868bd7dac8eb1ad733653b3}{
+\index{CloudDetection@{CloudDetection}!CloudDetection@{CloudDetection}}
+\index{CloudDetection@{CloudDetection}!CloudDetection@{CloudDetection}}
+\subsubsection[{CloudDetection}]{\setlength{\rightskip}{0pt plus 5cm}CloudDetection::CloudDetection (
+\begin{DoxyParamCaption}
+\item[{long}]{msgTimestampMs, }
+\item[{double}]{latDecDeg, }
+\item[{double}]{lonDecDeg, }
+\item[{double}]{altMslM, }
+\item[{float}]{value, }
+\item[{int}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{class_cloud_detection_a12711360e868bd7dac8eb1ad733653b3}
+
+
+Constructor, sets specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msgTimestampMs} & Timestamp milliseconds of detection \\
+\hline
+{\em latDecDeg} & Latitude decimal degrees of detection \\
+\hline
+{\em lonDecDeg} & Longitude decimal degrees of detection \\
+\hline
+{\em altMslM} & Altitude MSL meters of detection \\
+\hline
+{\em value} & Strength value of detection \\
+\hline
+{\em source} & Source of detection: 0=Chemical, 1=Particle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cloud_detection_a49dbb860f39a8023094f0f9ac1072689}{
+\index{CloudDetection@{CloudDetection}!getAltMslM@{getAltMslM}}
+\index{getAltMslM@{getAltMslM}!CloudDetection@{CloudDetection}}
+\subsubsection[{getAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}double CloudDetection::getAltMslM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a49dbb860f39a8023094f0f9ac1072689}
+
+
+Accessor for detection altitude. 
+
+\begin{DoxyReturn}{Returns}
+Altitude MSL m 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a006ffdad9b3c205b10c342ef8f6ea91e}{
+\index{CloudDetection@{CloudDetection}!getLatDecDeg@{getLatDecDeg}}
+\index{getLatDecDeg@{getLatDecDeg}!CloudDetection@{CloudDetection}}
+\subsubsection[{getLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double CloudDetection::getLatDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a006ffdad9b3c205b10c342ef8f6ea91e}
+
+
+Accessor for detection latitude. 
+
+\begin{DoxyReturn}{Returns}
+Latitude decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_abd87d304838c9d764a4ceb0d070fa0c8}{
+\index{CloudDetection@{CloudDetection}!getLonDecDeg@{getLonDecDeg}}
+\index{getLonDecDeg@{getLonDecDeg}!CloudDetection@{CloudDetection}}
+\subsubsection[{getLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double CloudDetection::getLonDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_abd87d304838c9d764a4ceb0d070fa0c8}
+
+
+Accessor for detection longitude. 
+
+\begin{DoxyReturn}{Returns}
+Longitude decimal degrees 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a7c08546a06dbb224f9937d5c78313b73}{
+\index{CloudDetection@{CloudDetection}!getMsgTimestampMs@{getMsgTimestampMs}}
+\index{getMsgTimestampMs@{getMsgTimestampMs}!CloudDetection@{CloudDetection}}
+\subsubsection[{getMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}long long CloudDetection::getMsgTimestampMs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a7c08546a06dbb224f9937d5c78313b73}
+
+
+Accessor for detection timestamp. 
+
+\begin{DoxyReturn}{Returns}
+Timestamp milliseconds 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_aa5382a15a5a87cfc779636426b12258d}{
+\index{CloudDetection@{CloudDetection}!getSource@{getSource}}
+\index{getSource@{getSource}!CloudDetection@{CloudDetection}}
+\subsubsection[{getSource}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::getSource (
+\begin{DoxyParamCaption}
+\item[{int}]{newSource}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_aa5382a15a5a87cfc779636426b12258d}
+
+
+Modifier for detection source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newSource} & New source index: 0=Chemical, 1=Particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_abae618ee83e7b59df7bb09bcd49fc691}{
+\index{CloudDetection@{CloudDetection}!getSource@{getSource}}
+\index{getSource@{getSource}!CloudDetection@{CloudDetection}}
+\subsubsection[{getSource}]{\setlength{\rightskip}{0pt plus 5cm}int CloudDetection::getSource (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_abae618ee83e7b59df7bb09bcd49fc691}
+
+
+Accessor for detection source. 
+
+\begin{DoxyReturn}{Returns}
+Source: 0=Chemical, 1=Particle 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a4e4a5e121f98f857263c998171ac92bc}{
+\index{CloudDetection@{CloudDetection}!getValue@{getValue}}
+\index{getValue@{getValue}!CloudDetection@{CloudDetection}}
+\subsubsection[{getValue}]{\setlength{\rightskip}{0pt plus 5cm}float CloudDetection::getValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a4e4a5e121f98f857263c998171ac92bc}
+
+
+Accessor for detection value. 
+
+\begin{DoxyReturn}{Returns}
+Strength value 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a57ad9d093b506088c74b718290bcbe91}{
+\index{CloudDetection@{CloudDetection}!setAltMslM@{setAltMslM}}
+\index{setAltMslM@{setAltMslM}!CloudDetection@{CloudDetection}}
+\subsubsection[{setAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::setAltMslM (
+\begin{DoxyParamCaption}
+\item[{double}]{newAltMslM}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a57ad9d093b506088c74b718290bcbe91}
+
+
+Modifier for detection altitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newAltMslM} & New altitude MSL m \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_acea0d4ecec08d243cec9700d1a23bd82}{
+\index{CloudDetection@{CloudDetection}!setLatDecDeg@{setLatDecDeg}}
+\index{setLatDecDeg@{setLatDecDeg}!CloudDetection@{CloudDetection}}
+\subsubsection[{setLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::setLatDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{newLatDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_acea0d4ecec08d243cec9700d1a23bd82}
+
+
+Modifier for detection latitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLatDecDeg} & New latitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_afc368a8a313809f2a135583534ddce57}{
+\index{CloudDetection@{CloudDetection}!setLonDecDeg@{setLonDecDeg}}
+\index{setLonDecDeg@{setLonDecDeg}!CloudDetection@{CloudDetection}}
+\subsubsection[{setLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::setLonDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{newLonDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_afc368a8a313809f2a135583534ddce57}
+
+
+Modifier for detection longitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newLonDecDeg} & New longitude decimal degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a974add57b48557bda5825722be6827e4}{
+\index{CloudDetection@{CloudDetection}!setMsgTimestampMs@{setMsgTimestampMs}}
+\index{setMsgTimestampMs@{setMsgTimestampMs}!CloudDetection@{CloudDetection}}
+\subsubsection[{setMsgTimestampMs}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::setMsgTimestampMs (
+\begin{DoxyParamCaption}
+\item[{long long}]{newMsgTimestampMs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a974add57b48557bda5825722be6827e4}
+
+
+Modifier for detection timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newMsgTimestampMs} & New timestamp milliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_cloud_detection_a977ead331d055c18647e21ab57b53e3d}{
+\index{CloudDetection@{CloudDetection}!setValue@{setValue}}
+\index{setValue@{setValue}!CloudDetection@{CloudDetection}}
+\subsubsection[{setValue}]{\setlength{\rightskip}{0pt plus 5cm}void CloudDetection::setValue (
+\begin{DoxyParamCaption}
+\item[{float}]{newValue}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_cloud_detection_a977ead331d055c18647e21ab57b53e3d}
+
+
+Modifier for detection value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newValue} & New strength value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CloudDetection.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CloudDetection.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,532 @@
+\hypertarget{class_circular_orbit_belief}{
+\section{CircularOrbitBelief Class Reference}
+\label{class_circular_orbit_belief}\index{CircularOrbitBelief@{CircularOrbitBelief}}
+}
+
+
+Class representing a WACS Swarm belief -\/ desired circular orbit for UAV.  
+
+
+
+
+{\ttfamily \#include $<$CircularOrbitBelief.h$>$}
+
+Inheritance diagram for CircularOrbitBelief:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_circular_orbit_belief}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_circular_orbit_belief_af62a5aec1370f834de4b2a27e3dd02d9}{
+\hyperlink{class_circular_orbit_belief_af62a5aec1370f834de4b2a27e3dd02d9}{CircularOrbitBelief} ()}
+\label{class_circular_orbit_belief_af62a5aec1370f834de4b2a27e3dd02d9}
+
+\begin{DoxyCompactList}\small\item\em Default Constructor. Sets empty parameters and initializes GLUquadricObj. \end{DoxyCompactList}\item 
+\hyperlink{class_circular_orbit_belief_ae3eb54916ef66940a6b326a68de3d2e4}{CircularOrbitBelief} (double centerLatDecDeg, double centerLonDecDeg, double radiusM, double altMslM, bool isClockwise)
+\begin{DoxyCompactList}\small\item\em Constructor, sets specified parameters and initializes GLUquadricObj. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_afed003d6a62dac861108ddaf396e3f2d}{
+\hyperlink{class_circular_orbit_belief_afed003d6a62dac861108ddaf396e3f2d}{$\sim$CircularOrbitBelief} ()}
+\label{class_circular_orbit_belief_afed003d6a62dac861108ddaf396e3f2d}
+
+\begin{DoxyCompactList}\small\item\em Destructor, kills GLUquadricObj. \end{DoxyCompactList}\item 
+bool \hyperlink{class_circular_orbit_belief_a3bff3e0503e6b5b47ea0a2a4dfb73cac}{setCircularOrbit} (double centerLatDecDeg, double centerLonDecDeg, double radiusM, double altMslM, bool isClockwise)
+\begin{DoxyCompactList}\small\item\em Set parameters for the circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a24aa41df680f5ed50114672aa02d1680}{drawGL} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPointPosition, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Paint the contents of this belief in an OpenGL scene. Display circle at orbit path with rotating arrows showing direction of orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a06a40bc8e475f6f443edcfb56713860d}{updateDataRows} (\hyperlink{struct_data_rows}{DataRows} $\ast$dataRows)
+\begin{DoxyCompactList}\small\item\em Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. \end{DoxyCompactList}\item 
+double \hyperlink{class_circular_orbit_belief_a5d1df33e08616a231fa37678186d9ed4}{getCenterLatDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for center latitude of circular orbit. \end{DoxyCompactList}\item 
+double \hyperlink{class_circular_orbit_belief_a2c04d31d6b5798bb49f4aef80867740b}{getCenterLonDecDeg} ()
+\begin{DoxyCompactList}\small\item\em Accessor for center longitude of circular orbit. \end{DoxyCompactList}\item 
+double \hyperlink{class_circular_orbit_belief_afde488e8eea71ed60a4d2583503a4eb8}{getRadiusM} ()
+\begin{DoxyCompactList}\small\item\em Accessor for radius of circular orbit. \end{DoxyCompactList}\item 
+double \hyperlink{class_circular_orbit_belief_a7cd0cfd450e978a9111743637b4c5594}{getAltMslM} ()
+\begin{DoxyCompactList}\small\item\em Accessor for altitude of circular orbit. \end{DoxyCompactList}\item 
+bool \hyperlink{class_circular_orbit_belief_a17d5add0e83fb24473ca60a7f9b4a268}{getIsClockwise} ()
+\begin{DoxyCompactList}\small\item\em Accessor for rotation direction of circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a19a699b6ce00ea4e2a9098384cf57197}{setCenterLatDecDeg} (double centerLatDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for center latitude of circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a179d0457b9800aa799fbbe52cf495a3f}{setCenterLonDecDeg} (double centerLonDecDeg)
+\begin{DoxyCompactList}\small\item\em Modifier for center longitude of circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a8efd107273f9ad56cb405deaf350b8d4}{setRadiusM} (double radiusM)
+\begin{DoxyCompactList}\small\item\em Modifier for radius of circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_a919c5fb94c962895aca1f9fcb3e3d076}{setAltMslM} (double altMslM)
+\begin{DoxyCompactList}\small\item\em Modifier for altitude of circular orbit. \end{DoxyCompactList}\item 
+void \hyperlink{class_circular_orbit_belief_aaa469ecd98b27578d56987aa362343d2}{setIsClockwise} (bool isClockwise)
+\begin{DoxyCompactList}\small\item\em Modifier for circular orbit direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_circular_orbit_belief_ab525b194690af9da600caa56e9216224}{readConfig} ()
+\begin{DoxyCompactList}\small\item\em Read config settings from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_circular_orbit_belief_a89ec0a3cda8792afcae2d6d86bcba586}{
+double \hyperlink{class_circular_orbit_belief_a89ec0a3cda8792afcae2d6d86bcba586}{m\_\-CenterLatDecDeg}}
+\label{class_circular_orbit_belief_a89ec0a3cda8792afcae2d6d86bcba586}
+
+\begin{DoxyCompactList}\small\item\em Center latitude decimal degrees of circular orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_adba1bec3bae4c5d359e2f98097fe4d17}{
+double \hyperlink{class_circular_orbit_belief_adba1bec3bae4c5d359e2f98097fe4d17}{m\_\-CenterLonDecDeg}}
+\label{class_circular_orbit_belief_adba1bec3bae4c5d359e2f98097fe4d17}
+
+\begin{DoxyCompactList}\small\item\em Center longitude decimal degrees of circular orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_ae2611494d76755888fa6e81a6b4e1bab}{
+double \hyperlink{class_circular_orbit_belief_ae2611494d76755888fa6e81a6b4e1bab}{m\_\-RadiusM}}
+\label{class_circular_orbit_belief_ae2611494d76755888fa6e81a6b4e1bab}
+
+\begin{DoxyCompactList}\small\item\em Radius meters of circular orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a27ccb23eb9c6cedf81b5c8d0fd5032fc}{
+double \hyperlink{class_circular_orbit_belief_a27ccb23eb9c6cedf81b5c8d0fd5032fc}{m\_\-AltMslM}}
+\label{class_circular_orbit_belief_a27ccb23eb9c6cedf81b5c8d0fd5032fc}
+
+\begin{DoxyCompactList}\small\item\em Altitude MSL meters of circular orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_aaa06b661a3f8333a88f194f7613bfe10}{
+bool \hyperlink{class_circular_orbit_belief_aaa06b661a3f8333a88f194f7613bfe10}{m\_\-IsClockwise}}
+\label{class_circular_orbit_belief_aaa06b661a3f8333a88f194f7613bfe10}
+
+\begin{DoxyCompactList}\small\item\em Circular orbit rotation direction; true=clockwise, false=counter-\/clockwise. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a298222e264bf4622ed900798bb30423a}{
+double \hyperlink{class_circular_orbit_belief_a298222e264bf4622ed900798bb30423a}{m\_\-RadiusLat}}
+\label{class_circular_orbit_belief_a298222e264bf4622ed900798bb30423a}
+
+\begin{DoxyCompactList}\small\item\em Radius of circular orbit, latitude decimal degrees distance from center. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a391c10546d6b038a045a9c01a1a481a5}{
+double \hyperlink{class_circular_orbit_belief_a391c10546d6b038a045a9c01a1a481a5}{m\_\-RadiusLon}}
+\label{class_circular_orbit_belief_a391c10546d6b038a045a9c01a1a481a5}
+
+\begin{DoxyCompactList}\small\item\em Radius of circular orbit, longitude decimal degrees distance from center. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_ad09afe6875687a7e8deff3c4e3aff338}{
+int \hyperlink{class_circular_orbit_belief_ad09afe6875687a7e8deff3c4e3aff338}{m\_\-ArrowCount}}
+\label{class_circular_orbit_belief_ad09afe6875687a7e8deff3c4e3aff338}
+
+\begin{DoxyCompactList}\small\item\em Number of arrows to spin around the orbit to show direction. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a1973a1f6a38379a06412994b1551fdd0}{
+int \hyperlink{class_circular_orbit_belief_a1973a1f6a38379a06412994b1551fdd0}{m\_\-ArrowOrbitPeriodSec}}
+\label{class_circular_orbit_belief_a1973a1f6a38379a06412994b1551fdd0}
+
+\begin{DoxyCompactList}\small\item\em Seconds for each spinning arrow to traverse entire orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_aee7d381354be4f39567ebe2709691440}{
+double \hyperlink{class_circular_orbit_belief_aee7d381354be4f39567ebe2709691440}{m\_\-ArrowBackRadiusM}}
+\label{class_circular_orbit_belief_aee7d381354be4f39567ebe2709691440}
+
+\begin{DoxyCompactList}\small\item\em Radius meters of backend of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a46b7fdc499ebe7eee08f3d14371a329b}{
+double \hyperlink{class_circular_orbit_belief_a46b7fdc499ebe7eee08f3d14371a329b}{m\_\-ArrowLengthM}}
+\label{class_circular_orbit_belief_a46b7fdc499ebe7eee08f3d14371a329b}
+
+\begin{DoxyCompactList}\small\item\em Length meters of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a98bef3a1d8fa3d6f43f6be7ffeb16e89}{
+double \hyperlink{class_circular_orbit_belief_a98bef3a1d8fa3d6f43f6be7ffeb16e89}{m\_\-ArrowColorRed}}
+\label{class_circular_orbit_belief_a98bef3a1d8fa3d6f43f6be7ffeb16e89}
+
+\begin{DoxyCompactList}\small\item\em Red component of color of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_ad91a90879b92838b48e0cfec62a99e95}{
+double \hyperlink{class_circular_orbit_belief_ad91a90879b92838b48e0cfec62a99e95}{m\_\-ArrowColorGreen}}
+\label{class_circular_orbit_belief_ad91a90879b92838b48e0cfec62a99e95}
+
+\begin{DoxyCompactList}\small\item\em Green component of color of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_afe5a7b90326b6c8208e7fd6095aff985}{
+double \hyperlink{class_circular_orbit_belief_afe5a7b90326b6c8208e7fd6095aff985}{m\_\-ArrowColorBlue}}
+\label{class_circular_orbit_belief_afe5a7b90326b6c8208e7fd6095aff985}
+
+\begin{DoxyCompactList}\small\item\em Blue component of color of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a68ac9ec66c2a89fe52300996d37b126f}{
+double \hyperlink{class_circular_orbit_belief_a68ac9ec66c2a89fe52300996d37b126f}{m\_\-ArrowColorAlpha}}
+\label{class_circular_orbit_belief_a68ac9ec66c2a89fe52300996d37b126f}
+
+\begin{DoxyCompactList}\small\item\em Alpha component of color of spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_ac299d51e5f2b01f53fa290f1681fb155}{
+double \hyperlink{class_circular_orbit_belief_ac299d51e5f2b01f53fa290f1681fb155}{m\_\-OrbitColorRed}}
+\label{class_circular_orbit_belief_ac299d51e5f2b01f53fa290f1681fb155}
+
+\begin{DoxyCompactList}\small\item\em Red component of color of orbit line. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a7458a8813ee77b0d821da71486ae9f4d}{
+double \hyperlink{class_circular_orbit_belief_a7458a8813ee77b0d821da71486ae9f4d}{m\_\-OrbitColorGreen}}
+\label{class_circular_orbit_belief_a7458a8813ee77b0d821da71486ae9f4d}
+
+\begin{DoxyCompactList}\small\item\em Green component of color of orbit line. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_ac5280e88c966d8e0217d2cf3eb6217c3}{
+double \hyperlink{class_circular_orbit_belief_ac5280e88c966d8e0217d2cf3eb6217c3}{m\_\-OrbitColorBlue}}
+\label{class_circular_orbit_belief_ac5280e88c966d8e0217d2cf3eb6217c3}
+
+\begin{DoxyCompactList}\small\item\em Blue component of color of orbit line. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a680f12532090b5f536850e81d10e2a25}{
+double \hyperlink{class_circular_orbit_belief_a680f12532090b5f536850e81d10e2a25}{m\_\-OrbitLineWidth}}
+\label{class_circular_orbit_belief_a680f12532090b5f536850e81d10e2a25}
+
+\begin{DoxyCompactList}\small\item\em Line width of orbit line. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a67ff5746924af468595e103752c0edb8}{
+GLUquadricObj $\ast$ \hyperlink{class_circular_orbit_belief_a67ff5746924af468595e103752c0edb8}{quadricObj}}
+\label{class_circular_orbit_belief_a67ff5746924af468595e103752c0edb8}
+
+\begin{DoxyCompactList}\small\item\em GL Quadric object to use for displaying spinning arrows. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a77d95f2ab2ad4cbb9e95e93321cf1e14}{
+int \hyperlink{class_circular_orbit_belief_a77d95f2ab2ad4cbb9e95e93321cf1e14}{displayList}}
+\label{class_circular_orbit_belief_a77d95f2ab2ad4cbb9e95e93321cf1e14}
+
+\begin{DoxyCompactList}\small\item\em GL display list to display spinning arrows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_circular_orbit_belief_a6edd05988001f9e983770e8baa6f452b}{
+static int \hyperlink{class_circular_orbit_belief_a6edd05988001f9e983770e8baa6f452b}{m\_\-ArrowAngleDeg} = 0}
+\label{class_circular_orbit_belief_a6edd05988001f9e983770e8baa6f452b}
+
+\begin{DoxyCompactList}\small\item\em Rotation angle from 0 to spin arrows around the orbit. \end{DoxyCompactList}\item 
+\hypertarget{class_circular_orbit_belief_a2c653a3cc50135db213cd52684cce06d}{
+static long \hyperlink{class_circular_orbit_belief_a2c653a3cc50135db213cd52684cce06d}{m\_\-ArrowStartTimeSec} = time(NULL)}
+\label{class_circular_orbit_belief_a2c653a3cc50135db213cd52684cce06d}
+
+\begin{DoxyCompactList}\small\item\em Timestamp seconds when spinning arrows started at 0 degrees rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a WACS Swarm belief -\/ desired circular orbit for UAV. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_circular_orbit_belief_ae3eb54916ef66940a6b326a68de3d2e4}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!CircularOrbitBelief@{CircularOrbitBelief}}
+\index{CircularOrbitBelief@{CircularOrbitBelief}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{CircularOrbitBelief}]{\setlength{\rightskip}{0pt plus 5cm}CircularOrbitBelief::CircularOrbitBelief (
+\begin{DoxyParamCaption}
+\item[{double}]{centerLatDecDeg, }
+\item[{double}]{centerLonDecDeg, }
+\item[{double}]{radiusM, }
+\item[{double}]{altMslM, }
+\item[{bool}]{isClockwise}
+\end{DoxyParamCaption}
+)}}
+\label{class_circular_orbit_belief_ae3eb54916ef66940a6b326a68de3d2e4}
+
+
+Constructor, sets specified parameters and initializes GLUquadricObj. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerLatDecDeg} & Center latitude decimal degrees of circular orbit \\
+\hline
+{\em centerLonDecDeg} & Center longitude decimal degrees of circular orbit \\
+\hline
+{\em radiusM} & Radius meters of circular orbit \\
+\hline
+{\em altMslM} & Altitude meters MSL of circular orbit \\
+\hline
+{\em isClockwise} & If true, orbit is clockwise. If false, orbit is counter-\/clockwise \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_circular_orbit_belief_a24aa41df680f5ed50114672aa02d1680}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!drawGL@{drawGL}}
+\index{drawGL@{drawGL}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{drawGL}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::drawGL (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPointPosition, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_circular_orbit_belief_a24aa41df680f5ed50114672aa02d1680}
+
+
+Paint the contents of this belief in an OpenGL scene. Display circle at orbit path with rotating arrows showing direction of orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPointPosition} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a39fa2dbd14a42cf6b67da48375e992f8}{BeliefTemplate}.
+
+\hypertarget{class_circular_orbit_belief_a7cd0cfd450e978a9111743637b4c5594}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!getAltMslM@{getAltMslM}}
+\index{getAltMslM@{getAltMslM}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{getAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}double CircularOrbitBelief::getAltMslM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a7cd0cfd450e978a9111743637b4c5594}
+
+
+Accessor for altitude of circular orbit. 
+
+\begin{DoxyReturn}{Returns}
+Altitude MSL meters of circular orbit 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a5d1df33e08616a231fa37678186d9ed4}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!getCenterLatDecDeg@{getCenterLatDecDeg}}
+\index{getCenterLatDecDeg@{getCenterLatDecDeg}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{getCenterLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double CircularOrbitBelief::getCenterLatDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a5d1df33e08616a231fa37678186d9ed4}
+
+
+Accessor for center latitude of circular orbit. 
+
+\begin{DoxyReturn}{Returns}
+Center latitude decimal degrees of circular orbit 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a2c04d31d6b5798bb49f4aef80867740b}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!getCenterLonDecDeg@{getCenterLonDecDeg}}
+\index{getCenterLonDecDeg@{getCenterLonDecDeg}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{getCenterLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}double CircularOrbitBelief::getCenterLonDecDeg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a2c04d31d6b5798bb49f4aef80867740b}
+
+
+Accessor for center longitude of circular orbit. 
+
+\begin{DoxyReturn}{Returns}
+Center longitude decimal degrees of circular orbit 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a17d5add0e83fb24473ca60a7f9b4a268}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!getIsClockwise@{getIsClockwise}}
+\index{getIsClockwise@{getIsClockwise}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{getIsClockwise}]{\setlength{\rightskip}{0pt plus 5cm}bool CircularOrbitBelief::getIsClockwise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a17d5add0e83fb24473ca60a7f9b4a268}
+
+
+Accessor for rotation direction of circular orbit. 
+
+\begin{DoxyReturn}{Returns}
+True if orbit is clockwise, false if orbit is counter-\/clockwise 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_afde488e8eea71ed60a4d2583503a4eb8}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!getRadiusM@{getRadiusM}}
+\index{getRadiusM@{getRadiusM}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{getRadiusM}]{\setlength{\rightskip}{0pt plus 5cm}double CircularOrbitBelief::getRadiusM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_afde488e8eea71ed60a4d2583503a4eb8}
+
+
+Accessor for radius of circular orbit. 
+
+\begin{DoxyReturn}{Returns}
+Radius meters of circular orbit 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_ab525b194690af9da600caa56e9216224}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!readConfig@{readConfig}}
+\index{readConfig@{readConfig}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{readConfig}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::readConfig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_circular_orbit_belief_ab525b194690af9da600caa56e9216224}
+
+
+Read config settings from file. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a919c5fb94c962895aca1f9fcb3e3d076}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setAltMslM@{setAltMslM}}
+\index{setAltMslM@{setAltMslM}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setAltMslM}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::setAltMslM (
+\begin{DoxyParamCaption}
+\item[{double}]{altMslM}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a919c5fb94c962895aca1f9fcb3e3d076}
+
+
+Modifier for altitude of circular orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em altMslM} & New altitude MSL meters of circular orbit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a19a699b6ce00ea4e2a9098384cf57197}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setCenterLatDecDeg@{setCenterLatDecDeg}}
+\index{setCenterLatDecDeg@{setCenterLatDecDeg}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setCenterLatDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::setCenterLatDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{centerLatDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a19a699b6ce00ea4e2a9098384cf57197}
+
+
+Modifier for center latitude of circular orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerLatDecDeg} & New center latitude decimal degrees of circular orbit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a179d0457b9800aa799fbbe52cf495a3f}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setCenterLonDecDeg@{setCenterLonDecDeg}}
+\index{setCenterLonDecDeg@{setCenterLonDecDeg}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setCenterLonDecDeg}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::setCenterLonDecDeg (
+\begin{DoxyParamCaption}
+\item[{double}]{centerLonDecDeg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a179d0457b9800aa799fbbe52cf495a3f}
+
+
+Modifier for center longitude of circular orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerLonDecDeg} & New center longitude decimal degrees of circular orbit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a3bff3e0503e6b5b47ea0a2a4dfb73cac}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setCircularOrbit@{setCircularOrbit}}
+\index{setCircularOrbit@{setCircularOrbit}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setCircularOrbit}]{\setlength{\rightskip}{0pt plus 5cm}bool CircularOrbitBelief::setCircularOrbit (
+\begin{DoxyParamCaption}
+\item[{double}]{centerLatDecDeg, }
+\item[{double}]{centerLonDecDeg, }
+\item[{double}]{radiusM, }
+\item[{double}]{altMslM, }
+\item[{bool}]{isClockwise}
+\end{DoxyParamCaption}
+)}}
+\label{class_circular_orbit_belief_a3bff3e0503e6b5b47ea0a2a4dfb73cac}
+
+
+Set parameters for the circular orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerLatDecDeg} & Center latitude decimal degrees of circular orbit \\
+\hline
+{\em centerLonDecDeg} & Center longitude decimal degrees of circular orbit \\
+\hline
+{\em radiusM} & Radius meters of circular orbit \\
+\hline
+{\em altMslM} & Altitude meters MSL of circular orbit \\
+\hline
+{\em isClockwise} & If true, orbit is clockwise. If false, orbit is counter-\/clockwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_aaa469ecd98b27578d56987aa362343d2}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setIsClockwise@{setIsClockwise}}
+\index{setIsClockwise@{setIsClockwise}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setIsClockwise}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::setIsClockwise (
+\begin{DoxyParamCaption}
+\item[{bool}]{isClockwise}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_aaa469ecd98b27578d56987aa362343d2}
+
+
+Modifier for circular orbit direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isClockwise} & New circular orbit rotation direction; true=clockwise, false=counter-\/clockwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a8efd107273f9ad56cb405deaf350b8d4}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!setRadiusM@{setRadiusM}}
+\index{setRadiusM@{setRadiusM}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{setRadiusM}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::setRadiusM (
+\begin{DoxyParamCaption}
+\item[{double}]{radiusM}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_circular_orbit_belief_a8efd107273f9ad56cb405deaf350b8d4}
+
+
+Modifier for radius of circular orbit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radiusM} & New radius meters of circular orbit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_circular_orbit_belief_a06a40bc8e475f6f443edcfb56713860d}{
+\index{CircularOrbitBelief@{CircularOrbitBelief}!updateDataRows@{updateDataRows}}
+\index{updateDataRows@{updateDataRows}!CircularOrbitBelief@{CircularOrbitBelief}}
+\subsubsection[{updateDataRows}]{\setlength{\rightskip}{0pt plus 5cm}void CircularOrbitBelief::updateDataRows (
+\begin{DoxyParamCaption}
+\item[{{\bf DataRows} $\ast$}]{dataRows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_circular_orbit_belief_a06a40bc8e475f6f443edcfb56713860d}
+
+
+Update \hyperlink{class_raw_data_dialog}{RawDataDialog} object with data from this belief. Rows of dialog are filled with contents of private variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataRows} & List of data rows in a \hyperlink{class_raw_data_dialog}{RawDataDialog} object to be updated with data for this belief \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_belief_template_a72e58b1d025012f3f2572a8983e8355c}{BeliefTemplate}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CircularOrbitBelief.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/CircularOrbitBelief.cpp\end{DoxyCompactItemize}

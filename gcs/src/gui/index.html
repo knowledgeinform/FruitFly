@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="gcs.css">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ground Control Station</title>
+  </head>
+  <body>
+    <div id='map' class='gcs-map'>
+      <div id='plotdiv' class='gcs-plotter-div'>
+        <div id="plotter" class='gcs-plotter'></div>
+        <div class="control-row">
+          <select id="agent-selector" class="agentid">
+          </select>
+          <select id="plot-selector" class="plottype">
+          </select>
+        </div>
+      </div>
+      <object id="gcs-icon" class="gcs-user-location-dot" data="./sprites/_svg/circle-15.svg" type="image/svg+xml"></object>
+      <object id="bread-crumb-icon" class="bread-crumb-location" data="./sprites/_svg/circle-150.svg" type="image/svg+xml"></object>
+      <object id="agent-icon" class="agent-location" data="./sprites/_svg/airfield-15.svg" type="image/svg+xml"></object>
+      <div id='altitude' class='gcs-altitude'>
+      </div>
+      <form id="minimumConcentrationForm" class="concentrationBoundsClass">
+        Minimum Concentration:
+        <input type="number" id="minConcField" style="width: 7ch;" value=2>
+        <button id="minConcCancelBtn" style="position: relative; left: 8ch; width: 8ch;">Cancel
+        </button>
+        <button id="minConcEnterBtn" style="position: relative; left: 10ch; width: 8ch;">Enter
+        </button>
+      </form>
+      <form id="maximumConcentrationForm" class="concentrationBoundsClass" style="text-shadow: white 1px 1px 2px;">
+        Maximum Concentration:
+        <input type="number" id="maxConcField" style="width: 7ch;" value=15>
+        <button id="maxConcCancelBtn" style="position: relative; left: 8ch; width: 8ch;">Cancel
+        </button>
+        <button id="maxConcEnterBtn" style="position: relative; left: 10ch; width: 8ch;">Enter
+        </button>
+      </form>
+      <form id="shrinkTimeForm" class="concentrationBoundsClass" style="text-shadow: white 1px 1px 2px;">
+        Shrink Time:
+        <input type="number" id="shrinkTimeField" style="width: 7ch;" value=10>
+         seconds
+
+        <button id="shrinkTimeCancelBtn" style="position: relative; left: 8ch; width: 8ch;">Cancel
+        </button>
+        <button id="shrinkTimeEnterBtn" style="position: relative; left: 10ch; width: 8ch;">Enter
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="./node_modules/plotly.js-dist/plotly.js" charset="utf-8"></script>
+</html>

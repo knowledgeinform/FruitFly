@@ -1,0 +1,192 @@
+\hypertarget{class_map_data}{
+\section{MapData Class Reference}
+\label{class_map_data}\index{MapData@{MapData}}
+}
+
+
+Object holding data about local terrain. Has DTED data and geo-\/referenced terrain maps.  
+
+
+
+
+{\ttfamily \#include $<$MapData.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_map_data_aca1581fc02ec46b4da7ed9b83c04a116}{
+\hyperlink{class_map_data_aca1581fc02ec46b4da7ed9b83c04a116}{MapData} ()}
+\label{class_map_data_aca1581fc02ec46b4da7ed9b83c04a116}
+
+\begin{DoxyCompactList}\small\item\em Default constructor, clear variables. \end{DoxyCompactList}\item 
+\hypertarget{class_map_data_afc3e096cf252c30641055ea4eaaab410}{
+\hyperlink{class_map_data_afc3e096cf252c30641055ea4eaaab410}{$\sim$MapData} ()}
+\label{class_map_data_afc3e096cf252c30641055ea4eaaab410}
+
+\begin{DoxyCompactList}\small\item\em Destructor, destroys objects. \end{DoxyCompactList}\item 
+void \hyperlink{class_map_data_aff0de8ebb5a9854c9ff3f538622d996b}{setDtedObject} (\hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$dted)
+\begin{DoxyCompactList}\small\item\em Stores the \hyperlink{class_d_t_e_d_object}{DTEDObject} for later use. \end{DoxyCompactList}\item 
+void \hyperlink{class_map_data_ae1279a256d75913e6e2dbe712820974c}{loadMap} (char $\ast$mapFilename, \hyperlink{class_agent_position}{AgentPosition} $\ast$centerPoint)
+\begin{DoxyCompactList}\small\item\em Loads terrain map image from file and generates a texture call list for display into an OpenGL scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_map_data_a359ee893b6a65bbd6fa7be2b28931f28}{paintMap} (\hyperlink{class_agent_position}{AgentPosition} $\ast$centerPoint, double estLatToMConv, double estLonToMConv)
+\begin{DoxyCompactList}\small\item\em Calls the generated display list to draw the 3D terrain map in an OpenGL scene. \end{DoxyCompactList}\item 
+double \hyperlink{class_map_data_a49e6635de521d2b1707f76904bff6a2a}{getMinZ} (double lat, double lon)
+\begin{DoxyCompactList}\small\item\em Return the minimum value of altitude (plus some buffer room) to be above ground at this location. \end{DoxyCompactList}\item 
+double \hyperlink{class_map_data_ac596a85c37b11e4dad4a5e4dabcfece1}{getTerrainZM} (double lat, double lon)
+\begin{DoxyCompactList}\small\item\em Accessor for DTED elevation value at a given location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_map_data_a28f0dcdeb8ff9c9f27959e0446628f52}{
+\hyperlink{class_d_t_e_d_object}{DTEDObject} $\ast$ \hyperlink{class_map_data_a28f0dcdeb8ff9c9f27959e0446628f52}{m\_\-DtedObject}}
+\label{class_map_data_a28f0dcdeb8ff9c9f27959e0446628f52}
+
+\begin{DoxyCompactList}\small\item\em DTED Data loaded for map. \end{DoxyCompactList}\item 
+\hypertarget{class_map_data_a8bc958053672ede6e033b8d0a979f381}{
+\hyperlink{class_geomap3_d}{Geomap3D} $\ast$ \hyperlink{class_map_data_a8bc958053672ede6e033b8d0a979f381}{m\_\-MapObject}}
+\label{class_map_data_a8bc958053672ede6e033b8d0a979f381}
+
+\begin{DoxyCompactList}\small\item\em Image data generated into textures for OpenGL display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object holding data about local terrain. Has DTED data and geo-\/referenced terrain maps. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_data_a49e6635de521d2b1707f76904bff6a2a}{
+\index{MapData@{MapData}!getMinZ@{getMinZ}}
+\index{getMinZ@{getMinZ}!MapData@{MapData}}
+\subsubsection[{getMinZ}]{\setlength{\rightskip}{0pt plus 5cm}double MapData::getMinZ (
+\begin{DoxyParamCaption}
+\item[{double}]{lat, }
+\item[{double}]{lon}
+\end{DoxyParamCaption}
+)}}
+\label{class_map_data_a49e6635de521d2b1707f76904bff6a2a}
+
+
+Return the minimum value of altitude (plus some buffer room) to be above ground at this location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & Latitude decmial degrees at point of interest \\
+\hline
+{\em lon} & Longitude decmial degrees at point of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Minimum altitude MSL m to guarantee height above ground 
+\end{DoxyReturn}
+\hypertarget{class_map_data_ac596a85c37b11e4dad4a5e4dabcfece1}{
+\index{MapData@{MapData}!getTerrainZM@{getTerrainZM}}
+\index{getTerrainZM@{getTerrainZM}!MapData@{MapData}}
+\subsubsection[{getTerrainZM}]{\setlength{\rightskip}{0pt plus 5cm}double MapData::getTerrainZM (
+\begin{DoxyParamCaption}
+\item[{double}]{lat, }
+\item[{double}]{lon}
+\end{DoxyParamCaption}
+)}}
+\label{class_map_data_ac596a85c37b11e4dad4a5e4dabcfece1}
+
+
+Accessor for DTED elevation value at a given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & Latitude decimal degrees at point of interest \\
+\hline
+{\em lon} & Longitude decimal degrees at point of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Elevation MSL m at point of interest 
+\end{DoxyReturn}
+\hypertarget{class_map_data_ae1279a256d75913e6e2dbe712820974c}{
+\index{MapData@{MapData}!loadMap@{loadMap}}
+\index{loadMap@{loadMap}!MapData@{MapData}}
+\subsubsection[{loadMap}]{\setlength{\rightskip}{0pt plus 5cm}void MapData::loadMap (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mapFilename, }
+\item[{{\bf AgentPosition} $\ast$}]{centerPoint}
+\end{DoxyParamCaption}
+)}}
+\label{class_map_data_ae1279a256d75913e6e2dbe712820974c}
+
+
+Loads terrain map image from file and generates a texture call list for display into an OpenGL scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapFilename} & Filename of image \\
+\hline
+{\em centerPoint} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_map_data_a359ee893b6a65bbd6fa7be2b28931f28}{
+\index{MapData@{MapData}!paintMap@{paintMap}}
+\index{paintMap@{paintMap}!MapData@{MapData}}
+\subsubsection[{paintMap}]{\setlength{\rightskip}{0pt plus 5cm}void MapData::paintMap (
+\begin{DoxyParamCaption}
+\item[{{\bf AgentPosition} $\ast$}]{centerPoint, }
+\item[{double}]{estLatToMConv, }
+\item[{double}]{estLonToMConv}
+\end{DoxyParamCaption}
+)}}
+\label{class_map_data_a359ee893b6a65bbd6fa7be2b28931f28}
+
+
+Calls the generated display list to draw the 3D terrain map in an OpenGL scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centerPoint} & Offset for all OpenGL locations. This real-\/world location corresponds to OpenGL location 0,0,0. \\
+\hline
+{\em estLatToMConv} & Estimated conversion from latitude to meters for the area. Used to map latitudes in meter space \\
+\hline
+{\em estLonToMConv} & Estimated conversion from longitude to meters for the area. Used to map longitudes in meter space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_map_data_aff0de8ebb5a9854c9ff3f538622d996b}{
+\index{MapData@{MapData}!setDtedObject@{setDtedObject}}
+\index{setDtedObject@{setDtedObject}!MapData@{MapData}}
+\subsubsection[{setDtedObject}]{\setlength{\rightskip}{0pt plus 5cm}void MapData::setDtedObject (
+\begin{DoxyParamCaption}
+\item[{{\bf DTEDObject} $\ast$}]{dted}
+\end{DoxyParamCaption}
+)}}
+\label{class_map_data_aff0de8ebb5a9854c9ff3f538622d996b}
+
+
+Stores the \hyperlink{class_d_t_e_d_object}{DTEDObject} for later use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dted} & Loaded DTED data for a given region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/MapData.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/MapData.cpp\end{DoxyCompactItemize}

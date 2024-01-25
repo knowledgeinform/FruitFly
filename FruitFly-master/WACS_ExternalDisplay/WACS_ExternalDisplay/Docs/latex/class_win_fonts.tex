@@ -1,0 +1,172 @@
+\hypertarget{class_win_fonts}{
+\section{WinFonts Class Reference}
+\label{class_win_fonts}\index{WinFonts@{WinFonts}}
+}
+
+
+A class that provides methods for building character fonts for OpenGL scenes.  
+
+
+
+
+{\ttfamily \#include $<$WinFonts.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static GLvoid \hyperlink{class_win_fonts_ac9458d16ce74fce9db04ecaca5d6eba5}{BuildGLFont} (HDC hDC, GLint GLbase, GLint Fontsize)
+\begin{DoxyCompactList}\small\item\em Build the character set for the given parameters. \end{DoxyCompactList}\item 
+static GLvoid \hyperlink{class_win_fonts_a4bd901543b5de096baedb9062fbe931c}{KillFont} (GLint GLbase)
+\begin{DoxyCompactList}\small\item\em Delete the character set. \end{DoxyCompactList}\item 
+static GLvoid \hyperlink{class_win_fonts_a57c22391965f60ee410b29dfd583578c}{glPrint2d} (GLint GLbase, double x, double y, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Prints the specified text in 2 dimensional OpenGL space. \end{DoxyCompactList}\item 
+static GLvoid \hyperlink{class_win_fonts_ac6df7d32302f883f39c5ca841f5a748e}{glPrint3d} (GLint GLbase, double x, double y, double z, const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Prints the specified text in 3 dimensional OpenGL space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_win_fonts_a40c51144013284fd5f87e3ec8c425c77}{
+static GLYPHMETRICSFLOAT \hyperlink{class_win_fonts_a40c51144013284fd5f87e3ec8c425c77}{gmf} \mbox{[}256\mbox{]}}
+\label{class_win_fonts_a40c51144013284fd5f87e3ec8c425c77}
+
+\begin{DoxyCompactList}\small\item\em Array holding character symbols. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that provides methods for building character fonts for OpenGL scenes. 
+
+\begin{DoxyAuthor}{Author}
+John Humphreys 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2009 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+Copyright: Johns Hopkins University Applied Physics Laboratory All rights reserved 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_win_fonts_ac9458d16ce74fce9db04ecaca5d6eba5}{
+\index{WinFonts@{WinFonts}!BuildGLFont@{BuildGLFont}}
+\index{BuildGLFont@{BuildGLFont}!WinFonts@{WinFonts}}
+\subsubsection[{BuildGLFont}]{\setlength{\rightskip}{0pt plus 5cm}GLvoid WinFonts::BuildGLFont (
+\begin{DoxyParamCaption}
+\item[{HDC}]{hDC, }
+\item[{GLint}]{GLbase, }
+\item[{GLint}]{Fontsize}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_win_fonts_ac9458d16ce74fce9db04ecaca5d6eba5}
+
+
+Build the character set for the given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hDC} & Device context to make the fonts for \\
+\hline
+{\em GLbase} & to begin generating at \\
+\hline
+{\em Fontsize} & Size of character font \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_win_fonts_a57c22391965f60ee410b29dfd583578c}{
+\index{WinFonts@{WinFonts}!glPrint2d@{glPrint2d}}
+\index{glPrint2d@{glPrint2d}!WinFonts@{WinFonts}}
+\subsubsection[{glPrint2d}]{\setlength{\rightskip}{0pt plus 5cm}GLvoid WinFonts::glPrint2d (
+\begin{DoxyParamCaption}
+\item[{GLint}]{GLbase, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_win_fonts_a57c22391965f60ee410b29dfd583578c}
+
+
+Prints the specified text in 2 dimensional OpenGL space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GLbase} & Base character value \\
+\hline
+{\em x} & X position to print text \\
+\hline
+{\em y} & Y position to print text \\
+\hline
+{\em fmt} & Formatting of text to print \\
+\hline
+{\em ...} & Optional parameters to complete the printed string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_win_fonts_ac6df7d32302f883f39c5ca841f5a748e}{
+\index{WinFonts@{WinFonts}!glPrint3d@{glPrint3d}}
+\index{glPrint3d@{glPrint3d}!WinFonts@{WinFonts}}
+\subsubsection[{glPrint3d}]{\setlength{\rightskip}{0pt plus 5cm}GLvoid WinFonts::glPrint3d (
+\begin{DoxyParamCaption}
+\item[{GLint}]{GLbase, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_win_fonts_ac6df7d32302f883f39c5ca841f5a748e}
+
+
+Prints the specified text in 3 dimensional OpenGL space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GLbase} & Base character value \\
+\hline
+{\em x} & X position to print text \\
+\hline
+{\em y} & Y position to print text \\
+\hline
+{\em z} & Z position to print text \\
+\hline
+{\em fmt} & Formatting of text to print \\
+\hline
+{\em ...} & Optional parameters to complete the printed string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{class_win_fonts_a4bd901543b5de096baedb9062fbe931c}{
+\index{WinFonts@{WinFonts}!KillFont@{KillFont}}
+\index{KillFont@{KillFont}!WinFonts@{WinFonts}}
+\subsubsection[{KillFont}]{\setlength{\rightskip}{0pt plus 5cm}GLvoid WinFonts::KillFont (
+\begin{DoxyParamCaption}
+\item[{GLint}]{GLbase}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_win_fonts_a4bd901543b5de096baedb9062fbe931c}
+
+
+Delete the character set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GLbase} & to begin deleting at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/WinFonts.h\item 
+C:/Documents and Settings/humphjc1/My Documents/wacs/WACS\_\-ExternalDisplay/WACS\_\-ExternalDisplay/WinFonts.cpp\end{DoxyCompactItemize}
